@@ -33,7 +33,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background: #161415 url(../images/header-bg.jpg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -308,7 +308,7 @@ ul#nav li.current a { color: #F06000; }
 }
 .bars li {
    position: relative;
-  	margin-bottom: 60px;
+  	margin-bottom: 55px;
   	background: #ccc;
   	height: 42px;
   	border-radius: 3px;
@@ -320,12 +320,12 @@ ul#nav li.current a { color: #F06000; }
    letter-spacing: 2px;
 	font-weight: normal;
    position: relative;
-	top: -42px;
+	top: -36px;
 	left: 10px;
 }
 .bars li img {
    position: relative;
-	top: -36px;
+	top: -30px;
 }
 .bar-expand {
    position: absolute;
@@ -341,60 +341,60 @@ ul#nav li.current a { color: #F06000; }
    border-radius: 3px 0 0 3px;
 }
 
-.projet {
-   width: 60%;
-   -moz-animation: photoshop 2s ease;
-   -webkit-animation: photoshop 2s ease;
+.projets {
+   width: 70%;
+   -moz-animation: projets 2s ease;
+   -webkit-animation: projets 2s ease;
 }
 .management {
   	width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+  	-moz-animation: management 2s ease;
+  	-webkit-animation: management 2s ease;
 }
 .excel {
-  	width: 55%;
-  	-moz-animation: illustrator 2s ease;
-  	-webkit-animation: illustrator 2s ease;
+  	width: 95%;
+  	-moz-animation: excel 2s ease;
+  	-webkit-animation: excel 2s ease;
 }
 .powerbi {
-  	width: 50%;
-  	-moz-animation: wordpress 2s ease;
-  	-webkit-animation: wordpress 2s ease;
+  	width: 80%;
+  	-moz-animation: powerbi 2s ease;
+  	-webkit-animation: powerbi 2s ease;
 }
 .debian {
-  	width: 90%;
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
+  	width: 80%;
+  	-moz-animation: debian 2s ease;
+  	-webkit-animation: debian 2s ease;
 }
 .docker {
-  	width: 80%;
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
+  	width: 70%;
+  	-moz-animation: docker 2s ease;
+  	-webkit-animation: docker 2s ease;
 }
 .meca {
-  	width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+  	width: 70%;
+  	-moz-animation: meca 2s ease;
+  	-webkit-animation: meca 2s ease;
 }
 .informatique {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+  	width: 90%;
+  	-moz-animation: informatique 2s ease;
+  	-webkit-animation: informatique 2s ease;
 }
 .web {
   	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+  	-moz-animation: web 2s ease;
+  	-webkit-animation: web 2s ease;
 }
 .python {
    width: 50%;
-   -moz-animation: jquery 2s ease;
-   -webkit-animation: jquery 2s ease;
+   -moz-animation: python 2s ease;
+   -webkit-animation: python 2s ease;
 }
 .c {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+  	width: 60%;
+  	-moz-animation: c 2s ease;
+  	-webkit-animation: c 2s ease;
 }
 @-moz-keyframes photoshop {
   0%   { width: 0px;  }
