@@ -90,46 +90,285 @@
         <div id="projet1" class="row">
             <div class="twelve columns main-col">
                 <div class="row item">
-                    <h3>Domotique</h3> 
+                    <h3>Domotique</h3>
                     <p class="info">Domotisation de ma maison<span>&bull;</span> <em class="date">2020</em></p>
-                    
-                    Grafana
-                    http://grafana.neptune79.duckdns.org/d/1DjY9Y5Vk/temperature
-                    http://grafana.neptune79.duckdns.org/d/BvgPZmGVz/consommation
-                    
-                    Objectifs : Domotiser maison avec solution gratuite, locale, open source et appareils de plusieurs marques
-                    1 - Installations d'appareils ZigBee de différentes marques
-                    Valves thermostatiques TuYa
-                    Lumières YSRSAI
-                    Capteurs température/humidité Xiaomi
-                    Capteurs de présence Xiaomi
-                    Capteurs de portes/fenetre Xiaomi
-                    1bis - Installation d'appareils à base d'arduino/esp
-                    photo esphome
-                    2 - Installation du module Sniffer Zigbee nommé PiZigate via GPIO du raspberry
-                    photo pizigate
-                    3 - Conversion des data brutes en MQTT avec Zigbee2MQTT
-                    photo Zigbee2MQTT
-                    4 - Intégration à Home assistant
-                    photo ha
-                    5 - Envoie des données vers InfluxDB puis affichage Grafana
-                    photo grafana
-                    liens grafana
-                    6 - Utilisation de NodeRed pour automatiser certaines taches
-                    photo NodeRed
-                    
-                    7- Management des dockers du raspberry facilement  (ssd raspberry au lieu de carte SD + backup bi mensuel) avec portainer
-                    photo portainer
+                    <bold>Objectifs</bold> : Domotiser ma maison en utilisant une solution : universelle (comaptible
+                    avec différentes marques d'appareils), modulable, gratuite et open-source.<br>
+                    <bold>Avantages</bold> :
+                    <ul>
+                        <li>Faible coût</li>
+                        <li>Mises à jour régulières</li>
+                        <li>Produit final facile d'utilisation</li>
+                        <li>Projet enrichissant en connaissances</li>
+                        <li>Haute fiabilité</li>
+                        <li>Maison indépendante du système</li>
+                    </ul>
+                    <bold>Inconvénients</bold> :
+                    <ul>
+                        <li>Première installation chronophage</li>
+                        <li>Requiert un minimum de connaissances</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Installations d'appareils ZigBee de différentes marques</span>
+                    <ul>
+                        <li>Valves thermostatiques TuYa</li>
+                        <li>Lumières YSRSAI</li>
+                        <li>Capteurs température/humidité Xiaomi</li>
+                        <li>Capteurs de présence Xiaomi</li>
+                        <li>Capteurs de portes/fenetre Xiaomi</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="bgrid-thirds s-bgrid-thirds cf">
+                    <div class="columns projets-item">
+                        <div class="item-wrap">
+                            <img alt="" src="images/projets/domotique/tuya.png">
+                            <div class="overlay">
+                                <div class="projets-item-meta">
+                                    <h5>Valve thermostatique TuYa</h5>
+                                    <p>Permet de contrôle l'ouverture de la valve de mes radiateurs à eau</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns projets-item">
+                        <div class="item-wrap">
+                            <img alt="" src="images/projets/domotique/xiaomi1.png">
+                            <div class="overlay">
+                                <div class="projets-item-meta">
+                                    <h5>Capteur Xiaomi</h5>
+                                    <p>Permet de mesurer la température et l'humidité</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns projets-item">
+                        <div class="item-wrap">
+                            <img alt="" src="images/projets/domotique/xiaomi2.png">
+                            <div class="overlay">
+                                <div class="projets-item-meta">
+                                    <h5>Capteur Xiaomi</h5>
+                                    <p>Permet de vérifier si une porte ou une fenêtre est ouverte.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Installations d'appareils Wi-Fi</span>
+                    <ul>
+                        <li>ESP8266 + relais 220V</li>
+                        <li>ESP32 + PN532 (lecteur RFID)</li>
+                        <li>Arduino nano + LED IR (pour simulation de télécommande IR)</li>
+                        <li>ESP32 + HTU21D (capteur température/humidité) + CCS811 (capteur CO2)</li>
+                        <li>...</li>
+                    </ul>
+                    Installation du firmware ESPHome sur mes Arduino/ESP : permet de faire des mises à jour OTA, de
+                    simplifier la gestion des capteurs et de communiquer plus facilement avec Home-Assistant
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/esphome.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>ESPHome</h5>
+                                        <p>Logiciel open-source de management d'ESP/Arduino</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Installation du module sniffer de réseau Zigbee sur les GPIO du Raspberry
+                        Pi</span>
+                    <div class="bgrid-halves s-bgrid-halves cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/pizigate.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>Raspberry Pi 4</h5>
+                                        <p>Boitier Argon One<br>Alimentation sans interruption (2h d'autonomie)<br>SSD
+                                            M2 120 Go<br>Connexion ethernet 1 GB/s</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/pizigate2.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>PiZigate</h5>
+                                        <p>Module sniffer de réseau ZigBee</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Conversion des data brutes en MQTT avec Zigbee2MQTT</span>
+                    <div class="bgrid s-bgrid-halves cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/zigbee2mqtt.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>Schéma réseau ZigBee</h5>
+                                        <p>Schéma du réseau maillé ZigBee de ma maison :
+                                            <br>
+                                            Etoile : Serveur Raspberry Pi 4
+                                            <br>
+                                            Noeuds bleus : Appareils répéteurs de réseau
+                                            <br>
+                                            Neouds verts : Appareils
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Intégration à Home assistant</span>
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/ha.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>Dashboard Home-Assistant</h5>
+                                        <p>Apperçu de la partie "Lumières" du dashboard home-assistant</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Stockage des données dans InfluxDB + Dashboard Grafana</span>
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/grafana.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>Dashboard Grafana</h5>
+                                        <p>Apperçu de la consommation énergétique de quelques appareils de la maison</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    Exemple de dashboard accessible au public affichant la température et la consommation de ma maison :
+                    <a href="http://grafana.neptune79.duckdns.org/d/1DjY9Y5Vk/temperature" title="Grafana - Température"
+                        target="_blank"> http://grafana.neptune79.duckdns.org/d/1DjY9Y5Vk/temperature</a>
+                    <a href="http://grafana.neptune79.duckdns.org/d/BvgPZmGVz/consommation"
+                        title="Grafana - Consommation"
+                        target="_blank">http://grafana.neptune79.duckdns.org/d/BvgPZmGVz/consommation</a>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Utilisation de NodeRed pour automatiser des tâches</span>
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/nodered.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>Flow "Chauffage" Node-Red</h5>
+                                        <p>Cette partie du flow permet de:
+                                            <br>
+                                            - Allumer le chauffage des toilettes la semaine entre 06:30 et 22:00, le
+                                            weekend entre 08:00 et 23:00.
+                                            <br>
+                                            - Vérifier que la fenêtre n'est pas ouverte lorsque le chauffage est allumé
+                                            <br>
+                                            - Appliquer des températures et courbes de chauffe en fonction de variables
+                                            définies dans Home-Assistant
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    8 - serveur samba + vpn pour accès à distance
+                    <br>
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/nodered2.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>Flow "Présence" Node-Red</h5>
+                                        <p>Cette partie du flow permet de:
+                                            <br>
+                                            - Vérifier la présence de quelqu'un et allumer la lumière si besoin
+                                            <br>
+                                            - Vérifier si l'intensité lumineuse de la pièce est inférieure à la consigne (réglable dans home assistant)
+                                            <br>
+                                            - Gérer l'intensité lumineuse et la température de la couleur en fonction du moment de la journée (réglable dans home assistant)
+                                            <br>
+                                            - Possibilité de verrouiller la lumière (à partir de home-assistant) afin qu'elle ne s'éteigne plus (lumière d'ambiance)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row item">
+                    <span class="titre">Installations d'appareils Wi-Fi</span>
+                    <ul>
+                        <li>ESP8266 + relais 220V</li>
+                        <li>ESP32 + PN532 (lecteur RFID)</li>
+                        <li>Arduino nano + LED IR (pour simulation de télécommande IR)</li>
+                        <li>ESP32 + HTU21D (capteur température/humidité) + CCS811 (capteur CO2)</li>
+                        <li>...</li>
+                    </ul>
+                    Installation du firmware ESPHome sur mes Arduino/ESP : permet de faire des mises à jour OTA, de
+                    simplifier la gestion des capteurs et de communiquer plus facilement avec Home-Assistant
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="item-wrap">
+                                <img alt="" src="images/projets/domotique/esphome.png">
+                                <div class="overlay">
+                                    <div class="projets-item-meta">
+                                        <h5>ESPHome</h5>
+                                        <p>Logiciel open-source de management d'ESP/Arduino</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
 
-                    bonus : fail2ban car trop de tentatives de connexion en SSH port 22 ouvert
-                    bonus2 : utilisation de nginx pour sous-domaine + ouverture d'un seul port 80
+
+                7- Management des dockers du raspberry facilement (ssd raspberry au lieu de carte SD + backup bi
+                mensuel) avec portainer
+                photo portainer
+
+                8 - serveur samba + vpn pour accès à distance
+
+                bonus : fail2ban car trop de tentatives de connexion en SSH port 22 ouvert
+                bonus2 : utilisation de nginx pour sous-domaine + ouverture d'un seul port 80
 
 
 
-                </div> <!-- item end -->
-            </div> <!-- main-col end -->
+            </div> <!-- item end -->
+        </div> <!-- main-col end -->
         </div> <!-- End projet1 -->
 
         <!-- Projet2
@@ -139,38 +378,96 @@
                 <div class="row item">
                     <h3>Titre</h3>
                     <p class="info">Titre<span>&bull;</span> <em class="date">Date</em></p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ornare ornare. Aenean ultricies nec orci ut pellentesque. Duis porta condimentum erat nec lacinia. Aliquam venenatis ultrices efficitur. Sed gravida nunc quis purus dignissim consectetur. Etiam porta, tellus vitae efficitur luctus, lectus orci ornare eros, ut auctor tellus magna ut tortor. Ut eget ligula hendrerit, tempor libero sed, dignissim sapien. Phasellus dignissim odio quis neque volutpat, sed dignissim mauris lobortis. Mauris vestibulum augue eu orci gravida aliquet. Fusce vulputate ligula ligula, ac tincidunt turpis pellentesque sed.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ornare ornare. Aenean
+                    ultricies nec orci ut pellentesque. Duis porta condimentum erat nec lacinia. Aliquam venenatis
+                    ultrices efficitur. Sed gravida nunc quis purus dignissim consectetur. Etiam porta, tellus vitae
+                    efficitur luctus, lectus orci ornare eros, ut auctor tellus magna ut tortor. Ut eget ligula
+                    hendrerit, tempor libero sed, dignissim sapien. Phasellus dignissim odio quis neque volutpat, sed
+                    dignissim mauris lobortis. Mauris vestibulum augue eu orci gravida aliquet. Fusce vulputate ligula
+                    ligula, ac tincidunt turpis pellentesque sed.
 
-Quisque volutpat egestas nunc eget volutpat. Phasellus scelerisque placerat mauris, sed volutpat arcu elementum a. Vestibulum lectus dui, tincidunt in urna a, suscipit pulvinar dui. Proin ante massa, semper eget urna id, consequat dictum enim. Donec posuere sollicitudin massa, porta malesuada metus cursus eu. Morbi laoreet ante a arcu laoreet, sodales pulvinar ex placerat. Mauris sollicitudin tincidunt finibus. Cras a consectetur orci. Aenean quis justo sit amet sapien sagittis luctus eu quis libero. Cras lacinia tincidunt metus. Nunc a nunc arcu.
+                    Quisque volutpat egestas nunc eget volutpat. Phasellus scelerisque placerat mauris, sed volutpat
+                    arcu elementum a. Vestibulum lectus dui, tincidunt in urna a, suscipit pulvinar dui. Proin ante
+                    massa, semper eget urna id, consequat dictum enim. Donec posuere sollicitudin massa, porta malesuada
+                    metus cursus eu. Morbi laoreet ante a arcu laoreet, sodales pulvinar ex placerat. Mauris
+                    sollicitudin tincidunt finibus. Cras a consectetur orci. Aenean quis justo sit amet sapien sagittis
+                    luctus eu quis libero. Cras lacinia tincidunt metus. Nunc a nunc arcu.
 
-Integer turpis mauris, iaculis quis turpis vel, placerat egestas massa. Sed pharetra arcu augue, non facilisis lectus euismod non. Sed bibendum arcu nec eleifend cursus. Nulla vehicula velit odio, vitae condimentum odio fringilla vel. Mauris efficitur posuere ex, vel condimentum sapien gravida sit amet. Nullam auctor mauris neque, vitae consectetur neque interdum ut. Curabitur felis leo, sollicitudin ultricies ligula pulvinar, rhoncus congue arcu. Suspendisse potenti. Cras risus felis, elementum posuere dapibus eget, feugiat vitae lectus. Pellentesque sed posuere quam. Etiam quis ornare sapien, non tempor ipsum. Nam sagittis ipsum ut pretium bibendum. Nam diam enim, condimentum in enim sit amet, tempus posuere risus. Vivamus eget enim vitae dui congue sagittis at eget ex. Nam at facilisis ex. Etiam sit amet nulla non quam blandit volutpat eget et massa.
+                    Integer turpis mauris, iaculis quis turpis vel, placerat egestas massa. Sed pharetra arcu augue, non
+                    facilisis lectus euismod non. Sed bibendum arcu nec eleifend cursus. Nulla vehicula velit odio,
+                    vitae condimentum odio fringilla vel. Mauris efficitur posuere ex, vel condimentum sapien gravida
+                    sit amet. Nullam auctor mauris neque, vitae consectetur neque interdum ut. Curabitur felis leo,
+                    sollicitudin ultricies ligula pulvinar, rhoncus congue arcu. Suspendisse potenti. Cras risus felis,
+                    elementum posuere dapibus eget, feugiat vitae lectus. Pellentesque sed posuere quam. Etiam quis
+                    ornare sapien, non tempor ipsum. Nam sagittis ipsum ut pretium bibendum. Nam diam enim, condimentum
+                    in enim sit amet, tempus posuere risus. Vivamus eget enim vitae dui congue sagittis at eget ex. Nam
+                    at facilisis ex. Etiam sit amet nulla non quam blandit volutpat eget et massa.
 
-Nam eget dui vel sapien gravida feugiat non vel risus. Vestibulum et pretium massa. Phasellus faucibus tellus lorem, eu commodo nulla tristique ut. Ut sit amet dui non libero venenatis dictum. Quisque iaculis finibus dictum. Fusce nec convallis lorem. Duis risus tortor, sollicitudin ac justo id, porttitor porta ipsum. Proin faucibus nisl eu nibh fermentum, eget vulputate dolor vehicula. Integer blandit nisl id justo fermentum, sit amet feugiat eros pretium.
+                    Nam eget dui vel sapien gravida feugiat non vel risus. Vestibulum et pretium massa. Phasellus
+                    faucibus tellus lorem, eu commodo nulla tristique ut. Ut sit amet dui non libero venenatis dictum.
+                    Quisque iaculis finibus dictum. Fusce nec convallis lorem. Duis risus tortor, sollicitudin ac justo
+                    id, porttitor porta ipsum. Proin faucibus nisl eu nibh fermentum, eget vulputate dolor vehicula.
+                    Integer blandit nisl id justo fermentum, sit amet feugiat eros pretium.
 
-Ut et nibh ut turpis maximus sodales. Duis sit amet est pharetra, ultrices lorem vitae, posuere leo. Integer accumsan, urna et maximus posuere, nisl turpis auctor tortor, sit amet blandit turpis ligula et metus. Proin condimentum gravida lectus, sit amet dapibus nisl varius a. Aliquam non rhoncus nunc. Phasellus ultricies justo ut nulla cursus, ut consectetur neque euismod. Etiam quis efficitur quam. Fusce in viverra enim. Integer convallis vitae ipsum eget pellentesque. Nunc varius urna eget velit tincidunt fermentum. Pellentesque nec semper nisi, id ultricies mi. Maecenas in nulla ut ante commodo eleifend. Quisque facilisis ex ac elit dictum fermentum. Vestibulum rutrum fringilla ligula.
+                    Ut et nibh ut turpis maximus sodales. Duis sit amet est pharetra, ultrices lorem vitae, posuere leo.
+                    Integer accumsan, urna et maximus posuere, nisl turpis auctor tortor, sit amet blandit turpis ligula
+                    et metus. Proin condimentum gravida lectus, sit amet dapibus nisl varius a. Aliquam non rhoncus
+                    nunc. Phasellus ultricies justo ut nulla cursus, ut consectetur neque euismod. Etiam quis efficitur
+                    quam. Fusce in viverra enim. Integer convallis vitae ipsum eget pellentesque. Nunc varius urna eget
+                    velit tincidunt fermentum. Pellentesque nec semper nisi, id ultricies mi. Maecenas in nulla ut ante
+                    commodo eleifend. Quisque facilisis ex ac elit dictum fermentum. Vestibulum rutrum fringilla ligula.
                 </div> <!-- item end -->
             </div> <!-- main-col end -->
         </div> <!-- End projet2 -->
 
         <!-- Projet3
       ----------------------------------------------- -->
-      <div id="projet3" class="row">
-        <div class="twelve columns main-col">
-            <div class="row item">
-                <h3>Titre</h3>
-                <p class="info">Titre<span>&bull;</span> <em class="date">Date</em></p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ornare ornare. Aenean ultricies nec orci ut pellentesque. Duis porta condimentum erat nec lacinia. Aliquam venenatis ultrices efficitur. Sed gravida nunc quis purus dignissim consectetur. Etiam porta, tellus vitae efficitur luctus, lectus orci ornare eros, ut auctor tellus magna ut tortor. Ut eget ligula hendrerit, tempor libero sed, dignissim sapien. Phasellus dignissim odio quis neque volutpat, sed dignissim mauris lobortis. Mauris vestibulum augue eu orci gravida aliquet. Fusce vulputate ligula ligula, ac tincidunt turpis pellentesque sed.
+        <div id="projet3" class="row">
+            <div class="twelve columns main-col">
+                <div class="row item">
+                    <h3>Titre</h3>
+                    <p class="info">Titre<span>&bull;</span> <em class="date">Date</em></p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ornare ornare. Aenean
+                    ultricies nec orci ut pellentesque. Duis porta condimentum erat nec lacinia. Aliquam venenatis
+                    ultrices efficitur. Sed gravida nunc quis purus dignissim consectetur. Etiam porta, tellus vitae
+                    efficitur luctus, lectus orci ornare eros, ut auctor tellus magna ut tortor. Ut eget ligula
+                    hendrerit, tempor libero sed, dignissim sapien. Phasellus dignissim odio quis neque volutpat, sed
+                    dignissim mauris lobortis. Mauris vestibulum augue eu orci gravida aliquet. Fusce vulputate ligula
+                    ligula, ac tincidunt turpis pellentesque sed.
 
-Quisque volutpat egestas nunc eget volutpat. Phasellus scelerisque placerat mauris, sed volutpat arcu elementum a. Vestibulum lectus dui, tincidunt in urna a, suscipit pulvinar dui. Proin ante massa, semper eget urna id, consequat dictum enim. Donec posuere sollicitudin massa, porta malesuada metus cursus eu. Morbi laoreet ante a arcu laoreet, sodales pulvinar ex placerat. Mauris sollicitudin tincidunt finibus. Cras a consectetur orci. Aenean quis justo sit amet sapien sagittis luctus eu quis libero. Cras lacinia tincidunt metus. Nunc a nunc arcu.
+                    Quisque volutpat egestas nunc eget volutpat. Phasellus scelerisque placerat mauris, sed volutpat
+                    arcu elementum a. Vestibulum lectus dui, tincidunt in urna a, suscipit pulvinar dui. Proin ante
+                    massa, semper eget urna id, consequat dictum enim. Donec posuere sollicitudin massa, porta malesuada
+                    metus cursus eu. Morbi laoreet ante a arcu laoreet, sodales pulvinar ex placerat. Mauris
+                    sollicitudin tincidunt finibus. Cras a consectetur orci. Aenean quis justo sit amet sapien sagittis
+                    luctus eu quis libero. Cras lacinia tincidunt metus. Nunc a nunc arcu.
 
-Integer turpis mauris, iaculis quis turpis vel, placerat egestas massa. Sed pharetra arcu augue, non facilisis lectus euismod non. Sed bibendum arcu nec eleifend cursus. Nulla vehicula velit odio, vitae condimentum odio fringilla vel. Mauris efficitur posuere ex, vel condimentum sapien gravida sit amet. Nullam auctor mauris neque, vitae consectetur neque interdum ut. Curabitur felis leo, sollicitudin ultricies ligula pulvinar, rhoncus congue arcu. Suspendisse potenti. Cras risus felis, elementum posuere dapibus eget, feugiat vitae lectus. Pellentesque sed posuere quam. Etiam quis ornare sapien, non tempor ipsum. Nam sagittis ipsum ut pretium bibendum. Nam diam enim, condimentum in enim sit amet, tempus posuere risus. Vivamus eget enim vitae dui congue sagittis at eget ex. Nam at facilisis ex. Etiam sit amet nulla non quam blandit volutpat eget et massa.
+                    Integer turpis mauris, iaculis quis turpis vel, placerat egestas massa. Sed pharetra arcu augue, non
+                    facilisis lectus euismod non. Sed bibendum arcu nec eleifend cursus. Nulla vehicula velit odio,
+                    vitae condimentum odio fringilla vel. Mauris efficitur posuere ex, vel condimentum sapien gravida
+                    sit amet. Nullam auctor mauris neque, vitae consectetur neque interdum ut. Curabitur felis leo,
+                    sollicitudin ultricies ligula pulvinar, rhoncus congue arcu. Suspendisse potenti. Cras risus felis,
+                    elementum posuere dapibus eget, feugiat vitae lectus. Pellentesque sed posuere quam. Etiam quis
+                    ornare sapien, non tempor ipsum. Nam sagittis ipsum ut pretium bibendum. Nam diam enim, condimentum
+                    in enim sit amet, tempus posuere risus. Vivamus eget enim vitae dui congue sagittis at eget ex. Nam
+                    at facilisis ex. Etiam sit amet nulla non quam blandit volutpat eget et massa.
 
-Nam eget dui vel sapien gravida feugiat non vel risus. Vestibulum et pretium massa. Phasellus faucibus tellus lorem, eu commodo nulla tristique ut. Ut sit amet dui non libero venenatis dictum. Quisque iaculis finibus dictum. Fusce nec convallis lorem. Duis risus tortor, sollicitudin ac justo id, porttitor porta ipsum. Proin faucibus nisl eu nibh fermentum, eget vulputate dolor vehicula. Integer blandit nisl id justo fermentum, sit amet feugiat eros pretium.
+                    Nam eget dui vel sapien gravida feugiat non vel risus. Vestibulum et pretium massa. Phasellus
+                    faucibus tellus lorem, eu commodo nulla tristique ut. Ut sit amet dui non libero venenatis dictum.
+                    Quisque iaculis finibus dictum. Fusce nec convallis lorem. Duis risus tortor, sollicitudin ac justo
+                    id, porttitor porta ipsum. Proin faucibus nisl eu nibh fermentum, eget vulputate dolor vehicula.
+                    Integer blandit nisl id justo fermentum, sit amet feugiat eros pretium.
 
-Ut et nibh ut turpis maximus sodales. Duis sit amet est pharetra, ultrices lorem vitae, posuere leo. Integer accumsan, urna et maximus posuere, nisl turpis auctor tortor, sit amet blandit turpis ligula et metus. Proin condimentum gravida lectus, sit amet dapibus nisl varius a. Aliquam non rhoncus nunc. Phasellus ultricies justo ut nulla cursus, ut consectetur neque euismod. Etiam quis efficitur quam. Fusce in viverra enim. Integer convallis vitae ipsum eget pellentesque. Nunc varius urna eget velit tincidunt fermentum. Pellentesque nec semper nisi, id ultricies mi. Maecenas in nulla ut ante commodo eleifend. Quisque facilisis ex ac elit dictum fermentum. Vestibulum rutrum fringilla ligula.
-            </div> <!-- item end -->
-        </div> <!-- main-col end -->
-    </div> <!-- End projet3 -->
+                    Ut et nibh ut turpis maximus sodales. Duis sit amet est pharetra, ultrices lorem vitae, posuere leo.
+                    Integer accumsan, urna et maximus posuere, nisl turpis auctor tortor, sit amet blandit turpis ligula
+                    et metus. Proin condimentum gravida lectus, sit amet dapibus nisl varius a. Aliquam non rhoncus
+                    nunc. Phasellus ultricies justo ut nulla cursus, ut consectetur neque euismod. Etiam quis efficitur
+                    quam. Fusce in viverra enim. Integer convallis vitae ipsum eget pellentesque. Nunc varius urna eget
+                    velit tincidunt fermentum. Pellentesque nec semper nisi, id ultricies mi. Maecenas in nulla ut ante
+                    commodo eleifend. Quisque facilisis ex ac elit dictum fermentum. Vestibulum rutrum fringilla ligula.
+                </div> <!-- item end -->
+            </div> <!-- main-col end -->
+        </div> <!-- End projet3 -->
 
 
     </section> <!-- Resume Section End-->
