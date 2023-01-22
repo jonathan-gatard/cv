@@ -298,7 +298,7 @@ ul#nav li.current a { color: #F06000; }
 /*----------------------------------------------*/
 
 .bars {
-	width: 80%;
+	width: 90%;
 	float: left;
 	padding: 0;
 	text-align: left;
@@ -359,12 +359,13 @@ ul#nav li.current a { color: #F06000; }
 /*	Langues Bars
 /*----------------------------------------------*/
 
-.language-item{
-   padding:0;
+.language-item .bars {
+	width: 80%;
 }
 
-#langues-wrapper .columns {
-   margin-bottom: 36px;
+.language-item{
+   padding:0;
+   margin-bottom:0;
 }
 
 .francais {
@@ -737,7 +738,7 @@ footer .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
-    color: #095153;
+    color: #943c01;
 }
 footer .copyright  li:first-child:before {
     display: none;
