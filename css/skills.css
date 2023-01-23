@@ -1,0 +1,60 @@
+.francais {
+   width: 100%;
+   border-radius: 3px;
+}
+
+.anglais {
+   width: 90%;
+}
+
+.espagnol {
+   width: 30%;
+}
+
+.slovaque {
+   width: 15%;
+}
+
+.proj {
+   width: 75%;
+}
+
+.management {
+   width: 65%;
+}
+
+.excel {
+   width: 95%;
+}
+
+.powerbi {
+   width: 80%;
+}
+
+.debian {
+   width: 80%;
+}
+
+.docker {
+   width: 70%;
+}
+
+.meca {
+   width: 75%;
+}
+
+.informatique {
+   width: 90%;
+}
+
+.web {
+   width: 40%;
+}
+
+.python {
+   width: 50%;
+}
+
+.c {
+   width: 70%;
+}

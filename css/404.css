@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@100;300&display=swap");
+
 :root {
   --shadow: #000000;
   --bg: #333333;
@@ -7,20 +8,24 @@
   --lit-header: #e6e6e6;
   --speed: 2s;
 }
+
 * {
   box-sizing: border-box;
   transform-style: preserve-3d;
 }
+
 @property --swing-x {
   initial-value: 0;
   inherits: false;
   syntax: '<integer>';
 }
+
 @property --swing-y {
   initial-value: 0;
   inherits: false;
   syntax: '<integer>';
 }
+
 body {
   min-height: 100vh;
   min-width: 680px;
@@ -32,17 +37,20 @@ body {
   background: var(--bg);
   color: var(--color);
   perspective: 1200px;
-  margin:0;
+  margin: 0;
 }
+
 p {
   font-weight: 100;
 }
+
 a {
   color: white;
 }
+
 h1 {
   -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
-          animation: swing var(--speed) infinite alternate ease-in-out;
+  animation: swing var(--speed) infinite alternate ease-in-out;
   font-size: clamp(10rem, 60vmin, 30rem);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -54,9 +62,10 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
 }
+
 h1:after {
   -webkit-animation: swing var(--speed) infinite alternate ease-in-out;
-          animation: swing var(--speed) infinite alternate ease-in-out;
+  animation: swing var(--speed) infinite alternate ease-in-out;
   content: "404";
   position: absolute;
   top: 0;
@@ -65,6 +74,7 @@ h1:after {
   filter: blur(1.5vmin);
   transform: scale(1.05) translate3d(0, 12%, -10vmin) translate(calc((var(--swing-x, 0) * 0.05) * 1%), calc((var(--swing-y) * 0.05) * 1%));
 }
+
 .cloak {
   animation: swing var(--speed) infinite alternate-reverse ease-in-out;
   height: 100%;
@@ -73,6 +83,7 @@ h1:after {
   transform: rotate(calc(var(--swing-x) * -0.2deg));
   background: radial-gradient(40% 40% at 50% 42%, transparent, #000 35%);
 }
+
 .cloak__wrapper {
   position: fixed;
   top: 0;
@@ -81,6 +92,7 @@ h1:after {
   right: 0;
   overflow: hidden;
 }
+
 .cloak__container {
   height: 250vmax;
   width: 250vmax;
@@ -89,35 +101,43 @@ h1:after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .info {
   text-align: center;
   line-height: 1.5;
   max-width: clamp(16rem, 90vmin, 25rem);
 }
-.info > p {
+
+.info>p {
   margin-bottom: 3rem;
 }
+
 @-webkit-keyframes swing {
   0% {
     --swing-x: -100;
     --swing-y: -100;
   }
+
   50% {
     --swing-y: 0;
   }
+
   100% {
     --swing-y: -100;
     --swing-x: 100;
   }
 }
+
 @keyframes swing {
   0% {
     --swing-x: -100;
     --swing-y: -100;
   }
+
   50% {
     --swing-y: 0;
   }
+
   100% {
     --swing-y: -100;
     --swing-x: 100;
