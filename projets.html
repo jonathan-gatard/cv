@@ -85,10 +85,10 @@
         <section id="domotique" class="projets">
 
             <!-- domotique ----------------------------------------------- -->
-            <div id="domotique" class="projet_block row">
+            <div class="projet_block row">
                 <div class="twelve columns main-col">
+                    <h2>Domotique</h2>
                     <div class="row item">
-                        <h2>Domotique</h2>
                         <p class="info">Domotisation de mon habitation<span>&bull;</span> <em class="date">2020 -
                                 aujourd'hui</em></p>
                         <bold>Objectifs</bold> : Automatiser l'habitation en utilisant une solution universelle, modulable, gratuite et open-source<br>
@@ -426,10 +426,10 @@
 
 
             <!-- mecanique ----------------------------------------------- -->
-            <div id="mecanique" class="projet_block row">
+            <div class="projet_block row">
                 <div class="twelve columns main-col">
+                    <h2>Mécanique automobile</h2>
                     <div class="row item">
-                        <h2>Mécanique automobile</h2>
                         <p class="info">Réparations d'une BMW E81 120D<span>&bull;</span> <em class="date">2020 - aujourd'hui</em></p>
                         <bold>Objectifs</bold> : Effectuer les réparations nécessaires sur la voiture de manière autonome.<br>
                         <bold>Avantages</bold> :
@@ -590,7 +590,7 @@
                         Après avoir éliminé les différentes causes potentielles (boîte de vitesse, pont, etc.) j'ai déterminé que le problème était lié à l'arbre de transmission.
                         <br>
                         Il s'agissait d'un bruit de claquement sourd au niveau du bas de l'habitacle :
-                        
+
                         <audio controls src="images/projets/meca/bruit-vibration.mp3">
                         </audio>
                         <br>
@@ -633,12 +633,214 @@
             </div> <!-- End mecanique -->
         </section>
         <section id="cnc" class="projets">
-
+            <!-- cnc ----------------------------------------------- -->
+            <div class="projet_block row">
+                <div class="twelve columns main-col">
+                    <h2>Machine CNC</h2>
+                    <div class="row item">
+                        <span class="titre"></span>
+                    </div>
+                    <br>
+                    <div class="row item">
+                        <span class="titre">Fabrication d'une imprimante 3D</span>
+                        <br>
+                        En 2015, j'ai entrepris un projet ambitieux consistant à construire ma propre imprimante 3D.
+                        Les kits d'imprimantes 3D étaient encore peu répandus à cette époque, j'ai dû me apprendre et comprendre par moi-même.
+                        Mon objectif était de concilier un coût raisonnable avec une qualité d'impression satisfaisante.
+                        C'est pourquoi j'ai sélectionné avec soin chaque élément de l'imprimante, en optant notamment pour une structure en acier de 3mm, un controlleur basé sur Arduino, des tiges filetées pour l'axe Z, etc.
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/2015.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Basique imprimante </h5>
+                                            <p>Bof</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/2016.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Basique imprimante </h5>
+                                            <p>Bof</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row item">
+                        <span class="titre"></span>
+                    </div>
+                    <br>
+                    <div class="row item">
+                        <span class="titre">Amélioration de l'imprimante 3D</span>
+                        <br>
+                        Au fil des années, j'ai continué à améliorer mon imprimante 3D.
+                        <ul>
+                            <li>Vis trapézoïdales</li>
+                            <li>Coupleurs rigides</li>
+                            <li>Extrusion bowden</li>
+                            <li>Carte SKR 32 bits (au lieu de Arduino 8 bits)</li>
+                            <li>Pilote moteurs TMC2130 (silencieux, détection de collision, plus précis)</li>
+                            <li>Hotend haut de gamme</li>
+                            <li>Relais statique lit chauffant + cables 5 mm²</li>
+                            <li>Boitier pour écran/contrôleur</li>
+                            <li>Isolation liège pour lit chauffant</li>
+                            <li>Silentbloc for motors</li>
+                            <li>Boite anti humidité pour bobines</li>
+                        </ul>
+                        <div class="bgrid s-bgrid cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/2023.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Basique imprimante </h5>
+                                            <p>Bof</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row item">
+                        <span class="titre">Découpeuse LASER</span>
+                        <br>
+                        En 2021, j'ai acquis un LASER à LED bleue à un coût abordable d'environ 30€, et j'ai conçu un support pour l'installer sur mon imprimante 3D.
+                        Comme le controlleur de l'imprimante 3D n'est pas prévu à cet effet, j'ai utilisé la sortie PWM du ventilateur en combinaison avec un montage de puissance basé sur des transistors pour dimmer mon LASER.
+                        Il s'est avéré que le fonctionnement du LASER est inversé, nécessitant une modification du firmware de l'imprimante.
+                        <div class="bgrid-thirds s-bgrid-thirds cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/support.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Support LASER</h5>
+                                            <p>J'ai créé (DAO + CAO) un support permettant de fixer mon LASER sur mon imprimante 3D</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <video poster="images/projets/imprimante/laser.png" controls preload>
+                                        <source src="images/projets/imprimante/laser.mp4" type="video/mp4" />
+                                        <source src="images/projets/imprimante/laser.webm" type="video/webm" />
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/transistor.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Transistor à souder</h5>
+                                            <p>Soudure à réaliser pour réparer un transistor sur la carte (sortie PWM ventilateur)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row item">
+                        <div class="bgrid-thirds s-bgrid-thirds cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/bougeoir.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Bougeoir</h5>
+                                            <p>Découpe LASER balsa 3mm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/chouette.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Chouette</h5>
+                                            <p>Gravure LASER sur coque de téléphone</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/imprimante/panier.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Panier</h5>
+                                            <p>Découpe laser CTP 3mm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- item end -->
+            </div> <!-- End cnc -->
 
         </section> <!-- Resume Section End-->
 
-        <section id="aeromodelisme" class="projets">
 
+
+        <section id="aeromodelisme" class="projets">
+            <!-- cnc ----------------------------------------------- -->
+            <div class="projet_block row">
+                <div class="twelve columns main-col">
+                    <h2>Aéromodélisme</h2>
+                    <div class="row item">
+                        <span class="titre"></span>
+                    </div>
+                    <br>
+                    <div class="row item">
+                        <span class="titre">Mes avions</span>
+                        <br>
+                        Mélange de mécanique, d'informatique et d'électronique
+                        Futaba T10CG
+                        Module stabilisateur
+                        Programmation radio
+                        Réparation avions
+
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/aero/">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Basique imprimante </h5>
+                                            <p>Bof</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projets/aero/">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Basique imprimante </h5>
+                                            <p>Bof</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                </div> <!-- item end -->
+            </div> <!-- End cnc -->
 
         </section> <!-- Resume Section End-->
 
