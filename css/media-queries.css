@@ -24,7 +24,12 @@
 /* screenwidth less than 900px
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 900px) {
-
+   .bars_right_skill {
+      margin-top: 40px;
+   }
+   .bars_right_langue {
+      margin-top: 0px;
+   }
    /* header styles
    ------------------------------------------------------------------ */
    header .banner {
@@ -119,7 +124,7 @@
 /* mobile wide/smaller tablets
 ---------------------------------------------------------------------- */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 900px) {
 
    /* mobile navigation
    -------------------------------------------------------------------- */

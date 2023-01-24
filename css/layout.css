@@ -225,6 +225,10 @@ ul#nav li.current a {
    overflow: hidden;
 }
 
+#about img {
+   max-width: none;
+}
+
 #about a,
 #about a:visited {
    color: #fff;
@@ -244,6 +248,11 @@ ul#nav li.current a {
 #about p {
    line-height: 30px;
    color: #AAAAAA;
+   text-align: justify;
+}
+
+#about .info{
+   text-indent: 40px;
 }
 
 #about .profile-pic {
@@ -255,11 +264,16 @@ ul#nav li.current a {
 
 #about .contact-details {
    width: 41.66667%;
+   padding: 0;
 }
 
 #about .download {
    width: 58.33333%;
-   padding-top: 6px;
+   padding: 0;
+}
+
+#about .download p{
+   text-align: center;
 }
 
 #about .main-col {
@@ -308,7 +322,7 @@ ul#nav li.current a {
 }
 
 #resume h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+   font: 18px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
 }
@@ -319,32 +333,35 @@ ul#nav li.current a {
 }
 
 #resume h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
+   font: 25px 'opensans-bold', sans-serif;
 }
 
 
-#resume .main-col {
-   padding-right: 10%;
-}
+
 
 .education,
 .work,
-.langues {
+.langues,
+.skill {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
 
+.education p{
+
+   margin-bottom: 48px;
+}
+
 #resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px 'opensans-italic', serif;
    color: #6E7881;
-   margin-bottom: 18px;
-   margin-top: 9px;
+   margin-bottom: 10px;
 }
 
 #resume .info span {
-   margin-right: 5px;
-   margin-left: 5px;
+   margin-right: 8px;
+   margin-left: 8px;
 }
 
 #resume .skillbull {
@@ -352,12 +369,6 @@ ul#nav li.current a {
    color: #6E7881;
    margin-right: 6px;
 }
-
-#resume .date {
-   font: 15px/24px 'opensans-regular', sans-serif;
-   margin-top: 6px;
-}
-
 
 /*----------------------------------------------*/
 /*	Skill Bars
@@ -375,12 +386,15 @@ ul#nav li.current a {
    list-style: none;
 }
 
-.bars li {
-   position: relative;
-   margin-bottom: 50px;
-   background: #ccc;
-   height: 42px;
-   border-radius: 3px;
+.bars ul:last-child{
+   margin-bottom: 0px;
+}
+.skillsgroup{
+   margin-bottom: 120px;
+}
+
+.bars .languages li em{
+   left: 0px;
 }
 
 .bars li em {
@@ -394,9 +408,28 @@ ul#nav li.current a {
    left: 10px;
 }
 
+.bars li {
+   position: relative;
+   margin-bottom: 50px;
+   background: #ccc;
+   height: 20px;
+   border-radius: 3px;
+}
+
+.bars li em {
+   font: 15px 'opensans-bold', sans-serif;
+   color: #313131;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: normal;
+   position: relative;
+   top: -28px;
+   left: 6px;
+}
+
 .bars li img {
    position: relative;
-   top: -30px;
+   top: -28px;
 }
 
 .bar-expand {
@@ -407,8 +440,8 @@ ul#nav li.current a {
    padding-right: 24px;
    background: #313131;
    display: inline-block;
-   height: 42px;
-   line-height: 42px;
+   height: 20px;
+   line-height: 20px;
    border-radius: 3px 0 0 3px;
 }
 
@@ -422,6 +455,8 @@ ul#nav li.current a {
    width: 80%;
 }
 
+
+
 .language-item {
    padding: 0;
    margin-bottom: 0;
@@ -432,24 +467,32 @@ ul#nav li.current a {
 /* e. Projets Section
 /* ------------------------------------------------------------------ */
 
+#projets h1 {
+   font: 18px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+#projets h1 span {
+   border-bottom: 3px solid #F06000;
+   padding-bottom: 6px;
+}
+
 #projets {
-   background: #ebeeee;
-   padding-top: 70px;
+   background: #ffffff;
    padding-bottom: 50px;
 }
 
-#projets h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   text-align: center;
-   margin-bottom: 48px;
-   color: #95A3A3;
-}
+
 
 /* Portfolio Content */
 #projets-wrapper .columns {
    margin-bottom: 36px;
+}
+
+
+.projets-item {
+   padding: 0 20px 0 0;
 }
 
 .projets-item .item-wrap {
@@ -666,6 +709,7 @@ ul#nav li.current a {
    padding-top: 9px;
 }
 
+
 #citations .header-col h1:before {
    font-family: 'FontAwesome';
    content: "\f10d";
@@ -802,15 +846,22 @@ ul#nav li.current a {
 }
 
 .flex-control-nav li {
-   margin: 0 6px;
+   margin-left: 10px;
+   display: inline-block;
+   zoom: 1;
+   *display: inline;
+}
+.flex-control-nav li:first-child
+{
+   margin-left: 0px;
    display: inline-block;
    zoom: 1;
    *display: inline;
 }
 
 .flex-control-paging li a {
-   width: 12px;
-   height: 12px;
+   width: 15px;
+   height: 15px;
    display: block;
    background: #ddd;
    background: rgba(255, 255, 255, .3);
@@ -879,7 +930,7 @@ footer .copyright li:before {
    content: "\2022";
    padding-left: 10px;
    padding-right: 10px;
-   color: #943c01;
+   color: #5c2500;
 }
 
 footer .copyright li:first-child:before {

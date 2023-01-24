@@ -43,9 +43,6 @@
    width: 75%;
 }
 
-.informatique {
-   width: 90%;
-}
 
 .web {
    width: 40%;
@@ -56,5 +53,17 @@
 }
 
 .c {
+   width: 70%;
+}
+
+.planning {
+   width: 70%;
+}
+
+.elec {
+   width: 70%;
+}
+
+.nodered{
    width: 70%;
 }

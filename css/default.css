@@ -36,7 +36,24 @@ e. Others
       Normalize.css - https://github.com/necolas/normalize.css/
       HTML5 Doctor Reset - html5doctor.com/html-5-reset-stylesheet/
 /* ------------------------------------------------------------------ */
+::-webkit-scrollbar {
+   width: 20px;
+ }
+ ::-webkit-scrollbar-track {
+   background-color: #ffffff;
+ }
+::-webkit-scrollbar-thumb {
+   background-color: #a9b0b3;
+   border-radius: 20px;
+   border: 6px solid transparent;
+   background-clip: content-box;
+ }
+ ::-webkit-scrollbar-thumb:hover {
+   background-color: #7e8c8f;
+ }
 
+ 
+ 
 html,
 body,
 div,
@@ -226,7 +243,7 @@ body {
    font-family: 'opensans-regular', sans-serif;
    font-weight: normal;
    font-size: 15px;
-   line-height: 30px;
+   line-height: 25px;
    color: #838C95;
    margin:0;
 
@@ -275,7 +292,7 @@ h2 {
 h3 {
    font-size: 22px;
    line-height: 30px;
-   margin-bottom: 12px;
+   margin-bottom: 0px;
 }
 
 h4 {
@@ -849,7 +866,7 @@ input[type="checkbox"] {
 --------------------------------------------------------------- */
 .row {
    width: 96%;
-   max-width: 1020px;
+   max-width: 1200px;
    margin: 0 auto;
 }
 
@@ -881,7 +898,7 @@ input[type="checkbox"] {
 .column,
 .columns {
    position: relative;
-   padding: 0 20px;
+   padding: 0 0px;
    min-height: 1px;
    float: left;
 }
@@ -1162,7 +1179,7 @@ properly.
 
 /* mobile wide/smaller tablets
 --------------------------------------------------------------- */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 900px) {
 
    .row {
       width: 460px;
