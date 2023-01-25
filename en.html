@@ -2,7 +2,7 @@
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="fr"> <!--<![endif]-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 
    <head>
 
@@ -28,15 +28,7 @@
       <!-- Script
 ================================================== -->
       <script src="js/modernizr.js"></script>
-      <script>
-         fetch("header.html")
-         .then(response => {
-            return response.text()
-         })
-         .then(data => {
-            document.querySelector("header").innerHTML = data;
-         });
-      </script>
+
       <!-- Favicons
 ================================================== -->
       <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -44,12 +36,48 @@
 
    </head>
 
-   <body >
+   <body>
 
       <!-- Header
 ================================================== -->
+      <header id="home">
 
-<header id="home"></header>  
+         <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+               <a class="flag" href="index.html"><img src="images/fr.png"></a>
+               <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+               <li><a class="smoothscroll" href="#about">About me</a></li>
+               <li><a class="smoothscroll" href="#resume">Resume</a></li>
+               <li><a class="smoothscroll" href="#projets">Projects</a></li>
+            </ul> <!-- end #nav -->
+
+         </nav> <!-- end #nav-wrap -->
+
+         <div class="row banner">
+            <div class="banner-text">
+               <h1 class="responsive-headline">Jonathan GATARD</h1>
+               <h3>
+                  Aeronautical and space engineer, who has expanded their skills as a digital project manager in the automotive industry and is eager to specialize in computer science to take on new professional challenges.<br>
+                  <a class="smoothscroll" href="#about">Scroll through the screen and learn more about me.</a>
+               </h3>
+               <hr />
+               <ul class="social">
+                  <li><a href="https://github.com/jonathan-gatard"><i class="fa fa-github"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/jonathan-gatard/"><i class="fa fa-linkedin"></i></a></li>
+               </ul>
+            </div>
+         </div>
+
+         <p class="scrolldown">
+            <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+         </p>
+
+      </header> <!-- Header End -->
+
 
       <!-- About Section
 ================================================== -->
@@ -65,9 +93,9 @@
 
             <div class="ten columns main-col">
 
-               <h2>À propos de moi</h2>
+               <h2>About me</h2>
 
-               <p class="info">Ingénieur aéronautique et spatial de formation, j'occupe actuellement le poste de manager de projets digitaux dans l'industrie automobile. Mes compétences techniques en informatique, électronique et mécanique, acquises depuis mon plus jeune âge, me permettent de relever des défis chaque jour et d'apprendre en permanence. Mon perfectionnisme et mon esprit innovant se reflètent dans les projets que j'ai mené à bien. Découvrez les <a class="smoothscroll" href="#projets">ci-dessous</a>.</p>
+               <p class="info">As an aeronautical and space engineer by training, I currently hold the position of digital project manager in the automotive industry. My technical skills in computer science, electronics, and mechanics, which I have acquired since a young age, allow me to face challenges every day and to constantly learn. My perfectionism and innovative spirit are reflected in the projects that I have successfully completed. Discover them <a class="smoothscroll" href="#projets">below</a>.</p>
 
 
                   <div class="columns contact-details">
@@ -86,7 +114,7 @@
 
                   <div class="columns download">
                      <p>
-                        <a href="download/CV.pdf" class="button"><i class="fa fa-download"></i>Téléchargez mon CV</a>
+                        <a href="download/CV.pdf" class="button"><i class="fa fa-download"></i>Download my CV</a>
                      </p>
                   </div>
 
@@ -146,7 +174,7 @@
                   <div class="twelve columns">
 
                      <h3>Autodidacte</h3>
-                     <p class="info">Informatique, électronique, mécanique<span>&bull;</span>depuis 2012</p>
+                     <p class="info">Informatique, électronique, mécanique<span>&bull;</span>2012 - aujourd'hui</p>
 
                      <p>
                         Passionné d'informatique, d'électronique, de mécanique, je suis un autodidacte expérimenté en Linux, docker, programmation et sécurité informatique. Mon expertise en électronique (Arduino, ESP) et en mécanique (automobile et aviation) me permet de développer des projets innovants et performants.
@@ -307,8 +335,8 @@
                         </ul>
                         <ul class="skills skillsgroup">
                            <li><span class="bar-expand proj"></span><img src="images/skills/proj.png"><em>Gestion de projet</em></li>
-                           <li><span class="bar-expand planning"></span><img src="images/skills/planning.png"><em>Planification</em></li>
                            <li><span class="bar-expand management"></span><img src="images/skills/management.png"><em>Management</em></li>
+                           <li><span class="bar-expand planning"></span><img src="images/skills/planning.png"><em>Planification</em></li>
                         </ul>
                      </div>
                   </div> <!-- item end -->
@@ -683,7 +711,7 @@ Portfolio Section
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
       <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-      
+
       <script src="js/jquery.flexslider.js"></script>
       <script src="js/waypoints.js"></script>
       <script src="js/jquery.fittext.js"></script>

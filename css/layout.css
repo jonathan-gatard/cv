@@ -141,6 +141,19 @@ header .scrolldown a:hover {
 
 /* primary navigation
 --------------------------------------------------------------------- */
+
+#nav .flag img{
+   border-radius: 5%;
+   height: 24px;
+}
+
+#nav .flag {
+   position: relative;
+   float:left;
+   margin:12px;
+}
+
+
 #nav-wrap ul,
 #nav-wrap li,
 #nav-wrap a {
