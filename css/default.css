@@ -40,7 +40,7 @@ e. Others
    width: 20px;
  }
  ::-webkit-scrollbar-track {
-   background-color: #ffffff;
+   background-color: transparent;
  }
 ::-webkit-scrollbar-thumb {
    background-color: #a9b0b3;
