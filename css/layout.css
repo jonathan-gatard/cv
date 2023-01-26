@@ -25,7 +25,11 @@
 body {
    background: #0f0f0f;
    overflow: overlay;
+   top: 0px !important; 
 }
+.goog-te-banner-frame.skiptranslate {
+   display: none !important;
+   } 
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -350,9 +354,6 @@ ul#nav li.current a {
    font: 25px 'opensans-bold', sans-serif;
 }
 
-
-
-
 .education,
 .work,
 .langues,
@@ -370,7 +371,7 @@ ul#nav li.current a {
 #resume .info {
    font: 16px/24px 'opensans-italic', serif;
    color: #6E7881;
-   margin-bottom: 10px;
+   margin-bottom: 14px;
 }
 
 #resume .info span {
@@ -379,11 +380,20 @@ ul#nav li.current a {
 }
 
 #resume .skillbull {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px 'opensans', serif;
    color: #6E7881;
    margin-right: 6px;
 }
 
+#resume .experiencebull{
+   display: inline-block;
+   margin-top: 8px;
+   margin-bottom: 8px;
+}
+
+#resume bold{
+   font-family:  'opensans-bold', serif;
+}
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
@@ -497,10 +507,42 @@ ul#nav li.current a {
    padding-bottom: 50px;
 }
 
+.imageinfo {
+   z-index:1;
+   width: 0;
+   height: 0;
+   border-bottom: 32px solid transparent;
+   border-left: 32px solid red;
+   position: absolute;
+   cursor: help;
+ }
+ 
+ .imageinfotext {
+   visibility: hidden;
+   width: 120px;
+   background-color: #000;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   left:-32px;
+   top: -30px;
+   position:absolute;
+   z-index: 2;
+ }
+ 
+ @keyframes showinfo {
+   0%   {top: -5px; bottom:0px; opacity: 0;}
+   100% {top: -30px;bottom:5px; opacity: 1;}
+ }
 
+ .imageinfo:hover .imageinfotext {
+   visibility: visible;
+   animation: showinfo 0.5s forwards;
+ }
 
 /* Portfolio Content */
 #projets-wrapper .columns {
+   margin-top: 36px;
    margin-bottom: 36px;
 }
 
@@ -604,6 +646,19 @@ ul#nav li.current a {
 }
 
 /* popup modal */
+
+.blink {
+   animation: blink linear  1.2s infinite;
+ }
+
+ @keyframes blink { 
+   0% { opacity:1; }
+   25% { opacity:0.8; }
+   50% { opacity:0.2; } 
+   75% { opacity:0.8; } 
+   100% { opacity:1; }
+ }
+
 .popup-modal {
    max-width: 550px;
    background: #fff;

@@ -7,11 +7,15 @@
  jQuery(document).ready(function($) {
 
 
+//language
+   localStorage.setItem("translate", "false");
+
 /*----------------------------------------------------*/
 /* Force scrollTop on reload
 ------------------------------------------------------ */
 $(window).on('beforeunload', function(){
-   $(window).scrollTop(0);
+   //$(window).scrollTop(0);
+   console.log("scrollTopDisabled")
    });
 
 /*----------------------------------------------------*/

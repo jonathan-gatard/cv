@@ -2,7 +2,7 @@
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="fr"> <!--<![endif]-->
+<html class="no-js" lang="fr" translate="no"> <!--<![endif]-->
 
    <head>
 
@@ -36,8 +36,8 @@
 
    </head>
 
-   <body >
-
+   <body>
+      <div id="google_translate_element" style="display:none"></div>
       <!-- Header
 ================================================== -->
       <header id="home">
@@ -48,7 +48,7 @@
             <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
             <ul id="nav" class="nav">
-               <a class="flag" href="en.html"><img src="images/en.png"></a>
+               <a class="flag" href="javascript:callTranslate();"><img class="flagimg" src="images/en.png"></a>
                <li class="current"><a class="smoothscroll" href="#home">Accueil</a></li>
                <li><a class="smoothscroll" href="#about">À propos de moi</a></li>
                <li><a class="smoothscroll" href="#resume">Résumé</a></li>
@@ -61,7 +61,7 @@
             <div class="banner-text">
                <h1 class="responsive-headline">Jonathan GATARD</h1>
                <h3>
-                  Ingénieur aéronautique et spatial, ayant élargi ses compétences en tant que manager de projets digitaux dans l'automobile et désireux de se spécialiser dans l'informatique pour relever de nouveaux défis professionnels.
+                  Ingénieur aéronautique et spatial, ayant élargi ses compétences en tant que manager de projets digitaux dans l'automobile en quête de spécialisation dans l'informatique pour relever de nouveaux défis professionnels.
                   <br>
                   <a class="smoothscroll" href="#about">Faites défiler l'écran et apprenez en plus sur moi.</a>
                </h3>
@@ -96,28 +96,29 @@
 
                <h2>À propos de moi</h2>
 
-               <p class="info">Ingénieur aéronautique et spatial de formation, j'occupe actuellement le poste de manager de projets digitaux dans l'industrie automobile. Mes compétences techniques en informatique, électronique et mécanique, acquises depuis mon plus jeune âge, me permettent de relever des défis chaque jour et d'apprendre en permanence. Mon perfectionnisme et mon esprit innovant se reflètent dans les projets que j'ai mené à bien. Découvrez les <a class="smoothscroll" href="#projets">ci-dessous</a>.</p>
+               <p class="info">Ingénieur aéronautique et spatial de formation, j'occupe actuellement le poste de manager de projets digitaux dans l'industrie automobile.
+                  Mes compétences techniques en informatique, électronique et mécanique, acquises depuis mon plus jeune âge, me permettent de relever des défis chaque jour et d'apprendre en permanence.
+                  Mon perfectionnisme et mon esprit innovant se reflètent dans les projets que j'ai mené à bien. Découvrez les <a class="smoothscroll" href="#projets">ci-dessous</a>.
+               </p>
+               <div class="columns contact-details">
 
+                  <h2>Contact</h2>
+                  <p class="address">
+                     <span>Jonathan GATARD</span><br>
+                     <span>Hospodárska 47<br>
+                        Trnava, 917 01, Slovaquie
+                     </span><br>
+                     <span>+33 6.13.54.83.19</span><br>
+                     <span><a href="mailto:jonathan.gatard@gmail.com">jonathan.gatard@gmail.com</a></span>
+                  </p>
 
-                  <div class="columns contact-details">
+               </div>
 
-                     <h2>Contact</h2>
-                     <p class="address">
-                        <span>Jonathan GATARD</span><br>
-                        <span>Hospodárska 47<br>
-                           Trnava, 917 01, Slovaquie
-                        </span><br>
-                        <span>+33 6.13.54.83.19</span><br>
-                        <span><a href="mailto:jonathan.gatard@gmail.com">jonathan.gatard@gmail.com</a></span>
-                     </p>
-
-                  </div>
-
-                  <div class="columns download">
-                     <p>
-                        <a href="download/CV.pdf" class="button"><i class="fa fa-download"></i>Téléchargez mon CV</a>
-                     </p>
-                  </div>
+               <div class="columns download">
+                  <p>
+                     <a href="download/CV.pdf" class="button"><i class="fa fa-download"></i>Téléchargez mon CV</a>
+                  </p>
+               </div>
 
             </div> <!-- end .main-col -->
 
@@ -148,7 +149,7 @@
                      <p class="info">Diplôme d’ingénieur en aéronautique et spatial<span>&bull;</span>2016 - 2019 : Poitiers/Toulouse, France</p>
 
                      <p>
-                        Formation de trois ans en alternance avec pour objectif la formation d’ingénieur industriel.
+                        Formation de trois ans en apprentissage développant les compétences nécessaires pour devenir ingénieur industriel.
                      </p>
 
                   </div>
@@ -178,7 +179,8 @@
                      <p class="info">Informatique, électronique, mécanique<span>&bull;</span>depuis 2012</p>
 
                      <p>
-                        Passionné d'informatique, d'électronique, de mécanique, je suis un autodidacte expérimenté en Linux, docker, programmation et sécurité informatique. Mon expertise en électronique (Arduino, ESP) et en mécanique (automobile et aviation) me permet de développer des projets innovants et performants.
+                        Passionné d'informatique, d'électronique et de mécanique, je suis un autodidacte expérimenté en Linux, Docker, réseau, programmation et sécurité informatique.
+                        Mon expertise en informatique combinée à mes connaissances en électronique et mécanique me permet de concevoir des projets innovants et performants.
                      </p>
 
                   </div>
@@ -204,15 +206,23 @@
                   <div class="twelve columns">
 
                      <h3>Stellantis</h3>
-                     <p class="info">Manager de projets digitaux<span>&bull;</span> <em class="date">2021 - 2023 : Trnava,
-                           Slovaquie</em></p>
+                     <p class="info">Manager de projets digitaux<span>&bull;</span> <em class="date">2021 - 2023 : Trnava, Slovaquie</em></p>
 
                      <p>
-                        Ma mission chez Stellantis consiste à gérer des projets industriels innovants et digitaux en tant que manager d'une équipe de 4 personnes.
+                        Ma mission chez Stellantis consiste à gérer des projets digitaux industriels en tant que manager d'une équipe de 4 personnes.
                         <br>
-                        <span class="skillbull">&bull;</span>Projets : Monitoring de l'électricité, automatisation d'un poste de vissage avec Cobot, développement d'applications web pour récupérer des données industrielles, développement de dashboard avec Grafana/InfluxDB et PowerBI
+                        <span class="experiencebull">
+                           <span class="skillbull">&bull;</span>
+                           <bold>Projets</bold> : mise en place d'un suivi des consommations électriques,
+                           déploiement de dashboards avec les outils Grafana/InfluxDB 2 et PowerBI,
+                           intégration d'une solution de robot collaboratif (Cobot) pour l'automatisation d'un poste de vissage,
+                           et développement d'applications web pour la collecte de données industrielles.
+                        </span>
                         <br>
-                        <span class="skillbull">&bull;</span>Compétences développées : management hiérarchique, gestion de projets, outils Microsoft (PowerQuery/BI/Apps, Excel), Node-Red
+                        <span class="experiencebull">
+                           <span class="skillbull">&bull;</span>
+                           <bold>Compétences développées</bold> : management hiérarchique, gestion de projet, outils informatiques (PowerBI, Node-Red, Grafana)
+                        </span>
                      </p>
 
                   </div>
@@ -224,13 +234,21 @@
                   <div class="twelve columns">
 
                      <h3>LISI Aerospace</h3>
-                     <p class="info">Ingénieur coordinateur logistique<span>&bull;</span> <em class="date">2019 - 2020 :
-                           Parthenay, France</em></p>
+                     <p class="info">Ingénieur coordinateur logistique<span>&bull;</span> <em class="date">2019 - 2020 : Parthenay, France</em></p>
 
                      <p>
                         J’ai eu la responsabilité de développer une stratégie permettant d’améliorer la satisfaction du client.
                         <br>
-                        <span class="skillbull">&bull;</span>Compétences développées : communication et lean management (5S, VSM)
+                        <span class="experiencebull">
+                           <span class="skillbull">&bull;</span>
+                           <bold>Projets</bold> : mise en place d'un processus d'impression automatisé d'étiquettes client,
+                           création d'un système de gestion des stocks basé sur les besoins des clients.
+                        </span>
+                        <br>
+                        <span class="experiencebull">
+                           <span class="skillbull">&bull;</span>
+                           <bold>Compétences développées</bold> : communication et lean management (5S, VSM)
+                        </span>
                      </p>
 
                   </div>
@@ -242,13 +260,21 @@
                   <div class="twelve columns">
 
                      <h3>LISI Aerospace</h3>
-                     <p class="info">Ingénieur projets logistique en alternance <span>&bull;</span> <em class="date">2016 -
-                           2019 : Parthenay, France</em></p>
+                     <p class="info">Ingénieur projets logistique en alternance <span>&bull;</span> <em class="date">2016 - 2019 : Parthenay, France</em></p>
 
                      <p>
                         J’ai géré trois projets d’une durée d’un an chacun, en lien avec la construction et le développement de deux nouvelles usines sur le site de Parthenay.
                         <br>
-                        <span class="skillbull">&bull;</span>Compétences développées : management transversal et gestion de projet (Gantt, PDCA, AMDEC)
+                        <span class="experiencebull">
+                           <span class="skillbull">&bull;</span>
+                           <bold>Projets</bold> : réorganisation de zones logistiques,
+                           implantation d'une nouvelle zone logistique.
+                        </span>
+                        <br>
+                        <span class="experiencebull">
+                           <span class="skillbull">&bull;</span>
+                           <bold>Compétences développées</bold> : management transversal et gestion de projet (Gantt, PDCA, AMDEC)
+                        </span>
                      </p>
 
                   </div>
@@ -314,7 +340,7 @@
                         <ul class="skills skillsgroup">
                            <li><span class="bar-expand debian"></span><img src="images/skills/debian.png"><em>Linux (Debian)</em></li>
                            <li><span class="bar-expand docker"></span><img src="images/skills/docker.png"><em>Docker</em></li>
-                        </ul>  
+                        </ul>
                         <ul class="skills skillsgroup">
                            <li><span class="bar-expand excel"></span><img src="images/skills/excel.png"><em>Excel/PowerQuery</em></li>
                            <li><span class="bar-expand powerbi"></span><img src="images/skills/powerbi.png"><em>PowerBI</em></li>
@@ -351,7 +377,7 @@
       </section> <!-- Resume Section End-->
 
 
-      
+
       <!--
 Portfolio Section
 ================================================== -->
@@ -367,6 +393,11 @@ Portfolio Section
                <div id="projets-wrapper" class="bgrid-thirds s-bgrid-thirds cf">
 
                   <div class="columns projets-item">
+                     <div class="imageinfo">
+                        <div class="imageinfotext">
+                           Projet détaillé
+                        </div>
+                     </div>
                      <div class="item-wrap">
 
                         <a href="#modal-01" title="">
@@ -374,7 +405,6 @@ Portfolio Section
                            <div class="overlay">
                               <div class="projets-item-meta">
                                  <h5>Domotique</h5>
-                                 <p>Raspberry Pi</p>
                               </div>
                            </div>
                            <div class="link-icon"><i class="icon-plus"></i></div>
@@ -384,6 +414,11 @@ Portfolio Section
                   </div> <!-- item end -->
 
                   <div class="columns projets-item">
+                     <div class="imageinfo">
+                        <div class="imageinfotext">
+                           Projet détaillé
+                        </div>
+                     </div>
                      <div class="item-wrap">
 
                         <a href="#modal-02" title="">
@@ -391,7 +426,6 @@ Portfolio Section
                            <div class="overlay">
                               <div class="projets-item-meta">
                                  <h5>Aéromodélisme</h5>
-                                 <p>Associations</p>
                               </div>
                            </div>
                            <div class="link-icon"><i class="icon-plus"></i></div>
@@ -401,6 +435,11 @@ Portfolio Section
                   </div> <!-- item end -->
 
                   <div class="columns projets-item">
+                     <div class="imageinfo">
+                        <div class="imageinfotext">
+                           Projet détaillé
+                        </div>
+                     </div>
                      <div class="item-wrap">
 
                         <a href="#modal-03" title="">
@@ -408,7 +447,6 @@ Portfolio Section
                            <div class="overlay">
                               <div class="projets-item-meta">
                                  <h5>Mécanique automobile</h5>
-                                 <p>BMW E81 120D 2007</p>
                               </div>
                            </div>
                            <div class="link-icon"><i class="icon-plus"></i></div>
@@ -418,6 +456,11 @@ Portfolio Section
                   </div> <!-- item end -->
 
                   <div class="columns projets-item">
+                     <div class="imageinfo">
+                        <div class="imageinfotext">
+                           Projet détaillé
+                        </div>
+                     </div>
                      <div class="item-wrap">
 
                         <a href="#modal-04" title="">
@@ -425,7 +468,6 @@ Portfolio Section
                            <div class="overlay">
                               <div class="projets-item-meta">
                                  <h5>CNC</h5>
-                                 <p>Imprimante + Découpeuse laser</p>
                               </div>
                            </div>
                            <div class="link-icon"><i class="icon-plus"></i></div>
@@ -442,7 +484,6 @@ Portfolio Section
                            <div class="overlay">
                               <div class="projets-item-meta">
                                  <h5>Terrarium</h5>
-                                 <p>Plantes carnivores</p>
                               </div>
                            </div>
                            <div class="link-icon"><i class="icon-plus"></i></div>
@@ -460,7 +501,22 @@ Portfolio Section
                            <div class="overlay">
                               <div class="projets-item-meta">
                                  <h5>Terrarium</h5>
-                                 <p>Escargot</p>
+                              </div>
+                           </div>
+                           <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                     </div>
+                  </div> <!-- item end -->
+
+                  <div class="columns projets-item">
+                     <div class="item-wrap">
+
+                        <a href="#modal-07" title="">
+                           <img alt="" src="images/projets/tourbiere.jpg">
+                           <div class="overlay">
+                              <div class="projets-item-meta">
+                                 <h5>Tourbière</h5>
                               </div>
                            </div>
                            <div class="link-icon"><i class="icon-plus"></i></div>
@@ -497,7 +553,7 @@ Portfolio Section
                   </div>
 
                   <div class="link-box">
-                     <a href="projets.html#domotique" target="_blank">Détails</a>
+                     <a class="blink" href="projets.html#domotique" target="_blank">Détails</a>
                      <a class="popup-modal-dismiss">Fermer</a>
                   </div>
 
@@ -519,7 +575,7 @@ Portfolio Section
                   </div>
 
                   <div class="link-box">
-                     <a href="projets.html#aeromodelisme" target="_blank">Détails</a>
+                     <a class="blink" href="projets.html#aeromodelisme" target="_blank">Détails</a>
                      <a class="popup-modal-dismiss">Fermer</a>
                   </div>
                </div><!-- modal-02 End -->
@@ -568,7 +624,7 @@ Portfolio Section
                   </div>
 
                   <div class="link-box">
-                     <a href="projets.html#cnc" target="_blank">Détails</a>
+                     <a class="blink" href="projets.html#cnc" target="_blank">Détails</a>
                      <a class="popup-modal-dismiss">Fermer</a>
                   </div>
                </div><!-- modal-04 End -->
@@ -612,6 +668,24 @@ Portfolio Section
                      <b>Lumière</b> : L'escargot ne nécessite pas de lumière. Les LEDs sont purement esthétiques et sont contrôlées via une prise domotisée ZigBee.
                   </p>
                   <span class="categories"><i class="fa fa-tag"></i>Animaux</span>
+               </div>
+
+               <div class="link-box">
+                  <a class="popup-modal-dismiss">Fermer</a>
+               </div>
+
+            </div><!-- modal-06 End -->
+
+            <div id="modal-07" class="popup-modal mfp-hide">
+
+               <img class="scale-with-grid" src="images/projets/modals/m-tourbiere.jpg" alt="" />
+
+               <div class="description-box">
+                  <h4>Tourbière</h4>
+                  <p>
+                     Tourbiere
+                  </p>
+                  <span class="categories"><i class="fa fa-tag"></i>Plantes carnivores</span>
                </div>
 
                <div class="link-box">
@@ -712,12 +786,39 @@ Portfolio Section
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
       <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-      
       <script src="js/jquery.flexslider.js"></script>
       <script src="js/waypoints.js"></script>
       <script src="js/jquery.fittext.js"></script>
       <script src="js/magnific-popup.js"></script>
       <script src="js/init.js"></script>
+
+      <script type="text/javascript">
+
+         function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: "fr" }, 'google_translate_element');
+         }
+
+         function callTranslate() {
+            var translate = localStorage.getItem("translate");
+            console.log(translate);
+            var selectField = document.querySelector("#google_translate_element select");
+            if (translate == "false") {
+               selectField.selectedIndex = 5;
+               $(".flag img").attr("src", "images/fr.png");
+               localStorage.setItem("translate", "true")
+            }
+            else {
+               $(".flag img").attr("src", "images/en.png");
+               selectField.selectedIndex = 1;
+               localStorage.setItem("translate", "false")
+            }
+            
+            selectField.dispatchEvent(new Event('change'));
+
+         }
+      </script>
+
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
    </body>
 
