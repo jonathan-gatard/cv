@@ -31,13 +31,11 @@
 
       <!-- Favicons
 ================================================== -->
-      <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-      <link rel="icon" type="image/png" href="images/favicon.png">
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
    </head>
 
    <body>
-      <div id="google_translate_element" style="display:none"></div>
       <!-- Header
 ================================================== -->
       <header id="home">
@@ -48,7 +46,7 @@
             <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
             <ul id="nav" class="nav">
-               <a class="flag" href="javascript:callTranslate();"><img class="flagimg" src="images/en.png"></a>
+               <a class="flag" href="index-en.html"><img class="flagimg" src="images/en.png"></a>
                <li class="current"><a class="smoothscroll" href="#home">Accueil</a></li>
                <li><a class="smoothscroll" href="#about">À propos de moi</a></li>
                <li><a class="smoothscroll" href="#resume">Résumé</a></li>
@@ -206,22 +204,19 @@
                   <div class="twelve columns">
 
                      <h3>Stellantis</h3>
-                     <p class="info">Manager de projets digitaux<span>&bull;</span> <em class="date">2021 - 2023 : Trnava, Slovaquie</em></p>
+                     <p class="info">Manager de projets digitaux<span>&bull;</span>2021 - 2023 : Trnava, Slovaquie</p>
 
                      <p>
-                        Ma mission chez Stellantis consiste à gérer des projets digitaux industriels en tant que manager d'une équipe de 4 personnes.
+                        En tant que manager d'une équipe de 4 personnes chez Stellantis, ma fonction consistait à gérer des projets digitaux industriels.
                         <br>
                         <span class="experiencebull">
                            <span class="skillbull">&bull;</span>
-                           <bold>Projets</bold> : mise en place d'un suivi des consommations électriques,
-                           déploiement de dashboards avec les outils Grafana/InfluxDB 2 et PowerBI,
-                           intégration d'une solution de robot collaboratif (Cobot) pour l'automatisation d'un poste de vissage,
-                           et développement d'applications web pour la collecte de données industrielles.
+                           <bold>Projets</bold> : mise en place d'un suivi des consommations électriques, déploiement de dashboards avec les outils Grafana/InfluxDB 2 et PowerBI, intégration d'une solution de robot collaboratif (Cobot) pour l'automatisation d'un poste de vissage et développement d'applications web pour la collecte de données industrielles.
                         </span>
                         <br>
                         <span class="experiencebull">
                            <span class="skillbull">&bull;</span>
-                           <bold>Compétences développées</bold> : management hiérarchique, gestion de projet, outils informatiques (PowerBI, Node-Red, Grafana)
+                           <bold>Compétences développées</bold> : management hiérarchique, gestion de projet, outils informatiques (PowerBI, PowerQuery, Node-Red, Grafana), programmation (JavaScript, SQL)
                         </span>
                      </p>
 
@@ -234,15 +229,14 @@
                   <div class="twelve columns">
 
                      <h3>LISI Aerospace</h3>
-                     <p class="info">Ingénieur coordinateur logistique<span>&bull;</span> <em class="date">2019 - 2020 : Parthenay, France</em></p>
+                     <p class="info">Ingénieur coordinateur logistique<span>&bull;</span> 2019 - 2020 : Parthenay, France</p>
 
                      <p>
-                        J’ai eu la responsabilité de développer une stratégie permettant d’améliorer la satisfaction du client.
+                        Mon rôle était de développer une stratégie permettant d’améliorer la satisfaction du client.
                         <br>
                         <span class="experiencebull">
                            <span class="skillbull">&bull;</span>
-                           <bold>Projets</bold> : mise en place d'un processus d'impression automatisé d'étiquettes client,
-                           création d'un système de gestion des stocks basé sur les besoins des clients.
+                           <bold>Projets</bold> : mise en place d'un processus d'impression automatisé d'étiquettes client, création d'un système de gestion des stocks basé sur les besoins des clients.
                         </span>
                         <br>
                         <span class="experiencebull">
@@ -260,15 +254,14 @@
                   <div class="twelve columns">
 
                      <h3>LISI Aerospace</h3>
-                     <p class="info">Ingénieur projets logistique en alternance <span>&bull;</span> <em class="date">2016 - 2019 : Parthenay, France</em></p>
+                     <p class="info">Ingénieur projets logistique en alternance <span>&bull;</span>2016 - 2019 : Parthenay, France</p>
 
                      <p>
-                        J’ai géré trois projets d’une durée d’un an chacun, en lien avec la construction et le développement de deux nouvelles usines sur le site de Parthenay.
+                        Mon poste était en lien avec la construction et le développement de deux nouvelles usines sur le site de Parthenay. Trois projets d’une durée d’un an chacun ont été menés.
                         <br>
                         <span class="experiencebull">
                            <span class="skillbull">&bull;</span>
-                           <bold>Projets</bold> : réorganisation de zones logistiques,
-                           implantation d'une nouvelle zone logistique.
+                           <bold>Projets</bold> : réorganisation de zones logistiques, implantation d'une nouvelle zone logistique.
                         </span>
                         <br>
                         <span class="experiencebull">
@@ -791,34 +784,6 @@ Portfolio Section
       <script src="js/jquery.fittext.js"></script>
       <script src="js/magnific-popup.js"></script>
       <script src="js/init.js"></script>
-
-      <script type="text/javascript">
-
-         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: "fr" }, 'google_translate_element');
-         }
-
-         function callTranslate() {
-            var translate = localStorage.getItem("translate");
-            console.log(translate);
-            var selectField = document.querySelector("#google_translate_element select");
-            if (translate == "false") {
-               selectField.selectedIndex = 5;
-               $(".flag img").attr("src", "images/fr.png");
-               localStorage.setItem("translate", "true")
-            }
-            else {
-               $(".flag img").attr("src", "images/en.png");
-               selectField.selectedIndex = 1;
-               localStorage.setItem("translate", "false")
-            }
-            
-            selectField.dispatchEvent(new Event('change'));
-
-         }
-      </script>
-
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
    </body>
 

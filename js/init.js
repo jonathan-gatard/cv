@@ -7,9 +7,6 @@
  jQuery(document).ready(function($) {
 
 
-//language
-   localStorage.setItem("translate", "false");
-
 /*----------------------------------------------------*/
 /* Force scrollTop on reload
 ------------------------------------------------------ */

@@ -25,11 +25,7 @@
 body {
    background: #0f0f0f;
    overflow: overlay;
-   top: 0px !important; 
 }
-.goog-te-banner-frame.skiptranslate {
-   display: none !important;
-   } 
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
