@@ -520,6 +520,14 @@ ul#nav li.current a {
    padding-top: 50px;
    padding-bottom: 50px;
 }
+.description-box p b {
+   font: 14px/24px 'opensans-bold', sans-serif;
+   vertical-align: top;
+}
+.description-box p i {
+   font: 14px/24px 'opensans-italic', sans-serif;
+   vertical-align: top;
+}
 
 .imageinfo img{
    z-index:1;
