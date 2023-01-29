@@ -317,6 +317,16 @@
       max-width: 85%;
    }
 
+   /* Projets Section
+   ----------------------------------------------------------------------- */
+   /* on hover */
+   .projets-item .overlay {
+      /*display: none;*/
+   }
+   
+   .projets-item:hover .link-icon {
+     /* display: none;*/
+   }
 
    /* Citations Section
    ----------------------------------------------------------------------- */
@@ -353,6 +363,8 @@
       text-align: center;
       margin-left: -30px;
    }
+
+
 
 
    /* contact Section
