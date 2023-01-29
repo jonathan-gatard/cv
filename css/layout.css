@@ -25,6 +25,7 @@
 body {
    background: #0f0f0f;
    overflow: overlay;
+   min-width: 330px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -142,15 +143,17 @@ header .scrolldown a:hover {
 /* primary navigation
 --------------------------------------------------------------------- */
 
-#nav .flag img{
+
+.flag img{
    border-radius: 5%;
    height: 24px;
 }
 
-#nav .flag {
-   position: relative;
-   float:left;
-   margin:12px;
+.flag {
+   position: fixed;
+   left:10px;
+   top:10px;
+   z-index: 4;
 }
 
 
@@ -170,7 +173,7 @@ header .scrolldown a:hover {
    text-transform: uppercase;
    letter-spacing: 2.5px;
    margin: 0 auto;
-   z-index: 100;
+   z-index: 3;
    position: fixed;
    left: 0;
    top: 0;
@@ -243,6 +246,7 @@ ul#nav li.current a {
    max-width: none;
 }
 
+
 #about a,
 #about a:visited {
    color: #fff;
@@ -274,7 +278,17 @@ ul#nav li.current a {
    width: 120px;
    height: 120px;
    border-radius: 100%;
+   display: visible;
+   
 }
+#about .profile-pic2 {
+   display: none;
+   position: relative;
+   width: 120px;
+   height: 120px;
+   border-radius: 100%;
+}
+
 
 #about .contact-details {
    width: 41.66667%;

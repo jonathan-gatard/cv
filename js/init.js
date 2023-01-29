@@ -91,15 +91,18 @@ $(window).on('beforeunload', function(){
 		var h = $('header').height();
 		var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
-      var flags = $('.flag');
+      var flag = $('.flag');
 
-	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
-	      flags.fadeOut('fast');
+	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 900 )) {
+	      flag.fadeOut('fast');
 	      nav.fadeOut('fast');
+	   }
+      else if ( (y > h*.20) && (y < h) ) {
+	      flag.fadeOut('fast');
 	   }
       else {
          if (y < h*.20) {
-            flags.fadeIn('fast');
+            flag.fadeIn('fast');
             nav.removeClass('opaque').fadeIn('fast');
          }
          else {
