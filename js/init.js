@@ -105,7 +105,7 @@
          //tout le reste du site
          else {
             nav.addClass('opaque').fadeIn('fast');
-            flag.fadeOut('fast');
+            flag.hide();
          }
       }
 
