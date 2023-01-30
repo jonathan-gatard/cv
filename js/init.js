@@ -6,15 +6,6 @@
 
  jQuery(document).ready(function($) {
 
-
-/*----------------------------------------------------*/
-/* Force scrollTop on reload
------------------------------------------------------- */
-$(window).on('beforeunload', function(){
-   $(window).scrollTop(0);
-   console.log("scrollTopDisabled")
-   });
-
 /*----------------------------------------------------*/
 /* FitText Settings
 ------------------------------------------------------ */
@@ -85,32 +76,40 @@ $(window).on('beforeunload', function(){
 /*----------------------------------------------------*/
 /*	Fade In/Out Primary Navigation
 ------------------------------------------------------*/
-
-   $(window).on('scroll', function() {
-
+   $(document).ready('DOMContentLoaded', manage_flag());
+   $(window).on('scroll', manage_flag);
+   
+   function manage_flag()
+   {
+      
 		var h = $('header').height();
 		var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
       var flag = $('.flag');
 
-	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 900 )) {
+      //Grand + sur mon nom
+	   if ( (y > h*0.18) && (y < h) && ($(window).outerWidth() > 900 )) {
 	      flag.fadeOut('fast');
 	      nav.fadeOut('fast');
 	   }
-      else if ( (y > h*.20) && (y < h) ) {
+      //Petit + sur mon nom
+      else if ( (y > h*0.18) && (y < h) ) {
 	      flag.fadeOut('fast');
 	   }
       else {
-         if (y < h*.20) {
+         //en haut
+         if (y < h*0.18) {
             flag.fadeIn('fast');
             nav.removeClass('opaque').fadeIn('fast');
          }
+         //tout le reste du site
          else {
             nav.addClass('opaque').fadeIn('fast');
+            flag.fadeOut('fast');
          }
       }
 
-	});
+	}
 
 
 /*----------------------------------------------------*/

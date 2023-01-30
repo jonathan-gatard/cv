@@ -142,7 +142,7 @@ body {
 
 .education,
 .work,
-.langues,
+.langues
 {
    margin-bottom: 48px;
    border-bottom: 1px solid #E8E8E8;
@@ -305,7 +305,7 @@ body {
    vertical-align: top;
 }
 
-.imageinfo img{
+.infobulle img{
    z-index:1;
    position:absolute;
    cursor: help;
@@ -314,7 +314,8 @@ body {
    top:4px;
  }
  
- .imageinfotext {
+
+.infotext {
    visibility: hidden;
    width: 220px;
    font-size:12px;
@@ -334,7 +335,7 @@ body {
    100% {height: 40px; top: -41px; opacity: 1;}
  }
 
- .imageinfo:hover .imageinfotext {
+ .infobulle:hover .infotext {
    visibility: visible;
    animation: showinfo 0.4s forwards;
  }
@@ -383,7 +384,7 @@ body {
    -o-transition: opacity 0.3s ease-in-out;
    transition: opacity 0.3s ease-in-out;
 
-   background: url(../images/overlay-bg.png) repeat;
+   background: url(../images/bg/overlay-bg.png) repeat;
 }
 
 .projets-item .item-wrap .link-icon {
@@ -478,7 +479,6 @@ body {
    font: 14px/24px 'opensans-regular', sans-serif;
    color: #888888;
    margin-bottom: 12px;
-   text-align: justify;
 }
 
 .popup-modal .description-box .categories {
@@ -545,7 +545,7 @@ body {
 /* ------------------------------------------------------------------ */
 
 #citations {
-   background: #1F1F1F url(../images/citations-bg.jpg) no-repeat center center;
+   background: #1F1F1F url(../images/bg/citations-bg.jpg) no-repeat center center;
    background-size: cover !important;
    -webkit-background-size: cover !important;
    background-attachment: fixed;

@@ -12,7 +12,7 @@
     height: 800px;	
     min-height: 500px;	
     width: 100%;	
-    background: #161415 url(../images/header-bg.jpg) no-repeat top center;	
+    background: #161415 url(../images/bg/header-bg.jpg) no-repeat top center;	
     background-size: cover !important;	
     -webkit-background-size: cover !important;	
     text-align: center;	
@@ -107,6 +107,7 @@
 }
 
 .flag {
+   display: none;
    position: fixed;
    float:none;
    left:10px;
@@ -177,7 +178,23 @@
 ul#nav li.current a {
    color: #F06000;
 }
- 
+
+
+/* ------------------------------------------------------------------ */
+/* Body
+/* ------------------------------------------------------------------ */
+
+table td, table th {
+   padding-right: 20px;
+}
+
+table th:last-child , table td:last-child {
+   padding-right: 0px;
+}
+
+table td {
+   vertical-align: topF ;
+}
 
 /* ------------------------------------------------------------------ */
 /* i. Footer

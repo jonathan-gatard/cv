@@ -135,7 +135,7 @@ ul {
    -o-transition: opacity 0.3s ease-in-out;
    transition: opacity 0.3s ease-in-out;
 
-   background: url(../images/overlay-bg.png) repeat;
+   background: url(../images/bg/overlay-bg.png) repeat;
 }
 
 .projets-item .item-wrap .link-icon {
@@ -191,42 +191,7 @@ ul {
    filter: alpha(opacity=100);
 }
 
-/* ------------------------------------------------------------------ */
-/* Domotique
-/* ------------------------------------------------------------------ */
 
-.smallimg
-{
-   height:50%;
-   width: 50%;
-   margin-right: 0;
-}
-.smallimg .item-wrap
-{
-   margin:10px;
-}
-
-.mediumimg
-{
-   height: 75%;
-   width: 75%;
-   margin-right: 0;
-}
-.mediumimg .item-wrap
-{
-   margin:10px;
-}
-
-.bigimg
-{
-   height: 90%;
-   width: 90%;
-   margin-right: 0;
-}
-.bigimg .item-wrap
-{
-   margin:10px;
-}
 /* ------------------------------------------------------------------ */
 /* i. Footer
 /* ------------------------------------------------------------------ */
