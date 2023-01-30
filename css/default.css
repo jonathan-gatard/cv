@@ -246,7 +246,6 @@ body {
    line-height: 25px;
    color: #838C95;
    margin:0;
-
    -webkit-font-smoothing: antialiased;
    /* Fix for webkit rendering */
    -webkit-text-size-adjust: 100%;
