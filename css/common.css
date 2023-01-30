@@ -194,9 +194,9 @@ ul#nav li.current a {
 }
 
 .init {
-   position: relative;	
-   min-height: 500px;	
-   width: 100%;	
+   position: absolute;		
+   height: 100%;		
+   width:100%;
    background: #161415 url(../images/bg/header-bg.jpg) no-repeat top center;	
    background-size: cover !important;	
    -webkit-background-size: cover !important;	

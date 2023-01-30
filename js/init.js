@@ -66,11 +66,6 @@
 /*	Make sure that #header-background-image height is
 /* equal to the browser height.
 ------------------------------------------------------ */
-   $('.init').css({ 'height': $(window).height() });
-   $(window).on('resize', function() {
-
-      $('.init').css({ 'height': $(window).height() });
-   });
 
    $('header').css({ 'height': $(window).height() });
    $(window).on('resize', function() {
