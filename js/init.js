@@ -6,7 +6,7 @@
 
  jQuery(document).ready(function($) {
    
-  $('.init').fadeOut(500);
+  $('.init').fadeOut(1000);
   $('.content').fadeIn(1000);
 /*----------------------------------------------------*/
 /* FitText Settings
@@ -66,6 +66,11 @@
 /*	Make sure that #header-background-image height is
 /* equal to the browser height.
 ------------------------------------------------------ */
+   $('.init').css({ 'height': $(window).height() });
+   $(window).on('resize', function() {
+
+      $('.init').css({ 'height': $(window).height() });
+   });
 
    $('header').css({ 'height': $(window).height() });
    $(window).on('resize', function() {
