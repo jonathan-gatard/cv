@@ -1,5 +1,6 @@
 /* less than 900px
 --------------------------------------------------------------------- */
+
 @media only screen and (max-width: 900px) {
    .bars_right_skill {
       margin-top: 40px;
@@ -12,7 +13,7 @@
    header .banner {
       padding-bottom: 12px;
    }
-
+   
    header .banner-text h1 {
       font: 78px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;
@@ -313,21 +314,9 @@
       margin-bottom: 40px;
    }
 
-   .popup-modal {
-      max-width: 85%;
-   }
-
    /* Projets Section
    ----------------------------------------------------------------------- */
-   /* on hover */
-   .projets-item .overlay {
-      /*display: none;*/
-   }
-   
-   .projets-item:hover .link-icon {
-     /* display: none;*/
-   }
-
+  
    /* Citations Section
    ----------------------------------------------------------------------- */
    #citations .text-container {

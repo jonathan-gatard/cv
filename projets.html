@@ -21,7 +21,6 @@
         <link rel="stylesheet" href="css/projets.css">
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Script
             ================================================== -->
         <script src="js/modernizr.js"></script>
@@ -48,8 +47,9 @@
                     <ul id="nav" class="nav">
                         <li><a href="index.html">CV</a></li>
                         <li><a class="smoothscroll" href="#domotique">Domotique</a></li>
+                        <li><a class="smoothscroll" href="#graz">Formation</a></li>
                         <li><a class="smoothscroll" href="#mecanique">Mécanique</a></li>
-                        <li><a class="smoothscroll" href="#cnc">Imprimante 3D</a></li>
+                        <li><a class="smoothscroll" href="#imprimante">Imprimante 3D</a></li>
                         <li><a class="smoothscroll" href="#aeromodelisme">Aéromodélisme</a></li>
                     </ul>
                     <!-- end #nav -->
@@ -98,9 +98,9 @@
                                     <tr>
                                         <td>
                                             <ul>
-                                                <li>Coût avantageux</li>
                                                 <li>Projet enrichissant en connaissances</li>
                                                 <li>Indépendance vis-à-vis des systèmes propriétaires</li>
+                                                <li>Coût avantageux</li>
                                                 <li>Mises à jour régulières</li>
                                                 <li>Interface utilisateur intuitive</li>
                                                 <li>Fiabilité élevée</li>
@@ -429,6 +429,128 @@
                 </div>
                 <!-- End domotique -->
             </section>
+            <section id="graz" class="projets">
+                <!-- graz ----------------------------------------------- -->
+                <div class="projet_block row">
+                    <div class="twelve columns main-col">
+                        <h2>Formation : Informatique & Réseaux</h2>
+                        <div class="row item">
+                            <p class="info">Université technique de Graz<span>&bull;</span> <em class="date">09/2022 - 01/2023</em></p>
+                            <b>Objectifs</b> :
+                            <ul>
+                                <li>Sécurité informatique</li>
+                                <li>Réalité augmentée</li>
+                                <li>Intelligence artificielle</li>
+                                <li>Réseau</li>
+                            </ul>
+                        </div>
+                        <div class="row item">
+                            <span class="titre">Sécurité informatique</span>
+                            <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :
+                                <li>"Cowsay" = Format string</li>
+                                <li>"Echo" : Buffer overflow</li>
+                                <li>"Fast_encryption" : TOCTOU</li>
+                                <li>"Matrix_multiplier" : Integer overflow</li>
+                                <li>"Router" : Insecure Randomness + UID/GID</li>
+                                <li>"Tugonline" : Use After Free</li>
+                                <li>"You_shall_not_rop" : Buffer stack overflow (ROP)</li>
+                                </ul>
+                                <br>
+                            <p>Exemple détaillé pour le programme "Cowsay" :</p>
+                        </div>
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/main.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Fonction principale</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/old_function.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Fonction à appeler</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                        La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée et l'utilisateur peut entrer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
+                        L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" en appelant l'adresse de la fonction.
+                        <ol>
+                            <li>Récupérer l'adresse de la fonction old_cowsay_please_dont_use</li>
+                            <li>Trouver où est écrit buffer dans la pile</li>
+                            <li>Récupérer l'adresse de la fonction old_cowsay_please_dont_use</li>
+
+                        </ol>
+                    </p>
+                        <br>
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>0000</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row item">
+                            <span class="titre">Réalité augmentée</span>
+                            <br>
+                            Projet 1 :<br>
+                            Projet 2 :<br>
+                            Projet 3 :<br>
+
+                        </div>
+                        <br>
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Tableau excel des opérations effectuées</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/.png">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Scan de chacune des factures de la voiture</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- item end -->
+                </div>
+                <!-- End graz -->
+            </section>
             <section id="mecanique" class="projets">
                 <!-- mecanique ----------------------------------------------- -->
                 <div class="projet_block row">
@@ -653,11 +775,11 @@
                 </div>
                 <!-- End mecanique -->
             </section>
-            <section id="cnc" class="projets">
-                <!-- cnc ----------------------------------------------- -->
+            <section id="imprimante" class="projets">
+                <!-- imprimante ----------------------------------------------- -->
                 <div class="projet_block row">
                     <div class="twelve columns main-col">
-                        <h2>Machine CNC</h2>
+                        <h2>Imprimante 3D</h2>
                         <div class="row item">
                             <span class="titre"></span>
                         </div>
@@ -811,16 +933,16 @@
                     </div>
                     <!-- item end -->
                 </div>
-                <!-- End cnc -->
+                <!-- End  -->
             </section>
             <!-- Resume Section End-->
             <section id="aeromodelisme" class="projets">
-                <!-- cnc ----------------------------------------------- -->
+                <!-- aeromodelisme ----------------------------------------------- -->
                 <div class="projet_block row">
                     <div class="twelve columns main-col">
                         <h2>Aéromodélisme</h2>
                         <p>
-                            J'ai eu l'occasion de participer activement à l'association ASPAN (Association de Sauvegarde du Patrimoine Aéronautique Niortais), où j'ai contribué à la restauration de différents types d'avions, notamment les Nord 3202 et Nord 1101.
+                            J'ai eu l'occasion de participer activement à l'association ASPAN (Association de Sauvegarde du Patrimoine Aéronautique Niortais), où j'ai contribué à la restauration de différents types d'avions, notamment un Nord 3202 et un Nord 1101.
                             Cette expérience m'a également permis de développer des contacts qui m'ont conduit à adhérer à l'association AMCN (Aero Model Club Niortais).
                             Cette dernière me permet de poursuivre mes intérêts en matière de mécanique, d'informatique et d'électronique.
                         </p>
@@ -946,7 +1068,7 @@
                     </div>
                     <!-- item end -->
                 </div>
-                <!-- End cnc -->
+                <!-- End aeromodelisme -->
             </section>
             <!-- Resume Section End-->
             <!-- footer
@@ -973,7 +1095,7 @@
         </div>
         <!-- Java Script
             ================================================== -->
-      <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
         <script src="js/jquery.flexslider.js"></script>

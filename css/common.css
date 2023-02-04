@@ -201,16 +201,32 @@ ul#nav li.current a {
 
 table td, table th {
    padding-right: 20px;
+   border-left: gray 1px solid;
+}
+
+table th {
+   border-bottom: gray 1px solid;
 }
 
 table th:last-child , table td:last-child {
    padding-right: 0px;
 }
 
-table td {
-   vertical-align: topF ;
+table th:first-child , table td:first-child {
+   border-left: none;
 }
 
+table td {
+   vertical-align: top ;
+}
+
+table li {
+   margin-bottom: 15px;
+}
+
+table li:last-child {
+   margin-bottom: 0;
+}
 /* ------------------------------------------------------------------ */
 /* i. Footer
 /* ------------------------------------------------------------------ */

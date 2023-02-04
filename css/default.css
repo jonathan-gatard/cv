@@ -239,7 +239,7 @@ html {
 }
 
 body {
-   background: #fff;
+   background: #fbfbfb;
    font-family: 'opensans-regular', sans-serif;
    font-weight: normal;
    font-size: 15px;
@@ -865,7 +865,7 @@ input[type="checkbox"] {
 --------------------------------------------------------------- */
 .row {
    width: 96%;
-   max-width: 1200px;
+   max-width: 1400px;
    margin: 0 auto;
 }
 

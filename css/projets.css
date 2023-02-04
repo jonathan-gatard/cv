@@ -1,11 +1,11 @@
-/* ------------------------------------------------------------------ */	
+/* ------------------------------------------------------------------ */
 /* a. General Styles	
-/* ------------------------------------------------------------------ */	
-body {	
-   background: #0f0f0f;	
-   overflow: overlay;	
-   min-width: 480px;	
-}	
+/* ------------------------------------------------------------------ */
+body {
+   background: #0f0f0f;
+   overflow: overlay;
+   min-width: 480px;
+}
 
 li {
    margin-bottom: 5px;
@@ -25,14 +25,13 @@ ul {
    max-width: 1400px;
 }
 
-
 .projets ul {
    list-style-type: circle;
    margin-left: 25px;
 }
 
 .projets {
-   background: #fff;
+   background: #fafafa;
    padding-top: 40px;
    padding-bottom: 40px;
    overflow: hidden;
@@ -40,6 +39,7 @@ ul {
 
 .projets p {
    text-align: justify;
+   margin-bottom: 15px;
 }
 
 .projets .titre {
@@ -116,6 +116,9 @@ ul {
    background: #fff;
    overflow: hidden;
    position: relative;
+   margin: 10px;
+   border-radius: 10px;
+   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.17), 0 10px 20px -2px rgba(0, 0, 0, 0.14);
 }
 
 /* overlay */

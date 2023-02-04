@@ -22,7 +22,6 @@
       <link rel="stylesheet" href="css/common.css">
       <link rel="stylesheet" href="css/skills.css">
       <link rel="stylesheet" href="css/responsive.css">
-      <link rel="stylesheet" href="css/magnific-popup.css">
       <!-- Script
             ================================================== -->
       <script src="js/modernizr.js"></script>
@@ -146,7 +145,8 @@
                         <p class="info">Computer Science, electronics, mechanics<span>&bull;</span>depuis 2012</p>
                         <p>
                            Passionate about computer science, electronics, and mechanics, I am an experienced self-taught individual in Linux, Docker, networking, programming, and computer security.
-                           My expertise in computer science combined with my knowledge in electronics and mechanics allows me to design innovative and high-performing projects."
+                           My expertise in computer science combined with my knowledge in electronics and mechanics allows me to design innovative and high-performing projects.<br>
+                           I also completed a 6-month "Computer Engineering and Networks" training program from September 2022 to February 2023.
                         </p>
                      </div>
                   </div>
@@ -320,287 +320,205 @@
          <!--
             Portfolio Section
             ================================================== -->
-         <section id="projets">
-            <div class="row">
-               <div class="two columns header-col">
-                  <h1><span>Projects</span></h1>
-               </div>
-               <div class="ten columns collapsed">
-                  <!-- portfolio-wrapper -->
-                  <div id="projets-wrapper" class="bgrid-thirds s-bgrid-thirds cf">
-                     <div class="columns projets-item">
-                        <div class="infobulle">
-                           <img src="images/icons/info.png">
-                           <div class="infotext">
-                              Detailed project,<br>click on it to learn more...
+
+
+
+
+
+
+
+
+
+
+
+            <section id="projets">
+               <div class="row">
+                  <div class="two columns header-col">
+                     <h1><span>Projects</span></h1>
+                  </div>
+                  <div class="ten columns collapsed">
+                     <!-- portfolio-wrapper -->
+                     <div id="projets-wrapper" class="bgrid-halves s-bgrid-halves cf">
+                        <div class="columns">
+                           <div class="spacer">
+                              <div class="card card-detail">
+                                 <img class="card-img" src="images/projects/projects_list/domotique.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">Home automation (Raspberry Pi + Docker)</h5>
+                                    <div class="card-text">
+                                       <p>A project of more than 100 hours of work.</p>
+                                       <ol>
+                                          <li>Installation of a ZigBee network sniffer on Raspberry Pi 4</li>
+                                          <li>Conversion of raw data into MQTT messages</li>
+                                          <li>Integration into Home Assistant</li>
+                                          <li>Automation management with Node-Red</li>
+                                          <li>Data export to InfluxDB</li>
+                                          <li>Creation of Grafana dashboards</li>
+                                       </ol>
+                                       <p></p>All managed via Docker on Debian.</p>
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Home automation, Linux, Docker, Raspberry Pi</span>
+                                    <a href="projets.html#domotique" class="card-btn">Details</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="spacer">
+                              <div class="card card-detail">
+                                 <img class="card-img" src="images/projects/projects_list/meca_auto.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">Automotive mechanics</h5>
+                                    <div class="card-text">
+                                       <p>Operations performed on a 2007 BMW E81 120D :</p>
+                                       <ul>
+                                          <li>Transmission shaft bearing replacement</li>
+                                          <li>Turbocompressor replacement</li>
+                                          <li>Injector cleaning</li>
+                                          <li>Fuel/air/oil filter replacement</li>
+                                          <li>Fluid changes (transmission, differential, engine)</li>
+                                          <li>Reprogramming with ISTA</li>
+                                       </ul>
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Mechanic</span>
+                                    <a href="projets.html#mecanique" class="card-btn">Details</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="spacer">
+                              <div class="card">
+                                 <img class="card-img" src="images/projects/projects_list/terrarium.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">Carnivorous plants terrarium</h5>
+                                    <div class="card-text">
+                                       <p>
+                                          The terrarium contains: <i>Cephalotus follicularis, Heliamphora ciliata, Heliamphora heterodoxa x minor, Heliamphora nutans, Heliamphora ionasii</i>.
+                                          <br>
+                                          To keep these species healthy, I must:
+                                       </p>
+                                       <ul>
+                                          <li>Respect the <b>temperature</b> difference between day and night of 10°C</li>
+                                          <li>Maintain a <b>humid substrate</b> and air humidity of 80%</li>
+                                          <li>Properly light for <b>photosynthesis</b>.</li>
+                                       </ul>
+                                       <p>
+                                          The left and right LEDs are controlled via a ZigBee home automation plug<br>
+                                          The LED panel is controlled via an ESP32 with infrared LED connected on the GPIO simulating a remote control. I can thus choose the color and intensity.
+                                       </p>
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Carnivorous plants, Terrarium</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="spacer">
+                              <div class="card">
+                                 <img class="card-img" src="images/projects/projects_list/tourbiere.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">Bog</h5>
+                                    <div class="card-text">
+                                       The goal is to create an optimal environment for carnivorous plants by reproducing the conditions of their natural habitat:<br>
+                                       - <b>acidic pH</b><br>
+                                       - <b>high humidity</b><br>
+                                       - <b>lack of nutrients in the soil</b><br>
+                                       To do this, I used a recycled bathtub, which I buried in my garden.
+                                          I then added a layer of pumice at the bottom, a geotextile fabric, and filled the bathtub with a volumetric mixture of:<br>
+                                          - 60% blonde peat <br>
+                                          - 20% perlite<br>
+                                          - 20% river sand<br>
+                                          Finally, I planted species adapted to these conditions, such as <b>Dionaea</b>, <b>Sarracenia</b> and <b>Drosera</b>.
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Plantes carnivores</span>
+                                 </div>
+                              </div>
+                           </div>
+   
+                        </div>
+                        <div class="columns">
+                           <div class="spacer">
+                              <div class="card card-detail">
+                                 <img class="card-img" src="images/projects/projects_list/aeromodelisme.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">Aeromodelling</h5>
+                                    <div class="card-text">
+                                       <ul>
+                                          <li>Member of AMCN (Aero Model Club Niortais)</li>
+                                          <li>Member of ASPAN (Association for the Preservation of Niortais Aeronautical Heritage)</li>
+                                          <li>Construction of radio-controlled wooden thermal planes</li>
+                                          <li>Programming radio-control firmware</li>
+                                       </ul>
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Aeromodelling, Planes</span>
+                                 </div>
+                                 <a href="projets.html#aeromodelisme" class="card-btn">Details</a>
+                              </div>
+                           </div>
+                           <div class="spacer">
+                              <div class="card card-detail">
+                                 <img class="card-img" src="images/projects/projects_list/imprimante.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">3D Printer + Laser Cutter</h5>
+                                    <div class="card-text">
+                                       <ul>
+                                          <li>Building a 3D printer + improvements</li>
+                                          <li>Conversion into a laser cutter</li>
+                                          <li>Improvements (trapezoidal screws, bowden extruder, 32-bit card, SSR relay, etc...)</li>
+                                       </ul>
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Imprimante 3D, Découpeuse Laser</span>
+                                    <a href="projets.html#imprimante" class="card-btn">Details</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="spacer">
+                              <div class="card card-detail">
+                                 <img class="card-img" src="images/projects/projects_list/terrarium2.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title"> AJOUTER DERNIER PROJET ICI</h5>
+                                    <div class="card-text">
+                                       PROJETTTTTTTTTTT<br>
+                                       PROJETTTTTTTTTTT
+                                       <b>Terrarium fabriqué</b> : vitres de recyclage, liège isolant, contreplaqué, charnières imprimées en 3D...<br>
+                                       <b>Régulation</b> : Thermostat DIY avec plaques chauffantes + système de ventilation (gestion de température / humidité)<br>
+                                       <b>Lumière</b> : L'escargot ne nécessite pas de lumière. Les LEDs sont purement esthétiques et sont contrôlées via une prise domotisée ZigBee.
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Escargot, Animaux, Terrarium</span>
+                                    <a href="projets.html#??????????" class="card-btn">Details</a>
+                                 </div>
+                              </div>
+                           </div>            <h4></h4>
+                           <p>
+                              
+                              <br>
+                              <br>
+                              
+                           </p>
+                           <span class="categories"><i class="fa fa-tag"></i></span>
+                           <div class="spacer">
+                              <div class="card">
+                                 <img class="card-img" src="images/projects/projects_list/terrarium2.jpg" alt="" />
+                                 <div class="card-body">
+                                    <h5 class="card-title">Snail terrarium</h5>
+                                    <div class="card-text">
+                                       <p>
+                                          The terrarium contains Archachatina marginata ovum snails which is the <b>largest snail species in the world.</b>
+                                       </p>
+                                       <ul>
+                                          <li><b>Terrarium made</b> : recycled glass, insulating cork, plywood, 3D printed hinges...</li>
+                                          <li><b>Regulation</b> : DIY thermostat with heating plates + ventilation system (temperature/humidity management)</li>
+                                          <li><b>Light</b> : The snail does not require light. The LEDs are purely aesthetic and are controlled via a ZigBee home automation outlet</li>
+                                       </ul>
+                                    </div>
+                                    <span class="categories"><span class="fa fa-tag"></span>Snails, Animals, Terrarium</span>
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                        <div class="item-wrap">
-                           <a href="#modal-01" title="">
-                              <img alt="" src="images/projects/projects_list/domotique.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>Home automation</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
                      </div>
-                     <!-- item end -->
-                     <div class="columns projets-item">
-                        <div class="infobulle">
-                           <img src="images/icons/info.png">
-                           <div class="infotext">
-                              Detailed project,<br>click on it to learn more...
-                           </div>
-                        </div>
-                        <div class="item-wrap">
-                           <a href="#modal-02" title="">
-                              <img alt="" src="images/projects/projects_list/aeromodelisme.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>Aeromodelling</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
-                     </div>
-                     <!-- item end -->
-                     <div class="columns projets-item">
-                        <div class="infobulle">
-                           <img src="images/icons/info.png">
-                           <div class="infotext">
-                              Detailed project,<br>click on it to learn more...
-                           </div>
-                        </div>
-                        <div class="item-wrap">
-                           <a href="#modal-03" title="">
-                              <img alt="" src="images/projects/projects_list/meca_auto.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>Automotive mechanic</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
-                     </div>
-                     <!-- item end -->
-                     <div class="columns projets-item">
-                        <div class="infobulle">
-                           <img src="images/icons/info.png">
-                           <div class="infotext">
-                              Projet détaillé, cliquez dessus pour en savoir plus...
-                           </div>
-                        </div>
-                        <div class="item-wrap">
-                           <a href="#modal-04" title="">
-                              <img alt="" src="images/projects/projects_list/cnc.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>3D printer</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
-                     </div>
-                     <!-- item end -->
-                     <div class="columns projets-item">
-                        <div class="item-wrap">
-                           <a href="#modal-05" title="">
-                              <img alt="" src="images/projects/projects_list/terrarium.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>Terrarium</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
-                     </div>
-                     <!-- item end -->
-                     <div class="columns projets-item">
-                        <div class="item-wrap">
-                           <a href="#modal-06" title="">
-                              <img alt="" src="images/projects/projects_list/terrarium2.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>Terrarium</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
-                     </div>
-                     <!-- item end -->
-                     <div class="columns projets-item">
-                        <div class="item-wrap">
-                           <a href="#modal-07" title="">
-                              <img alt="" src="images/projects/projects_list/tourbiere.jpg">
-                              <div class="overlay">
-                                 <div class="projets-item-meta">
-                                    <h5>Bog</h5>
-                                 </div>
-                              </div>
-                              <div class="link-icon"><i class="icon-plus"></i></div>
-                           </a>
-                        </div>
-                     </div>
-                     <!-- item end -->
+   
                   </div>
                   <!-- projets-wrapper end -->
                </div>
-               <!-- twelve columns end -->
-               <!-- Modal Popup
-                     --------------------------------------------------------------- -->
-               <a href="projets-en.html#domotique">
-                  <div id="modal-01" class="popup-modal mfp-hide" data-bs-keyboard="false" data-bs-backdrop="static">
-                     <img class="scale-with-grid" src="images/projects/projects_list/modals/m-domotique.jpg" alt="" />
-                     <div class="description-box">
-                        <h4>ZigBee home automation with Raspberry Pi + Docker</h4>
-                        <p>
-                           A project with over 100 hours of work.<br>
-                           1 - Installation of a ZigBee network sniffer on Raspberry Pi 4<br>
-                           2 - Conversion of raw data into MQTT messages<br>
-                           3 - Integration into Home Assistant<br>
-                           4 - Automation management with Node-Red<br>
-                           5 - Data export to InfluxDB<br>
-                           6 - Creation of Grafana dashboards<br>
-                           All managed via Docker on Debian.
-                        </p>
-                        <span class="categories"><i class="fa fa-tag"></i>Domotique</span>
-                     </div>
-                     <div class="link-box">
-                        <a class="blink" href="projets-en.html#domotique">Details</a>
-                        <a class="popup-modal-dismiss">Close</a>
-                     </div>
-                  </div><!-- modal-01 End -->
-               </a>
-               <a href="projets-en.html#aeromodelisme">
-                  <div id="modal-02" class="popup-modal mfp-hide">
-                     <img class="scale-with-grid" src="images/projects/projects_list/modals/m-aeromodelisme.jpg" alt="" />
-                     <div class="description-box">
-                        <h4>Aeromodelling</h4>
-                        <p>
-                           - Member of AMCN (Aero Model Club Niortais)<br>
-                           - Member of ASPAN (Association for the Preservation of Niortais Aeronautical Heritage)<br>
-                           - Construction of radio-controlled wooden thermal planes<br>
-                           - Programming radio-control firmware
-                        </p>
-                        <span class="categories"><i class="fa fa-tag"></i>Aeromodelling, Planes</span>
-                     </div>
-                     <div class="link-box">
-                        <a class="blink" href="projets-en.html#aeromodelisme">Details</a>
-                        <a class="popup-modal-dismiss">Close</a>
-                     </div>
-                  </div><!-- modal-02 End -->
-               </a>
-               <a href="projets-en.html#mecanique">
-                  <div id="modal-03" class="popup-modal mfp-hide">
-                     <img class="scale-with-grid" src="images/projects/projects_list/modals/m-meca_auto.jpg" alt="" />
-                     <div class="description-box">
-                        <h4>Automotive mechanics</h4>
-                        <p>
-                           Operations performed on a 2007 BMW E81 120D<br>
-                           - Transmission shaft bearing replacement<br>
-                           - Turbo replacement<br>
-                           - Injector cleaning<br>
-                           - Fuel/air/oil filter replacement<br>
-                           - Fluid changes (transmission, differential, engine)<br>
-                           - Reprogramming with ISTA<br>
-                           - ...
-                           <br>
-                        </p>
-                        <span class="categories"><i class="fa fa-tag"></i>Mechanic</span>
-                     </div>
-                     <div class="link-box">
-                        <a href="projets-en.html#mecanique">Details</a>
-                        <a class="popup-modal-dismiss">Close</a>
-                     </div>
-                  </div><!-- modal-03 End -->
-               </a>
-               <a href="projets-en.html#cnc">
-                  <div id="modal-04" class="popup-modal mfp-hide">
-                     <img class="scale-with-grid" src="images/projects/projects_list/modals/m-cnc.jpg" alt="" />
-                     <div class="description-box">
-                        <h4>3D Printer + Laser Cutter</h4>
-                        <p>
-                           - Building a 3D printer + improvements<br>
-                           - Conversion into a laser cutter
-                        </p>
-                        <span class="categories"><i class="fa fa-tag"></i>3D printer, laser</span>
-                     </div>
-                     <div class="link-box">
-                        <a class="blink" href="projets-en.html#cnc">Details</a>
-                        <a class="popup-modal-dismiss">Close</a>
-                     </div>
-                  </div><!-- modal-04 End -->
-               </a>
-               <div id="modal-05" class="popup-modal mfp-hide">
-                  <img class="scale-with-grid" src="images/projects/projects_list/modals/m-terrarium.jpg" alt="" />
-                  <div class="description-box">
-                     <h4>Carnivorous Plant Terrarium</h4>
-                     <p>
-                        The terrarium contains: <i>Cephalotus follicularis, Heliamphora ciliata, Heliamphora heterodoxa x minor, Heliamphora nutans, Heliamphora ionasii</i>.<br>
-                        To keep these species healthy, I must:<br>
-                        - Respect the <b>temperature</b> difference between day and night of 10°C min.<br>
-                        - Maintain a <b>humid substrate</b> and air humidity of 80% min.<br>
-                        - Properly light for <b>photosynthesis</b>.<br>
-                        The left and right LEDs are controlled via a ZigBee home automation plug<br>
-                        The LED panel is controlled via an ESP32 with infrared LED connected on the GPIO simulating a remote control. I can thus choose the color and intensity.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Carnivorous plants, Terrarium</span>
-                  </div>
-                  <div class="link-box">
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-               </div>
-               <!-- modal-05 End -->
-               <div id="modal-06" class="popup-modal mfp-hide">
-                  <img class="scale-with-grid" src="images/projects/projects_list/modals/m-terrarium2.jpg" alt="" />
-                  <div class="description-box">
-                     <h4>Snail terrarium</h4>
-                     <p>
-                        The terrarium contains Archachatina marginata ovum snails<br>
-                        This is the <b>largest snail species in the world.</b><br>
-                        <b>Terrarium made</b> : recycled glass, insulating cork, plywood, 3D printed hinges...<br>
-                        <b>Regulation</b> : DIY thermostat with heating plates + ventilation system (temperature/humidity management)<br>
-                        <b>Light</b> : The snail does not require light. The LEDs are purely aesthetic and are controlled via a ZigBee home automation outlet.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Snails, Animals, Terrarium</span>
-                  </div>
-                  <div class="link-box">
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-               </div>
-               <!-- modal-06 End -->
-               <div id="modal-07" class="popup-modal mfp-hide">
-                  <img class="scale-with-grid" src="images/projects/projects_list/modals/m-tourbiere.jpg" alt="" />
-                  <div class="description-box">
-                     <h4>Bog</h4>
-                     <p>
-                        The goal is to create an optimal environment for carnivorous plants by reproducing the conditions of their natural habitat:<br>
-                        - <b>acidic pH</b><br>
-                        - <b>high humidity</b><br>
-                        - <b>lack of nutrients in the soil</b><br>
-                        To do this, I used a recycled bathtub, which I buried in my garden.
-                        I then added a layer of pumice at the bottom, a geotextile fabric, and filled the bathtub with a volumetric mixture of:<br>
-                        - 60% blonde peat <br>
-                        - 20% perlite<br>
-                        - 20% river sand<br>
-                        Finally, I planted species adapted to these conditions, such as <b>Dionaea</b>, <b>Sarracenia</b> and <b>Drosera</b>.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Carnivorous plants, Terrarium</span>
-                  </div>
-                  <div class="link-box">
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-               </div>
-               <!-- modal-06 End -->
-            </div>
+
+         </div>
+
             <!-- row End -->
          </section>
          <!-- projets Section End-->
