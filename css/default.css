@@ -251,6 +251,10 @@ body {
    -webkit-text-size-adjust: 100%;
 }
 
+content {
+   width:100%;
+}
+
 /*  2. Typography
        Vertical rhythm with leading derived from 6
 --------------------------------------------------------------------- */
@@ -1174,18 +1178,11 @@ properly.
       clear: left;
    }
 
-}
-
-/* mobile wide/smaller tablets
---------------------------------------------------------------- */
-@media only screen and (max-width: 900px) {
-
    .row {
       width: 600px;
       margin: 0 auto;
       padding: 0;
    }
-
    .column,
    .columns {
       width: auto !important;
@@ -1207,51 +1204,6 @@ properly.
 
    [class*="bgrid"] [class*="column"]+[class*="column"]:last-child {
       float: none;
-   }
-
-   /* Offsets */
-   .row .offset-1 {
-      margin-left: 0%;
-   }
-
-   .row .offset-2 {
-      margin-left: 0%;
-   }
-
-   .row .offset-3 {
-      margin-left: 0%;
-   }
-
-   .row .offset-4 {
-      margin-left: 0%;
-   }
-
-   .row .offset-5 {
-      margin-left: 0%;
-   }
-
-   .row .offset-6 {
-      margin-left: 0%;
-   }
-
-   .row .offset-7 {
-      margin-left: 0%;
-   }
-
-   .row .offset-8 {
-      margin-left: 0%;
-   }
-
-   .row .offset-9 {
-      margin-left: 0%;
-   }
-
-   .row .offset-10 {
-      margin-left: 0%;
-   }
-
-   .row .offset-11 {
-      margin-left: 0%;
    }
 }
 

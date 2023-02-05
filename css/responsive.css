@@ -47,12 +47,13 @@
    }
 
    #about .profile-pic2 {
-      width: 114px;
-      height: 114px;
-      display:flex;
+      width: 140px;
+      height: 140px;
+      display:inline-block;
       float:right;
+      margin-right: 65px;
+      margin-top: 31px;
    }
-
 
    #about .contact-details {
       width: 50%;
@@ -60,6 +61,7 @@
 
    #about .download {
       width: 50%;
+      vertical-align: middle;
    }
 
    /* Resume Section
@@ -71,7 +73,6 @@
    #resume .main-col {
       padding-right: 5%;
    }
-
    /*  Section
    ------------------------------------------------------------------- */
    #citations .header-col h1:before {

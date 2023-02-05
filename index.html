@@ -331,9 +331,34 @@
                   <!-- portfolio-wrapper -->
                   <div id="projets-wrapper" class="bgrid-halves s-bgrid-halves cf">
                      <div class="columns">
+
+                        <script type="text/javascript" src="js/mdb.min.js"></script>
                         <div class="spacer">
-                           <div class="card">
-                              <img class="card-img" src="images/projects/projects_list/domotique.jpg" alt="" />
+                           <div class="card card-detail">
+                              <div id="carousel_domotique" class="carousel slide" data-mdb-ride="carousel">
+                                 <div class="carousel-indicators">
+                                    <button type="button" data-mdb-target="#carousel_domotique" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-mdb-target="#carousel_domotique" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-mdb-target="#carousel_domotique" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+                                 </div>
+                                 <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                       <img src="images/projects/projects_list/domotique.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/domotique.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/domotique.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                 </div>
+                                 <button class="carousel-control-prev" type="button" data-mdb-target="#carousel_domotique" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 </button>
+                                 <button class="carousel-control-next" type="button" data-mdb-target="#carousel_domotique" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 </button>
+                              </div>
                               <div class="card-body">
                                  <h5 class="card-title">Domotique (Raspberry Pi + Docker)</h5>
                                  <div class="card-text">
@@ -354,23 +379,38 @@
                            </div>
                         </div>
                         <div class="spacer">
-                           <div class="card">
-                              <img class="card-img" src="images/projects/projects_list/meca_auto.jpg" alt="" />
-                              <div class="card-body">
-                                 <h5 class="card-title">Mécanique automobile</h5>
-                                 <div class="card-text">
-                                    <p>Opérations effectuées sur une BMW E81 120D de 2007 :</p>
-                                    <ul>
-                                       <li>Changement pallier d'arbre de transmission</li>
-                                       <li>Changement turbocompresseur</li>
-                                       <li>Nettoyage injecteurs</li>
-                                       <li>Changement filtres à carburant/air/huile</li>
-                                       <li>Vidanges (BVA, pont, moteur)</li>
-                                       <li>Reprogrammation avec ISTA</li>
-                                    </ul>
+                           <div class="card card-detail">
+                              <div id="carousel_graz" class="carousel slide" data-mdb-ride="carousel">
+                                 <div class="carousel-indicators">
+                                    <button type="button" data-mdb-target="#carousel_graz" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-mdb-target="#carousel_graz" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-mdb-target="#carousel_graz" data-mdb-slide-to="2" aria-label="Slide 3"></button>
                                  </div>
-                                 <span class="categories"><span class="fa fa-tag"></span>Mécanique</span>
-                                 <a href="projets.html#mecanique" class="card-btn">Détails</a>
+                                 <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                       <img src="images/projects/projects_list/graz.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/graz.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/graz.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                 </div>
+                                 <button class="carousel-control-prev" type="button" data-mdb-target="#carousel_graz" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 </button>
+                                 <button class="carousel-control-next" type="button" data-mdb-target="#carousel_graz" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 </button>
+                              </div>
+                              <div class="card-body">
+                                 <h5 class="card-title">Formation informatique et réseaux</h5>
+                                 <div class="card-text">
+                                    <p>Formation d'ingénieur informatique et réseaux suivie en parallèle de mon travail durant 5 mois (Septembre 2022 - Janvier 2023).</p>
+                                 </div>
+                                 <span class="categories"><span class="fa fa-tag"></span>Formation, Informatique, Réseaux</span>
+                                 <a href="projets.html#graz" class="card-btn">Détails</a>
                               </div>
                            </div>
                         </div>
@@ -425,20 +465,30 @@
                      <div class="columns">
                         <div class="spacer">
                            <div class="card card-detail">
-                              <img class="card-img" src="images/projects/projects_list/graz.jpg" alt="" />
-                              <div class="card-body">
-                                 <h5 class="card-title">Formation informatique et réseaux</h5>
-                                 <div class="card-text">
-                                    <p>Formation d'ingénieur informatique et réseaux suivie en parallèle de mon travail durant 5 mois (Septembre 2022 - Janvier 2023).</p>
+                              <div id="carousel_meca" class="carousel slide" data-mdb-ride="carousel">
+                                 <div class="carousel-indicators">
+                                    <button type="button" data-mdb-target="#carousel_meca" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-mdb-target="#carousel_meca" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-mdb-target="#carousel_meca" data-mdb-slide-to="2" aria-label="Slide 3"></button>
                                  </div>
-                                 <span class="categories"><span class="fa fa-tag"></span>Formation, Informatique, Réseaux</span>
-                                 <a href="projets.html#graz" class="card-btn">Détails</a>
+                                 <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                       <img src="images/projects/projects_list/aeromodelisme.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/aeromodelisme.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/aeromodelisme.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                 </div>
+                                 <button class="carousel-control-prev" type="button" data-mdb-target="#carousel_meca" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 </button>
+                                 <button class="carousel-control-next" type="button" data-mdb-target="#carousel_meca" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 </button>
                               </div>
-                           </div>
-                        </div>
-                        <div class="spacer">
-                           <div class="card card-detail">
-                              <img class="card-img" src="images/projects/projects_list/aeromodelisme.jpg" alt="" />
                               <div class="card-body">
                                  <h5 class="card-title">Aéromodélisme</h5>
                                  <div class="card-text">
@@ -452,6 +502,50 @@
                                  <span class="categories"><span class="fa fa-tag"></span>Aéromodélisme, Avions</span>
                               </div>
                               <a href="projets.html#aeromodelisme" class="card-btn">Détails</a>
+                           </div>
+                        </div>
+                        <div class="spacer">
+                           <div class="card card-detail">
+                              <div id="carousel_meca" class="carousel slide" data-mdb-ride="carousel">
+                                 <div class="carousel-indicators">
+                                    <button type="button" data-mdb-target="#carousel_meca" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-mdb-target="#carousel_meca" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-mdb-target="#carousel_meca" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+                                 </div>
+                                 <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                       <img src="images/projects/projects_list/meca_auto.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/meca_auto.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                    <div class="carousel-item">
+                                       <img src="images/projects/projects_list/meca_auto.jpg" class="d-block w-100" alt="" />
+                                    </div>
+                                 </div>
+                                 <button class="carousel-control-prev" type="button" data-mdb-target="#carousel_meca" data-mdb-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 </button>
+                                 <button class="carousel-control-next" type="button" data-mdb-target="#carousel_meca" data-mdb-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 </button>
+                              </div>
+                              <div class="card-body">
+                                 <h5 class="card-title">Mécanique automobile</h5>
+                                 <div class="card-text">
+                                    <p>Opérations effectuées sur une BMW E81 120D de 2007 :</p>
+                                    <ul>
+                                       <li>Changement pallier d'arbre de transmission</li>
+                                       <li>Changement turbocompresseur</li>
+                                       <li>Nettoyage injecteurs</li>
+                                       <li>Changement filtres à carburant/air/huile</li>
+                                       <li>Vidanges (BVA, pont, moteur)</li>
+                                       <li>Reprogrammation avec ISTA</li>
+                                    </ul>
+                                 </div>
+                                 <span class="categories"><span class="fa fa-tag"></span>Mécanique</span>
+                                 <a href="projets.html#mecanique" class="card-btn">Détails</a>
+                              </div>
                            </div>
                         </div>
                         <div class="spacer">

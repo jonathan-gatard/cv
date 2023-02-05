@@ -4,7 +4,7 @@
 body {
    background: #0f0f0f;
    overflow: overlay;
-   min-width: 330px;
+   min-width: 600px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -14,7 +14,7 @@ body {
 #about {
    background: #2B2B2B;
    padding-top: 50px;
-   padding-bottom: 20px;
+   padding-bottom: 50px;
    overflow: hidden;
 }
 
@@ -72,6 +72,10 @@ body {
    padding: 0;
 }
 
+#about .contact-details p {
+   margin-bottom: 0;
+}
+
 #about .download {
    width: 58.33333%;
    padding: 0;
@@ -108,7 +112,6 @@ body {
 #resume {
    background: #fafafa;
    padding-top: 50px;
-   padding-bottom: 20px;
    overflow: hidden;
 }
 
@@ -143,14 +146,10 @@ body {
 
 .education,
 .work,
-.langues {
+.langues,
+.skill {
    margin-bottom: 48px;
    border-bottom: 1px solid #E8E8E8;
-}
-
-.skill {
-   border-bottom: 1px solid #E8E8E8;
-   padding-bottom: 24px;
 }
 
 .education p {
@@ -225,7 +224,7 @@ body {
 
 .bars li {
    position: relative;
-   margin-bottom: 50px;
+   margin-bottom: 48px;
    background: #ccc;
    height: 20px;
    border-radius: 3px;
@@ -295,8 +294,6 @@ body {
 
 #projets {
    background: #fafafa;
-   padding-top: 50px;
-   padding-bottom: 50px;
 }
 
 #projets .header-col {
@@ -315,7 +312,7 @@ body {
 
 
 .spacer {
-   height:100%;
+   height: 100%;
    padding: 0px 30px 30px 0px;
 }
 
@@ -825,4 +822,191 @@ body {
    background: #fff;
    background: rgba(255, 255, 255, .9);
    cursor: default;
+}
+
+
+/* CAROUSSEL */
+
+
+.carousel {
+   position: relative
+}
+
+.carousel.pointer-event {
+   touch-action: pan-y
+}
+
+.carousel-inner {
+   position: relative;
+   width: 100%;
+   overflow: hidden
+}
+
+.carousel-inner:after {
+   display: block;
+   clear: both;
+   content: ""
+}
+
+.carousel-item {
+   position: relative;
+   display: none;
+   float: left;
+   width: 100%;
+   margin-right: -100%;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   transition: transform .6s ease-in-out
+}
+
+@media(prefers-reduced-motion:reduce) {
+   .carousel-item {
+      transition: none
+   }
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+   display: block
+}
+
+.active.carousel-item-end,
+.carousel-item-next:not(.carousel-item-start) {
+   transform: translateX(100%)
+}
+
+.active.carousel-item-start,
+.carousel-item-prev:not(.carousel-item-end) {
+   transform: translateX(-100%)
+}
+
+.carousel-fade .carousel-item {
+   opacity: 0;
+   transition-property: opacity;
+   transform: none
+}
+
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end,
+.carousel-fade .carousel-item.active {
+   z-index: 1;
+   opacity: 1
+}
+
+.carousel-fade .active.carousel-item-end,
+.carousel-fade .active.carousel-item-start {
+   z-index: 0;
+   opacity: 0;
+   transition: opacity 0s .6s
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+   .carousel-fade .active.carousel-item-end,
+   .carousel-fade .active.carousel-item-start {
+      transition: none
+   }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 15%;
+   padding: 0;
+   color: #fff;
+   text-align: center;
+   background: none;
+   border: 0;
+   opacity: 0.8;
+   transition: opacity .15s ease;
+   margin-bottom: 0px;
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+   .carousel-control-next,
+   .carousel-control-prev {
+      transition: none
+   }
+}
+
+.carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+   color: #fff;
+   text-decoration: none;
+   outline: 0;
+   opacity: 0.9;
+   background: none;
+}
+
+.carousel-control-prev {
+   left: 0
+}
+
+.carousel-control-next {
+   right: 0
+}
+
+.carousel-indicators {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 2;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   margin: 0 15% 0 15%;
+   list-style: none
+}
+
+.carousel-indicators [data-mdb-target] {
+   box-sizing: content-box;
+   flex: 0 1 auto;
+   width: 30px;
+   height: 3px;
+   padding: 0;
+   margin: 0 3px 0 3px;
+   text-indent: -999px;
+   cursor: pointer;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 0;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+   opacity: 0.8;
+   transition: opacity .6s ease
+}
+
+@media(prefers-reduced-motion:reduce) {
+   .carousel-indicators [data-mdb-target] {
+      transition: none
+   }
+}
+
+.carousel-indicators .active {
+   opacity: 1
+}
+
+.carousel-control-prev-icon:after {
+   content: "\3c";
+}
+
+.carousel-control-next-icon:after {
+   content: "\3e";
+}
+
+.carousel-control-next-icon:after,
+.carousel-control-prev-icon:after {
+   font-weight: bold;
+   font-size: 30px;
 }
