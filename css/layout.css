@@ -79,6 +79,7 @@ body {
 #about .download {
    width: 58.33333%;
    padding: 0;
+   text-align: center;
 }
 
 #about .download p {
@@ -90,7 +91,7 @@ body {
 }
 
 #about .download .button {
-   margin-top: 6px;
+   margin: 0;
    background: #444;
 }
 
@@ -146,11 +147,16 @@ body {
 
 .education,
 .work,
-.langues,
-.skill {
+.langues {
    margin-bottom: 48px;
    border-bottom: 1px solid #E8E8E8;
 }
+
+.skill {
+   margin-bottom: 0;
+   border-bottom: 1px solid #E8E8E8;
+}
+
 
 .education p {
    margin-bottom: 48px;
@@ -294,6 +300,7 @@ body {
 
 #projets {
    background: #fafafa;
+   padding-top: 48px;
 }
 
 #projets .header-col {
@@ -781,7 +788,8 @@ body {
    width: 100%;
    position: absolute;
    bottom: -20px;
-   text-align: left;
+   text-align: center;
+   padding-right: 20%;
 }
 
 .flex-control-nav li {
@@ -881,34 +889,6 @@ body {
    transform: translateX(-100%)
 }
 
-.carousel-fade .carousel-item {
-   opacity: 0;
-   transition-property: opacity;
-   transform: none
-}
-
-.carousel-fade .carousel-item-next.carousel-item-start,
-.carousel-fade .carousel-item-prev.carousel-item-end,
-.carousel-fade .carousel-item.active {
-   z-index: 1;
-   opacity: 1
-}
-
-.carousel-fade .active.carousel-item-end,
-.carousel-fade .active.carousel-item-start {
-   z-index: 0;
-   opacity: 0;
-   transition: opacity 0s .6s
-}
-
-@media(prefers-reduced-motion:reduce) {
-
-   .carousel-fade .active.carousel-item-end,
-   .carousel-fade .active.carousel-item-start {
-      transition: none
-   }
-}
-
 .carousel-control-next,
 .carousel-control-prev {
    position: absolute;
@@ -924,27 +904,17 @@ body {
    text-align: center;
    background: none;
    border: 0;
-   opacity: 0.8;
+   opacity: 0.7;
    transition: opacity .15s ease;
    margin-bottom: 0px;
 }
 
-@media(prefers-reduced-motion:reduce) {
-
-   .carousel-control-next,
-   .carousel-control-prev {
-      transition: none
-   }
-}
-
-.carousel-control-next:focus,
 .carousel-control-next:hover,
-.carousel-control-prev:focus,
 .carousel-control-prev:hover {
    color: #fff;
    text-decoration: none;
    outline: 0;
-   opacity: 0.9;
+   opacity: 1;
    background: none;
 }
 
@@ -983,30 +953,16 @@ body {
    border: 0;
    border-top: 10px solid transparent;
    border-bottom: 10px solid transparent;
-   opacity: 0.8;
+   opacity: 0.5;
    transition: opacity .6s ease
-}
-
-@media(prefers-reduced-motion:reduce) {
-   .carousel-indicators [data-mdb-target] {
-      transition: none
-   }
 }
 
 .carousel-indicators .active {
    opacity: 1
 }
 
-.carousel-control-prev-icon:after {
-   content: "\3c";
-}
-
-.carousel-control-next-icon:after {
-   content: "\3e";
-}
-
-.carousel-control-next-icon:after,
-.carousel-control-prev-icon:after {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
    font-weight: bold;
-   font-size: 30px;
+   font-size: 25px;
 }
