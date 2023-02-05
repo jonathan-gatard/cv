@@ -23,6 +23,7 @@ ul {
 
 .projets .row {
    max-width: 1400px;
+   margin-top: 15px;
 }
 
 .projets ul {
@@ -44,7 +45,9 @@ ul {
 
 .projets .titre {
    font-weight: bold;
-   font-size: 18px;
+   font-size: 22px;
+   margin-top: 25px;
+   margin: 35px 0px 10px 0px;
 }
 
 .projets b {
@@ -182,13 +185,7 @@ ul {
 }
 
 /* on hover */
-.projets-item:hover .overlay {
-   opacity: 1;
-   -moz-opacity: 1;
-   filter: alpha(opacity=100);
-}
-
-.projets-item:hover .link-icon {
+.item-wrap:hover .overlay {
    opacity: 1;
    -moz-opacity: 1;
    filter: alpha(opacity=100);

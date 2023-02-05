@@ -117,9 +117,8 @@
                             </table>
 
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Installations d'appareils ZigBee de différentes marques</span>
+                            <div class="titre">Installations d'appareils ZigBee de différentes marques</div>
                             <ul>
                                 <li>Valves thermostatiques TuYa</li>
                                 <li>Lumières YSRSAI</li>
@@ -129,7 +128,6 @@
                                 <li>...</li>
                             </ul>
                         </div>
-                        <br>
                         <div class="bgrid-thirds s-bgrid-thirds cf">
                             <div class="columns projets-item">
                                 <div class="item-wrap">
@@ -165,9 +163,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Installations d'appareils Wi-Fi</span>
+                            <div class="titre">Installations d'appareils Wi-Fi</div>
                             <ul>
                                 <li>ESP8266 + relais 220V</li>
                                 <li>ESP32 + PN532 (lecteur RFID)</li>
@@ -190,9 +187,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Installation du module sniffer de réseau Zigbee sur les GPIO du Raspberry Pi</span><br>
+                            <div class="titre">Installation du module sniffer de réseau Zigbee sur les GPIO du Raspberry Pi</div>
                             <b>Difficultés rencontrées :</b>
                             <ul>
                                 <li>Mapper "/dev/ttyAMA0" vers le docker Zigbee2MQTT</li>
@@ -226,10 +222,10 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Conversion des data brutes en MQTT avec Zigbee2MQTT</span>
-                            <br>
+                            <div class="titre">
+                                Conversion des data brutes en MQTT avec Zigbee2MQTT
+                            </div>
                             Liste des appareils compatibles :
                             <a href="https://www.zigbee2mqtt.io/supported-devices/" title="Zigbee2MQTT" target="_blank">https://www.zigbee2mqtt.io/supported-devices/</a>
                             <div class="bgrid s-bgrid-halves cf">
@@ -253,9 +249,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Intégration à Home assistant</span>
+                            <div class="titre">Intégration à Home assistant</div>
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class=" item-wrap">
@@ -270,9 +265,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Stockage des données dans InfluxDB + Dashboard Grafana</span>
+                            <div class="titre">Stockage des données dans InfluxDB + Dashboard Grafana</div>
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class="item-wrap">
@@ -293,9 +287,8 @@
                             <br>
                             <a href="http://grafana.neptune79.duckdns.org/d/BvgPZmGVz/consommation" title="Grafana - Consommation" target="_blank">http://grafana.neptune79.duckdns.org/d/BvgPZmGVz/consommation</a>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Utilisation de NodeRed pour automatiser des tâches</span>
+                            <div class="titre">Utilisation de NodeRed pour automatiser des tâches</div>
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class="item-wrap">
@@ -316,7 +309,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <br>
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class="item-wrap">
@@ -340,10 +332,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Gestion des dockers avec Portainer</span>
-                            <br>
+                            <div class="titre">Gestion des dockers avec Portainer</div>
                             Les logiciels précédemment mentionnés sont tous installés dans des conteneurs Docker sur mon serveur. Afin d'obtenir une visualisation efficace et de gérer les sauvegardes sans avoir à utiliser une connexion SSH, j'utilise Portainer comme outil de gestion.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
@@ -359,10 +349,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Accès VPN et SAMBA</span>
-                            <br>
+                            <div class="titre">Accès VPN et SAMBA</div>
                             J'ai mis en place un serveur SAMBA pour faciliter l'accès aux fichiers sur mon serveur. Pour des raisons de sécurité, j'ai limité l'utilisation de ce protocole au sein du réseau local. En outre, j'ai installé un serveur VPN pour protéger les connexions et établir un tunnel sécurisé entre mon serveur et mes clients.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
@@ -380,10 +368,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Protection du serveur avec Fail2Ban</span>
-                            <br>
+                            <div class="titre">Protection du serveur avec Fail2Ban</div>
                             En raison de l'ouverture du port 22 sur mon routeur pour SSH, j'ai choisi d'installer un module appelé "Fail2Ban" afin de protéger mon système en bloquant les adresses IP qui tentent de se connecter de manière erronée de façon excessive.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
@@ -401,10 +387,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Personnalisation avec NGINX et DuckDNS</span>
-                            <br>
+                            <div class="titre">Personnalisation avec NGINX et DuckDNS</div>
                             J'ai choisi d'utiliser un nom de domaine gratuit "neptune79.duckdns.org" ainsi que NGINX en tant que reverse proxy pour limiter l'ouverture du port 80 de mon routeur et personnaliser mes URL.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
@@ -424,7 +408,6 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                     </div>
                 </div>
                 <!-- End domotique -->
@@ -445,7 +428,7 @@
                             </ul>
                         </div>
                         <div class="row item">
-                            <span class="titre">Sécurité informatique</span>
+                            <div class="titre">Sécurité informatique</div>
                             <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :
                                 <li>"Cowsay" = Format string</li>
                                 <li>"Echo" : Buffer overflow</li>
@@ -456,12 +439,12 @@
                                 <li>"You_shall_not_rop" : Buffer stack overflow (ROP)</li>
                                 </ul>
                                 <br>
-                            <p>Exemple détaillé pour le programme "Cowsay" :</p>
+                            <p><b>Exemple détaillé pour le programme "Cowsay" :</b><br>L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" dans "cowsay".</p>
                         </div>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
                                 <div class="item-wrap">
-                                    <img alt="" src="images/projects/graz/main.png">
+                                    <img alt="" src="images/projects/graz/cowsay.png">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
                                             <h5>Fonction principale</h5>
@@ -471,7 +454,7 @@
                             </div>
                             <div class="columns projets-item">
                                 <div class="item-wrap">
-                                    <img alt="" src="images/projects/graz/old_function.png">
+                                    <img alt="" src="images/projects/graz/old_cowsay_please_dont_use.png">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
                                             <h5>Fonction à appeler</h5>
@@ -481,71 +464,156 @@
                             </div>
                         </div>
                         <p>
-                        La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée et l'utilisateur peut entrer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
-                        L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" en appelant l'adresse de la fonction.
+                            La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée et l'utilisateur peut entrer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
+                        </p>
+                        <p>
+                            <b>Méthodologie :</b>
+                        </p>
                         <ol>
-                            <li>Récupérer l'adresse de la fonction old_cowsay_please_dont_use</li>
-                            <li>Trouver où est écrit buffer dans la pile</li>
-                            <li>Récupérer l'adresse de la fonction old_cowsay_please_dont_use</li>
-
+                            <li>Désassembler la fonction "cowsay", mettre un breakpoint après le "fgets" avec "break* 0x080494ad" et exécuter le programme</li>
+                            <li>En affichant la pile (x/x $sp), regarder où est écrit notre input (AAAA = 0x41414141)</li>
+                            <li>Récupérer l'adresse de la fonction "old_cowsay_please_dont_use" en désassemblant la fonction</li>
+                            <li>Récupérer l'adresse appelée par "fflush"</li>
+                            <li>Appeler "old_cowsay_please_dont_use" au lieu de "fflush"</li>
                         </ol>
-                    </p>
-                        <br>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
                                 <div class="item-wrap">
-                                    <img alt="" src="images/projects/graz/.png">
+                                    <img alt="" src="images/projects/graz/disas_cowsay.jpg">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
-                                            <h5>0000</h5>
+                                            <h5>1 - Fonction "cowsay" désassemblée</h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
                                 <div class="item-wrap">
-                                    <img alt="" src="images/projects/graz/.png">
+                                    <img alt="" src="images/projects/graz/pile.jpg">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
-                                            <h5>0000</h5>
+                                            <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/disas_old_cowsay_please_dont_use.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>3 - Fonction "old_cowsay_please_dont_use" désassemblée</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/objdump.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>4 - Allocations dynamiques (objdump -R)</h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br>
+                        <p>
+                            <b>Écrire le pointeur de "old_cowsay_please_dont_use" (0x08049202) à l'adresse "fflush" (0x0804c018) :</b><br>
+                            Pour écrire dans la mémoire avec %n (integer 4 octets) on doit écrire "0x08049202" (134 517 250 en décimal) caractères ce qui est impossible/long.<br>
+                            La solution est d'utiliser deux fois %hn (short integer 2 octets) : décomposition en "0x0804" (2052) et "0x9202" (37 378).
+                        </p>
+                        <p>
+                            On écrit à "0x0804c018 + offset de 2 octets" = "0x0804c020" la valeur 2052 - 8 = <b>2044</b><br>
+                            (-8 car l'adresse 18c00408 "consomme" 8 octets)<br>
+                            <b>\x20\xc0\x04\x08%2044x%7$hn</b>
+                        </p>
+                        <ul>
+                            <li>"\x20\xc0\x04\x08" = Adresse à la quelle on veut écrire</li>
+                            <li>"%2044x" = Nombre de caractères à écrire (exemple : 15 = 0x000F)</li>
+                            <li>"%7" = Position du buffer dans la pile</li>
+                            <li>"$hn" = Fonction qui écrit un nombre d'octets donnés sur 2 bytes</li>
+                        </ul>
+                        <p>
+                            On écris maintenant à "0x0804c020" : 37378 - 2052 = <b>35326</b><br>
+                            (-2052 car on les à déjà écrit précedemment)<br>
+                            <b>\x18\xc0\x04\x08%35326x%8$hn</b>
+                        </p>
+                        <p>
+                            On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
+                            Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
+                        </p>
+                        <div class="bgrid s-bgrid cf">
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/hacked.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Au lieu du "fflush" la fonction "old_cowsay_please_dont_use" est appelée</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row item">
-                            <span class="titre">Réalité augmentée</span>
-                            <br>
-                            Projet 1 :<br>
-                            Projet 2 :<br>
-                            Projet 3 :<br>
+                            <div class="titre">Réalité augmentée</div>
+                            <p><b>Projet 1 : Détection d'une image dans le monde réel avec projection d'un cube virtuel</b>
+                                <br>
+                                Pour cela, j'ai choisi Python avec la bibliothèque OpenCV, les étapes sont :
+                            </p>
+                            <ol>
+                                <li>Calibration de la caméra : matrice caméra + coefficient de distorsion</li>
+                                <li>Recherches des correspondances : coordonnées objet réel / image virtuelle</li>
+                                <li>RANSAC : traitement du modèle (élimination des erreurs statistiquement)</li>
+                                <li>Dessin du cube : projection des coordonées d'un cube 3D dans le 2D virtuel</li>
+                            </ol>
 
                         </div>
-                        <br>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
                                 <div class="item-wrap">
-                                    <img alt="" src="images/projects/graz/.png">
+                                    <img alt="" src="images/projects/graz/ransac.jpg">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
-                                            <h5>Tableau excel des opérations effectuées</h5>
+                                            <h5>La fonction effectue 20 itérations, elle sélectionne au hasard 5 points à chaque tour et calcule une matrice de transformation pour ces points. La matrice qui donne le plus grand nombre d'inliers est retournée à la fin.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/calibrate.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Cette fonction calcule les matrices de la caméra et les coefficients de distorsion en utilisant un damier.</h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
                                 <div class="item-wrap">
-                                    <img alt="" src="images/projects/graz/.png">
+                                    <img alt="" src="images/projects/graz/findHomography.jpg">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
-                                            <h5>Scan de chacune des factures de la voiture</h5>
+                                            <h5>Utilisation de l'algorithme SIFT pour détecter les points clés dans deux images (image de référence et vidéo en direct).
+                                                Si le nombre de correspondances valides est supérieur à un nombre minimum donné, la fonction RANSAC est appelée.
+                                                La fonction dessine les correspondances (traits verts).</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/graz/drawcube.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Dessin d'un cube sur la vidéo en direct. Les points 2D sont vérifiés pour être dans les limites de la dimension de la vidéo.</h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="row item">
+                            <p><b>Projet 2 : rtuel</b>
+                                <br>
+                                .......
+                            </p>
+                            <ol>
+                                <li>111</li>
+                            </ol>
+                        </div>
                     </div>
                     <!-- item end -->
                 </div>
@@ -558,7 +626,7 @@
                         <h2>Mécanique automobile</h2>
                         <div class="row item">
                             <p class="info">Réparations d'une BMW E81 120D<span>&bull;</span> <em class="date">2020 - aujourd'hui</em></p>
-                            <b>Objectifs</b>: Effectuer les réparations nécessaires sur la voiture de manière autonome.<br>
+                            <b>Objectifs</b>: Effectuer les réparations nécessaires sur la voiture de manière autonome.
                             <br>
                             <table>
                                 <thead>
@@ -589,10 +657,8 @@
                             </table>
 
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Historisation de toutes les opérations</span>
-                            <br>
+                            <div class="titre">Historisation de toutes les opérations</div>
                             J'ai mis en place un système de suivi rigoureux des informations relatives à ma voiture via un tableau Excel :<br>
                             <ul>
                                 <li>Je liste chaque opération effectuée sur la voiture (réparation et entretien) ainsi que les factures correspondantes.</li>
@@ -601,7 +667,6 @@
                                 <li>Les couples de serrage des vis et écrous pour toutes les pièces que j'ai manipulées.</li>
                             </ul>
                         </div>
-                        <br>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
                                 <div class="item-wrap">
@@ -624,10 +689,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Logiciel ISTA D/P</span>
-                            <br>
+                            <div class="titre">Logiciel ISTA D/P</div>
                             ISTA-D (diagnostique) et ISTA-P (programmation) sont des logiciels concessionnaires BMW.
                             <br>
                             Je m'appuie fréquemment sur l'outil ISTA-D pour évaluer l'état de mon véhicule, notamment en ce qui concerne la détection de codes d'erreur et la planification des entretiens nécessaires.
@@ -645,10 +708,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Changement CHRA Turbocompresseur</span>
-                            <br>
+                            <div class="titre">Changement CHRA Turbocompresseur</div>
                             J'ai constaté un important jeu axial et radial lors de l'inspection de la turbine du turbo.
                             L'augmentation du bruit émis par le turbo m'a conduit à prendre la décision de procéder à son remplacement.
                             <br>
@@ -680,10 +741,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Nettoyage injecteurs</span>
-                            <br>
+                            <div class="titre">Nettoyage injecteurs</div>
                             Après avoir parcouru plus de 200 000 km, j'ai suspecté que mes injecteurs étaient sales et potentiellement obstrués.
                             J'ai donc pris la décision de les démonter et de les nettoyer en utilisant un bac à ultrasons avec un produit dégraissant spécifique.
                             <br>
@@ -720,14 +779,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre"></span>
-                        </div>
-                        <br>
-                        <div class="row item">
-                            <span class="titre">Changement pallier d'arbre</span>
-                            <br>
+                            <div class="titre">Changement pallier d'arbre</div>
                             J'ai constaté qu'un bruit de claquement apparaissait de plus en plus fréquemment lors des accélérations.
                             Après avoir éliminé les différentes causes potentielles (boîte de vitesse, pont, etc.) j'ai déterminé que le problème était lié à l'arbre de transmission.
                             <br>
@@ -769,7 +822,6 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                     </div>
                     <!-- item end -->
                 </div>
@@ -781,12 +833,7 @@
                     <div class="twelve columns main-col">
                         <h2>Imprimante 3D</h2>
                         <div class="row item">
-                            <span class="titre"></span>
-                        </div>
-                        <br>
-                        <div class="row item">
-                            <span class="titre">Fabrication d'une imprimante 3D</span>
-                            <br>
+                            <div class="titre">Fabrication d'une imprimante 3D</div>
                             En 2015, j'ai entrepris un projet ambitieux consistant à construire ma propre imprimante 3D.
                             Les kits d'imprimantes 3D étaient encore peu répandus à cette époque, j'ai dû me apprendre et comprendre par moi-même.
                             Mon objectif était de concilier un coût raisonnable avec une qualité d'impression satisfaisante.
@@ -816,14 +863,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre"></span>
-                        </div>
-                        <br>
-                        <div class="row item">
-                            <span class="titre">Amélioration de l'imprimante 3D</span>
-                            <br>
+                            <div class="titre">Amélioration de l'imprimante 3D</div>
                             Au fil des années, j'ai continué à améliorer mon imprimante 3D.
                             <ul>
                                 <li>Vis trapézoïdales</li>
@@ -852,10 +893,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Découpeuse laser</span>
-                            <br>
+                            <div class="titre">Découpeuse laser</div>
                             En 2021, j'ai acquis un laser à LED bleue à un coût abordable d'environ 30€, et j'ai conçu un support pour l'installer sur mon imprimante 3D.
                             Comme le controlleur de l'imprimante 3D n'est pas prévu à cet effet, j'ai utilisé la sortie PWM du ventilateur en combinaison avec un montage de puissance basé sur des transistors pour dimmer mon laser.
                             Il s'est avéré que le fonctionnement du laser est inversé, nécessitant une modification du firmware de l'imprimante.
@@ -892,7 +931,6 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
                             <div class="bgrid-thirds s-bgrid-thirds cf">
                                 <div class="columns projets-item">
@@ -947,7 +985,7 @@
                             Cette dernière me permet de poursuivre mes intérêts en matière de mécanique, d'informatique et d'électronique.
                         </p>
                         <div class="row item">
-                            <span class="titre">Le matériel</span><br>
+                            <div class="titre">Le matériel</div>
                             J'ai acheté plusieurs avions et une télécommande radio futaba T10CG, puis plus tard une Frsky Taranis X9D Plus.
                             L'avantage de cette dernière est d'être conçue pour recevoir un firmware open source, hautement configurable et avec beaucoup plus de fonctionnalités.
                             <div class="bgrid-thirds s-bgrid-thirds cf">
@@ -991,9 +1029,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Les crashs</span><br>
+                            <div class="titre">Les crashs</div>
                             Deux crashs à mon actifs :<br>
                             - 1er crash : Calmato ailes hautes, ressource trop importante, servomoteur pas assez puissant pour relever la gouverne de tangage<br>
                             - 2nd crash : Batterie de l'avion défaillante, perte de communication, gaz bloqués à 100%.<br>
@@ -1034,9 +1071,8 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                         <div class="row item">
-                            <span class="titre">Démonstrations</span><br>
+                            <div class="titre">Démonstrations</div>
                             <div class="bgrid-thirds s-bgrid-halves cf">
                                 <div class="columns projets-item">
                                     <div class="item-wrap">
@@ -1064,7 +1100,6 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
                     </div>
                     <!-- item end -->
                 </div>
