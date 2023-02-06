@@ -244,7 +244,7 @@ body {
    font-weight: normal;
    font-size: 15px;
    line-height: 25px;
-   color: #838C95;
+   color: #414141;
    margin:0;
    -webkit-font-smoothing: antialiased;
    /* Fix for webkit rendering */
@@ -265,7 +265,7 @@ h3,
 h4,
 h5,
 h6 {
-   color: #313131;
+   color: #414141;
    font-family: 'opensans-bold', sans-serif;
    font-weight: normal;
 }

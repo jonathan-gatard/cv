@@ -30,7 +30,7 @@ body {
 
 #about a:hover,
 #about a:focus {
-   color: #F06000;
+   color: #f06000;
 }
 
 #about h2 {
@@ -122,7 +122,7 @@ body {
 
 #resume a,
 #resume a:visited {
-   color: #F06000;
+   color: #f06000;
 }
 
 #resume a:hover,
@@ -137,7 +137,7 @@ body {
 }
 
 #resume h1 span {
-   border-bottom: 3px solid #F06000;
+   border-bottom: 3px solid #f06000;
    padding-bottom: 6px;
 }
 
@@ -294,7 +294,7 @@ body {
 }
 
 #projets h1 span {
-   border-bottom: 3px solid #F06000;
+   border-bottom: 3px solid #f06000;
    padding-bottom: 6px;
 }
 
@@ -341,45 +341,49 @@ body {
    line-height: 18px;
 }
 
-.card-detail {
-   padding-bottom: 45px;
-}
-
 .card-body {
-   padding: 10px;
+   padding: 20px;
 }
 
 .card-title {
-   margin-bottom: 15px;
+   margin-bottom: 20px;
 }
 
 .card-text {
    margin-bottom: 15px;
 }
 
+.card-bottom {
+   display: flex;
+   align-items: flex-end;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   margin-top: 30px;
+}
+
 .card-btn {
    text-transform: uppercase;
    padding: 5px 15px 5px 15px;
-   background-color: #F06000;
-   color: #fff;
+   background-color: #ffffff;
+   color: #f06000;
+   height: 35px;
    border-radius: 5px;
    font-weight: bold;
-   box-shadow: 0 4px 9px -4px #F06000;
    letter-spacing: 3px;
-   position: absolute;
-   bottom: 10px;
-   left: 10px;
+   border:1px solid #f06000;
+   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.17), 0 10px 20px -2px rgba(0, 0, 0, 0.14);
+   transition: background-color 0.1s ease-in-out;
+   transition: color 0.1s ease-in-out;
 }
 
 .card-btn:hover {
-   color: #e6e6e6;
-   background-color: #da5700;
+   color: #ffffff;
+   background-color: #f06000;
+   transition: color 0.1s ease-in-out;
+   transition: background-color 0.1s ease-in-out;
 }
 
-.card-btn:visited {
-   background-color: #F06000;
-   color: #fff;
-}
 
 .card li {
    line-height: 16px;
@@ -397,21 +401,22 @@ body {
 }
 
 .categories {
-   font: 11px/21px 'opensans-light', sans-serif;
+   font: 14px 'opensans-light', sans-serif;
    color: #888888;
    text-transform: uppercase;
-   letter-spacing: 2px;
+   letter-spacing: 1px;
    display: block;
-   text-align: right;
+   text-align: left;
+}
+
+.categories-text {
+   margin-left: 20px ;
 }
 
 .categories .fa-tag {
-   margin-right: 8px;
+   float: left;
+   margin-top:3px;
 }
-
-
-
-
 
 /* Portfolio Content */
 #projets-wrapper .columns {
@@ -585,7 +590,7 @@ body {
 }
 
 .popup-modal a:hover {
-   color: #F06000;
+   color: #f06000;
 }
 
 .popup-modal a.popup-modal-dismiss {
