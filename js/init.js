@@ -120,23 +120,15 @@
 
 
 /*----------------------------------------------------*/
-/*	Modal Popup
-------------------------------------------------------*/
+/*	Dezoom pour mobile
+/*----------------------------------------------------*/
 
-    $('.item-wrap a').magnificPopup({
+var viewport = document.querySelector('meta[name="viewport"]');
 
-       type:'inline',
-       fixedContentPos: false,
-       removalDelay: 200,
-       showCloseBtn: false,
-       mainClass: 'mfp-fade'
-
-    });
-
-    $(document).on('click', '.popup-modal-dismiss', function (e) {
-    		e.preventDefault();
-    		$.magnificPopup.close();
-    });
+if ( viewport ) {
+   viewport.content = "initial-scale=1";
+  viewport.content = "width=600";
+}
 
 
 /*----------------------------------------------------*/
