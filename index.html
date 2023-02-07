@@ -173,7 +173,7 @@
                            <span class="experiencebull">
                               <span class="skillbull">&bull;</span>
                               <bold>Projets</bold>
-                              : mise en place d'un suivi des consommations électriques, déploiement de dashboards avec les outils Grafana/InfluxDB 2 et PowerBI, intégration d'une solution de robot collaboratif (Cobot) pour l'automatisation d'un poste de vissage et développement d'applications web pour la collecte de données industrielles.
+                              : mise en place d'un suivi des consommations électriques, déploiement de dashboards avec les outils Grafana/InfluxDB et PowerBI, automatisation d'un poste de vissage avec cobot et développement d'applications pour la collecte de données industrielles.
                            </span>
                            <br>
                            <span class="experiencebull">
@@ -274,7 +274,7 @@
                   <h1><span>Compétences</span></h1>
                </div>
                <div class="ten columns main-col">
-                  <p>Avec une expérience diversifiée et des compétences solides en gestion de projet, communication, résolution de problèmes, je suis prêt à relever les défis professionnels les plus exigeants.</p>
+                  <p>Avec une expérience diversifiée et des compétences solides en informatique et gestion de projet, je suis prêt à relever les défis professionnels les plus exigeants.</p>
                   <div id="langues-wrapper" class="bgrid-halves s-bgrid-halves cf">
                      <div class="columns language-item">
                         <div class="bars">
@@ -359,7 +359,7 @@
                               <div class="card-body">
                                  <h5 class="card-title">Domotique (Raspberry Pi + Docker)</h5>
                                  <div class="card-text">
-                                    <p>Un projet de plus de 100h de travail.</p>
+                                    <p>Un projet de plus de 100h de travail :</p>
                                     <ol>
                                        <li>Installation d'un sniffeur de réseau ZigBee sur Raspberry Pi 4</li>
                                        <li>Conversion des données brutes en messages MQTT</li>
@@ -411,7 +411,7 @@
                               <div class="card-body">
                                  <h5 class="card-title">Formation informatique et réseaux</h5>
                                  <div class="card-text">
-                                    <p>Formation d'ingénieur informatique et réseaux suivie en parallèle de mon travail durant 5 mois (Septembre 2022 - Janvier 2023).</p>
+                                    <p>Formation d'ingénieur informatique et réseaux durant 5 mois (soirs + week-ends).</p>
                                  </div>
                                  <div class="card-bottom">
                                     <div class="categories">
@@ -433,25 +433,34 @@
                                  <h5 class="card-title">Terrarium pour plantes carnivores</h5>
                                  <div class="card-text">
                                     <p>
-                                       Le terrarium contient : <i>Cephalotus follicularis, Heliamphora ciliata, Heliamphora heterodoxa x minor, Heliamphora nutans, Heliamphora ionasii</i>.
-                                       <br>
-                                       Pour maintenir ces espèces en bonne santé, je dois :
+                                       <b>Plantes :</b>
                                     </p>
                                     <ul>
-                                       <li>Respecter l'écart de <b>température</b> entre le jour et la nuit de 10°C</li>
-                                       <li>Maintenir un substrat humide et une <b>humidité</b> de l'air de 80 %</li>
-                                       <li>Eclairer correctement pour la <b>photosynthèse</b>.</li>
+                                       <li><i>Heliamphora : heterodoxa x minor, ciliata, nutans, ionasii</i></li>
+                                       <li><i>Cephalotus : follicularis</i></li>
                                     </ul>
                                     <p>
-                                       Les LEDs gauche et droite sont contrôlées via une prise domotisée ZigBee<br>
-                                       Le panneau LED est contrôlé via un ESP32 avec led infrarouge connecté sur GPIO simulant une télécommande. Je peux ainsi choisir la couleur et l'intensité.
+                                       <b>Conditions optimales pour Heliamphora :</b>
                                     </p>
+                                    <ul>
+                                       <li>Substrat très humide</li>
+                                       <li>Ecart de température jour/nuit de 10°C</li>
+                                       <li>Fort éclairage</li>
+                                       <li>Humidité de l'air de 80 %</li>
+                                    </ul>
+                                    <p>
+                                       <b>Eclairage :</b>
+                                    </p>
+                                    <ol>
+                                       <li>Deux modules LED blanc : contrôle via une prise domotisée ZigBee</li>
+                                       <li>Panneau LED bleu/rouge : contrôle via ESP32 (led infrarouge connecté sur GPIO simulant une télécommande)</li>
+                                    </ol>
                                  </div>
                                  <div class="card-bottom">
                                     <div class="categories">
                                        <span class="fa fa-tag"></span>
                                        <div class="categories-text">
-                                          Plantes carnivores, Terrarium
+                                          Plantes carnivores, Terrarium, Domotique
                                        </div>
                                     </div>
                                  </div>
@@ -460,33 +469,30 @@
                         </div>
                         <div class="spacer">
                            <div class="card">
-                              <img src="images/projects/projects_list/tourbiere.jpg" alt="" />
+                              <img src="images/projects/projects_list/terrarium2.jpg" alt="" />
                               <div class="card-body">
-                                 <h5 class="card-title">Tourbière</h5>
+                                 <h5 class="card-title">Terrarium pour escargots</h5>
                                  <div class="card-text">
-                                    L'objectif est de créer un environnement optimal pour les plantes carnivores en reproduisant les conditions de leur habitat naturel :<br>
-                                    - <b>pH acide</b><br>
-                                    - <b>humidité élevé</b><br>
-                                    - <b>manque de nutriments dans le sol</b><br>
-                                    Pour ce faire, j'ai utilisé une baignoire recyclée, que j'ai enterrée dans mon jardin.
-                                    J'ai ensuite ajouté au fond une couche de pouzzolane, un feutre géotextile, et rempli la baignoire avec un mélange volumique de :<br>
-                                    - 60% tourbe blonde <br>
-                                    - 20% perlite<br>
-                                    - 20% sable de rivière<br>
-                                    Enfin, j'ai planté des espèces adaptées à ces conditions, telles que <b>Dionaea</b>, <b>Sarracenia</b> et <b>Drosera</b>.
+                                    <p>
+                                       Archachatina marginata ovum : espèce d'escargot <b>la plus grosse du monde</b>.
+                                    </p>
+                                    <ul>
+                                       <li>Terrarium fabriqué : vitres de recyclage, liège isolant, contreplaqué, <b>charnières imprimées en 3D</b></li>
+                                       <li>Régulation : Thermostat DIY avec plaques chauffantes + système de ventilation (gestion de température / humidité)</li>
+                                       <li>Lumière : L'escargot ne nécessite pas de lumière. Les LEDs sont purement esthétiques et sont contrôlées via une prise domotisée ZigBee.</li>
+                                    </ul>
                                  </div>
                                  <div class="card-bottom">
                                     <div class="categories">
                                        <span class="fa fa-tag"></span>
                                        <div class="categories-text">
-                                          Plantes carnivores
+                                          Escargot, Animaux, Terrarium, Electronique
                                        </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-
                      </div>
                      <div class="columns">
                         <div class="spacer">
@@ -568,12 +574,12 @@
                                  <div class="card-text">
                                     <p>Opérations effectuées sur une BMW E81 120D de 2007 :</p>
                                     <ul>
+                                       <li>Reprogrammation (temporaire) avec ISTA</li>
                                        <li>Changement pallier d'arbre de transmission</li>
                                        <li>Changement turbocompresseur</li>
                                        <li>Nettoyage injecteurs</li>
                                        <li>Changement filtres à carburant/air/huile</li>
                                        <li>Vidanges (BVA, pont, moteur)</li>
-                                       <li>Reprogrammation avec ISTA</li>
                                     </ul>
                                  </div>
                                  <div class="card-bottom">
@@ -618,7 +624,7 @@
                                  <h5 class="card-title">Imprimante 3D + découpeuse LASER</h5>
                                  <div class="card-text">
                                     <ul>
-                                       <li>Construction d'une imprimante 3D + améliorations</li>
+                                       <li>Construction d'une imprimante 3D</li>
                                        <li>Transformation en découpeuse laser</li>
                                        <li>Améliorations (vis trapézoïdales, extrudeur déporté, carte 32-bit, relais SSR, etc...)</li>
                                     </ul>
@@ -637,24 +643,42 @@
                         </div>
                         <div class="spacer">
                            <div class="card">
-                              <img src="images/projects/projects_list/terrarium2.jpg" alt="" />
+                              <img src="images/projects/projects_list/tourbiere.jpg" alt="" />
                               <div class="card-body">
-                                 <h5 class="card-title">Terrarium pour escargots</h5>
+                                 <h5 class="card-title">Tourbière</h5>
                                  <div class="card-text">
                                     <p>
-                                       Le terrarium contient des escargots Archachatina marginata ovum, l'espèce d'escargot <b>la plus grosse du monde.</b><br>
+                                       <b>Plantes :</b>
                                     </p>
                                     <ul>
-                                       <li><b>Terrarium fabriqué</b> : vitres de recyclage, liège isolant, contreplaqué, charnières imprimées en 3D...</li>
-                                       <li><b>Régulation</b> : Thermostat DIY avec plaques chauffantes + système de ventilation (gestion de température / humidité)</li>
-                                       <li><b>Lumière</b> : L'escargot ne nécessite pas de lumière. Les LEDs sont purement esthétiques et sont contrôlées via une prise domotisée ZigBee.</li>
+                                       <li><i>Sarracenia : velvet, purpurea venosa, maroon, tygo, barba, vogel, scarlet belle, stevensii, judith, farnhamii, juthatip sopper</i></li>
+                                       <li><i>Drosera : aliciae, binata, capensis, spatulata, rotundifolia</i></li>
+                                       <li><i>Dionaea : muscipula</i></li>
+                                    </ul>
+                                    <p>
+                                       <b>Conditions optimales :</b>
+                                    </p>
+                                    <ul>
+                                       <li>substrat pH acide</li>
+                                       <li>humidité élevé</li>
+                                       <li>pas de nutriments dans le substrat</li>
+                                    </ul>
+                                    <p>
+                                       <b>Baignoire céramique enterrée :</b>
+                                    </p>
+                                    <ul>
+                                       <li>10cm de pouzolane</li>
+                                       <li>Feutre géotextile</li>
+                                       <li>60% tourbe blonde</li>
+                                       <li>20% perlite</li>
+                                       <li>20% sable de rivière</li>
                                     </ul>
                                  </div>
                                  <div class="card-bottom">
                                     <div class="categories">
                                        <span class="fa fa-tag"></span>
                                        <div class="categories-text">
-                                          Escargot, Animaux, Terrarium
+                                          Plantes carnivores
                                        </div>
                                     </div>
                                  </div>
