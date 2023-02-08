@@ -268,6 +268,10 @@
       margin-bottom: 48px;
       text-align: center;
    }
+   
+   .spacer {
+      padding: 0px 0px 30px 0px;
+  }
 
    /* Citations Section
    ----------------------------------------------------------------------- */
