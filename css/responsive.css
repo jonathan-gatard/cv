@@ -2,12 +2,7 @@
 --------------------------------------------------------------------- */
 
 @media only screen and (max-width: 900px) {
-   .bars_right_skill {
-      margin-top: 40px;
-   }
-   .bars_right_langue {
-      margin-top: 0px;
-   }
+
    /* header styles
    ------------------------------------------------------------------ */
    header .banner {
@@ -36,37 +31,7 @@
    }
 
 
-   /* About Section
-   ------------------------------------------------------------------- */
-   #about .profile-pic {
-      width: 114px;
-      height: 114px;
-      margin-left: 12px;
-      display: none;
-      
-   }
 
-   #about .profile-pic2 {
-      width: 140px;
-      height: 140px;
-      display:inline-block;
-      float:right;
-      margin-right: 65px;
-      margin-top: 31px;
-   }
-
-   #about .contact-details {
-      width: 50%;
-   }
-
-   #about .download {
-      width: 50%;
-      vertical-align: middle;
-   }
-
-   #about .download .button {
-      margin-top: 20px;
-   }
    /* Resume Section
    ------------------------------------------------------------------- */
    #resume h1 {
@@ -259,6 +224,13 @@
       width: 100%;
    }
 
+
+   .bars_right_skill {
+      margin-top: 40px;
+   }
+   .bars_right_langue {
+      margin-top: 0px;
+   }
 
    /* Projets Section
    ----------------------------------------------------------------------- */

@@ -66,7 +66,6 @@ body {
    border-radius: 100%;
 }
 
-
 #about .contact-details {
    width: 41.66667%;
    padding: 0;
@@ -973,4 +972,40 @@ body {
    font-weight: bold;
    font-size: 25px;
    color: #dadada;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+   /* About Section
+   ------------------------------------------------------------------- */
+  
+   #about .contact-details {
+      width: 50%;
+   }
+
+   #about .download {
+      width: 50%;
+      vertical-align: middle;
+   }
+
+   #about .download .button {
+      margin-top: 20px;
+   }
+   #about .profile-pic {
+      width: 114px;
+      height: 114px;
+      margin-left: 12px;
+      display: none;
+      
+   }
+
+   #about .profile-pic2 {
+      width: 140px;
+      height: 140px;
+      display:inline-block;
+      float:right;
+      margin-right: 65px;
+      margin-top: 31px;
+   }
 }

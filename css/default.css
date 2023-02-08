@@ -974,6 +974,42 @@ properly.
    [class*="bgrid"] [class*="column"]+[class*="column"]:last-child {
       float: none;
    }
+
+
+
+
+
+   /* About Section
+   ------------------------------------------------------------------- */
+  
+   #about .contact-details {
+      width: 50%;
+   }
+
+   #about .download {
+      width: 50%;
+      vertical-align: middle;
+   }
+
+   #about .download .button {
+      margin-top: 20px;
+   }
+   #about .profile-pic {
+      width: 114px;
+      height: 114px;
+      margin-left: 12px;
+      display: none;
+      
+   }
+
+   #about .profile-pic2 {
+      width: 140px;
+      height: 140px;
+      display:inline-block;
+      float:right;
+      margin-right: 65px;
+      margin-top: 31px;
+   }
 }
 
 
