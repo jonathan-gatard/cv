@@ -124,12 +124,10 @@
 /*	Dezoom pour mobile
 /*----------------------------------------------------*/
 
-var viewport = document.querySelector('meta[name="viewport"]');
+var siteWidth = 900;
+var scale = screen.width /siteWidth;
 
-if ( viewport ) {
-   viewport.content = "initial-scale=1";
-  viewport.content = "width=600";
-}
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
 
 
 /*----------------------------------------------------*/
