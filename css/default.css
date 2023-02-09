@@ -249,12 +249,8 @@ body {
    -webkit-font-smoothing: antialiased;
    /* Fix for webkit rendering */
    -webkit-text-size-adjust: 100%;
+   display: none;
 }
-
-content {
-   width:100%;
-}
-
 /*  2. Typography
        Vertical rhythm with leading derived from 6
 --------------------------------------------------------------------- */

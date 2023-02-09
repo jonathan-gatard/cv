@@ -195,10 +195,6 @@ ul#nav li.current a {
    overflow: hidden;	
 }
 
-.content {
-   display: none;
-}
-
 table td, table th {
    padding-right: 20px;
    border-left: gray 1px solid;
