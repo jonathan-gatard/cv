@@ -7,14 +7,6 @@
  jQuery(document).ready(function($) {
    
   $('body').fadeIn(1000);
-/*----------------------------------------------------*/
-/* FitText Settings
------------------------------------------------------- */
-
-    setTimeout(function() {
-	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
-	 }, 100);
-
 
 /*----------------------------------------------------*/
 /* Smooth Scrolling
@@ -68,34 +60,9 @@
 ------------------------------------------------------ */
 
 
-if ($(window).width() > 600)
-{
-   var largeur = $(window).width()
-   
-}
-else
-{
-   var largeur=600;
-}
-
-
 $('header').css({ 'height': $(window).height() });
-$('body').css({ 'width': largeur })
-
-
-$(window).on('resize', function() {
-
-   if ($(window).width() > 600)
-   {
-      var largeur = $(window).width()
-      
-   }
-   else
-   {
-      var largeur=600;
-   }
+$(window).on('resize', function() {  
      $('header').css({ 'height': $(window).height() });
-     $('body').css({ 'width': largeur })
 });
 
 

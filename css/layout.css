@@ -1005,7 +1005,6 @@ body {
       height: 140px;
       display:inline-block;
       float:right;
-      margin-right: 65px;
-      margin-top: 31px;
+      margin: 0;
    }
 }
