@@ -45,9 +45,10 @@ ul {
 
 .projets .titre {
    font-weight: bold;
-   font-size: 22px;
+   font-size: 26px;
+   line-height: 26px ;
    margin-top: 25px;
-   margin: 35px 0px 10px 0px;
+   margin: 35px 0px 20px 0px;
 }
 
 .projets b {
@@ -77,18 +78,14 @@ ul {
 }
 
 .projets h2 {
-   font: 35px 'opensans-bold', sans-serif;
+   font: 45px/45px 'opensans-bold', sans-serif;
+   margin-bottom: 10px;
 }
 
 .projets .main-col {
    padding: 0 5% 0 5%;
 }
 
-.projet_block {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
-}
 
 .projets .info {
    font: 16px/24px 'librebaskerville-italic', serif;
@@ -118,9 +115,17 @@ ul {
    background: #fff;
    overflow: hidden;
    position: relative;
-   margin: 10px;
+   margin-bottom: 30px;
    border-radius: 10px;
    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.17), 0 10px 20px -2px rgba(0, 0, 0, 0.14);
+}
+.projets-item .item-wrap:last-child {
+   margin-bottom: 10px;
+}
+
+.spacer {
+   height: 100%;
+   padding-right: 30px;
 }
 
 /* overlay */
