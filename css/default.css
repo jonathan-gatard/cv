@@ -51,7 +51,10 @@ e. Others
  ::-webkit-scrollbar-thumb:hover {
    background-color: #7e8c8f;
  }
-
+ 
+ ::-webkit-scrollbar-corner {
+   background: rgba(0,0,0,0);
+ }
  
  
 html,
