@@ -42,11 +42,11 @@
                     <a class="mobile-btn" href="#" title="Masquer le menu">Masquer le menu</a>
                     <ul id="nav" class="nav">
                         <li><a href="index.html#projets">CV</a></li>
-                        <li><a href="#domotique">Domotique</a></li>
+                        <li><a class="smoothscroll" href="#domotique">Domotique</a></li>
                         <li><a href="formation.html#formation">Formation</a></li>
+                        <li><a href="aeromodelisme.html#aeromodelisme">Aéromodélisme</a></li>
                         <li><a href="mecanique.html#mecanique">Mécanique</a></li>
                         <li><a href="imprimante.html#imprimante">Imprimante 3D</a></li>
-                        <li><a href="aeromodelisme.html#aeromodelisme">Aéromodélisme</a></li>
                     </ul>
                     <!-- end #nav -->
                 </nav>
@@ -77,14 +77,14 @@
             <!-- Projets Section  ================================================== -->
             <section id="domotique" class="projets">
                 <!-- domotique ----------------------------------------------- -->
-                <div class="projet_block row">
+                <div class="row">
                     <div class="twelve columns main-col">
                         <h2>Domotique</h2>
+                        <p class="info">Domotisation de mon habitation<span>&bull;</span> <em class="date">2020 -
+                                aujourd'hui</em>
+                        </p>
                         <div class="row item">
-                            <p class="info">Domotisation de mon habitation<span>&bull;</span> <em class="date">2020 -
-                                    aujourd'hui</em>
-                            </p>
-                            <b>Objectifs</b>: Automatiser l'habitation en utilisant une solution universelle, modulable, gratuite et open-source<br>
+                            <b>Objectifs</b>: Automatiser une habitation en utilisant une solution universelle, modulable, gratuite et open-source<br>
                             <br>
                             <table>
                                 <thead>
@@ -117,9 +117,9 @@
 
                         </div>
                         <div class="row item">
-                            <div class="titre">Installations d'appareils ZigBee de différentes marques</div>
+                            <div class="titre">Installations d'appareils ZigBee</div>
                             <ul>
-                                <li>Valves thermostatiques TuYa</li>
+                                <li>Valves thermostatiques Tuya</li>
                                 <li>Lumières YSRSAI</li>
                                 <li>Capteurs température/humidité Xiaomi</li>
                                 <li>Capteurs de présence Xiaomi</li>
@@ -133,19 +133,7 @@
                                     <img alt="" src="images/projects/domotique/xiaomi1.jpg">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
-                                            <h5>Capteur Xiaomi</h5>
-                                            <p>Permet de mesurer la température et l'humidité</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/domotique/tuya.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Valve thermostatique TuYa</h5>
-                                            <p>Permet de contrôle l'ouverture de la valve de mes radiateurs à eau</p>
+                                            <h5>Capteur de température/humidité - Xiaomi</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -155,8 +143,17 @@
                                     <img alt="" src="images/projects/domotique/xiaomi2.jpg">
                                     <div class="overlay">
                                         <div class="projets-item-meta">
-                                            <h5>Capteur Xiaomi</h5>
-                                            <p>Permet de vérifier si une porte ou une fenêtre est ouverte.</p>
+                                            <h5>Capteur de porte/fenêtre - Xiaomi</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/domotique/tuya.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>Valve thermostatique (pour radiateurs à eau) - Tuya</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +168,7 @@
                                 <li>ESP32 + HTU21D (capteur température/humidité) + CCS811 (capteur CO2)</li>
                                 <li>...</li>
                             </ul>
-                            Installation du firmware ESPHome sur mes Arduino/ESP : permet de faire des mises à jour OTA, de simplifier la gestion des capteurs et de communiquer plus facilement avec Home-Assistant
+                            Installation du firmware ESPHome sur Arduino/ESP : permet de faire des mises à jour OTA, de simplifier la gestion des capteurs et de communiquer plus facilement avec Home-Assistant
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class="item-wrap">
@@ -187,12 +184,12 @@
                             </div>
                         </div>
                         <div class="row item">
-                            <div class="titre">Installation du module sniffer de réseau Zigbee sur les GPIO du Raspberry Pi</div>
+                            <div class="titre">Installation du sniffer de réseau Zigbee sur Raspberry Pi</div>
                             <b>Difficultés rencontrées :</b>
                             <ul>
                                 <li>Mapper "/dev/ttyAMA0" vers le docker Zigbee2MQTT</li>
                                 <li>Paramétrer le baudrate de la PiZigate à 115200 (modification firmware)</li>
-                                <li>Passer la PiZigate en mode production en modifiant la valeur des GPIO 0 et 2</li>
+                                <li>Passer la PiZigate en mode production (modification états GPIO)</li>
                             </ul>
                             <div class="bgrid-halves s-bgrid-halves cf">
                                 <div class="columns projets-item">
@@ -201,8 +198,10 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Raspberry Pi 4</h5>
-                                                <p>Boitier Argon One<br>Alimentation sans interruption (2h d'autonomie)<br>SSD
-                                                    M2 120 Go<br>Connexion ethernet 1 GB/s
+                                                <p>Boitier Argon One<br>
+                                                    Alimentation sans interruption (2h d'autonomie)<br>
+                                                    SSD M2 120 Go<br>
+                                                    Connexion ethernet 1 GB/s
                                                 </p>
                                             </div>
                                         </div>
@@ -234,7 +233,7 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Schéma réseau ZigBee</h5>
-                                                <p>Schéma du réseau maillé ZigBee de mon habitation :
+                                                <p>Schéma du réseau maillé ZigBee :
                                                     <br>
                                                     Etoile : Serveur Raspberry Pi 4
                                                     <br>
@@ -273,7 +272,7 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Dashboard Grafana</h5>
-                                                <p>Apperçu de la consommation énergétique de quelques appareils de l'habitation
+                                                <p>Apperçu de la consommation énergétique de quelques appareils
                                                 </p>
                                             </div>
                                         </div>
@@ -295,8 +294,7 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Flow "Chauffage" Node-Red</h5>
-                                                <p>Cette partie du flow permet de:
-                                                    <br>
+                                                <p>
                                                     - Allumer le chauffage des toilettes la semaine entre 06:30 et 22:00, le weekend entre 08:00 et 23:00.
                                                     <br>
                                                     - Vérifier que la fenêtre n'est pas ouverte lorsque le chauffage est allumé
@@ -315,8 +313,7 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Flow "Présence" Node-Red</h5>
-                                                <p>Cette partie du flow permet de:
-                                                    <br>
+                                                <p>
                                                     - Vérifier la présence de quelqu'un et allumer la lumière si besoin
                                                     <br>
                                                     - Vérifier si l'intensité lumineuse de la pièce est inférieure à la consigne (réglable dans home assistant)
@@ -333,7 +330,7 @@
                         </div>
                         <div class="row item">
                             <div class="titre">Gestion des dockers avec Portainer</div>
-                            Les logiciels précédemment mentionnés sont tous installés dans des conteneurs Docker sur mon serveur. Afin d'obtenir une visualisation efficace et de gérer les sauvegardes sans avoir à utiliser une connexion SSH, j'utilise Portainer comme outil de gestion.
+                            Chaque logiciel est dans un conteneur Docker sur le serveur : Portainer est utilisé comme outil de gestion pour avoir une vue globale sur les Dockers sans avoir à utiliser une connexion SSH.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class="item-wrap">
@@ -341,7 +338,7 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Portainer</h5>
-                                                <p>Management de docker</p>
+                                                <p>Management des conteneurs, images, volumes</p>
                                             </div>
                                         </div>
                                     </div>
@@ -349,8 +346,9 @@
                             </div>
                         </div>
                         <div class="row item">
-                            <div class="titre">Accès VPN et SAMBA</div>
-                            J'ai mis en place un serveur SAMBA pour faciliter l'accès aux fichiers sur mon serveur. Pour des raisons de sécurité, j'ai limité l'utilisation de ce protocole au sein du réseau local. En outre, j'ai installé un serveur VPN pour protéger les connexions et établir un tunnel sécurisé entre mon serveur et mes clients.
+                            <div class="titre">Accès SAMBA via VPN</div>
+                            Serveur SAMBA pour faciliter l'accès aux fichiers (limité au réseau local)<br>
+                            Serveur VPN (pour accéder au réseau local + chiffrer les données)
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class=" item-wrap">
@@ -358,8 +356,7 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Samba + VPN</h5>
-                                                <p>En haut : les logs de mon serveur VPN<br>
-                                                    En bas : l'accès à mon serveur (Neptune) via l'explorer Windows
+                                                <p>Logs du serveur VPN et accès aux fichiers du server (via SAMBA)
                                                 </p>
                                             </div>
                                         </div>
@@ -369,16 +366,16 @@
                         </div>
                         <div class="row item">
                             <div class="titre">Protection du serveur avec Fail2Ban</div>
-                            En raison de l'ouverture du port 22 sur mon routeur pour SSH, j'ai choisi d'installer un module appelé "Fail2Ban" afin de protéger mon système en bloquant les adresses IP qui tentent de se connecter de manière erronée de façon excessive.
+                            En raison de l'ouverture du port 22 sur le routeur pour SSH, il est nécessaire de se protéger.
+                            Un module nommé "Fail2Ban" permet de bannir les adresses IP qui tentent de se connecter de manière erronée de façon excessive.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class=" item-wrap">
                                         <img alt="" src="images/projects/domotique/fail2ban.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Samba + VPN</h5>
-                                                <p>En haut : les logs de mon serveur VPN<br>
-                                                    En bas : l'accès à mon serveur (Neptune) via l'explorer Windows
+                                                <h5>Fail2Ban</h5>
+                                                <p>Logs de Fail2Ban
                                                 </p>
                                             </div>
                                         </div>
@@ -388,7 +385,7 @@
                         </div>
                         <div class="row item">
                             <div class="titre">Personnalisation avec NGINX et DuckDNS</div>
-                            J'ai choisi d'utiliser un nom de domaine gratuit "neptune79.duckdns.org" ainsi que NGINX en tant que reverse proxy pour limiter l'ouverture du port 80 de mon routeur et personnaliser mes URL.
+                            Utilisation d'un nom de domaine gratuit "neptune79.duckdns.org" ainsi que NGINX en tant que reverse proxy pour n'ouvrir que le port 80 du routeur et personnaliser les URL.
                             <div class="bgrid s-bgrid cf">
                                 <div class="columns projets-item">
                                     <div class=" item-wrap">
@@ -396,10 +393,10 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Configuration NGINX</h5>
-                                                <p>Je redirige :<br>
-                                                    - grafana.neptune79.duckdns.org:80<br>vers<br>http://127.0.0.1:3000<br>
-                                                    <br><br>
-                                                    - homeassistant.neptune79.duckdns.org:80<br>vers<br>http://127.0.0.1:8123
+                                                <p>Redirection de :<br><br>
+                                                    grafana.neptune79.duckdns.org:80<br>vers<br>127.0.0.1:3000<br>
+                                                    <br>
+                                                    homeassistant.neptune79.duckdns.org:80<br>vers<br>127.0.0.1:8123
                                                 </p>
                                             </div>
                                         </div>

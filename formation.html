@@ -27,83 +27,87 @@
     </head>
 
     <body>
-            <!-- Header
+        <!-- Header
             ================================================== -->
-            <header id="home">
-                <div class="flag">
-                    <a href="projets-en.html">
-                        <img class="flagimg" src="images/icons/en.jpg">
-                    </a>
-                </div>
-                <nav id="nav-wrap">
-                    <a class="mobile-btn" href="#nav-wrap" title="Afficher le menu">Afficher le menu</a>
-                    <a class="mobile-btn" href="#" title="Masquer le menu">Masquer le menu</a>
-                    <ul id="nav" class="nav">
-                        <li><a href="index.html#projets">CV</a></li>
-                        <li><a href="domotique.html#domotique">Domotique</a></li>
-                        <li><a href="#formation">Formation</a></li>
-                        <li><a href="mecanique.html#mecanique">Mécanique</a></li>
-                        <li><a href="imprimante.html#imprimante">Imprimante 3D</a></li>
-                        <li><a href="aeromodelisme.html#aeromodelisme">Aéromodélisme</a></li>
+        <header id="home">
+            <div class="flag">
+                <a href="projets-en.html">
+                    <img class="flagimg" src="images/icons/en.jpg">
+                </a>
+            </div>
+            <nav id="nav-wrap">
+                <a class="mobile-btn" href="#nav-wrap" title="Afficher le menu">Afficher le menu</a>
+                <a class="mobile-btn" href="#" title="Masquer le menu">Masquer le menu</a>
+                <ul id="nav" class="nav">
+                    <li><a href="index.html#projets">CV</a></li>
+                    <li><a href="domotique.html#domotique">Domotique</a></li>
+                    <li><a class="smoothscroll" href="#formation">Formation</a></li>
+                    <li><a href="aeromodelisme.html#aeromodelisme">Aéromodélisme</a></li>
+                    <li><a href="mecanique.html#mecanique">Mécanique</a></li>
+                    <li><a href="imprimante.html#imprimante">Imprimante 3D</a></li>
+                </ul>
+                <!-- end #nav -->
+            </nav>
+            <!-- end #nav-wrap -->
+
+
+            <div class="row banner">
+                <div class="banner-text">
+                    <h1 class="responsive-headline">Jonathan GATARD</h1>
+                    <h3>
+                        Ingénieur en aéronautique et spatial, ayant élargi ses compétences en tant que manager de projets digitaux dans l'automobile en quête de spécialisation dans l'informatique pour relever de nouveaux défis professionnels.
+                        <br>
+                        <a class="smoothscroll" href="#formation">Faites défiler l'écran et apprenez en plus sur mes projets.</a>
+                    </h3>
+                    <hr />
+                    <ul class="social">
+                        <li><a href="https://github.com/jonathan-gatard"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonathan-gatard/"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
-                    <!-- end #nav -->
-                </nav>
-                <!-- end #nav-wrap -->
-
-
-                <div class="row banner">
-                    <div class="banner-text">
-                        <h1 class="responsive-headline">Jonathan GATARD</h1>
-                        <h3>
-                            Ingénieur en aéronautique et spatial, ayant élargi ses compétences en tant que manager de projets digitaux dans l'automobile en quête de spécialisation dans l'informatique pour relever de nouveaux défis professionnels.
-                            <br>
-                            <a class="smoothscroll" href="#formation">Faites défiler l'écran et apprenez en plus sur mes projets.</a>
-                        </h3>
-                        <hr />
-                        <ul class="social">
-                            <li><a href="https://github.com/jonathan-gatard"><i class="fa fa-github"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/jonathan-gatard/"><i class="fa fa-linkedin"></i></a></li>
+                </div>
+            </div>
+            <p class="scrolldown">
+                <a class="smoothscroll" href="#formation"><i class="icon-down-circle"></i></a>
+            </p>
+            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+        </header>
+        <!-- Header End -->
+        <!-- Projets Section  ================================================== -->
+        <section id="formation" class="projets">
+            <!-- formation ----------------------------------------------- -->
+            <div class="row">
+                <div class="twelve columns main-col">
+                    <h2>Formation : Informatique & Réseaux</h2>
+                    <p class="info">Université technique de Graz<span>&bull;</span> <em class="date">09/2022 - 01/2023</em></p>
+                    <div class="row item">
+                        <b>Objectifs</b> :
+                        <ul>
+                            <li>Sécurité informatique</li>
+                            <li>Réalité augmentée</li>
+                            <li>Intelligence artificielle</li>
+                            <li>Réseau</li>
                         </ul>
                     </div>
-                </div>
-                <p class="scrolldown">
-                    <a class="smoothscroll" href="#formation"><i class="icon-down-circle"></i></a>
-                </p>
-                <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
-            </header>
-            <!-- Header End -->
-            <!-- Projets Section  ================================================== -->
-            <section id="formation" class="projets">
-                <!-- formation ----------------------------------------------- -->
-                <div class="projet_block row">
-                    <div class="twelve columns main-col">
-                        <h2>Formation : Informatique & Réseaux</h2>
-                        <div class="row item">
-                            <p class="info">Université technique de Graz<span>&bull;</span> <em class="date">09/2022 - 01/2023</em></p>
-                            <b>Objectifs</b> :
-                            <ul>
-                                <li>Sécurité informatique</li>
-                                <li>Réalité augmentée</li>
-                                <li>Intelligence artificielle</li>
-                                <li>Réseau</li>
+                    <div class="row item">
+                        <div class="titre">Sécurité informatique</div>
+                        <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :
+                            <li>"Cowsay" = Format string</li>
+                            <li>"Echo" : Buffer overflow</li>
+                            <li>"Fast_encryption" : TOCTOU</li>
+                            <li>"Matrix_multiplier" : Integer overflow</li>
+                            <li>"Router" : Insecure Randomness + UID/GID</li>
+                            <li>"Tugonline" : Use After Free</li>
+                            <li>"You_shall_not_rop" : Buffer stack overflow (ROP)</li>
                             </ul>
-                        </div>
-                        <div class="row item">
-                            <div class="titre">Sécurité informatique</div>
-                            <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :
-                                <li>"Cowsay" = Format string</li>
-                                <li>"Echo" : Buffer overflow</li>
-                                <li>"Fast_encryption" : TOCTOU</li>
-                                <li>"Matrix_multiplier" : Integer overflow</li>
-                                <li>"Router" : Insecure Randomness + UID/GID</li>
-                                <li>"Tugonline" : Use After Free</li>
-                                <li>"You_shall_not_rop" : Buffer stack overflow (ROP)</li>
-                                </ul>
-                                <br>
-                            <p><b>Exemple détaillé pour le programme "Cowsay" :</b><br>L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" dans "cowsay".</p>
-                        </div>
-                        <div class="bgrid-halves s-bgrid-halves cf">
-                            <div class="columns projets-item">
+                            <br>
+                        <p><b>Exemple détaillé pour le programme "Cowsay" :</b>
+                            <br>
+                            L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" dans "cowsay".
+                        </p>
+                    </div>
+                    <div class="bgrid-halves s-bgrid-halves cf">
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/cowsay.jpg">
                                     <div class="overlay">
@@ -113,7 +117,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="columns projets-item">
+                        </div>
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/old_cowsay_please_dont_use.jpg">
                                     <div class="overlay">
@@ -124,21 +130,23 @@
                                 </div>
                             </div>
                         </div>
-                        <p>
-                            La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée et l'utilisateur peut entrer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
-                        </p>
-                        <p>
-                            <b>Méthodologie :</b>
-                        </p>
-                        <ol>
-                            <li>Désassembler la fonction "cowsay", mettre un breakpoint après le "fgets" avec "break* 0x080494ad" et exécuter le programme</li>
-                            <li>En affichant la pile (x/x $sp), regarder où est écrit notre input (AAAA = 0x41414141)</li>
-                            <li>Récupérer l'adresse de la fonction "old_cowsay_please_dont_use" en désassemblant la fonction</li>
-                            <li>Récupérer l'adresse appelée par "fflush"</li>
-                            <li>Appeler "old_cowsay_please_dont_use" au lieu de "fflush"</li>
-                        </ol>
-                        <div class="bgrid-halves s-bgrid-halves cf">
-                            <div class="columns projets-item">
+                    </div>
+                    <p>
+                        La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée sachant que l'utilisateur peut attribuer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
+                    </p>
+                    <p>
+                        <b>Méthodologie :</b>
+                    </p>
+                    <ol>
+                        <li>Désassembler la fonction "cowsay", mettre un breakpoint après le "fgets" avec "break* 0x080494ad" et exécuter le programme</li>
+                        <li>En affichant la pile (x/x $sp), regarder où est écrit notre input (AAAA = 0x41414141)</li>
+                        <li>Récupérer l'adresse de la fonction "old_cowsay_please_dont_use" en désassemblant la fonction</li>
+                        <li>Récupérer l'adresse appelée par "fflush"</li>
+                        <li>Appeler "old_cowsay_please_dont_use" au lieu de "fflush"</li>
+                    </ol>
+                    <div class="bgrid-halves s-bgrid-halves cf">
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/disas_cowsay.jpg">
                                     <div class="overlay">
@@ -148,7 +156,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="columns projets-item">
+                        </div>
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/pile.jpg">
                                     <div class="overlay">
@@ -175,36 +185,38 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row item">
-                            <p>
-                                <b>Écrire le pointeur de "old_cowsay_please_dont_use" (0x08049202) à l'adresse "fflush" (0x0804c018) :</b><br>
-                                Pour écrire dans la mémoire avec %n (integer 4 octets) on doit écrire "0x08049202" (134 517 250 en décimal) caractères ce qui est impossible/long.<br>
-                                La solution est d'utiliser deux fois %hn (short integer 2 octets) : décomposition en "0x0804" (2052) et "0x9202" (37 378).
-                            </p>
-                            <p>
-                                On écrit à "0x0804c018 + offset de 2 octets" = "0x0804c020" la valeur 2052 - 8 = <b>2044</b><br>
-                                (-8 car l'adresse 18c00408 "consomme" 8 octets)<br>
-                                <b>\x20\xc0\x04\x08%2044x%7$hn</b>
-                            </p>
-                            <ul>
-                                <li>"\x20\xc0\x04\x08" = Adresse à la quelle on veut écrire</li>
-                                <li>"%2044x" = Nombre de caractères à écrire (exemple : 15 = 0x000F)</li>
-                                <li>"%7" = Position du buffer dans la pile</li>
-                                <li>"$hn" = Fonction qui écrit un nombre d'octets donnés sur 2 bytes</li>
-                            </ul>
-                            <p>
-                                On écris maintenant à "0x0804c020" : 37378 - 2052 = <b>35326</b><br>
-                                (-2052 car on les à déjà écrit précedemment)<br>
-                                <b>\x18\xc0\x04\x08%35326x%8$hn</b>
-                            </p>
-                            <p>
-                                On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
-                                Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
-                            </p>
-                        </div>
-                        <div class="bgrid s-bgrid cf">
-                            <div class="columns projets-item">
+                    <div class="row item">
+                        <p>
+                            <b>Écrire l'adresse de "old_cowsay_please_dont_use" (0x08049202) à la place de "fflush" (0x0804c018) :</b><br>
+                            Pour écrire dans la mémoire avec %n (integer 4 octets) on doit écrire 0x08049202 (134 517 250 en base 10) caractères ce qui est très long, voir impossible.<br>
+                            La solution est d'utiliser deux fois %hn (short integer 2 octets) : décomposition en 0x0804 (2052) et 0x9202 (37 378).
+                        </p>
+                        <p>
+                            On écrit avec le premier %hn à "0x0804c018" puis à un offset de 2 octets avec le second %hn à "0x0804c020" la valeur 2052 - 8 = <b>2044</b><br>
+                            (-8 car l'adresse 18c00408 "consomme" 8 caractères soit 8 octets)<br>
+                            <b>\x20\xc0\x04\x08%2044x%7$hn</b>
+                        </p>
+                        <ul>
+                            <li>"\x20\xc0\x04\x08" = adresse à la quelle on veut écrire</li>
+                            <li>"%2044x" = nombre de caractères à écrire</li>
+                            <li>"%7" = position du buffer dans la pile</li>
+                            <li>"$hn" = écrit un nombre sur 2 octets</li>
+                        </ul>
+                        <p>
+                            On écris maintenant à "0x0804c020" : 37378 - 2052 = <b>35326</b><br>
+                            (-2052 car on les à déjà écrit précedemment)<br>
+                            <b>\x18\xc0\x04\x08%35326x%8$hn</b>
+                        </p>
+                        <p>
+                            On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
+                            Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
+                        </p>
+                    </div>
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/hacked.jpg">
                                     <div class="overlay">
@@ -215,22 +227,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row item">
-                            <div class="titre">Réalité augmentée</div>
-                            <p><b>Projet 1 : Détection d'une image dans le monde réel avec projection d'un cube virtuel</b>
-                                <br>
-                                Pour cela, j'ai choisi Python avec la bibliothèque OpenCV, les étapes sont :
-                            </p>
-                            <ol>
-                                <li>Calibration de la caméra : matrice caméra + coefficient de distorsion</li>
-                                <li>Recherches des correspondances : coordonnées objet réel / image virtuelle</li>
-                                <li>RANSAC : traitement du modèle (élimination des erreurs statistiquement)</li>
-                                <li>Dessin du cube : projection des coordonées d'un cube 3D dans le 2D virtuel</li>
-                            </ol>
+                    </div>
+                    <div class="row item">
+                        <div class="titre">Réalité augmentée</div>
+                        <p><b>Détection d'une image dans le monde réel avec projection d'un cube virtuel</b>
+                            <br>
+                            J'utilise Python avec la bibliothèque OpenCV, les étapes sont les suivantes :
+                        </p>
+                        <ol>
+                            <li>Calibration de la caméra : matrice caméra + coefficient de distorsion</li>
+                            <li>Recherches des correspondances : coordonnées objet réel / image virtuelle</li>
+                            <li>RANSAC : traitement du modèle (élimination des erreurs statistiquement)</li>
+                            <li>Dessin du cube : projection des coordonées d'un cube 3D dans le 2D virtuel</li>
+                        </ol>
 
-                        </div>
-                        <div class="bgrid-halves s-bgrid-halves cf">
-                            <div class="columns projets-item">
+                    </div>
+                    <div class="bgrid-halves s-bgrid-halves cf">
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/ransac.jpg">
                                     <div class="overlay">
@@ -248,7 +262,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="columns projets-item">
+                        </div>
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <img alt="" src="images/projects/formation/findHomography.jpg">
                                     <div class="overlay">
@@ -269,8 +285,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bgrid s-bgrid cf">
-                            <div class="columns projets-item" style="margin: auto;">
+                    </div>
+                    <div class="row item">
+                        <p>
+                            La caméra est calibrée à l'aide de l'échiquier, l'image est détectée puis un cube virtuel est placé en haut à gauche d'elle.
+                        </p>
+                    </div>
+                    <div class="bgrid s-bgrid cf">
+                        <div class="columns projets-item">
+                            <div class="spacer">
                                 <div class="item-wrap">
                                     <video controls preload width="720">
                                         <source src="videos/projects/formation/AR1.mp4" type="video/mp4" />
@@ -279,49 +302,103 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row item">
-                            <p><b>Projet 2 : rtuel</b>
-                                <br>
-                                .......
-                            </p>
-                            <ol>
-                                <li>111</li>
-                            </ol>
+                    </div>
+                    <br><br>
+                    <div class="row item">
+                        <p><b>Création d'une tour de Hanoï fonctionnelle basée sur des objets réels</b>
+                            <br>
+                            J'utilise Unity avec la bibliothèque Vuforia, les étapes sont les suivantes :
+                        </p>
+                        <ol>
+                            <li>Placer une "ARCamera" et une "ImageTarget" dans la scène</li>
+                            <li>Créer un plan transparent avec un shader pour projeter les ombres</li>
+                            <li>Créer trois "cylinders targets" autour desquels les disques de la tour se placeront </li>
+                            <li>Créer un bouton devant chaque tour pour prendre/déposer un disque</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="bgrid-halves s-bgrid-halves cf">
+                        <div class="columns projets-item">
+                            <div class="spacer">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/formation/algo.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>3 - Fonction "old_cowsay_please_dont_use" désassemblée</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/formation/ar3.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>1 - Fonction "cowsay" désassemblée</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns projets-item">
+                            <div class="spacer">
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/formation/shader.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap">
+                                    <img alt="" src="images/projects/formation/scene.jpg">
+                                    <div class="overlay">
+                                        <div class="projets-item-meta">
+                                            <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- item end -->
-                </div>
-                <!-- End formation -->
-            </section>
-            <!-- Resume Section End-->
-            <!-- footer
-            ================================================== -->
-            <footer>
-                <div class="row">
-                    <div class="twelve columns">
-                        <ul class="social-links">
-                            <li><a href="https://github.com/jonathan-gatard"><i class="fa fa-github"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/jonathan-gatard/"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://twitter.com/gtd_jonathan"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                        <ul class="copyright">
-                            <li>&copy; Copyright 2023</li>
-                            <li>Jonathan GATARD</li>
-                        </ul>
-                    </div>
-                    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer End-->
 
-      <!-- Java Script
+                    <div class="row item">
+                        <p>
+                            a finir
+                        </p>
+                    </div>
+                </div>
+                <!-- item end -->
+            </div>
+            <!-- End formation -->
+        </section>
+        <!-- Resume Section End-->
+        <!-- footer
             ================================================== -->
-            <script type="text/javascript" src="js/jquery.min.js"></script>
-            <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-            <script type="text/javascript" src="js/init.js"></script>
-            <script type="text/javascript" src="js/mdb.min.js"></script>
-            <script type="text/javascript" src="js/waypoints.js"></script>
+        <footer>
+            <div class="row">
+                <div class="twelve columns">
+                    <ul class="social-links">
+                        <li><a href="https://github.com/jonathan-gatard"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonathan-gatard/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://twitter.com/gtd_jonathan"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; Copyright 2023</li>
+                        <li>Jonathan GATARD</li>
+                    </ul>
+                </div>
+                <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End-->
+
+        <!-- Java Script
+            ================================================== -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <script type="text/javascript" src="js/waypoints.js"></script>
     </body>
 
 </html>
