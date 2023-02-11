@@ -4,7 +4,7 @@
 body {
    background: #0f0f0f;
    overflow: overlay;
-   min-width: 600px;
+   min-width: 360px;
 }
 
 li {
@@ -55,7 +55,6 @@ ul {
    vertical-align: baseline;
 }
 
-
 .projets a,
 .projets a:visited {
    color: #F06000;
@@ -82,7 +81,7 @@ ul {
 }
 
 .projets .main-col {
-   padding-right: 10%;
+   padding: 0 5% 0 5%;
 }
 
 .projet_block {

@@ -79,15 +79,22 @@ $(window).on('resize', function() {
 		var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
       var flag = $('.flag');
+      var gotop = $('#go-top-fixed');
 
       //Grand + sur mon nom
 	   if ( (y > h*0.18) && (y < h) && ($(window).outerWidth() > 900 )) {
 	      flag.fadeOut('fast');
 	      nav.fadeOut('fast');
+	      gotop.fadeOut('fast');
 	   }
       //Petit + sur mon nom
       else if ( (y > h*0.18) && (y < h) ) {
 	      flag.fadeOut('fast');
+	      gotop.fadeOut('fast');
+	   }
+      //en dessous de flèche gotop
+      else if (((document.querySelector('html').offsetHeight - document.querySelector('footer').offsetHeight - 60) - (window.innerHeight + window.scrollY)) < 0 ) {
+	      gotop.fadeOut('fast');
 	   }
       else {
          //en haut
@@ -98,6 +105,7 @@ $(window).on('resize', function() {
          //tout le reste du site
          else {
             nav.addClass('opaque').fadeIn('fast');
+            gotop.fadeIn('fast');
             flag.hide();
          }
       }
