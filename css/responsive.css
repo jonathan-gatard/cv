@@ -47,9 +47,8 @@
 
    /*  Section
    ------------------------------------------------------------------- */
-   #citations .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
+   #citations .header-col img {
+      display: none;
    }
 
    #citations blockquote p {
