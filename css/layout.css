@@ -734,10 +734,25 @@ ul#nav li.current a {
    color: #fff;
 }
 
+#citations h1 span {
+   display: none;
+}
+
 #citations .header-col {
    padding-top: 9px;
 }
 
+
+#citations .header-col h1:before {
+   font-family: 'FontAwesome';
+   content: "\f10d";
+   padding-right: 10px;
+   font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #fff;
+}
 
 /*	Blockquotes */
 #citations blockquote {
