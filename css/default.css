@@ -87,7 +87,6 @@ samp,
 small,
 strong,
 sub,
-sup,
 var,
 b,
 i,
@@ -470,8 +469,7 @@ hr {
 
 /*  3. Links  ------------------------------------------------------- */
 
-a,
-a:visited {
+a {
    text-decoration: none;
    outline: 0;
    color: #F06000;
@@ -487,8 +485,7 @@ a:focus {
    color: #313131;
 }
 
-p a,
-p a:visited {
+p a {
    line-height: inherit;
 }
 

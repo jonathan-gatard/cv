@@ -166,19 +166,15 @@
     line-height: 32px;	
     text-decoration: none;	
     text-align: left;	
-    color: #fff;		   color: #fff;
-    -webkit-transition: color .2s ease-in-out;		   -webkit-transition: color .2s ease-in-out;
-    -moz-transition: color .2s ease-in-out;		   -moz-transition: color .2s ease-in-out;
-    -o-transition: color .2s ease-in-out;		   -o-transition: color .2s ease-in-out;
-    -ms-transition: color .2s ease-in-out;		   -ms-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out;		   transition: color .2s ease-in-out;
+    color: #fff;		
+    -webkit-transition: color .2s ease-in-out;		
+    -moz-transition: color .2s ease-in-out;		  
+    -o-transition: color .2s ease-in-out;		
+    -ms-transition: color .2s ease-in-out;	
+    transition: color .2s ease-in-out;	
  }		
  ul#nav li a:active {
    background-color: transparent !important;
-}
-
-ul#nav li.current a {
-   color: #F06000;
 }
 
 
@@ -186,8 +182,7 @@ ul#nav li.current a {
 /* Body
 /* ------------------------------------------------------------------ */
 table {
-   margin-left: auto;
-   margin-right: auto;
+   margin-top: 10px;
 }
 
 table td, table th {
@@ -229,19 +224,23 @@ footer {
     text-align: center;
     position: relative;
  }
+
  footer a,
  footer a:visited {
     color: #525252;
  }
+
  footer a:hover,
  footer a:focus {
     color: #fff;
  }
+
  /* copyright */
  footer .copyright {
     margin: 0;
     padding: 0;
  }
+ 
  footer .copyright li {
     display: inline-block;
     margin: 0;

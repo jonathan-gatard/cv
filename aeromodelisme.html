@@ -6,30 +6,19 @@
     <!--<![endif]-->
 
     <head>
-        <!--- Basic Page Needs
-================================================== -->
         <meta charset="utf-8">
         <title>CV - Jonathan GATARD</title>
         <meta name="description" content="CV - Jonathan GATARD">
         <meta name="author" content="Jonathan GATARD">
-        <!-- Mobile Specific Metas
-================================================== -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <!-- CSS
-================================================== -->
+        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/projets.css">
-        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/responsive.css">
-        <!-- Favicons
-================================================== -->
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
     <body>
-        <!-- Header
-================================================== -->
         <header id="home">
             <div class="flag">
                 <a href="projets-en.html">
@@ -42,16 +31,12 @@
                 <ul id="nav" class="nav">
                     <li><a href="index.html#projets">CV</a></li>
                     <li><a href="domotique.html#domotique">Domotique</a></li>
+                    <li class="actif"><a class="smoothscroll" href="#aeromodelisme">Aéromodélisme</a></li>
                     <li><a href="formation.html#formation">Formation</a></li>
-                    <li><a class="smoothscroll" href="#aeromodelisme">Aéromodélisme</a></li>
                     <li><a href="mecanique.html#mecanique">Mécanique</a></li>
                     <li><a href="imprimante.html#imprimante">Imprimante 3D</a></li>
                 </ul>
-                <!-- end #nav -->
             </nav>
-            <!-- end #nav-wrap -->
-
-
             <div class="row banner">
                 <div class="banner-text">
                     <h1 class="responsive-headline">Jonathan GATARD</h1>
@@ -89,43 +74,51 @@
                     </p>
                     <div class="row item">
                         <div class="titre">Le matériel</div>
-                        J'ai acheté plusieurs avions et une télécommande radio futaba T10CG, puis plus tard une Frsky Taranis X9D Plus.
-                        L'avantage de cette dernière est d'être conçue pour recevoir un firmware open source, hautement configurable et avec beaucoup plus de fonctionnalités.
+                        <p>
+                            J'ai acheté plusieurs avions et une télécommande radio futaba <b>T10CG</b>, puis plus tard une Frsky <b>Taranis X9D Plus</b>.
+                            L'avantage de cette dernière est d'être conçue pour recevoir un firmware open source, hautement configurable et avec beaucoup plus de fonctionnalités.
+                        </p>
                         <div class="bgrid-thirds s-bgrid-thirds cf">
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/aero/avions.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Avions</h5>
-                                            <p>Avion rouge bi-plan : Super Sterman<br>
-                                                Avion jaune ailes basses : Calmato<br>
-                                                Radiocommandes Futaba T10CG et Taranis X9D+<br>
-                                            </p>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/aero/avions.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Avions</h5>
+                                                <p>Avion rouge bi-plan : Super Stearman<br>
+                                                    Avion jaune ailes basses : Calmato<br>
+                                                    Radiocommandes Futaba T10CG et Taranis X9D+<br>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/aero/opentx.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Loigicel OpenTX</h5>
-                                            <p>Logiciel permettant de générer le firmware OpenTX</p>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/aero/opentx.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Loigicel OpenTX</h5>
+                                                <p>Logiciel permettant de générer le firmware OpenTX</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/aero/word.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Document Word pour configuration planeur</h5>
-                                            <p>Document que j'ai crée pour noter les paramètres de mon planneur<br>
-                                                Exemple : dans le mode "phase aterrisage", déployer les volets au maximum, limiter les effets du joystick gauche (gaz/ailerons)
-                                            </p>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/aero/word.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Document Word pour configuration planeur</h5>
+                                                <p>Document que j'ai crée pour noter les paramètres de mon planneur<br>
+                                                    Exemple : dans le mode "phase aterrisage", déployer les volets au maximum, limiter les effets du joystick gauche (gaz/ailerons)
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -134,40 +127,50 @@
                     </div>
                     <div class="row item">
                         <div class="titre">Les crashs</div>
-                        Deux crashs à mon actifs :<br>
-                        - 1er crash : Calmato ailes hautes, ressource trop importante, servomoteur pas assez puissant pour relever la gouverne de tangage<br>
-                        - 2nd crash : Batterie de l'avion défaillante, perte de communication, gaz bloqués à 100%.<br>
-                        Reconstruire les avions, une épreuve de patience...
+                        <p>
+                            Deux crashs à mon actifs :<br>
+                            - 1<sup>er</sup> crash : <b>Calmato ailes hautes</b>, ressource trop importante, servomoteur pas assez puissant pour relever la gouverne de tangage<br>
+                            - 2<sup>e</sup> crash : <b>U-Can-Do 3D</b>, batterie de l'avion défaillante, perte de communication, gaz bloqués à 100%.
+                        </p>
+                        <p>
+                            Reconstruire les avions, une épreuve de patience...
+                        </p>
                         <div class="bgrid-thirds s-bgrid-thirds cf">
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/aero/crash.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Calmato ailes hautes</h5>
-                                            <p>Trop de pièces cassées pour le réparer</p>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/aero/crash.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Calmato ailes hautes</h5>
+                                                <p>Trop de pièces cassées pour le réparer</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/aero/reparation.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>U-Can-Do 3D</h5>
-                                            <p>Fuselage intacte, mais ailes détruites : refaire chaque parties en bois + entoilage</p>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/aero/reparation.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>U-Can-Do 3D</h5>
+                                                <p>Fuselage intacte, mais ailes détruites : refaire chaque parties en bois + entoilage</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/aero/repare.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>U-Can-Do 3D</h5>
-                                            <p>Bois reconstruit, besoin d'entoiler</p>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/aero/repare.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>U-Can-Do 3D</h5>
+                                                <p>Bois reconstruit, besoin d'entoiler</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -178,27 +181,33 @@
                         <div class="titre">Démonstrations</div>
                         <div class="bgrid-thirds s-bgrid-halves cf">
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <video poster="images/projects/aero/avanti.jpg" controls preload>
-                                        <source src="videos/projects/aero/avanti.mp4" type="video/mp4" />
-                                        <source src="videos/projects/aero/avanti.webm" type="video/webm" />
-                                    </video>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <video poster="images/projects/aero/avanti.jpg" controls preload>
+                                            <source src="videos/projects/aero/avanti.mp4" type="video/mp4" />
+                                            <source src="videos/projects/aero/avanti.webm" type="video/webm" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <video poster="images/projects/aero/p47.jpg" controls preload>
-                                        <source src="videos/projects/aero/p47.mp4" type="video/mp4" />
-                                        <source src="videos/projects/aero/p47.webm" type="video/webm" />
-                                    </video>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <video poster="images/projects/aero/p47.jpg" controls preload>
+                                            <source src="videos/projects/aero/p47.mp4" type="video/mp4" />
+                                            <source src="videos/projects/aero/p47.webm" type="video/webm" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                             <div class="columns projets-item">
-                                <div class="item-wrap">
-                                    <video poster="images/projects/aero/nord3202.jpg" controls preload>
-                                        <source src="videos/projects/aero/nord3202.mp4" type="video/mp4" />
-                                        <source src="videos/projects/aero/nord3202.webm" type="video/webm" />
-                                    </video>
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <video poster="images/projects/aero/nord3202.jpg" controls preload>
+                                            <source src="videos/projects/aero/nord3202.mp4" type="video/mp4" />
+                                            <source src="videos/projects/aero/nord3202.webm" type="video/webm" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
