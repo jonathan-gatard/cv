@@ -6,29 +6,19 @@
     <!--<![endif]-->
 
     <head>
-        <!--- Basic Page Needs
-            ================================================== -->
         <meta charset="utf-8">
         <title>CV - Jonathan GATARD</title>
         <meta name="description" content="CV - Jonathan GATARD">
         <meta name="author" content="Jonathan GATARD">
-        <!-- Mobile Specific Metas
-            ================================================== -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- CSS
-            ================================================== -->
+        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/projets.css">
-        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/responsive.css">
-        <!-- Favicons
-            ================================================== -->
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
     <body>
-        <!-- Header
-            ================================================== -->
         <header id="home">
             <div class="flag">
                 <a href="projets-en.html">
@@ -41,16 +31,12 @@
                 <ul id="nav" class="nav">
                     <li><a href="index.html#projets">CV</a></li>
                     <li><a href="domotique.html#domotique">Domotique</a></li>
-                    <li><a class="smoothscroll" href="#formation">Formation</a></li>
                     <li><a href="aeromodelisme.html#aeromodelisme">Aéromodélisme</a></li>
+                    <li class="actif"><a class="smoothscroll" href="#formation">Formation</a></li>
                     <li><a href="mecanique.html#mecanique">Mécanique</a></li>
                     <li><a href="imprimante.html#imprimante">Imprimante 3D</a></li>
                 </ul>
-                <!-- end #nav -->
             </nav>
-            <!-- end #nav-wrap -->
-
-
             <div class="row banner">
                 <div class="banner-text">
                     <h1 class="responsive-headline">Jonathan GATARD</h1>
@@ -104,82 +90,84 @@
                             <br>
                             L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" dans "cowsay".
                         </p>
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/cowsay.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Fonction principale</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/old_cowsay_please_dont_use.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Fonction à appeler</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée sachant que l'utilisateur peut attribuer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
+                        </p>
                     </div>
-                    <div class="bgrid-halves s-bgrid-halves cf">
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/cowsay.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Fonction principale</h5>
+                    <div class="row item">
+                        <p>
+                            <b>Méthodologie :</b>
+                        </p>
+                        <ol>
+                            <li>Désassembler la fonction "cowsay", mettre un breakpoint après le "fgets" avec "break* 0x080494ad" et exécuter le programme</li>
+                            <li>En affichant la pile (x/x $sp), regarder où est écrit notre input (AAAA = 0x41414141)</li>
+                            <li>Récupérer l'adresse de la fonction "old_cowsay_please_dont_use" en désassemblant la fonction</li>
+                            <li>Récupérer l'adresse appelée par "fflush"</li>
+                            <li>Appeler "old_cowsay_please_dont_use" au lieu de "fflush"</li>
+                        </ol>
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/disas_cowsay.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>1 - Fonction "cowsay" désassemblée</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/old_cowsay_please_dont_use.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Fonction à appeler</h5>
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/pile.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p>
-                        La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée sachant que l'utilisateur peut attribuer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
-                    </p>
-                    <p>
-                        <b>Méthodologie :</b>
-                    </p>
-                    <ol>
-                        <li>Désassembler la fonction "cowsay", mettre un breakpoint après le "fgets" avec "break* 0x080494ad" et exécuter le programme</li>
-                        <li>En affichant la pile (x/x $sp), regarder où est écrit notre input (AAAA = 0x41414141)</li>
-                        <li>Récupérer l'adresse de la fonction "old_cowsay_please_dont_use" en désassemblant la fonction</li>
-                        <li>Récupérer l'adresse appelée par "fflush"</li>
-                        <li>Appeler "old_cowsay_please_dont_use" au lieu de "fflush"</li>
-                    </ol>
-                    <div class="bgrid-halves s-bgrid-halves cf">
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/disas_cowsay.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>1 - Fonction "cowsay" désassemblée</h5>
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/disas_old_cowsay_please_dont_use.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>3 - Fonction "old_cowsay_please_dont_use" désassemblée</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/pile.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/disas_old_cowsay_please_dont_use.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>3 - Fonction "old_cowsay_please_dont_use" désassemblée</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/objdump.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>4 - Allocations dynamiques (objdump -R)</h5>
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/objdump.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>4 - Allocations dynamiques (objdump -R)</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -213,15 +201,15 @@
                             On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
                             Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
                         </p>
-                    </div>
-                    <div class="bgrid s-bgrid cf">
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/hacked.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Au lieu du "fflush" la fonction "old_cowsay_please_dont_use" est appelée</h5>
+                        <div class="bgrid s-bgrid cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/hacked.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Au lieu du "fflush" la fonction "old_cowsay_please_dont_use" est appelée</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -229,9 +217,9 @@
                         </div>
                     </div>
                     <div class="row item">
-                        <div class="titre">Réalité augmentée</div>
-                        <p><b>Détection d'une image dans le monde réel avec projection d'un cube virtuel</b>
-                            <br>
+                        <div class="titre">Réalité augmentée - Détection d'objets réels</div>
+                        <p>
+                            L'objectif est de détecter un objet réel (image) et de projeter un cube sur lui.<br>
                             J'utilise Python avec la bibliothèque OpenCV, les étapes sont les suivantes :
                         </p>
                         <ol>
@@ -241,45 +229,45 @@
                             <li>Dessin du cube : projection des coordonées d'un cube 3D dans le 2D virtuel</li>
                         </ol>
 
-                    </div>
-                    <div class="bgrid-halves s-bgrid-halves cf">
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/ransac.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>La fonction effectue 20 itérations, elle sélectionne au hasard 5 points à chaque tour et calcule une matrice de transformation pour ces points. La matrice qui donne le plus grand nombre d'inliers est retournée à la fin.</h5>
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/ransac.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>La fonction effectue 20 itérations, elle sélectionne au hasard 5 points à chaque tour et calcule une matrice de transformation pour ces points. La matrice qui donne le plus grand nombre d'inliers est retournée à la fin.</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/calibrate.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Cette fonction calcule les matrices de la caméra et les coefficients de distorsion en utilisant un damier.</h5>
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/calibrate.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Cette fonction calcule les matrices de la caméra et les coefficients de distorsion en utilisant un damier.</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/findHomography.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Utilisation de l'algorithme SIFT pour détecter les points clés dans deux images (image de référence et vidéo en direct).
-                                                Si le nombre de correspondances valides est supérieur à un nombre minimum donné, la fonction RANSAC est appelée.
-                                                La fonction dessine les correspondances (traits verts).</h5>
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/findHomography.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Utilisation de l'algorithme SIFT pour détecter les points clés dans deux images (image de référence et vidéo en direct).
+                                                    Si le nombre de correspondances valides est supérieur à un nombre minimum donné, la fonction RANSAC est appelée.
+                                                    La fonction dessine les correspondances (traits verts).</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/drawcube.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>Dessin d'un cube sur la vidéo en direct. Les points 2D sont vérifiés pour être dans les limites de la dimension de la vidéo.</h5>
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/drawcube.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Dessin d'un cube sur la vidéo en direct. Les points 2D sont vérifiés pour être dans les limites de la dimension de la vidéo.</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -290,80 +278,90 @@
                         <p>
                             La caméra est calibrée à l'aide de l'échiquier, l'image est détectée puis un cube virtuel est placé en haut à gauche d'elle.
                         </p>
-                    </div>
-                    <div class="bgrid s-bgrid cf">
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <video controls preload width="720">
-                                        <source src="videos/projects/formation/AR1.mp4" type="video/mp4" />
-                                        <source src="videos/projects/formation/AR1.webm" type="video/webm" />
-                                    </video>
+                        <div class="bgrid s-bgrid cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <video controls preload width="720">
+                                            <source src="videos/projects/formation/AR1.mp4" type="video/mp4" />
+                                            <source src="videos/projects/formation/AR1.webm" type="video/webm" />
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <br><br>
                     <div class="row item">
-                        <p><b>Création d'une tour de Hanoï fonctionnelle basée sur des objets réels</b>
-                            <br>
-                            J'utilise Unity avec la bibliothèque Vuforia, les étapes sont les suivantes :
+                        <div class="titre">Réalité augmentée - Tour de Hanoï</div>
+                        L'objectif est de créer une tour de Hanoï fonctionnelle à base de trois piliers et 4 disques.<br>
+                        J'utilise Unity avec la bibliothèque Vuforia, les étapes sont les suivantes :
                         </p>
                         <ol>
-                            <li>Placer une "ARCamera" et une "ImageTarget" dans la scène</li>
+                            <li>Placer une "ARCamera" et une "ImageTarget" dans la scène de Unity</li>
                             <li>Créer un plan transparent avec un shader pour projeter les ombres</li>
                             <li>Créer trois "cylinders targets" autour desquels les disques de la tour se placeront </li>
                             <li>Créer un bouton devant chaque tour pour prendre/déposer un disque</li>
                         </ol>
-                    </div>
-                    
-                    <div class="bgrid-halves s-bgrid-halves cf">
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/algo.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>3 - Fonction "old_cowsay_please_dont_use" désassemblée</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/ar3.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>1 - Fonction "cowsay" désassemblée</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="columns projets-item">
-                            <div class="spacer">
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/shader.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-wrap">
-                                    <img alt="" src="images/projects/formation/scene.jpg">
-                                    <div class="overlay">
-                                        <div class="projets-item-meta">
-                                            <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
+                        <div class="bgrid-halves s-bgrid-halves cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/scene.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Scène Unity avec la caméra, une lumière, l'image à détecter et les éléments de la tour de hanoï</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/shader.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Shader appliqué au plan transparent, permettant de recevoir les ombres des élements de la scène.</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/algo.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Algorithme executé lorsqu'un bouton est pressé (pour déplacer les disques)</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-wrap">
+                                        <img alt="" src="images/projects/formation/ar3.jpg">
+                                        <div class="overlay">
+                                            <div class="projets-item-meta">
+                                                <h5>Image de la scène Unity</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row item">
                         <p>
-                            a finir
+                            Lors de l'execution de la scène, la caméra démarre, l'image est détectée dans le monde réel et la tour de hanoï apparait.
                         </p>
+                        <div class="bgrid s-bgrid cf">
+                            <div class="columns projets-item">
+                                <div class="spacer">
+                                    <div class="item-wrap">
+                                        <video controls preload width="720">
+                                            <source src="videos/projects/formation/AR3.mp4" type="video/mp4" />
+                                            <source src="videos/projects/formation/AR3.webm" type="video/webm" />
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- item end -->
