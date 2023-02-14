@@ -6,7 +6,7 @@
 
 jQuery(document).ready(function ($) {
 
-   $('body').fadeIn(1000);
+   $('body').fadeIn(500);
 
    /*----------------------------------------------------*/
    /* Smooth Scrolling
@@ -136,11 +136,3 @@ jQuery(document).ready(function ($) {
 
 
 });
-
-
-
-
-
-
-
-
