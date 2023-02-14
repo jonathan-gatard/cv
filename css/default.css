@@ -946,6 +946,7 @@ properly.
       margin: 0 auto;
       padding: 0;
    }
+
    .column,
    .columns {
       width: auto !important;

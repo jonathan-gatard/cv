@@ -250,6 +250,14 @@
       padding: 0px 0px 30px 0px;
    }
 
+   .projets-item .projets-item-meta {
+      padding: 6px
+   }
+
+   .projets-item .projets-item-meta h5 {
+      margin-bottom: 0px;
+   }
+
    /* Citations Section
    ----------------------------------------------------------------------- */
    #citations .text-container {
