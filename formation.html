@@ -11,8 +11,8 @@
         <meta name="description" content="CV - Jonathan GATARD">
         <meta name="author" content="Jonathan GATARD">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/projets.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -55,7 +55,7 @@
             <p class="scrolldown">
                 <a class="smoothscroll" href="#formation"><i class="icon-down-circle"></i></a>
             </p>
-            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
         </header>
         <section id="formation" class="projets">
             <div class="row">
@@ -73,7 +73,8 @@
                     </div>
                     <div class="row item">
                         <div class="titre">Sécurité informatique</div>
-                        <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :
+                        <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :</p>
+                        <ul>
                             <li>"Cowsay" : Format string</li>
                             <li>"Echo" : Stack overflow</li>
                             <li>"Fast_encryption" : TOCTOU</li>
@@ -81,8 +82,8 @@
                             <li>"Router" : Insecure Randomness + UID/GID</li>
                             <li>"Tugonline" : Use After Free</li>
                             <li>"You_shall_not_rop" : Stack overflow (ROP)</li>
-                            </ul>
-                            <br>
+                        </ul>
+                        <br>
                         <p><b>Exemple détaillé pour le programme "Cowsay" :</b>
                             <br>
                             L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" dans "cowsay".

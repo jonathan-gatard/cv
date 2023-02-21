@@ -5,9 +5,10 @@
 -----------------------------------------------------------------------------------*/
 
 jQuery(document).ready(function ($) {
-
+   
+   var vitesse = 0;
+   manage_flag(vitesse);
    $('body').fadeIn(500);
-
    /*----------------------------------------------------*/
    /* Smooth Scrolling
    ------------------------------------------------------ */
@@ -69,11 +70,13 @@ jQuery(document).ready(function ($) {
    /*----------------------------------------------------*/
    /*	Fade In/Out Primary Navigation
    ------------------------------------------------------*/
-   $(document).ready('DOMContentLoaded', manage_flag());
-   $(window).on('scroll', manage_flag);
+  
+   $(window).on('scroll', function() {
+      var vitesse = 400;
+      manage_flag(vitesse);
+  });
 
-   function manage_flag() {
-
+   function manage_flag(vitesse) {
       var h = $('header').height();
       var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
@@ -82,22 +85,22 @@ jQuery(document).ready(function ($) {
 
       //Grand + sur mon nom
       if ((y > h * 0.18) && (y < h) && ($(window).outerWidth() > 900)) {
-         flag.fadeOut('fast');
-         nav.fadeOut('fast');
+         flag.fadeOut(vitesse);
+         nav.fadeOut(vitesse);
       }
       //Petit + sur mon nom
       else if ((y > h * 0.18) && (y < h)) {
-         flag.fadeOut('fast');
+         flag.fadeOut(vitesse);
       }
       else {
          //en haut
          if (y < h * 0.18) {
-            flag.fadeIn('fast');
-            nav.removeClass('opaque').fadeIn('fast');
+            flag.fadeIn(vitesse);
+            nav.removeClass('opaque').fadeIn(vitesse);
          }
          //tout le reste du site
          else {
-            nav.addClass('opaque').fadeIn('fast');
+            nav.addClass('opaque').fadeIn(vitesse);
             flag.hide();
          }
       }
@@ -106,14 +109,14 @@ jQuery(document).ready(function ($) {
       //Manage top button
       if (y < h)
       {
-         gotop.fadeOut('fast');
+         gotop.fadeOut(vitesse);
       }
       else if (((document.querySelector('html').offsetHeight - document.querySelector('footer').offsetHeight - 60) - (window.innerHeight + window.scrollY)) < 0)
       {
-         gotop.fadeOut('fast');
+         gotop.fadeOut(vitesse);
       }
       else {
-         gotop.fadeIn('fast');
+         gotop.fadeIn(vitesse);
       }
    }
 

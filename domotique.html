@@ -11,8 +11,8 @@
         <meta name="description" content="CV - Jonathan GATARD">
         <meta name="author" content="Jonathan GATARD">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/projets.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -55,7 +55,7 @@
             <p class="scrolldown">
                 <a class="smoothscroll" href="#domotique"><i class="icon-down-circle"></i></a>
             </p>
-            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
         </header>
         <!-- Header End -->
         <!-- Projets Section  ================================================== -->
@@ -107,9 +107,9 @@
                         <ul>
                             <li>Valves thermostatiques Tuya</li>
                             <li>Lumières YSRSAI</li>
-                            <li>Capteurs température/humidité Xiaomi</li>
+                            <li>Capteurs de température/humidité Xiaomi</li>
                             <li>Capteurs de présence Xiaomi</li>
-                            <li>Capteurs de portes/fenetre Xiaomi</li>
+                            <li>Capteurs de porte/fenêtre Xiaomi</li>
                         </ul>
                         <div class="bgrid-thirds s-bgrid-thirds cf">
                             <div class="columns projets-item">
@@ -155,11 +155,11 @@
                         <ul>
                             <li>ESP8266 + relais 220V</li>
                             <li>ESP32 + PN532 (lecteur RFID)</li>
-                            <li>Arduino nano + LED IR (pour simulation de télécommande IR)</li>
-                            <li>ESP32 + HTU21D (capteur température/humidité) + CCS811 (capteur CO2)</li>
+                            <li>Arduino nano + LED IR (pour simuler une télécommande IR)</li>
+                            <li>ESP32 + HTU21D (capteur de température/humidité) + CCS811 (capteur CO2)</li>
                         </ul>
                         <p>
-                            Installation du firmware ESPHome sur Arduino/ESP : permet de faire des mises à jour OTA, de simplifier la gestion des capteurs et de communiquer plus facilement avec Home Assistant
+                            Installation du firmware ESPHome sur Arduino/ESP : permet de faire des mises à jour OTA, de simplifier la gestion des capteurs et de communiquer plus facilement avec Home Assistant.
                         </p>
                         <div class="bgrid s-bgrid cf">
                             <div class="columns projets-item">
@@ -183,9 +183,9 @@
                             <b>Difficultés rencontrées :</b>
                         </p>
                         <ul>
-                            <li>Mapper "/dev/ttyAMA0" vers le docker Zigbee2MQTT</li>
-                            <li>Paramétrer le baudrate de la PiZigate à 115200 (modification firmware)</li>
+                            <li>Mapper "/dev/ttyAMA0" du Raspberry vers le docker Zigbee2MQTT</li>
                             <li>Passer la PiZigate en mode production (modification états GPIO)</li>
+                            <li>Paramétrer le baudrate de la PiZigate à 115200 (modification firmware)</li>
                         </ul>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
@@ -238,11 +238,11 @@
                                                 <h5>Schéma réseau ZigBee</h5>
                                                 <p>Schéma du réseau maillé ZigBee :
                                                     <br>
-                                                    Etoile : Serveur Raspberry Pi 4
+                                                    Etoile : serveur (Raspberry Pi)
                                                     <br>
-                                                    Noeuds bleus : Appareils répéteurs de réseau
+                                                    Noeuds bleus : appareils répéteurs de réseau
                                                     <br>
-                                                    Neouds verts : Appareils
+                                                    Neouds verts : appareils basiques
                                                 </p>
                                             </div>
                                         </div>
@@ -390,9 +390,7 @@
                                         <img alt="" src="images/projects/domotique/fail2ban.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Fail2Ban</h5>
-                                                <p>Logs de Fail2Ban
-                                                </p>
+                                                <h5>Logs de Fail2Ban</h5>
                                             </div>
                                         </div>
                                     </div>

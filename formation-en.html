@@ -11,8 +11,8 @@
         <meta name="description" content="Resume - Jonathan GATARD">
         <meta name="author" content="Jonathan GATARD">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/projets.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -31,7 +31,7 @@
                 <ul id="nav" class="nav">
                     <li><a href="index-en.html#projets">Resume</a></li>
                     <li><a href="domotique-en.html#domotique">Home automation</a></li>
-                    <li><a href="aeromodelisme-en.html">Aeromodelling</a></li>
+                    <li><a href="aeromodelisme-en.html#aeromodelisme">Aeromodelling</a></li>
                     <li class="actif"><a class="smoothscroll" href="#formation">Formation</a></li>
                     <li><a href="mecanique-en.html#mecanique">Mechanic</a></li>
                     <li><a href="imprimante-en.html#imprimante">3D printer</a></li>
@@ -44,7 +44,7 @@
                         Aerospace and space engineer, who has expanded his skills as a digital project manager in the automotive industry and is seeking specialization in computer science to take on new professional challenges.
                         <br>
                         <a class="smoothscroll" href="#about">Scroll down and learn more about my projects.</a>
-                     </h3>
+                    </h3>
                     <hr />
                     <ul class="social">
                         <li><a href="https://github.com/jonathan-gatard"><i class="fa fa-github"></i></a></li>
@@ -53,27 +53,28 @@
                 </div>
             </div>
             <p class="scrolldown">
-                <a class="smoothscroll" href="#aeromodelisme"><i class="icon-down-circle"></i></a>
+                <a class="smoothscroll" href="#formation"><i class="icon-down-circle"></i></a>
             </p>
-            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+            <div id="go-top-fixed"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
         </header>
         <section id="formation" class="projets">
             <div class="row">
                 <div class="twelve columns main-col">
-                    <h2>Formation : Informatique & Réseaux</h2>
-                    <p class="info">Université technique de Graz<span>&bull;</span> <em class="date">09/2022 - 01/2023</em></p>
+                    <h2>Education: Computer Science & Networks</h2>
+                    <p class="info">Graz University of Technology<span>&bull;</span> <em class="date">09/2022 - 01/2023</em></p>
                     <div class="row item">
-                        <b>Objectifs</b> :
+                        <b>Objectives</b>:
                         <ul>
-                            <li>Sécurité informatique</li>
-                            <li>Réalité augmentée</li>
-                            <li>Intelligence artificielle</li>
-                            <li>Réseau</li>
+                            <li>Computer Security</li>
+                            <li>Augmented Reality</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Networks</li>
                         </ul>
                     </div>
                     <div class="row item">
-                        <div class="titre">Sécurité informatique</div>
-                        <p>J'ai identifié des vulnérabilités dans des programmes (C / C++) :
+                        <div class="titre">Computer Security</div>
+                        <p>I identified vulnerabilities in programs (C/C++):</p>
+                        <ul>
                             <li>"Cowsay": Format string</li>
                             <li>"Echo": Stack overflow</li>
                             <li>"Fast_encryption": TOCTOU</li>
@@ -81,11 +82,11 @@
                             <li>"Router": Insecure Randomness + UID/GID</li>
                             <li>"Tugonline": Use After Free</li>
                             <li>"You_shall_not_rop": Stack overflow (ROP)</li>
-                            </ul>
+                        </ul>
+                        <br>
+                        <p><b>Detailed example for the program "Cowsay":</b>
                             <br>
-                        <p><b>Exemple détaillé pour le programme "Cowsay" :</b>
-                            <br>
-                            L'objectif est d'appeler la fonction "old_cowsay_please_dont_use" dans "cowsay".
+                            The objective is to call the function "old_cowsay_please_dont_use" in "cowsay".
                         </p>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
@@ -94,7 +95,7 @@
                                         <img alt="" src="images/projects/formation/cowsay.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Fonction principale</h5>
+                                                <h5>Main function</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -106,7 +107,7 @@
                                         <img alt="" src="images/projects/formation/old_cowsay_please_dont_use.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Fonction à appeler</h5>
+                                                <h5>Function to call</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -114,19 +115,19 @@
                             </div>
                         </div>
                         <p>
-                            La faille se trouve dans le "printf" ligne 75 : la chaîne affichée (variable "buffer") n'est pas formatée sachant que l'utilisateur peut attribuer la valeur qu'il souhaite à la variable "buffer" grâce au "fgets".
+                            The vulnerability is in the "printf" on line 75: the displayed string (variable "buffer") is not formatted knowing that the user can assign any value to the "buffer" variable thanks to "fgets".
                         </p>
                     </div>
                     <div class="row item">
                         <p>
-                            <b>Méthodologie :</b>
+                            <b>Methodology:</b>
                         </p>
                         <ol>
-                            <li>Désassembler la fonction "cowsay", mettre un breakpoint après le "fgets" avec "break* 0x080494ad" et exécuter le programme</li>
-                            <li>En affichant la pile (x/x $sp), regarder où est écrit notre input (AAAA = 0x41414141)</li>
-                            <li>Récupérer l'adresse de la fonction "old_cowsay_please_dont_use" en désassemblant la fonction</li>
-                            <li>Récupérer l'adresse appelée par "fflush"</li>
-                            <li>Appeler "old_cowsay_please_dont_use" au lieu de "fflush"</li>
+                            <li>Disassemble the "cowsay" function, put a breakpoint after "fgets" with "break* 0x080494ad" and run the program.</li>
+                            <li>By displaying the stack (x/x $sp), see where our input is written (AAAA = 0x41414141).</li>
+                            <li>Retrieve the address of the "old_cowsay_please_dont_use" function by disassembling it.</li>
+                            <li>Retrieve the address called by "fflush".</li>
+                            <li>Call "old_cowsay_please_dont_use" instead of "fflush".</li>
                         </ol>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
@@ -135,7 +136,7 @@
                                         <img alt="" src="images/projects/formation/disas_cowsay.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>1 - Fonction "cowsay" désassemblée</h5>
+                                                <h5>1 - Disassembled "cowsay" function</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -147,7 +148,7 @@
                                         <img alt="" src="images/projects/formation/pile.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>2 - Affichage de la pile après avoir écrit en input "AAAA"</h5>
+                                                <h5>2 - Stack display after writing "AAAA" in input</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -155,7 +156,7 @@
                                         <img alt="" src="images/projects/formation/disas_old_cowsay_please_dont_use.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>3 - Fonction "old_cowsay_please_dont_use" désassemblée</h5>
+                                                <h5>3 - Disassembled "old_cowsay_please_dont_use" function</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -163,7 +164,7 @@
                                         <img alt="" src="images/projects/formation/objdump.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>4 - Allocations dynamiques (objdump -R)</h5>
+                                                <h5>4 - Dynamic allocations (objdump -R)</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -174,29 +175,29 @@
 
                     <div class="row item">
                         <p>
-                            <b>Écrire l'adresse de "old_cowsay_please_dont_use" (0x08049202) à la place de "fflush" (0x0804c018) :</b><br>
-                            Pour écrire dans la mémoire avec %n (integer 4 octets) on doit écrire 0x08049202 (134 517 250 en base 10) caractères ce qui est très long, voir impossible.<br>
-                            La solution est d'utiliser deux fois %hn (short integer 2 octets) : décomposition en 0x0804 (2052) et 0x9202 (37 378).
+                            <b>Write the address of "old_cowsay_please_dont_use" (0x08049202) instead of "fflush" (0x0804c018):</b><br>
+                            To write into memory with %n (integer 4 bytes), we would have to write 0x08049202 (134,517,250 in base 10) characters, which is very long or even impossible.<br>
+                            The solution is to use two %hn (short integer 2 bytes): the decomposition into 0x0804 (2052) and 0x9202 (37,378).
                         </p>
                         <p>
-                            On écrit avec le premier %hn à "0x0804c018" puis à un offset de 2 octets avec le second %hn à "0x0804c020" la valeur 2052 - 8 = <b>2044</b><br>
-                            (-8 car l'adresse 18c00408 "consomme" 8 caractères soit 8 octets)<br>
+                            We write with the first %hn at "0x0804c018", and with an offset of 2 bytes using the second %hn at "0x0804c020", the value 2052 - 8 = <b>2044</b><br>
+                            (-8 because the address 18c00408 "consumes" 8 characters, or 8 bytes)<br>
                             <b>\x20\xc0\x04\x08%2044x%7$hn</b>
                         </p>
                         <ul>
-                            <li>"\x20\xc0\x04\x08" = adresse à la quelle on veut écrire</li>
-                            <li>"%2044x" = nombre de caractères à écrire</li>
-                            <li>"%7" = position du buffer dans la pile</li>
-                            <li>"$hn" = écrit un nombre sur 2 octets</li>
+                            <li>"\x20\xc0\x04\x08" = the address we want to write to</li>
+                            <li>"%2044x" = the number of characters to write</li>
+                            <li>"%7" = the position of the buffer on the stack</li>
+                            <li>"$hn" = write a number on 2 bytes</li>
                         </ul>
                         <p>
-                            On écris maintenant à "0x0804c020" : 37378 - 2052 = <b>35326</b><br>
-                            (-2052 car on les à déjà écrit précedemment)<br>
+                            We now write at "0x0804c020": 37,378 - 2052 = <b>35,326</b><br>
+                            (-2052 because we have already written them previously)<br>
                             <b>\x18\xc0\x04\x08%35326x%8$hn</b>
                         </p>
                         <p>
-                            On combine les deux : <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
-                            Il suffit désormais d'entrer cet input pour appeler la fonction "old_cowsay_please_dont_use".
+                            We combine the two: <b>\x20\xc0\x04\x08\x18\xc0\x04\x08%2044x%7$hn%35326x%8$hn</b>.<br>
+                            We now just have to input this to call the "old_cowsay_please_dont_use" function.
                         </p>
                         <div class="bgrid s-bgrid cf">
                             <div class="columns projets-item">
@@ -205,7 +206,7 @@
                                         <img alt="" src="images/projects/formation/hacked.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Au lieu du "fflush" la fonction "old_cowsay_please_dont_use" est appelée</h5>
+                                                <h5>Instead of "fflush", the function "old_cowsay_please_dont_use" is called</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -214,16 +215,16 @@
                         </div>
                     </div>
                     <div class="row item">
-                        <div class="titre">Réalité augmentée - Détection d'objets réels</div>
+                        <div class="titre">Augmented Reality - Real Object Detection</div>
                         <p>
-                            L'objectif est de détecter un objet réel (image) et de projeter un cube sur lui.<br>
-                            J'utilise Python avec la bibliothèque OpenCV, les étapes sont les suivantes :
+                            The goal is to detect a real object (image) and project a cube onto it.<br>
+                            I use Python with the OpenCV library, the steps are as follows:
                         </p>
                         <ol>
-                            <li>Calibration de la caméra : matrice caméra + coefficient de distorsion</li>
-                            <li>Recherches des correspondances : coordonnées objet réel / image virtuelle</li>
-                            <li>RANSAC : traitement du modèle (élimination des erreurs statistiquement)</li>
-                            <li>Dessin du cube : projection des coordonées d'un cube 3D dans le 2D virtuel</li>
+                            <li>Camera calibration: camera matrix + distortion coefficient</li>
+                            <li>Correspondence search: real object coordinates / virtual image</li>
+                            <li>RANSAC: model processing (statistical error elimination)</li>
+                            <li>Cube drawing: projection of 3D cube coordinates into virtual 2D</li>
                         </ol>
 
                         <div class="bgrid-halves s-bgrid-halves cf">
@@ -233,7 +234,7 @@
                                         <img alt="" src="images/projects/formation/ransac.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>La fonction effectue 20 itérations, elle sélectionne au hasard 5 points à chaque tour et calcule une matrice de transformation pour ces points. La matrice qui donne le plus grand nombre d'inliers est retournée à la fin.</h5>
+                                                <h5>The function performs 20 iterations, randomly selecting 5 points at each round and calculating a transformation matrix for those points. The matrix that gives the largest number of inliers is returned at the end.</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -241,7 +242,7 @@
                                         <img alt="" src="images/projects/formation/calibrate.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Cette fonction calcule les matrices de la caméra et les coefficients de distorsion en utilisant un damier.</h5>
+                                                <h5>This function calculates the camera matrices and distortion coefficients using a checkerboard.</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -253,9 +254,9 @@
                                         <img alt="" src="images/projects/formation/findHomography.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Utilisation de l'algorithme SIFT pour détecter les points clés dans deux images (image de référence et vidéo en direct).
-                                                    Si le nombre de correspondances valides est supérieur à un nombre minimum donné, la fonction RANSAC est appelée.
-                                                    La fonction dessine les correspondances (traits verts).</h5>
+                                                <h5>Using the SIFT algorithm to detect key points in two images (reference image and live video).
+                                                    If the number of valid correspondences is greater than a given minimum number, the RANSAC function is called.
+                                                    The function draws the correspondences (green lines).</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +264,7 @@
                                         <img alt="" src="images/projects/formation/drawcube.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Dessin d'un cube sur la vidéo en direct. Les points 2D sont vérifiés pour être dans les limites de la dimension de la vidéo.</h5>
+                                                <h5>Drawing a cube onto the live video. The 2D points are checked to be within the dimension boundaries of the video.</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -273,7 +274,7 @@
                     </div>
                     <div class="row item">
                         <p>
-                            La caméra est calibrée à l'aide de l'échiquier, l'image est détectée puis un cube virtuel est placé dans son coin supérieur gauche.
+                            The camera is calibrated using a checkerboard, the image is detected and a virtual cube is placed in its upper left corner.
                         </p>
                         <div class="bgrid s-bgrid cf">
                             <div class="columns projets-item">
@@ -289,17 +290,16 @@
                         </div>
                     </div>
                     <div class="row item">
-                        <div class="titre">Réalité augmentée - Tour de Hanoï</div>
-                        L'objectif est de créer une tour de Hanoï fonctionnelle à base de trois piliers et 4 disques.<br>
-                        J'utilise Unity avec la bibliothèque Vuforia, les étapes sont les suivantes :
+                        <div class="titre">Augmented Reality - Tower of Hanoi</div>
+                        The goal is to create a functional Tower of Hanoi using three pillars and four discs.<br>
+                        I am using Unity with the Vuforia library, and the steps are as follows:
                         </p>
                         <ol>
-                            <li>Placer une "ARCamera" et une "ImageTarget" dans la scène de Unity</li>
-                            <li>Créer un plan transparent avec un shader pour projeter les ombres</li>
-                            <li>Créer trois "cylinders targets" autour desquels les disques de la tour se placeront </li>
-                            <li>Créer un bouton devant chaque tour pour prendre/déposer un disque</li>
+                            <li>Place an "ARCamera" and an "ImageTarget" in the Unity scene.</li>
+                            <li>Create a transparent plane with a shader to project shadows.</li>
+                            <li>Create three "cylinder targets" around which the tower's discs will be placed.</li>
+                            <li>Create a button in front of each tower to pick up/put down a disc.</li>
                         </ol>
-
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
                                 <div class="spacer">
@@ -307,7 +307,7 @@
                                         <img alt="" src="images/projects/formation/scene.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Scène Unity avec la caméra, une lumière, l'image à détecter et les éléments de la tour de hanoï</h5>
+                                                <h5>Unity scene with the camera, a light, the image to be detected, and the elements of the Tower of Hanoi</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -315,7 +315,7 @@
                                         <img alt="" src="images/projects/formation/shader.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Shader appliqué au plan transparent, permettant de recevoir les ombres des élements de la scène.</h5>
+                                                <h5>Shader applied to the transparent plane, allowing it to receive shadows from the scene's elements.</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -327,7 +327,7 @@
                                         <img alt="" src="images/projects/formation/algo.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Algorithme executé lorsqu'un bouton est pressé (pour déplacer les disques)</h5>
+                                                <h5>Algorithm executed when a button is pressed (to move the discs)</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -335,33 +335,32 @@
                                         <img alt="" src="images/projects/formation/ar3.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>Image de la scène Unity</h5>
+                                                <h5>Image of the Unity scene</h5>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row item">
-                        <p>
-                            Lors de l'execution de la scène, la caméra démarre, l'image est détectée dans le monde réel et la tour de hanoï apparait.
-                        </p>
-                        <div class="bgrid s-bgrid cf">
-                            <div class="columns projets-item">
-                                <div class="spacer">
-                                    <div class="item-wrap">
-                                        <video controls preload width="720">
-                                            <source src="videos/projects/formation/AR3.mp4" type="video/mp4" />
-                                            <source src="videos/projects/formation/AR3.webm" type="video/webm" />
-                                        </video>
+                        <div class="row item">
+                            <p>
+                                During scene execution, the camera starts, the image is detected in the real world, and the Tower of Hanoi appears.
+                            </p>
+                            <div class="bgrid s-bgrid cf">
+                                <div class="columns projets-item">
+                                    <div class="spacer">
+                                        <div class="item-wrap">
+                                            <video controls preload width="720">
+                                                <source src="videos/projects/formation/AR3.mp4" type="video/mp4" />
+                                                <source src="videos/projects/formation/AR3.webm" type="video/webm" />
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <footer>
             <div class="row">
