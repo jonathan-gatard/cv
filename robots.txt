@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/profil.jpg
+
+Sitemap: https://jonathan-gatard.fr/sitemap.xml
