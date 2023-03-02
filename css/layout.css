@@ -319,15 +319,15 @@ ul#nav li.current a {
 }
 
 .web {
-   width: 50%;
+   width: 85%;
 }
 
 .python {
-   width: 55%;
+   width: 60%;
 }
 
 .c {
-   width: 70%;
+   width: 75%;
 }
 
 .planning {
@@ -342,6 +342,29 @@ ul#nav li.current a {
    width: 70%;
 }
 
+.js{
+   width: 60%;
+}
+
+.react{
+   width: 45%;
+}
+
+.mongodb{
+   width: 60%;
+}
+
+.mysql{
+   width: 80%;
+}
+
+.influxdb{
+   width: 80%;
+}
+
+.grafana{
+   width: 85%;
+}
 /*----------------------------------------------*/
 /*	Langues Bars
 /*----------------------------------------------*/
