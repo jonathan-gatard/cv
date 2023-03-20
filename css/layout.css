@@ -459,6 +459,7 @@ ul#nav li.current a {
 
 .card-body {
    padding: 20px;
+   background-color: #fbfbfb;
 }
 
 .card-title {
