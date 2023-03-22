@@ -176,7 +176,11 @@ ul#nav li.actif a {
    margin-top: -15px;
 }
 
-.projets-item .item-wrap img video {
+.projets-item .item-wrap video {
+   vertical-align: bottom;
+}
+
+.projets-item .item-wrap img {
    vertical-align: bottom;
 }
 
@@ -194,6 +198,13 @@ ul#nav li.actif a {
    font: 12px/18px 'opensans-light', sans-serif;
    color: #c6c7c7;
    margin-bottom: 0;
+}
+
+.projets-item-meta li {
+   font: 12px/18px 'opensans-light', sans-serif;
+   color: #c6c7c7;
+   margin-bottom: 0;
+   vertical-align: baseline;
 }
 
 /* on hover */

@@ -66,13 +66,13 @@
                     <div class="row item">
                         <div class="titre">Installation de l'environnement Docker</div>
                         <p>
-                            Pour faciliter le développement et le déploiement de React, j'ai créé un environnement de développement Docker (avec Docker-Compose).
-                            L'environnement Docker permet d'intégrer facilement le backend et le frontend de l'application, ainsi que le nécessaire pour gérer l'intégration et le déploiement continus (Jenkins).
+                            Pour faciliter le développement et le déploiement de mes applications React, j'ai créé un environnement Docker (avec Docker-Compose).
+                            L'environnement Docker permet d'intégrer facilement le backend et le frontend des applications, ainsi que le nécessaire pour gérer l'intégration et le déploiement continus (Jenkins).
                         </p>
                         <ul>
-                            <li>Installer Docker et docker compose sur le serveur (Linux Debian)</li>
-                            <li>Créer les Dockers Jenkins et MongoDB via DockerHub (Image pull)</li>
-                            <li>Créer les Dockerfiles Nodes pour le backend et le frontend</li>
+                            <li>Installer Docker et Docker-compose sur le serveur (Linux Debian)</li>
+                            <li>Créer les Dockers Jenkins et MongoDB via DockerHub (Pull des images prêtes à l'emploi)</li>
+                            <li>Créer les Dockerfiles Nodes pour le backend et le frontend (Build des images sur base Alpine)</li>
                         </ul>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
@@ -82,12 +82,12 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Docker-Compose</h5>
-                                                <p>
-                                                    Jenkins<br>
-                                                    MongoDB<br>
-                                                    Node Frontend<br>
-                                                    Node Backend
-                                                </p>
+                                                <ul>
+                                                    <li>Jenkins</li>
+                                                    <li>MongoDB</li>
+                                                    <li>Node Frontend</li>
+                                                    <li>Node Backend</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -100,9 +100,6 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Dockerfile Node Frontend</h5>
-                                                <p>
-                                                    Frontend for React
-                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -114,7 +111,7 @@
                         <div class="titre">Mise en place du repository Github</div>
                         <p>
                             J'ai généré un token d'accès à mon repository Github pour permettre le fonctionnement de Jenkins.
-                            Cela permet de restreindre l'accès au code source de l'application si besoin.
+                            Cela permet de restreindre l'accès au code source de l'application.
                             J'ai ensuite configuré ce token dans Jenkins en tant que "secret", cela permet à Jenkins d'accéder au code source de l'application sur Github, de le build et de le déployer automatiquement.
                         </p>
                         <div class="bgrid-halves s-bgrid-halves cf">
@@ -124,7 +121,7 @@
                                         <img alt="" src="images/projects/react/github.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>...</h5>
+                                                <h5>Token Github</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -137,7 +134,6 @@
                         <p>
                             Pour configurer Jenkins, j'ai créé des pipelines basés sur des fichiers de configuration appelés Jenkinsfiles.
                             Ces pipelines définissent les étapes à exécuter pour l'intégration et le déploiement de l'application.
-                            J'ai également configuré des notifications pour être informé en temps réel de l'état des pipelines et des résultats des tests.
                             Je compte mettre en place dans un futur proche des outils pour contrôler la qualité du code source de l'application (tels que SonarQube)
                             La partie "environnement" est maintenant en place, le processus est automatisé et fiable pour le développement et le déploiement de mes applications React.
                         </p>
@@ -149,8 +145,7 @@
                                         <img alt="" src="images/projects/react/jenkins1.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>...</h5>
-                                                <p>...</p>
+                                                <h5>Configuration Jenkins</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -162,8 +157,15 @@
                                         <img alt="" src="images/projects/react/jenkins2.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>...</h5>
-                                                <p>...</p>
+                                                <h5>Jenkinsfile</h5>
+                                                <p>
+                                                <ul>
+                                                    <li>Clonage du repository</li>
+                                                    <li>Compilation de l'image</li>
+                                                    <li>Déploiement de l'image</li>
+                                                </ul>
+                                                </p>
+
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +176,7 @@
                     <div class="row item">
                         <div class="titre">Préparation de la base de données</div>
                         <p>
-                            Pour préparer la base de données de l'application React, j'ai installé et configuré MongoDB, créé une base de données et des collections, et intégré MongoDB dans l'application.
+                            Pour préparer la base de données de l'application React, j'ai installé et configuré MongoDB, créé une base de données et des collections, et intégré MongoDB dans mon application.
                             J'ai également mis en place des sauvegardes régulières pour garantir la sécurité des données.
                         </p>
                         <div class="bgrid-halves s-bgrid-halves cf">
@@ -184,7 +186,7 @@
                                         <img alt="" src="images/projects/react/mongodb.jpg">
                                         <div class="overlay">
                                             <div class="projets-item-meta">
-                                                <h5>...</h5>
+                                                <h5>MongoDB collection</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -196,11 +198,10 @@
                         <div class="titre">Développement de l'application</div>
                         <br>
                         <p>
-                            Le développement de l'application React a été effectué en utilisant le framework React pour le développement du frontend et Node.js pour le développement du backend. J'ai créé des composants React pour les différentes pages de l'application et les ai reliés à l'API REST du backend via des requêtes HTTP.
-
-                            Pour le développement du backend, j'ai créé des endpoints pour les différentes fonctionnalités de l'application et ai utilisé MongoDB pour le stockage des données. J'ai également mis en place des fonctions pour la validation des données, l'authentification et la gestion des erreurs.
-
-                            Le développement de l'application a été effectué de manière itérative en utilisant des méthodes agiles pour améliorer continuellement la qualité du rendu.
+                            Le développement de l'application a été effectué en utilisant le framework React pour le développement du frontend et Node.js pour le développement du backend.
+                            J'ai créé des composants React pour les différentes pages de l'application et les ai reliés à l'API du backend via des requêtes HTTP.
+                            Pour le développement du backend, j'ai créé des endpoints pour les différentes fonctionnalités de l'application et ai utilisé MongoDB pour le stockage des données.
+                            J'ai également mis en place des fonctions pour la validation des données, l'authentification et la gestion des erreurs.
                         </p>
                         <div class="bgrid-halves s-bgrid-halves cf">
                             <div class="columns projets-item">
@@ -210,7 +211,6 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Backend</h5>
-                                                <p>...</p>
                                             </div>
                                         </div>
                                     </div>
@@ -223,7 +223,6 @@
                                         <div class="overlay">
                                             <div class="projets-item-meta">
                                                 <h5>Frontend</h5>
-                                                <p>...</p>
                                             </div>
                                         </div>
                                     </div>
