@@ -343,6 +343,10 @@ ul#nav li.current a {
 }
 
 .js{
+   width: 70%;
+}
+
+.java{
    width: 60%;
 }
 
