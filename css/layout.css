@@ -257,7 +257,7 @@ ul#nav li.current a {
 
 
 .skillsgroup {
-   margin-bottom: 120px;
+   margin-bottom: 70px;
 }
 
 .bars .languages li em {
@@ -277,7 +277,7 @@ ul#nav li.current a {
 
 .bars li {
    position: relative;
-   margin-bottom: 48px;
+   margin-bottom: 42px;
    background: #ccc;
    height: 20px;
    border-radius: 3px;
