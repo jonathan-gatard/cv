@@ -196,6 +196,45 @@ ul#nav li.current a {
    font-family: 'opensans-bold', serif;
 }
 
+#resume .name-entreprise {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: flex-end;
+   justify-content: flex-start;
+}
+
+#resume .img-entreprise {
+   height: 40px;
+   margin-left: 10px;
+}
+
+#resume .row {
+   margin-bottom: 50px;
+}
+
+.work p {
+   margin-bottom: 0;
+}
+
+#resume .div-experiences-details {
+   display: none;
+}
+
+
+#resume .btn-experiences-details {
+   padding: 0px 10px 0px 10px;
+   font-size: 14px;
+   line-height: 16px;
+   background-color: #fbfbfb;
+   color: #414141;
+   border: 1px solid black;
+   border-radius: 3px;
+   cursor: pointer;
+
+}
+
+
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
@@ -215,6 +254,7 @@ ul#nav li.current a {
 .bars ul:last-child {
    margin-bottom: 0px;
 }
+
 
 .skillsgroup {
    margin-bottom: 120px;
@@ -241,6 +281,13 @@ ul#nav li.current a {
    background: #ccc;
    height: 20px;
    border-radius: 3px;
+}
+.skills .skill-title {
+   background: transparent;
+   border-bottom: #1F1F1F solid 1px;
+   border-radius: 0;
+   padding-bottom: 30px;
+   font-size: 18px;
 }
 
 .bars li em {
@@ -272,7 +319,6 @@ ul#nav li.current a {
    border-radius: 3px 0 0 3px;
 }
 
-
 .francais {
    width: 100%;
    border-radius: 3px;
@@ -290,85 +336,180 @@ ul#nav li.current a {
    width: 15%;
 }
 
-.proj {
+
+/* Skills */
+.windows {
+   width: 95%;
+}
+
+.windowsserver {
+   width: 90%;
+}
+
+.debian {
+   width: 85%;
+}
+
+.centos {
+   width: 80%;
+}
+
+.freebsd {
+   width: 80%;
+}
+
+.java {
+   width: 90%;
+}
+
+.spring {
+   width: 60%;
+}
+
+.js {
+   width: 80%;
+}
+
+.react {
    width: 75%;
 }
 
-.management {
-   width: 65%;
+.express {
+   width: 75%;
 }
 
+.web {
+   width: 90%;
+}
+
+.c {
+   width: 80%;
+}
+
+.python {
+   width: 80%;
+}
+
+.bash {
+   width: 60%;
+}
+
+.powershell {
+   width: 90%;
+}
+
+.mongodb {
+   width: 80%;
+}
+
+.mysql {
+   width: 95%;
+}
+
+.mariadb {
+   width: 95%;
+}
+
+.influxdb {
+   width: 80%;
+}
+
+/* Other Skills */
+.meca {
+   width: 90%;
+}
+
+.elec {
+   width: 80%;
+}
+
+.docker {
+   width: 95%;
+}
+
+.kubernetes {
+   width: 50%;
+}
+
+.git {
+   width: 80%;
+}
+
+.vpn {
+   width: 80%;
+}
+
+.junit {
+   width: 60%;
+}
+
+.ansible {
+   width: 70%;
+}
+
+.jenkins {
+   width: 60%;
+}
+
+.prometheus {
+   width: 60%;
+}
+
+.zabbix {
+   width: 60%;
+}
+
+.unity {
+   width: 50%;
+}
+
+/* Tools */
 .excel {
    width: 95%;
 }
 
 .powerbi {
-   width: 80%;
+   width: 95%;
 }
 
-.debian {
-   width: 80%;
+.grafana {
+   width: 90%;
 }
 
-.docker {
+.nodered {
+   width: 90%;
+}
+
+.jira {
    width: 70%;
 }
 
-.meca {
-   width: 75%;
-}
-
-.web {
-   width: 85%;
-}
-
-.python {
-   width: 60%;
-}
-
-.c {
-   width: 75%;
+.proj {
+   width: 90%;
 }
 
 .planning {
-   width: 70%;
+   width: 90%;
 }
 
-.elec {
-   width: 70%;
+.management {
+   width: 90%;
 }
 
-.nodered{
-   width: 70%;
-}
-
-.js{
-   width: 70%;
-}
-
-.java{
-   width: 60%;
-}
-
-.react{
-   width: 45%;
-}
-
-.mongodb{
-   width: 60%;
-}
-
-.mysql{
+.agile {
    width: 80%;
 }
 
-.influxdb{
-   width: 80%;
+.team {
+   width: 100%;
 }
 
-.grafana{
-   width: 85%;
+.communication {
+   width: 100%;
 }
+
+
+
 /*----------------------------------------------*/
 /*	Langues Bars
 /*----------------------------------------------*/
@@ -431,7 +572,7 @@ ul#nav li.current a {
    position: relative;
 }
 
-.card img{
+.card img {
    width: 100%;
 }
 
@@ -494,7 +635,7 @@ ul#nav li.current a {
    border-radius: 5px;
    font-weight: bold;
    letter-spacing: 3px;
-   border:1px solid #f06000;
+   border: 1px solid #f06000;
    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.17), 0 10px 20px -2px rgba(0, 0, 0, 0.14);
    transition: background-color 0.1s ease-in-out;
    transition: color 0.1s ease-in-out;
@@ -519,12 +660,12 @@ ul#nav li.current a {
 }
 
 .categories-text {
-   margin-left: 20px ;
+   margin-left: 20px;
 }
 
 .categories .fa-tag {
    float: left;
-   margin-top:3px;
+   margin-top: 3px;
 }
 
 /* Portfolio Content */
@@ -1085,7 +1226,7 @@ ul#nav li.current a {
 
    /* About Section
    ------------------------------------------------------------------- */
-  
+
    #about .contact-details {
       width: 50%;
    }
@@ -1098,19 +1239,20 @@ ul#nav li.current a {
    #about .download .button {
       margin-top: 20px;
    }
+
    #about .profile-pic {
       width: 114px;
       height: 114px;
       margin-left: 12px;
       display: none;
-      
+
    }
 
    #about .profile-pic2 {
       width: 140px;
       height: 140px;
-      display:inline-block;
-      float:right;
+      display: inline-block;
+      float: right;
       margin: 0;
    }
 }
