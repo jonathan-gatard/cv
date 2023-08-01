@@ -166,7 +166,7 @@ ul#nav li.current a {
 
 
 .education p {
-   margin-bottom: 48px;
+   margin-bottom: 0;
 }
 
 #resume .info {
@@ -188,7 +188,6 @@ ul#nav li.current a {
 
 #resume .experiencebull {
    display: inline-block;
-   margin-top: 8px;
    margin-bottom: 8px;
 }
 
@@ -223,15 +222,25 @@ ul#nav li.current a {
 
 
 #resume .btn-experiences-details {
-   padding: 0px 10px 0px 10px;
+   margin: 0;
+   background-color: #ffffff;
    font-size: 14px;
-   line-height: 16px;
-   background-color: #fbfbfb;
-   color: #414141;
-   border: 1px solid black;
-   border-radius: 3px;
-   cursor: pointer;
+   line-height: 14px;
+   padding: 2px;
+   color: #f06000;
+   border-radius: 5px;
+   font-weight: bold;
+   border: 1px solid #f06000;
+   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.17), 0 10px 20px -2px rgba(0, 0, 0, 0.14);
+   transition: background-color 0.1s ease-in-out;
+   transition: color 0.1s ease-in-out;
+}
 
+#resume .btn-experiences-details:hover {
+   color: #ffffff;
+   background-color: #f06000;
+   transition: color 0.1s ease-in-out;
+   transition: background-color 0.1s ease-in-out;
 }
 
 
