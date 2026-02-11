@@ -12,6 +12,39 @@ import Navbar from '../components/Navbar.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | Jonathan Gatard</title>
         <meta name="description" content={description || "CV de Jonathan Gatard, Ingénieur Système Mainframe & Modernisation."}>
+        
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Jonathan Gatard",
+              "jobTitle": "Ingénieur Mainframe & Interopérabilité",
+              "url": "https://jonathan-gatard.fr",
+              "sameAs": [
+                "https://www.linkedin.com/in/jonathan-gatard/",
+                "https://github.com/jonathan-gtd"
+              ],
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Prestataire Aubay Solutec"
+              },
+              "alumniOf": [
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "ISAE-Supaero"
+                },
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "ISAE-ENSMA"
+                },
+                 {
+                  "@type": "CollegeOrUniversity",
+                  "name": "CNAM Poitiers"
+                }
+              ]
+            }
+        </script>
 	</head>
 	<body class="bg-gray-900 text-white font-sans antialiased min-h-screen flex flex-col relative">
         <Navbar />
