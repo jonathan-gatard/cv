@@ -69,14 +69,11 @@ const passions = [
             </p>
             
             <div class="flex flex-wrap gap-2">
-              {item.tags.slice(0, 3).map((tag) => (
+              {item.tags.map((tag) => (
                 <span class="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded-full border border-gray-700">
                   #{tag}
                 </span>
               ))}
-              {item.tags.length > 3 && (
-                <span class="px-3 py-1 bg-gray-900 text-gray-500 text-xs rounded-full border border-gray-700">+{item.tags.length - 3}</span>
-              )}
             </div>
           </div>
         </div>

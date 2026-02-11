@@ -1,0 +1,30 @@
+---
+const { title, description } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+---
+
+<html lang="fr" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Jonathan Gatard</title>
+        <meta name="description" content={description || "CV de Jonathan Gatard, Ingénieur Mainframe et DevOps."}>
+	</head>
+	<body class="bg-gray-900 text-white font-sans antialiased min-h-screen flex flex-col">
+        <Navbar />
+		<main class="flex-grow pt-16"> <!-- pt-16 to account for fixed navbar -->
+            <slot />
+		</main>
+        
+        <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm mt-auto border-t border-gray-800">
+             <div class="flex justify-center gap-6 mb-4">
+                <a href="https://github.com/jonathan-gatard" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/jonathan-gatard/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="/cv/cv.pdf" target="_blank" class="hover:text-white transition-colors">CV PDF</a>
+            </div>
+            <p>&copy; {new Date().getFullYear()} Jonathan Gatard</p>
+        </footer>
+	</body>
+</html>
