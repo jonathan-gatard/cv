@@ -1,0 +1,102 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Terrariophilie High-Tech" description="Terrariums automatisés pour plantes carnivores et escargots géants.">
+  <div class="max-w-4xl mx-auto px-4 py-12 text-gray-300">
+    <a href="/en/passions" class="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      ← Back to passions
+    </a>
+
+    <h1 class="text-4xl font-bold text-white mb-6">Terrariophilie High-Tech</h1>
+    <p class="text-xl text-gray-400 mb-12">Quand la biologie rencontre l'électronique.</p>
+
+    <div class="space-y-16">
+
+       <!-- Terrarium Carnivores -->
+       <section class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+           <div class="grid md:grid-cols-2">
+               <div class="h-64 md:h-auto overflow-hidden relative group">
+                   <img src="/images/projects/projects_list/terrarium.jpg" class="w-full h-full object-cover transition transform group-hover:scale-105">
+               </div>
+               <div class="p-8 flex flex-col justify-center">
+                   <h2 class="text-2xl font-bold text-green-400 mb-4">Plantes Carnivores (Heliamphora)</h2>
+                   <p class="mb-4 text-sm">
+                       Ces plantes d'altitude (Tepuys du Venezuela) sont extrêmement capricieuses et nécessitent des conditions strictes que j'ai automatisées.
+                   </p>
+                   
+                   <h3 class="font-bold text-white text-sm uppercase tracking-wider mb-2">Conditions pilotées :</h3>
+                   <ul class="list-disc list-inside space-y-1 text-sm text-gray-400 mb-6">
+                       <li><span class="text-white">Froid :</span> Écart de 10°C obligatoire jour/nuit.</li>
+                       <li><span class="text-white">Lumière :</span> Spectre horticole intense (LEDs haute puissance).</li>
+                       <li><span class="text-white">Humidité :</span> Maintien constant à 80% via brumisation ultra-sonique.</li>
+                   </ul>
+
+                   <div class="bg-black/30 p-4 rounded text-xs font-mono text-green-200">
+                       IOT: ESP32 pilotant des LEDs GrowLight et monitoring Hygro.
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <!-- Terrarium Escargots -->
+       <section class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+           <div class="grid md:grid-cols-2">
+               <div class="p-8 flex flex-col justify-center order-2 md:order-1">
+                   <h2 class="text-2xl font-bold text-orange-400 mb-4">Escargots Géants (Archachatina)</h2>
+                   <p class="mb-4 text-sm">
+                       L'<em>Archachatina marginata ovum</em> est la plus grosse espèce d'escargot terrestre.
+                       J'ai construit ce terrarium sur mesure (upcycling vitres, charnières imprimées en 3D).
+                   </p>
+                   
+                   <h3 class="font-bold text-white text-sm uppercase tracking-wider mb-2">Technique :</h3>
+                   <ul class="list-disc list-inside space-y-1 text-sm text-gray-400 mb-6">
+                       <li><span class="text-white">Chauffage :</span> Thermostat DIY régulant des tapis chauffants au sol.</li>
+                       <li><span class="text-white">Ventilation :</span> Extraction d'air pilotée pour limiter la condensation.</li>
+                       <li><span class="text-white">Éclairage :</span> Purement esthétique (ZigBee), car l'animal est nocturne.</li>
+                   </ul>
+                   
+                   <div class="bg-black/30 p-4 rounded text-xs font-mono text-orange-200">
+                       Construction: Charnières et verrous custom conçus et imprimés en 3D (PETG).
+                   </div>
+
+               </div>
+                <div class="h-64 md:h-auto overflow-hidden relative group order-1 md:order-2">
+                   <img src="/images/projects/projects_list/terrarium2.jpg" class="w-full h-full object-cover transition transform group-hover:scale-105">
+               </div>
+           </div>
+       </section>
+
+       <!-- Tourbiere -->
+       <section class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+           <div class="grid md:grid-cols-2">
+               <div class="h-64 md:h-auto overflow-hidden relative group">
+                   <img src="/images/projects/projects_list/tourbiere.jpg" class="w-full h-full object-cover transition transform group-hover:scale-105">
+               </div>
+               <div class="p-8 flex flex-col justify-center">
+                   <h2 class="text-2xl font-bold text-cyan-400 mb-4">Tourbière Extérieure (Sarracenia)</h2>
+                   <p class="mb-4 text-sm">
+                       Création d'un écosystème autonome enterré capable de supporter le gel et la canicule sans entretien.
+                       Basé sur une réserve d'eau (principe des nappes phréatiques) avec une céramique enterrée.
+                   </p>
+                   
+                   <h3 class="font-bold text-white text-sm uppercase tracking-wider mb-2">Plantes :</h3>
+                   <ul class="list-disc list-inside space-y-1 text-sm text-gray-400 mb-6">
+                       <li><span class="text-white">Sarracenia :</span> Plante trompette très résistante.</li>
+                       <li><span class="text-white">Drosera :</span> "Rossolis" à glu, indigène en France.</li>
+                       <li><span class="text-white">Dionaea :</span> La célèbre "Attrape-mouche".</li>
+                   </ul>
+
+                   <div class="bg-black/30 p-4 rounded text-xs font-mono text-cyan-200">
+                       Ingénierie: Substrat spécifique (Tourbe/Perlite) et gestion hydraulique passive.
+                   </div>
+               </div>
+           </div>
+       </section>
+
+    </div>
+  </div>
+</Layout>

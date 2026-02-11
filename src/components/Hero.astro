@@ -1,4 +1,8 @@
 ---
+const { lang = 'fr' } = Astro.props;
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations(lang);
 ---
 <section class="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-gray-900 text-white pt-28 md:pt-0">
   
@@ -20,22 +24,22 @@
     </h1>
     
     <h2 class="text-2xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 mb-10 pb-2">
-      Ingénieur Mainframe & Interopérabilité
+      {t('hero.title')}
     </h2>
     
     <!-- Description -->
     <p class="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 shadow-2xl">
       Double compétence <strong>z/OS & Open</strong>. <br class="hidden md:block"/>
-      J'assure l'interopérabilité sécurisée entre les environnements Mainframe et les architectures Open.
+      {t('hero.subtitle')}
     </p>
 
     <!-- CTAs (Simple & Clean) -->
     <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
       <a href="#experience" class="px-8 py-4 bg-white text-gray-900 hover:bg-gray-100 rounded-full font-bold shadow-lg shadow-white/10 transition-all transform hover:-translate-y-1 flex items-center gap-3 text-sm tracking-wide">
-        Découvrir mon parcours
+        {t('hero.cta.journey')}
       </a>
       <a href="#passions" class="px-8 py-4 bg-gray-800/50 hover:bg-gray-800 text-gray-300 hover:text-white border border-gray-700 hover:border-gray-500 rounded-full font-medium backdrop-blur-md transition-all flex items-center gap-3 text-sm tracking-wide">
-        Voir mes projets
+        {t('hero.cta.projects')}
       </a>
     </div>
   </div>

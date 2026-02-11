@@ -8,5 +8,12 @@ export default defineConfig({
   site: 'https://jonathan-gatard.fr', // Custom domain overrides github.io
   // If not using custom domain: site: 'https://jonathan-gtd.github.io', 
   // base: '/cv',
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  i18n: {
+    defaultLocale: "fr",
+    locales: ["fr", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });
