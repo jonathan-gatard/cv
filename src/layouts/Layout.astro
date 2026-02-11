@@ -1,5 +1,5 @@
 ---
-const { title, description, lang = 'fr' } = Astro.props;
+const { title, description, lang = 'fr', hideFooter = false } = Astro.props;
 import Navbar from '../components/Navbar.astro';
 ---
 
@@ -52,6 +52,7 @@ import Navbar from '../components/Navbar.astro';
             <slot />
 		</main>
         
+        {!hideFooter && (
         <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm mt-auto border-t border-gray-800">
              <div class="flex justify-center gap-6 mb-4">
                 <a href="https://github.com/jonathan-gtd" target="_blank" class="hover:text-white transition-colors">GitHub</a>
@@ -59,6 +60,7 @@ import Navbar from '../components/Navbar.astro';
             </div>
             <p>&copy; {new Date().getFullYear()} Jonathan Gatard</p>
         </footer>
+        )}
 
         <!-- Back to Top Button -->
         <button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 transform hover:-translate-y-1 z-50">
