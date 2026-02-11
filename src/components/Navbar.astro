@@ -6,43 +6,62 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-800 bg-gray-900/90 backdrop-blur-md">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Jonathan Gatard</span>
+<nav class="fixed w-full z-50 top-4 px-4 transition-all duration-300" id="navbar">
+  <div class="max-w-4xl mx-auto bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-full shadow-2xl px-6 py-3 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-xs font-bold shadow-lg group-hover:shadow-blue-500/50 transition-all">JG</div>
+        <span class="font-bold text-gray-200 tracking-tight group-hover:text-white transition-colors">Jonathan Gatard</span>
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Ouvrir menu</span>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-1">
+      {navItems.map(item => (
+        <a href={item.href} class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-full transition-all">
+            {item.label}
+        </a>
+      ))}
+      <div class="w-px h-4 bg-gray-700 mx-2"></div>
+      <a href="/cv.pdf" target="_blank" class="px-4 py-2 text-sm font-bold text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 rounded-full transition-all flex items-center gap-2">
+         <span>📄</span> CV
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-full md:hidden hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-600">
+        <span class="sr-only">Menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-lg bg-gray-900 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
-        {navItems.map(item => {
-           return (
+  </div>
+
+  <!-- Mobile Dropdown (Detached) -->
+  <div class="hidden max-w-4xl mx-auto mt-2 px-4 md:hidden" id="navbar-default">
+      <ul class="flex flex-col p-4 border border-gray-700/50 rounded-2xl bg-gray-900/95 backdrop-blur-xl shadow-2xl space-y-2">
+        {navItems.map(item => (
             <li>
-            <a href={item.href} 
-               class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-800 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 transition-colors">
-                {item.label}
-            </a>
+                <a href={item.href} class="block py-3 px-4 text-gray-200 rounded-xl hover:bg-gray-800 transition-colors font-medium">
+                    {item.label}
+                </a>
             </li>
-        )})}
+        ))}
          <li>
-            <a href="/cv.pdf" target="_blank" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-400 md:p-0" aria-current="page">CV PDF</a>
+            <a href="/cv.pdf" target="_blank" class="block py-3 px-4 text-blue-400 bg-blue-500/10 rounded-xl font-bold">
+                📄 Télécharger CV
+            </a>
         </li>
       </ul>
-    </div>
   </div>
 </nav>
 
 <script>
-    // Simple toggle for mobile menu
     const btn = document.querySelector('[data-collapse-toggle="navbar-default"]');
     const menu = document.getElementById('navbar-default');
     if (btn && menu) {
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+             menu.classList.toggle('hidden');
         });
     }
 </script>
