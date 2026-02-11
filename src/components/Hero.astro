@@ -1,36 +1,81 @@
 ---
 ---
-<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900 text-white">
-  <!-- Subtle Background Elements -->
-  <div class="absolute inset-0 z-0 opacity-10">
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-gray-900 text-white">
+  
+  <!-- Dynamic Tech Background -->
+  <div class="absolute inset-0 z-0">
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    
+    <!-- Moving Glows -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-pulse delay-1000"></div>
   </div>
 
-  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white">
+  <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-auto mb-auto">
+    
+    <!-- Title -->
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-white drop-shadow-lg">
       Jonathan Gatard
     </h1>
     
-    <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-8">
-      Ingénieur Système Mainframe & Modernisation
+    <h2 class="text-2xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 mb-10 pb-2">
+      Ingénieur Mainframe & Interopérabilité
     </h2>
     
-    <p class="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-      Expert technique sur <strong>IBM z/OS</strong>, je développe des solutions d'interopérabilité sécurisées entre le Mainframe et le monde Open. <br/>
-      Actuellement en mission chez CAGIP pour moderniser les échanges au cœur du système bancaire.
+    <!-- Description -->
+    <p class="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 shadow-2xl">
+      Double compétence <strong>z/OS & Open</strong>. <br class="hidden md:block"/>
+      J'assure l'intégration et la communication sécurisée entre les Grands Systèmes et les plateformes distribuées. <br/>
+      Évoluant au cœur des infrastructures bancaires critiques.
     </p>
 
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <a href="/cv.pdf" target="_blank" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium shadow-lg transition-all transform hover:-translate-y-1 flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
+      <a href="/cv.pdf" target="_blank" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold shadow-lg shadow-blue-900/50 transition-all transform hover:-translate-y-1 flex items-center gap-3 text-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
-        Télécharger mon CV (PDF)
+        Télécharger mon CV
       </a>
-      <a href="#experience" class="px-8 py-3 bg-transparent border border-gray-600 hover:border-white text-gray-300 hover:text-white rounded-lg font-medium transition-all">
-        Voir mon parcours
+      <a href="#passions" class="px-8 py-4 bg-gray-800/80 hover:bg-gray-700 border border-gray-600 text-gray-200 rounded-lg font-bold backdrop-blur-md transition-all flex items-center gap-3 text-lg">
+        <span>🚀</span> Voir mes projets
       </a>
     </div>
   </div>
+
+  <!-- Tech Ticker (Infinite Scroll) -->
+  <div class="w-full bg-gray-950/80 border-y border-gray-800 backdrop-blur-sm py-4 mt-auto">
+    <div class="flex overflow-hidden group">
+        <div class="flex animate-loop-scroll space-x-12 px-6">
+            {/* Tech Stack Items - Duplicated for seamless loop */}
+            {[
+                "IBM z/OS", "JCL", "COBOL", "Python", "Zowe", "DB2", "CICS", "VSCode", 
+                "Docker", "Linux", "Git", "Ansible", "Rest API"
+            ].map(tech => (
+                <span class="text-gray-400 font-mono font-semibold whitespace-nowrap text-lg flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> {tech}
+                </span>
+            ))}
+             {[
+                "IBM z/OS", "JCL", "COBOL", "Python", "Zowe", "DB2", "CICS", "VSCode", 
+                "Docker", "Linux", "Git", "Ansible", "Rest API"
+            ].map(tech => (
+                <span class="text-gray-400 font-mono font-semibold whitespace-nowrap text-lg flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> {tech}
+                </span>
+            ))}
+        </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  @keyframes loop-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-loop-scroll {
+    animation: loop-scroll 40s linear infinite;
+  }
+</style>
