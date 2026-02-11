@@ -1,6 +1,7 @@
 ---
 const { title, description, hideFooter = false } = Astro.props;
 import Navbar from '../components/Navbar.astro';
+import Lightbox from '../components/Lightbox.astro';
 ---
 
 <html lang="fr" class="scroll-smooth">
@@ -84,5 +85,7 @@ import Navbar from '../components/Navbar.astro';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         </script>
+
+        <Lightbox />
 	</body>
 </html>
