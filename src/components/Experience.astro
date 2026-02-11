@@ -1,13 +1,20 @@
 ---
 const { lang = 'fr' } = Astro.props;
-import { experiences } from '../data/experience';
+import { experiences, education } from '../data/experience';
 
 const currentExperiences = experiences[lang] || experiences.fr;
+const currentEducation = education[lang] || education.fr;
 
 const sections = [
   { id: 'experience', label: lang === 'fr' ? 'Expérience' : 'Experience' },
   { id: 'formation', label: lang === 'fr' ? 'Formation' : 'Education' },
   { id: 'stack', label: 'Tech Stack' },
+];
+
+// Shared card renderer helper — same structure for both exp and edu
+const cardItems = [
+  { id: 'experience', title: lang === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience', items: currentExperiences },
+  { id: 'formation', title: lang === 'fr' ? 'Formation' : 'Education', items: currentEducation },
 ];
 ---
 
@@ -29,85 +36,48 @@ const sections = [
     <!-- Main Content -->
     <main class="flex-1 min-w-0">
 
-      <!-- Experience Section -->
-      <section id="experience" class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          {lang === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience'}
-        </h2>
+      {cardItems.map(section => (
+        <section id={section.id} class="mb-20">
+          <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+            {section.title}
+          </h2>
 
-        <div class="space-y-6">
-          {currentExperiences.map((exp) => (
-            <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all group">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                <div>
-                  <h3 class="text-lg font-bold group-hover:text-blue-300 transition-colors">{exp.role}</h3>
-                  <p class="text-gray-400 text-sm font-medium">{exp.company}</p>
-                </div>
-                <span class="text-blue-400 text-xs font-mono bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700 whitespace-nowrap self-start">
-                  {exp.date}
-                </span>
-              </div>
-
-              <p class="text-gray-300 text-sm italic mb-4">{exp.description}</p>
-              
-              <div class="grid gap-2">
-                {exp.details.map((detail) => (
-                  <div class="bg-gray-700/30 p-3 rounded-lg border-l-2 border-blue-500">
-                    <h4 class="font-bold text-white text-xs mb-1">{detail.title}</h4>
-                    <p class="text-[12px] text-gray-300 leading-relaxed">{detail.content}</p>
+          <div class="space-y-6">
+            {section.items.map((item) => (
+              <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all group">
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-lg font-bold group-hover:text-blue-300 transition-colors">{item.role}</h3>
+                    <p class="text-gray-400 text-sm font-medium">{item.company}</p>
                   </div>
-                ))}
-              </div>
-
-              <div class="flex flex-wrap gap-1.5 mt-4">
-                {exp.tags.map((tag) => (
-                  <span class="px-2 py-0.5 bg-gray-900 text-gray-400 text-[10px] rounded-md border border-gray-700">
-                    #{tag}
+                  <span class="text-blue-400 text-xs font-mono bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700 whitespace-nowrap self-start">
+                    {item.date}
                   </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+                </div>
 
-      <!-- Education Section -->
-      <section id="formation" class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          {lang === 'fr' ? 'Formation' : 'Education'}
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
-                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2022</div>
-                <div>
-                  <h3 class="text-lg font-bold text-white">TU Graz</h3>
-                  <p class="text-gray-400 text-sm italic">{lang === 'fr' ? 'Autodidacte' : 'Self-taught'}</p>
-                  <p class="text-gray-500 text-xs mt-1">Network Security & Real Time OS</p>
+                <p class="text-gray-300 text-sm italic mb-4">{item.description}</p>
+                
+                <div class="grid gap-2">
+                  {item.details.map((detail) => (
+                    <div class="bg-gray-700/30 p-3 rounded-lg border-l-2 border-blue-500">
+                      <h4 class="font-bold text-white text-xs mb-1">{detail.title}</h4>
+                      <p class="text-[12px] text-gray-300 leading-relaxed">{detail.content}</p>
+                    </div>
+                  ))}
                 </div>
-            </div>
-             <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
-                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2019</div>
-                <div>
-                  <h3 class="text-lg font-bold text-white">ISAE-ENSMA</h3>
-                  <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Approfondissement Matériaux' : 'Materials Science Deep Dive'}</p>
+
+                <div class="flex flex-wrap gap-1.5 mt-4">
+                  {item.tags.map((tag) => (
+                    <span class="px-2 py-0.5 bg-gray-900 text-gray-400 text-[10px] rounded-md border border-gray-700">
+                      #{tag}
+                    </span>
+                  ))}
                 </div>
-            </div>
-            <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
-                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2018</div>
-                <div>
-                  <h3 class="text-lg font-bold text-white">ISAE-Supaero</h3>
-                  <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Formation Spécialisée' : 'Specialized Training'}</p>
-                </div>
-            </div>
-             <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
-                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2017</div>
-                <div>
-                  <h3 class="text-lg font-bold text-white">CNAM Poitiers</h3>
-                  <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Parcours Ingénieur' : 'Engineering Degree'}</p>
-                </div>
-            </div>
-        </div>
-      </section>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
 
       <!-- Tech Stack Section -->
       <section id="stack">
@@ -155,7 +125,6 @@ const sections = [
 </div>
 
 <script>
-  // Sidebar scroll-spy
   const links = document.querySelectorAll('.sidebar-link');
   const sections = document.querySelectorAll('section[id]');
   

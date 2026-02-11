@@ -106,3 +106,114 @@ export const experiences = {
         }
     ]
 };
+
+export const education = {
+    fr: [
+        {
+            role: "Sécurité & Réseaux (Autodidacte)",
+            company: "TU Graz (Autriche)",
+            date: "2022",
+            description: "Suivi de cours en autonomie sur les thématiques de sécurité réseau et systèmes temps réel.",
+            tags: ["Network Security", "Real Time OS", "CTF"],
+            details: [
+                {
+                    title: "Cursus",
+                    content: "Network Security, Real Time Operating Systems, Capture The Flag (CTF)."
+                }
+            ]
+        },
+        {
+            role: "Approfondissement Matériaux",
+            company: "ISAE-ENSMA",
+            date: "2019",
+            description: "Formation spécialisée en science des matériaux et procédés industriels.",
+            tags: ["Matériaux", "Composites", "Procédés"],
+            details: [
+                {
+                    title: "Spécialisation",
+                    content: "Matériaux composites, procédés de mise en forme, caractérisation mécanique."
+                }
+            ]
+        },
+        {
+            role: "Formation Spécialisée",
+            company: "ISAE-Supaero",
+            date: "2018",
+            description: "Cursus d'ingénieur orienté aéronautique et spatial.",
+            tags: ["Aéronautique", "Spatial", "Ingénierie"],
+            details: [
+                {
+                    title: "Programme",
+                    content: "Formation intensive en ingénierie aéronautique et spatiale, mécanique des fluides et résistance des matériaux."
+                }
+            ]
+        },
+        {
+            role: "Parcours Ingénieur (Apprentissage)",
+            company: "CNAM Poitiers",
+            date: "2017",
+            description: "Diplôme d'ingénieur en Génie Industriel obtenu en alternance.",
+            tags: ["Génie Industriel", "Lean", "Alternance"],
+            details: [
+                {
+                    title: "Formation",
+                    content: "Génie Industriel, Performance Industrielle, Amélioration Continue, Lean Management."
+                }
+            ]
+        }
+    ],
+    en: [
+        {
+            role: "Security & Networks (Self-taught)",
+            company: "TU Graz (Austria)",
+            date: "2022",
+            description: "Self-directed coursework in network security and real-time systems.",
+            tags: ["Network Security", "Real Time OS", "CTF"],
+            details: [
+                {
+                    title: "Coursework",
+                    content: "Network Security, Real Time Operating Systems, Capture The Flag (CTF)."
+                }
+            ]
+        },
+        {
+            role: "Materials Science Deep Dive",
+            company: "ISAE-ENSMA",
+            date: "2019",
+            description: "Specialized training in materials science and industrial processes.",
+            tags: ["Materials", "Composites", "Processes"],
+            details: [
+                {
+                    title: "Specialization",
+                    content: "Composite materials, forming processes, mechanical characterization."
+                }
+            ]
+        },
+        {
+            role: "Specialized Training",
+            company: "ISAE-Supaero",
+            date: "2018",
+            description: "Engineering curriculum focused on aeronautics and space.",
+            tags: ["Aeronautics", "Space", "Engineering"],
+            details: [
+                {
+                    title: "Program",
+                    content: "Intensive training in aerospace engineering, fluid mechanics and materials science."
+                }
+            ]
+        },
+        {
+            role: "Engineering Degree (Apprenticeship)",
+            company: "CNAM Poitiers",
+            date: "2017",
+            description: "Industrial Engineering degree obtained through work-study program.",
+            tags: ["Industrial Engineering", "Lean", "Work-Study"],
+            details: [
+                {
+                    title: "Training",
+                    content: "Industrial Engineering, Industrial Performance, Continuous Improvement, Lean Management."
+                }
+            ]
+        }
+    ]
+};
