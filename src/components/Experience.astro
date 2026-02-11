@@ -4,8 +4,8 @@ const experiences = [
     role: "Mission @ CAGIP - Mainframe & AppOps",
     company: "Prestataire Solutec",
     date: "Sept 2023 - Présent",
-    description: "Une mission hybride au cœur de la modernisation bancaire.",
-    tags: ["Mainframe", "Python", "AppOps", "Zowe"],
+    description: "Une mission hybride au cœur de la modernisation bancaire. Pont entre le monde Legacy et le DevOps moderne.",
+    tags: ["Mainframe", "Python", "AppOps", "Zowe", "VSCode"],
     details: [
       {
         title: "Run & Stabilité",
@@ -26,18 +26,78 @@ const experiences = [
     company: "Solutec",
     date: "Mai 2023 - Présent",
     description: "Intégration au sein de l'ESN Solutec pour des missions à haute valeur ajoutée.",
-    tags: ["Consulting", "Intégration"],
+    tags: ["Consulting", "Java/Spring", "Agile"],
     details: [
       {
-        title: "Onboarding",
-        content: "Formation aux méthodologies de l'entreprise et préparation à la mission grand compte (CAGIP)."
+        title: "Développement Interne",
+        content: "Développement backend d'une application de gestion RH en Java/Spring. Formation intensive aux technologies DevOps (Ansible, K8s) et systèmes."
+      }
+    ]
+  },
+  {
+    role: "Ingénieur DevOps",
+    company: "Stellantis (Slovaquie)",
+    date: "2022 - 2023",
+    description: "Transformation numérique et automatisation des processus industriels et RH.",
+    tags: ["DevOps", "React", "Docker", "Ansible", "Jenkins"],
+    details: [
+      {
+        title: "Développement Full Stack",
+        content: "Création d'applications web critiques : Gestion des compétences RH (React/Express/Mongo) et Archivage comptable (React/Node-Red/MariaDB)."
+      },
+      {
+        title: "Automatisation CI/CD",
+        content: "Simplification et accélération des déploiements applicatifs via Docker, Jenkins et Ansible sur environnement Debian."
+      }
+    ]
+  },
+  {
+    role: "Manager Projets Informatiques",
+    company: "Stellantis (Slovaquie)",
+    date: "2021 - 2022",
+    description: "Pilotage de projets IT industriels et management d'équipe.",
+    tags: ["Management", "IoT", "Grafana", "PowerBi"],
+    details: [
+      {
+        title: "Pilotage & Management",
+        content: "Encadrement d'une équipe de 4 personnes. Gestion de projets de collecte de données industrielles."
+      },
+      {
+        title: "Data & Monitoring",
+        content: "Mise en place de dashboards de suivi énergétique (Grafana/InfluxDB) et reporting (PowerBI). Automatisation d'un poste de vissage avec Cobot."
+      }
+    ]
+  },
+  {
+    role: "Ingénieur Coordinateur Logistique",
+    company: "LISI Aerospace",
+    date: "2019 - 2020",
+    description: "Optimisation des flux logistiques et développement d'outils de gestion.",
+    tags: ["Logistique", "ERP", "Optimisation"],
+    details: [
+      {
+        title: "Amélioration Continue",
+        content: "Développement de stratégies pour la satisfaction client. Mise en place d'impression automatisée d'étiquettes et optimisation de la gestion des stocks."
+      }
+    ]
+  },
+   {
+    role: "Ingénieur Projets Logistique (Alternance)",
+    company: "LISI Aerospace",
+    date: "2016 - 2019",
+    description: "Conduite de projets industriels majeurs pour de nouvelles usines.",
+    tags: ["Gestion de Projet", "Lean", "VB.NET"],
+    details: [
+      {
+        title: "Projets Industriels",
+        content: "Implantation de nouvelles zones logistiques, réorganisation Lean/5S et développement d'une application de gestion de production (VB)."
       }
     ]
   }
 ];
 ---
 
-<section id="experience" class="py-20 bg-gray-900 text-white">
+<section id="experience" class="py-12 bg-gray-900 text-white">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
       Mon Parcours
@@ -52,28 +112,32 @@ const experiences = [
           <div class={`md:flex items-center justify-between gap-8 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
             
             <!-- Date Bubble (Center) -->
-            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-blue-600 border-4 border-gray-900 z-10"></div>
+            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-32 py-1 rounded-full bg-gray-800 border-2 border-gray-700 z-10 text-sm font-mono text-blue-400">
+                {exp.date}
+            </div>
 
             <!-- Content Card -->
             <div class="w-full md:w-5/12">
-              <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow border border-gray-700 group hover:border-blue-500/50">
-                <span class="text-blue-400 text-sm font-mono mb-2 block">{exp.date}</span>
+              <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all border border-gray-700 group hover:border-blue-500/50 relative">
+                 <!-- Mobile Date -->
+                 <span class="md:hidden text-blue-400 text-sm font-mono mb-2 block">{exp.date}</span>
+                 
                 <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-300 transition-colors">{exp.role}</h3>
                 <p class="text-gray-400 mb-4 font-medium">{exp.company}</p>
-                <p class="text-gray-300 mb-6 italic">{exp.description}</p>
+                <p class="text-gray-300 mb-6 italic text-sm">{exp.description}</p>
                 
                 <div class="space-y-4">
                   {exp.details.map((detail) => (
-                    <div class="bg-gray-700/50 p-4 rounded-lg border-l-4 border-blue-500">
-                      <h4 class="font-bold text-white mb-1">{detail.title}</h4>
-                      <p class="text-sm text-gray-300">{detail.content}</p>
+                    <div class="bg-gray-700/50 p-3 rounded-lg border-l-2 border-blue-500">
+                      <h4 class="font-bold text-white text-sm mb-1">{detail.title}</h4>
+                      <p class="text-xs text-gray-300 leading-relaxed">{detail.content}</p>
                     </div>
                   ))}
                 </div>
 
                 <div class="flex flex-wrap gap-2 mt-6">
                   {exp.tags.map((tag) => (
-                    <span class="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded-full border border-gray-700">
+                    <span class="px-2 py-1 bg-gray-900 text-gray-300 text-xs rounded-md border border-gray-700">
                       #{tag}
                     </span>
                   ))}
