@@ -36,16 +36,7 @@ const experiences = [
       "AppOps : Pont technique entre les équipes études et la production."
     ]
   },
-  {
-    role: "Consultant IT Java/DevOps",
-    company: "Aubay Solutec",
-    date: "Mai 2023 - Sept 2023",
-    description: "Développement et montée en compétences sur les architectures modernes.",
-    details: [
-      "Développement backend Java/Spring pour une application RH interne.",
-      "Formation intensive sur la chaîne CI/CD : Ansible, Kubernetes, Docker."
-    ]
-  },
+  // Removed "Consultant IT" as requested to save space
   {
     role: "Ingénieur DevOps",
     company: "Stellantis (Slovaquie)",
@@ -113,27 +104,27 @@ const education = [
     <!-- A4 Page Container -->
     <div class="w-[210mm] h-[297mm] bg-white shadow-2xl print:shadow-none flex overflow-hidden relative">
         
-        <!-- Left Column (Dark) -->
-        <div class="w-1/3 bg-gray-900 text-white p-6 flex flex-col gap-6">
+        <!-- Left Column (Dark) - Increased density -->
+        <div class="w-1/3 bg-gray-900 text-white p-5 flex flex-col gap-5">
             
             <!-- Photo Placeholder -->
             <div class="flex justify-center">
-                 <div class="w-32 h-32 rounded-full bg-gray-800 border-4 border-blue-500 overflow-hidden flex items-center justify-center">
-                    <span class="text-gray-500 text-xs text-center px-2">Photo ici<br/>(à fournir)</span>
+                 <div class="w-28 h-28 rounded-full bg-gray-800 border-4 border-blue-500 overflow-hidden flex items-center justify-center">
+                    <span class="text-gray-500 text-[10px] text-center px-1">Photo ici<br/>(à fournir)</span>
                     <!-- <img src="/photo.jpg" class="w-full h-full object-cover"> -->
                 </div>
             </div>
 
             <!-- Header -->
-            <div class="text-center">
-                <h1 class="text-xl font-bold uppercase tracking-wider mb-1 leading-tight">{personalInfo.name}</h1>
-                <p class="text-blue-400 font-medium text-xs">{personalInfo.title}</p>
+            <div class="text-center mb-1">
+                <h1 class="text-lg font-bold uppercase tracking-wider mb-1 leading-tight">{personalInfo.name}</h1>
+                <p class="text-blue-400 font-medium text-[11px]">{personalInfo.title}</p>
             </div>
 
             <!-- Contact -->
             <div>
                 <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Contact</h2>
-                <ul class="space-y-1.5 text-[11px] text-gray-300">
+                <ul class="space-y-1 text-[10px] text-gray-300">
                     <li class="flex items-center gap-2">
                         <span>📧</span> {personalInfo.email}
                     </li>
@@ -150,27 +141,27 @@ const education = [
             </div>
 
             <!-- Skills -->
-            <div class="flex-1">
-                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Compétences</h2>
+            <div class="flex-1 flex flex-col gap-3">
+                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-1">Compétences</h2>
                 
-                <div class="mb-3">
-                    <h3 class="text-white font-bold text-[11px] mb-1">Mainframe</h3>
+                <div>
+                    <h3 class="text-white font-bold text-[10px] mb-1">Mainframe</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.mainframe.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[10px] text-gray-300">{s}</span>)}
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <h3 class="text-white font-bold text-[11px] mb-1">Open & DevOps</h3>
-                    <div class="flex flex-wrap gap-1">
-                        {skills.open.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[10px] text-gray-300">{s}</span>)}
+                        {skills.mainframe.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300">{s}</span>)}
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-white font-bold text-[11px] mb-1">Méthodologie</h3>
+                    <h3 class="text-white font-bold text-[10px] mb-1">Open & DevOps</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.methodology.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[10px] text-gray-300">{s}</span>)}
+                        {skills.open.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300">{s}</span>)}
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-[10px] mb-1">Méthodologie</h3>
+                    <div class="flex flex-wrap gap-1">
+                        {skills.methodology.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300">{s}</span>)}
                     </div>
                 </div>
             </div>
@@ -178,7 +169,7 @@ const education = [
             <!-- Languages -->
             <div>
                 <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Langues</h2>
-                <ul class="space-y-1 text-[11px] text-gray-300">
+                <ul class="space-y-0.5 text-[10px] text-gray-300">
                     {languages.map(l => (
                         <li class="flex justify-between">
                             <span>{l.name}</span>
@@ -192,19 +183,19 @@ const education = [
              <div class="mt-auto">
                 <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Intérêts</h2>
                 <div class="text-[10px] text-gray-400 leading-snug">
-                    Domotique (Home Assistant), Aéromodélisme, Mécanique Auto, Terrariophilie, Impression 3D.
+                    Domotique (HA), Aéromodélisme, Mécanique Auto, Terrariophilie, Impression 3D.
                 </div>
             </div>
 
         </div>
 
-        <!-- Right Column (White) -->
+        <!-- Right Column (White) - Increased density -->
         <div class="w-2/3 p-6 bg-white text-gray-800 flex flex-col gap-4">
             
             <!-- Profile Summary -->
             <div class="bg-blue-50 p-3 rounded-l border-l-4 border-blue-500 text-xs italic text-gray-600 leading-relaxed">
                 "Double compétence unique alliant la rigueur du Mainframe à l'agilité DevOps. 
-                 Je conçois des ponts sécurisés entre les systèmes historiques (Système Z) et le monde ouvert."
+                 J'assure l'interconnexion sécurisée entre les environnements Mainframe et les architectures Open."
             </div>
 
             <!-- Experience -->
