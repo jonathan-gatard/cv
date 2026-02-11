@@ -12,19 +12,42 @@ import Navbar from '../components/Navbar.astro';
 		<title>{title} | Jonathan Gatard</title>
         <meta name="description" content={description || "CV de Jonathan Gatard, Ingénieur Système Mainframe & Modernisation."}>
 	</head>
-	<body class="bg-gray-900 text-white font-sans antialiased min-h-screen flex flex-col">
-        <Navbar />
-		<main class="flex-grow pt-16"> <!-- pt-16 to account for fixed navbar -->
+	<body class="bg-gray-900 text-white font-sans antialiased min-h-screen flex flex-col relative">
+        <!-- <Navbar /> Removed for Hero Hub Navigation -->
+		<main class="flex-grow">
             <slot />
 		</main>
         
         <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm mt-auto border-t border-gray-800">
              <div class="flex justify-center gap-6 mb-4">
-                <a href="https://github.com/jonathan-gatard" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://github.com/jonathan-gtd" target="_blank" class="hover:text-white transition-colors">GitHub</a>
                 <a href="https://www.linkedin.com/in/jonathan-gatard/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
                 <a href="/cv.pdf" target="_blank" class="hover:text-white transition-colors">CV PDF</a>
             </div>
             <p>&copy; {new Date().getFullYear()} Jonathan Gatard</p>
         </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 transform hover:-translate-y-1 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+
+        <script>
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        </script>
 	</body>
 </html>
