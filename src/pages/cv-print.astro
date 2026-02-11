@@ -3,23 +3,24 @@
 const personalInfo = {
   name: "Jonathan Gatard",
   title: "Ingénieur Mainframe & Interopérabilité",
-  email: "contact@jonathan-gatard.fr", // Placeholder - user might want to update
-  phone: "06 00 00 00 00", // Placeholder
-  location: "France",
+  email: "jonathan.gatard@gmail.com",
+  phone: "06 13 54 83 19",
   website: "jonathan-gatard.fr",
   linkedin: "linkedin.com/in/jonathan-gatard",
-  github: "github.com/jonathan-gtd"
+  // github: "github.com/jonathan-gtd" // Optional to save space
 };
 
 const skills = {
-  mainframe: ["IBM z/OS", "COBOL", "JCL", "CICS", "DB2", "Zowe"],
+  mainframe: ["z/OS", "USS", "JCL", "CICS", "DB2", "Zowe"],
   open: ["Python", "Docker", "Ansible", "Linux", "Git", "Rest API"],
-  methodology: ["Agile/Scrum", "DevOps", "ITIL", "Lean Management"]
+  methodology: ["Agile/Scrum", "DevOps", "ITIL 4", "Lean Management"]
 };
 
 const languages = [
   { name: "Français", level: "Natif" },
-  { name: "Anglais", level: "Courant (Professionnel)" }
+  { name: "Anglais", level: "Courant" },
+  { name: "Slovaque", level: "Notions" },
+  { name: "Espagnol", level: "Scolaire" },
 ];
 
 const experiences = [
@@ -30,7 +31,7 @@ const experiences = [
     description: "Modernisation des écosystèmes mainframe et interopérabilité.",
     details: [
       "Assurer le MCO et la stabilité des environnements critiques (CATS).",
-      "Développement d'outils Python pour l'automatisation et l'appel d'API depuis z/OS.",
+      "Développement d'outils Python pour l'automatisation et l'appel d'API depuis z/OS (USS).",
       "Mise en place de Zowe et VSCode pour moderniser l'environnement de développement.",
       "AppOps : Pont technique entre les équipes études et la production."
     ]
@@ -53,7 +54,7 @@ const experiences = [
     details: [
       "Développement Fullstack (React/Node) pour la gestion des compétences RH.",
       "Automatisation des déploiements via Jenkins, Docker et Ansible.",
-      "Administration système Linux et gestion de bases de données (Mongo, MariaDB)."
+      "Administration système Linux et gestion de bases de données."
     ]
   },
   {
@@ -113,30 +114,31 @@ const education = [
     <div class="w-[210mm] h-[297mm] bg-white shadow-2xl print:shadow-none flex overflow-hidden relative">
         
         <!-- Left Column (Dark) -->
-        <div class="w-1/3 bg-gray-900 text-white p-8 flex flex-col gap-8">
+        <div class="w-1/3 bg-gray-900 text-white p-6 flex flex-col gap-6">
             
-            <!-- Photo / Header -->
+            <!-- Photo Placeholder -->
+            <div class="flex justify-center">
+                 <div class="w-32 h-32 rounded-full bg-gray-800 border-4 border-blue-500 overflow-hidden flex items-center justify-center">
+                    <span class="text-gray-500 text-xs text-center px-2">Photo ici<br/>(à fournir)</span>
+                    <!-- <img src="/photo.jpg" class="w-full h-full object-cover"> -->
+                </div>
+            </div>
+
+            <!-- Header -->
             <div class="text-center">
-                <!-- <div class="w-32 h-32 rounded-full bg-gray-700 mx-auto mb-4 border-4 border-blue-500 overflow-hidden">
-                    <img src="/photo.jpg" class="w-full h-full object-cover"> 
-                </div> --> 
-                <!-- Name only if no photo -->
-                <h1 class="text-2xl font-bold uppercase tracking-wider mb-2">{personalInfo.name}</h1>
-                <p class="text-blue-400 font-medium text-sm">{personalInfo.title}</p>
+                <h1 class="text-xl font-bold uppercase tracking-wider mb-1 leading-tight">{personalInfo.name}</h1>
+                <p class="text-blue-400 font-medium text-xs">{personalInfo.title}</p>
             </div>
 
             <!-- Contact -->
             <div>
-                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Contact</h2>
-                <ul class="space-y-2 text-xs text-gray-300">
+                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Contact</h2>
+                <ul class="space-y-1.5 text-[11px] text-gray-300">
                     <li class="flex items-center gap-2">
                         <span>📧</span> {personalInfo.email}
                     </li>
                     <li class="flex items-center gap-2">
                         <span>📱</span> {personalInfo.phone}
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <span>📍</span> {personalInfo.location}
                     </li>
                     <li class="flex items-center gap-2">
                         <span>🌐</span> {personalInfo.website}
@@ -148,35 +150,35 @@ const education = [
             </div>
 
             <!-- Skills -->
-            <div>
-                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Compétences</h2>
+            <div class="flex-1">
+                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Compétences</h2>
                 
-                <div class="mb-4">
-                    <h3 class="text-white font-bold mb-1">Mainframe</h3>
+                <div class="mb-3">
+                    <h3 class="text-white font-bold text-[11px] mb-1">Mainframe</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.mainframe.map(s => <span class="px-2 py-0.5 bg-gray-800 rounded text-xs text-gray-300">{s}</span>)}
+                        {skills.mainframe.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[10px] text-gray-300">{s}</span>)}
                     </div>
                 </div>
 
-                <div class="mb-4">
-                    <h3 class="text-white font-bold mb-1">Open & DevOps</h3>
+                <div class="mb-3">
+                    <h3 class="text-white font-bold text-[11px] mb-1">Open & DevOps</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.open.map(s => <span class="px-2 py-0.5 bg-gray-800 rounded text-xs text-gray-300">{s}</span>)}
+                        {skills.open.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[10px] text-gray-300">{s}</span>)}
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-white font-bold mb-1">Méthodologie</h3>
+                    <h3 class="text-white font-bold text-[11px] mb-1">Méthodologie</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.methodology.map(s => <span class="px-2 py-0.5 bg-gray-800 rounded text-xs text-gray-300">{s}</span>)}
+                        {skills.methodology.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[10px] text-gray-300">{s}</span>)}
                     </div>
                 </div>
             </div>
 
             <!-- Languages -->
             <div>
-                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Langues</h2>
-                <ul class="space-y-1 text-xs text-gray-300">
+                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Langues</h2>
+                <ul class="space-y-1 text-[11px] text-gray-300">
                     {languages.map(l => (
                         <li class="flex justify-between">
                             <span>{l.name}</span>
@@ -188,8 +190,8 @@ const education = [
             
              <!-- Passions (Short) -->
              <div class="mt-auto">
-                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Intérêts</h2>
-                <div class="text-xs text-gray-400 leading-relaxed">
+                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Intérêts</h2>
+                <div class="text-[10px] text-gray-400 leading-snug">
                     Domotique (Home Assistant), Aéromodélisme, Mécanique Auto, Terrariophilie, Impression 3D.
                 </div>
             </div>
@@ -197,28 +199,28 @@ const education = [
         </div>
 
         <!-- Right Column (White) -->
-        <div class="w-2/3 p-8 bg-white text-gray-800 flex flex-col gap-6">
+        <div class="w-2/3 p-6 bg-white text-gray-800 flex flex-col gap-4">
             
             <!-- Profile Summary -->
-            <div class="bg-blue-50 p-4 rounded-l border-l-4 border-blue-500 text-sm italic text-gray-600">
+            <div class="bg-blue-50 p-3 rounded-l border-l-4 border-blue-500 text-xs italic text-gray-600 leading-relaxed">
                 "Double compétence unique alliant la rigueur du Mainframe à l'agilité DevOps. 
                  Je conçois des ponts sécurisés entre les systèmes historiques (Système Z) et le monde ouvert."
             </div>
 
             <!-- Experience -->
-            <div>
-                <h2 class="text-lg font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-2 mb-4">Expériences Professionnelles</h2>
+            <div class="flex-1">
+                <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3">Expériences Professionnelles</h2>
                 
-                <div class="space-y-5">
+                <div class="space-y-4">
                     {experiences.map(exp => (
                         <div>
-                            <div class="flex justify-between items-baseline mb-1">
-                                <h3 class="font-bold text-base text-gray-900">{exp.role}</h3>
-                                <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2 py-0.5 rounded">{exp.date}</span>
+                            <div class="flex justify-between items-baseline mb-0.5">
+                                <h3 class="font-bold text-sm text-gray-900">{exp.role}</h3>
+                                <span class="text-[10px] font-mono text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">{exp.date}</span>
                             </div>
-                            <div class="text-blue-600 font-semibold mb-1 text-sm">{exp.company}</div>
-                            <p class="text-xs text-gray-500 italic mb-2">{exp.description}</p>
-                            <ul class="list-disc list-inside space-y-0.5 text-sm text-gray-700">
+                            <div class="text-blue-600 font-semibold mb-0.5 text-xs">{exp.company}</div>
+                            <p class="text-[11px] text-gray-500 italic mb-1">{exp.description}</p>
+                            <ul class="list-disc list-inside space-y-0.5 text-[11px] text-gray-700 leading-snug">
                                 {exp.details.map(d => <li>{d}</li>)}
                             </ul>
                         </div>
@@ -228,15 +230,15 @@ const education = [
 
             <!-- Education -->
             <div class="mt-auto">
-                <h2 class="text-lg font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-2 mb-4">Formation</h2>
+                <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3">Formation</h2>
                 {education.map(edu => (
-                    <div class="mb-2">
+                    <div class="mb-1">
                         <div class="flex justify-between items-baseline">
-                             <h3 class="font-bold text-gray-900">{edu.degree}</h3>
-                             <span class="text-gray-500 text-xs">{edu.date}</span>
+                             <h3 class="font-bold text-gray-900 text-sm">{edu.degree}</h3>
+                             <span class="text-gray-500 text-[10px]">{edu.date}</span>
                         </div>
-                        <div class="text-blue-600 text-sm mb-1">{edu.school}</div>
-                        <p class="text-xs text-gray-500">{edu.desc}</p>
+                        <div class="text-blue-600 text-xs mb-0.5">{edu.school}</div>
+                        <p class="text-[11px] text-gray-500">{edu.desc}</p>
                     </div>
                 ))}
             </div>
