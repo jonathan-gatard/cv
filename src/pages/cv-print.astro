@@ -1,0 +1,249 @@
+---
+// Import nothing, we'll define data here for print-specific tweaking
+const personalInfo = {
+  name: "Jonathan Gatard",
+  title: "Ingénieur Mainframe & Interopérabilité",
+  email: "contact@jonathan-gatard.fr", // Placeholder - user might want to update
+  phone: "06 00 00 00 00", // Placeholder
+  location: "France",
+  website: "jonathan-gatard.fr",
+  linkedin: "linkedin.com/in/jonathan-gatard",
+  github: "github.com/jonathan-gtd"
+};
+
+const skills = {
+  mainframe: ["IBM z/OS", "COBOL", "JCL", "CICS", "DB2", "Zowe"],
+  open: ["Python", "Docker", "Ansible", "Linux", "Git", "Rest API"],
+  methodology: ["Agile/Scrum", "DevOps", "ITIL", "Lean Management"]
+};
+
+const languages = [
+  { name: "Français", level: "Natif" },
+  { name: "Anglais", level: "Courant (Professionnel)" }
+];
+
+const experiences = [
+  {
+    role: "Ingénieur Mainframe & AppOps",
+    company: "Prestataire Aubay Solutec - Mission CAGIP",
+    date: "Sept 2023 - Présent",
+    description: "Modernisation des écosystèmes mainframe et interopérabilité.",
+    details: [
+      "Assurer le MCO et la stabilité des environnements critiques (CATS).",
+      "Développement d'outils Python pour l'automatisation et l'appel d'API depuis z/OS.",
+      "Mise en place de Zowe et VSCode pour moderniser l'environnement de développement.",
+      "AppOps : Pont technique entre les équipes études et la production."
+    ]
+  },
+  {
+    role: "Consultant IT Java/DevOps",
+    company: "Aubay Solutec",
+    date: "Mai 2023 - Sept 2023",
+    description: "Développement et montée en compétences sur les architectures modernes.",
+    details: [
+      "Développement backend Java/Spring pour une application RH interne.",
+      "Formation intensive sur la chaîne CI/CD : Ansible, Kubernetes, Docker."
+    ]
+  },
+  {
+    role: "Ingénieur DevOps",
+    company: "Stellantis (Slovaquie)",
+    date: "2022 - 2023",
+    description: "Transformation numérique en contexte industriel.",
+    details: [
+      "Développement Fullstack (React/Node) pour la gestion des compétences RH.",
+      "Automatisation des déploiements via Jenkins, Docker et Ansible.",
+      "Administration système Linux et gestion de bases de données (Mongo, MariaDB)."
+    ]
+  },
+  {
+    role: "Manager Projets Informatiques",
+    company: "Stellantis (Slovaquie)",
+    date: "2021 - 2022",
+    description: "Pilotage de l'innovation industrielle.",
+    details: [
+      "Management d'une équipe de 4 personnes.",
+      "Mise en place de dashboards de monitoring énergétique (Grafana/InfluxDB)."
+    ]
+  }
+];
+
+const education = [
+  {
+    degree: "Diplôme d'Ingénieur Généraliste",
+    school: "CESI École d'Ingénieurs",
+    date: "2016 - 2019",
+    desc: "Spécialité Performance Industrielle & Amélioration Continue."
+  }
+];
+---
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>CV - Jonathan Gatard</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        @media print {
+            body { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+            }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans text-sm h-screen overflow-hidden flex flex-col items-center py-8 print:py-0 print:h-auto print:block">
+
+    <!-- Print Controls (Screen Only) -->
+    <div class="no-print fixed top-4 right-4 flex gap-4 bg-gray-900 p-2 rounded-lg shadow-xl z-50">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-bold transition-colors">
+            🖨️ Imprimer / PDF
+        </button>
+        <a href="/" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded font-bold transition-colors">
+            ⬅️ Retour Site
+        </a>
+    </div>
+
+    <!-- A4 Page Container -->
+    <div class="w-[210mm] h-[297mm] bg-white shadow-2xl print:shadow-none flex overflow-hidden relative">
+        
+        <!-- Left Column (Dark) -->
+        <div class="w-1/3 bg-gray-900 text-white p-8 flex flex-col gap-8">
+            
+            <!-- Photo / Header -->
+            <div class="text-center">
+                <!-- <div class="w-32 h-32 rounded-full bg-gray-700 mx-auto mb-4 border-4 border-blue-500 overflow-hidden">
+                    <img src="/photo.jpg" class="w-full h-full object-cover"> 
+                </div> --> 
+                <!-- Name only if no photo -->
+                <h1 class="text-2xl font-bold uppercase tracking-wider mb-2">{personalInfo.name}</h1>
+                <p class="text-blue-400 font-medium text-sm">{personalInfo.title}</p>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Contact</h2>
+                <ul class="space-y-2 text-xs text-gray-300">
+                    <li class="flex items-center gap-2">
+                        <span>📧</span> {personalInfo.email}
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span>📱</span> {personalInfo.phone}
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span>📍</span> {personalInfo.location}
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span>🌐</span> {personalInfo.website}
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span>💼</span> {personalInfo.linkedin}
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Compétences</h2>
+                
+                <div class="mb-4">
+                    <h3 class="text-white font-bold mb-1">Mainframe</h3>
+                    <div class="flex flex-wrap gap-1">
+                        {skills.mainframe.map(s => <span class="px-2 py-0.5 bg-gray-800 rounded text-xs text-gray-300">{s}</span>)}
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-white font-bold mb-1">Open & DevOps</h3>
+                    <div class="flex flex-wrap gap-1">
+                        {skills.open.map(s => <span class="px-2 py-0.5 bg-gray-800 rounded text-xs text-gray-300">{s}</span>)}
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold mb-1">Méthodologie</h3>
+                    <div class="flex flex-wrap gap-1">
+                        {skills.methodology.map(s => <span class="px-2 py-0.5 bg-gray-800 rounded text-xs text-gray-300">{s}</span>)}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div>
+                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Langues</h2>
+                <ul class="space-y-1 text-xs text-gray-300">
+                    {languages.map(l => (
+                        <li class="flex justify-between">
+                            <span>{l.name}</span>
+                            <span class="text-gray-500">{l.level}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            
+             <!-- Passions (Short) -->
+             <div class="mt-auto">
+                <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest border-b border-gray-700 pb-1 mb-3">Intérêts</h2>
+                <div class="text-xs text-gray-400 leading-relaxed">
+                    Domotique (Home Assistant), Aéromodélisme, Mécanique Auto, Terrariophilie, Impression 3D.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column (White) -->
+        <div class="w-2/3 p-8 bg-white text-gray-800 flex flex-col gap-6">
+            
+            <!-- Profile Summary -->
+            <div class="bg-blue-50 p-4 rounded-l border-l-4 border-blue-500 text-sm italic text-gray-600">
+                "Double compétence unique alliant la rigueur du Mainframe à l'agilité DevOps. 
+                 Je conçois des ponts sécurisés entre les systèmes historiques (Système Z) et le monde ouvert."
+            </div>
+
+            <!-- Experience -->
+            <div>
+                <h2 class="text-lg font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-2 mb-4">Expériences Professionnelles</h2>
+                
+                <div class="space-y-5">
+                    {experiences.map(exp => (
+                        <div>
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h3 class="font-bold text-base text-gray-900">{exp.role}</h3>
+                                <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2 py-0.5 rounded">{exp.date}</span>
+                            </div>
+                            <div class="text-blue-600 font-semibold mb-1 text-sm">{exp.company}</div>
+                            <p class="text-xs text-gray-500 italic mb-2">{exp.description}</p>
+                            <ul class="list-disc list-inside space-y-0.5 text-sm text-gray-700">
+                                {exp.details.map(d => <li>{d}</li>)}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mt-auto">
+                <h2 class="text-lg font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-2 mb-4">Formation</h2>
+                {education.map(edu => (
+                    <div class="mb-2">
+                        <div class="flex justify-between items-baseline">
+                             <h3 class="font-bold text-gray-900">{edu.degree}</h3>
+                             <span class="text-gray-500 text-xs">{edu.date}</span>
+                        </div>
+                        <div class="text-blue-600 text-sm mb-1">{edu.school}</div>
+                        <p class="text-xs text-gray-500">{edu.desc}</p>
+                    </div>
+                ))}
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
