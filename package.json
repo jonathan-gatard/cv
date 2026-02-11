@@ -1,5 +1,9 @@
 {
-  "name": "cv",
+  "name": "jonathan-g-cv",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathan-g/cv.git"
+  },
   "type": "module",
   "version": "0.0.1",
   "scripts": {
