@@ -1,8 +1,0 @@
-public/videos/projects/aero/p47.mp4
-public/videos/projects/aero/nord3202.mp4
-public/videos/projects/aero/avanti.mp4
-public/videos/projects/meca/palier_old.mp4
-public/videos/projects/meca/ultrasons.mp4
-public/videos/projects/imprimante/laser.mp4
-public/videos/projects/formation/AR3.mp4
-public/videos/projects/formation/AR1.mp4

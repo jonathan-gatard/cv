@@ -1,6 +1,0 @@
-/cv/videos/projects/aero/avanti.mp4type=video/mp4
-/cv/videos/projects/aero/p47.mp4type=video/mp4
-/cv/videos/projects/formation/AR1.mp4type=video/mp4
-/cv/videos/projects/imprimante/laser.mp4type=video/mp4
-/cv/videos/projects/meca/palier_old.mp4type=video/mp4
-/cv/videos/projects/meca/ultrasons.mp4type=video/mp4
