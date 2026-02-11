@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Voron 3D" description="Construction d'une imprimante Voron CoreXY haute performance.">
+  <div class="max-w-4xl mx-auto px-4 py-12 text-gray-300">
+    <a href="/passions" class="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Retour aux passions
+    </a>
+
+    <div class="flex items-center gap-4 mb-6">
+      <h1 class="text-4xl font-bold text-white">Voron 3D</h1>
+      <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-full border border-amber-500/30 uppercase tracking-wider">
+        En cours
+      </span>
+    </div>
+    <p class="text-xl text-gray-400 mb-12">Construction d'une imprimante CoreXY haute performance — le Saint Graal de l'impression 3D DIY.</p>
+
+    <div class="space-y-16">
+
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-4 border-l-4 border-red-500 pl-4">Pourquoi une Voron ?</h2>
+        <p class="mb-6">
+          Après des années à modifier ma Prusa i3, j'ai voulu construire une machine de qualité semi-professionnelle.
+          La <strong>Voron</strong> est un projet open-source communautaire reconnu pour sa vitesse, sa précision et sa fiabilité.
+        </p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+            <div class="text-3xl mb-2">🚀</div>
+            <h3 class="font-bold text-white mb-1">Vitesse</h3>
+            <p class="text-sm text-gray-400">Cinématique CoreXY : accélérations jusqu'à 10 000 mm/s²</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+            <div class="text-3xl mb-2">🎯</div>
+            <h3 class="font-bold text-white mb-1">Précision</h3>
+            <p class="text-sm text-gray-400">Rails linéaires, châssis aluminium rigide, calibration automatique</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+            <div class="text-3xl mb-2">🧠</div>
+            <h3 class="font-bold text-white mb-1">Klipper</h3>
+            <p class="text-sm text-gray-400">Firmware avancé avec Input Shaper, Pressure Advance et interface web Moonraker</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-4 border-l-4 border-red-500 pl-4">Intégration Home Assistant</h2>
+        <p class="mb-4">
+          Grâce à l'API Moonraker, l'imprimante est entièrement pilotable depuis Home Assistant :
+          monitoring de température, état d'impression, E-Stop, contrôle des LEDs...
+        </p>
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div class="bg-black/30 p-4 rounded font-mono text-xs text-red-200">
+            Klipper (firmware) → Moonraker (API) → Home Assistant (Dashboard)
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-6 text-center">
+          <p class="text-amber-400 font-bold mb-2">📸 Photos à venir</p>
+          <p class="text-sm text-gray-400">Le projet est en cours de montage. Photos de la construction et des premières impressions bientôt disponibles.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>

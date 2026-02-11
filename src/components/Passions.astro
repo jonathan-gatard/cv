@@ -20,7 +20,14 @@ import { passions } from '../data/passions';
           <div class="p-6 flex-1 flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <span class="text-4xl">{item.icon}</span>
-              <div class={`w-10 h-10 rounded-full bg-gradient-to-br ${item.color} opacity-10 group-hover:opacity-20 transition-opacity`}></div>
+              <div class="flex items-center gap-2">
+                {item.wip && (
+                  <span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-[10px] font-bold rounded-full border border-amber-500/30 uppercase tracking-wider">
+                    En cours
+                  </span>
+                )}
+                <div class={`w-10 h-10 rounded-full bg-gradient-to-br ${item.color} opacity-10 group-hover:opacity-20 transition-opacity`}></div>
+              </div>
             </div>
             
             <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">

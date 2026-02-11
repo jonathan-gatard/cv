@@ -136,6 +136,54 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </section>
 
+      <!-- Évolution : du Raspberry Pi au NUC -->
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-6 border-l-4 border-blue-500 pl-4">Évolution : du Raspberry Pi au NUC</h2>
+        <p class="mb-6">
+            Avec la multiplication des services (Frigate, Grafana, bases de données, musique...), le Raspberry Pi 4 a atteint ses limites.
+            J'ai migré l'ensemble sur un <strong>Intel NUC</strong>, bien plus puissant et fiable.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-800 p-6 rounded-lg border border-red-900/30">
+                <h3 class="font-bold text-red-400 mb-3">🔴 Avant (RPi4)</h3>
+                <ul class="text-sm space-y-1 text-gray-400">
+                    <li>• CPU ARM 4 cœurs — limité pour Frigate</li>
+                    <li>• SSD M.2 120 Go via USB</li>
+                    <li>• PiZigate soudée (port série)</li>
+                    <li>• ~10 conteneurs Docker</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg border border-green-900/30">
+                <h3 class="font-bold text-green-400 mb-3">🟢 Maintenant (NUC)</h3>
+                <ul class="text-sm space-y-1 text-gray-400">
+                    <li>• CPU x86 Intel — puissance largement suffisante</li>
+                    <li>• SSD NVMe + stockage données</li>
+                    <li>• Coordinateur ZigBee USB (Sonoff dongle)</li>
+                    <li>• ~25 conteneurs Docker (HA, Frigate, Grafana, PostgreSQL, Mail...)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+            <h4 class="font-bold text-white mb-3 text-lg">Stack Docker actuelle</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-300">
+                <span class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Home Assistant</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>Zigbee2MQTT</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Mosquitto (MQTT)</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>Node-Red</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Grafana + InfluxDB</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>Frigate (vidéo IA)</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>AdGuard Home</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Nginx Proxy Manager</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>Portainer</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>PostgreSQL (Scribe)</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>Music Assistant</span>
+                <span class="flex items-center"><span class="w-2 h-2 bg-amber-500 rounded-full mr-2"></span>Mailu (Email)</span>
+            </div>
+        </div>
+      </section>
+
       <!-- Dashboarding -->
       <section>
           <h2 class="text-2xl font-semibold text-white mb-6 border-l-4 border-blue-500 pl-4">Monitoring & Visualisation</h2>

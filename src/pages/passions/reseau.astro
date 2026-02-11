@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Infrastructure Réseau" description="Architecture réseau avancée : OpenWrt, VPN, reverse proxy, vidéosurveillance Frigate.">
+  <div class="max-w-4xl mx-auto px-4 py-12 text-gray-300">
+    <a href="/passions" class="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Retour aux passions
+    </a>
+
+    <h1 class="text-4xl font-bold text-white mb-6">Infrastructure Réseau</h1>
+    <p class="text-xl text-gray-400 mb-12">Maîtrise complète du réseau domestique, de la couche physique jusqu'aux services.</p>
+
+    <div class="space-y-16">
+
+      <!-- Routeur -->
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-4 border-l-4 border-teal-500 pl-4">Routeur OpenWrt</h2>
+        <p class="mb-6">
+          Remplacement du routeur FAI par un routeur flashé <strong>OpenWrt</strong> pour un contrôle total du réseau.
+          Configuration avancée : VLAN, QoS, politique de routage, et gestion fine du pare-feu.
+        </p>
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 class="font-bold text-white mb-3">Fonctionnalités clés</h3>
+          <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+            <li><strong>AdGuard Home</strong> — DNS sinkhole pour bloquer publicités et trackers sur tout le réseau</li>
+            <li><strong>VPN (OpenVPN)</strong> — Tunnel sécurisé pour l'accès distant et la protection du trafic</li>
+            <li><strong>Policy Based Routing</strong> — Certains services contournent le VPN (reverse proxy, streaming)</li>
+            <li><strong>VLAN</strong> — Isolation des appareils IoT du réseau principal</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Reverse Proxy -->
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-4 border-l-4 border-teal-500 pl-4">Reverse Proxy & Accès Distant</h2>
+        <p class="mb-4">
+          Utilisation de <strong>Nginx Proxy Manager</strong> pour exposer certains services (Home Assistant, Grafana) 
+          de manière sécurisée via HTTPS avec certificats Let's Encrypt.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
+            <h3 class="font-bold text-white mb-2">🔒 Sécurité</h3>
+            <ul class="text-sm space-y-1 text-gray-400">
+              <li>• Certificats SSL automatiques</li>
+              <li>• Fail2Ban (protection brute-force SSH)</li>
+              <li>• Firewall OpenWrt avancé</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
+            <h3 class="font-bold text-white mb-2">📡 Services exposés</h3>
+            <ul class="text-sm space-y-1 text-gray-400">
+              <li>• Home Assistant (domotique)</li>
+              <li>• Grafana (monitoring)</li>
+              <li>• Portainer (gestion Docker)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vidéosurveillance -->
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-4 border-l-4 border-teal-500 pl-4">Vidéosurveillance (Frigate)</h2>
+        <p class="mb-4">
+          Mise en place de <strong>Frigate</strong> pour la détection de personnes en temps réel via des caméras IP.
+          Intégration native avec Home Assistant pour les alertes et l'enregistrement.
+        </p>
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+            <li>Analyse du trafic réseau des caméras (protocoles RTSP, ONVIF)</li>
+            <li>Détection IA de personnes avec alertes push</li>
+            <li>Enregistrement continu avec rétention configurable</li>
+            <li>Bascule automatique jour/nuit sur les flux vidéo</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Schéma réseau -->
+      <section>
+        <h2 class="text-2xl font-semibold text-white mb-4 border-l-4 border-teal-500 pl-4">Architecture Globale</h2>
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center">
+          <p class="text-sm text-gray-500 italic mb-4">Schéma réseau à venir — en attendant les photos 📸</p>
+          <div class="bg-black/30 p-4 rounded font-mono text-xs text-teal-200 text-left">
+            Internet ↔ Box FAI (bridge) ↔ OpenWrt Router<br/>
+            &nbsp;&nbsp;├── VLAN1: LAN Principal (PC, NAS, NUC)<br/>
+            &nbsp;&nbsp;├── VLAN2: IoT (ZigBee, caméras, ESP32)<br/>
+            &nbsp;&nbsp;├── VLAN3: Invités<br/>
+            &nbsp;&nbsp;└── VPN Tunnel → Accès distant sécurisé
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>
