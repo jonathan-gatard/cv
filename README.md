@@ -1,4 +1,4 @@
-# CV de Jonathan Gatard (Jonathan-G)
+# CV de Jonathan Gatard (jonathan-gtd)
 
 Source code of my online CV / Portfolio.
 
