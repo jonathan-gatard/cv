@@ -106,6 +106,8 @@ Cette section contient l'intégralité des informations du CV pour référence f
 - **Maker / Hardware** : Conception et amélioration d'imprimantes 3D. Transformation en découpeuse laser.
 - **Terrariophilie** : Création de biotopes automatisés (Tourbière artificielle, plantes carnivores).
 
-## 7. Prochaines Étapes Possibles
-- Ajouter des articles de blog ou des "Case Studies".
-- Mettre à jour la photo de profil.
+## 7. Prochaines Étapes & Améliorations
+- [ ] **Internationalisation (i18n)** : Traduire le site en Anglais (essentiel pour un profil international). Astro gère très bien le routing `fr/` et `en/`.
+- [ ] **Blog / Case Studies** : Créer des pages dédiées pour détailler les projets techniques (ex: le projet Domotique >100h, outils Mainframe).
+- [ ] **SEO Avancé** : Ajouter des données structurées (JSON-LD) pour être mieux compris par Google.
+- [ ] **Mise à jour Photo** : Remplacer le placeholder sur le CV imprimable.
