@@ -1,31 +1,27 @@
 ---
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import TechStack from '../components/TechStack.astro';
 ---
 
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Jonathan Gatard - CV</title>
+		<title>Jonathan Gatard - Mainframe & DevOps Engineer</title>
+        <meta name="description" content="CV de Jonathan Gatard, Ingénieur Mainframe et DevOps. Expert en modernisation Legacy, Python et Zowe.">
 	</head>
-	<body class="bg-gray-900 text-white font-sans min-h-screen flex items-center justify-center">
-		<div class="text-center">
-			<h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4">
-				Jonathan Gatard
-			</h1>
-			<p class="text-xl text-gray-400 mb-8">
-				Développeur Full Stack & DevOps
-			</p>
-			<button class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg transition-all transform hover:scale-105">
-				Télécharger mon CV
-			</button>
-            <div class="mt-12 p-6 bg-gray-800 rounded-xl shadow-xl max-w-md mx-auto">
-                <p class="text-gray-300">
-                    Ceci est une page de test pour valider la stack technique : <br/>
-                    <span class="font-mono text-blue-400">Astro v4 + TailwindCSS</span>
-                </p>
-            </div>
-		</div>
+	<body class="bg-gray-900 text-white font-sans antialiased">
+		<main>
+            <Hero />
+            <TechStack />
+            <Experience />
+		</main>
+        
+        <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
+            <p>&copy; {new Date().getFullYear()} Jonathan Gatard. Construit avec <a href="https://astro.build" class="text-blue-400 hover:underline">Astro</a> & Tailwind.</p>
+        </footer>
 	</body>
 </html>

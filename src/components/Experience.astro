@@ -1,0 +1,92 @@
+---
+const experiences = [
+  {
+    role: "Mission @ CAGIP - Mainframe & AppOps",
+    company: "Prestataire Solutec",
+    date: "Sept 2023 - Présent",
+    description: "Une mission hybride au cœur de la modernisation bancaire.",
+    tags: ["Mainframe", "Python", "AppOps", "Zowe"],
+    details: [
+      {
+        title: "Run & Stabilité",
+        content: "Installation et maintenance de matière mainframe pour CATS. Garantie de la disponibilité et de la performance des environnements critiques."
+      },
+      {
+        title: "Build & Modernisation",
+        content: "Développement d'outils en Python pour automatiser les tâches récurrentes. Mise en place de Zowe et VSCode pour moderniser l'expérience développeur et formation des équipes à ces nouveaux standards."
+      },
+      {
+        title: "AppOps",
+        content: "Accompagnement technique des projets CATS, faisant le lien entre les besoins métiers et les contraintes opérationnelles du Mainframe."
+      }
+    ]
+  },
+  {
+    role: "Consultant IT",
+    company: "Solutec",
+    date: "Mai 2023 - Présent",
+    description: "Intégration au sein de l'ESN Solutec pour des missions à haute valeur ajoutée.",
+    tags: ["Consulting", "Intégration"],
+    details: [
+      {
+        title: "Onboarding",
+        content: "Formation aux méthodologies de l'entreprise et préparation à la mission grand compte (CAGIP)."
+      }
+    ]
+  }
+];
+---
+
+<section id="experience" class="py-20 bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+      Mon Parcours
+    </h2>
+
+    <div class="space-y-12">
+      {experiences.map((exp, index) => (
+        <div class="relative pl-8 md:pl-0">
+          <!-- Timeline Line -->
+          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-800 transform -translate-x-1/2"></div>
+          
+          <div class={`md:flex items-center justify-between gap-8 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+            
+            <!-- Date Bubble (Center) -->
+            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-blue-600 border-4 border-gray-900 z-10"></div>
+
+            <!-- Content Card -->
+            <div class="w-full md:w-5/12">
+              <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow border border-gray-700 group hover:border-blue-500/50">
+                <span class="text-blue-400 text-sm font-mono mb-2 block">{exp.date}</span>
+                <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-300 transition-colors">{exp.role}</h3>
+                <p class="text-gray-400 mb-4 font-medium">{exp.company}</p>
+                <p class="text-gray-300 mb-6 italic">{exp.description}</p>
+                
+                <div class="space-y-4">
+                  {exp.details.map((detail) => (
+                    <div class="bg-gray-700/50 p-4 rounded-lg border-l-4 border-blue-500">
+                      <h4 class="font-bold text-white mb-1">{detail.title}</h4>
+                      <p class="text-sm text-gray-300">{detail.content}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div class="flex flex-wrap gap-2 mt-6">
+                  {exp.tags.map((tag) => (
+                    <span class="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded-full border border-gray-700">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <!-- Empty Space for Timeline balance -->
+            <div class="w-full md:w-5/12"></div>
+            
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
