@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Impression 3D & Laser" description="Conception et modification d'imprimantes 3D et découpeuse laser.">
+  <div class="max-w-4xl mx-auto px-4 py-12 text-gray-300">
+    <a href="/cv/passions" class="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Retour aux passions
+    </a>
+
+    <h1 class="text-4xl font-bold text-white mb-6">Impression 3D & Laser</h1>
+    <p class="text-xl text-gray-400 mb-12">"De la Prusa i3 DIY à la machine de production hybride"</p>
+
+    <div class="space-y-16">
+
+       <!-- Histoire -->
+       <section>
+          <h2 class="text-2xl font-semibold text-white mb-6 border-l-4 border-purple-500 pl-4">L'Évolution (2015 - Aujourd'hui)</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="bg-gray-800 p-2 rounded-lg">
+                  <img src="/cv/images/projects/imprimante/2015.jpg" class="w-full rounded h-48 object-cover mb-2">
+                  <h4 class="font-bold text-center text-white">2015 - La Genèse</h4>
+                  <p class="text-xs text-justify text-gray-400 p-2">
+                      Construction scratch d'une Prusa i3 : Tiges filetées basiques, cadre acier, électronique Arduino 8-bit. Une machine rudimentaire mais fonctionnelle.
+                  </p>
+              </div>
+              <div class="bg-gray-800 p-2 rounded-lg">
+                  <img src="/cv/images/projects/imprimante/2018.jpg" class="w-full rounded h-48 object-cover mb-2">
+                  <h4 class="font-bold text-center text-white">2018 - Fiabilisation</h4>
+                  <p class="text-xs text-justify text-gray-400 p-2">
+                      Passage en vis trapézoïdales, amélioration du câblage, et rigidification du châssis. Les impressions deviennent répétables.
+                  </p>
+              </div>
+               <div class="bg-gray-800 p-2 rounded-lg border border-purple-500/30">
+                  <img src="/cv/images/projects/imprimante/2023.jpg" class="w-full rounded h-48 object-cover mb-2">
+                  <h4 class="font-bold text-center text-white">2023 - Hybride</h4>
+                  <p class="text-xs text-justify text-gray-400 p-2">
+                      Carte mère 32-bits (SKR), drivers silencieux TMC2130, isolation thermique, et <strong>tête interchangeable Laser/Extrudeur</strong>.
+                  </p>
+              </div>
+          </div>
+       </section>
+
+       <!-- Upgrade Laser -->
+       <section>
+          <h2 class="text-2xl font-semibold text-white mb-6 border-l-4 border-purple-500 pl-4">Conversion Découpe Laser</h2>
+          <p class="mb-4">
+              J'ai conçu un module additionnel pour monter un laser à diode bleu (450nm) sur la tête d'impression.
+              Nécessité de hacker l'électronique de l'imprimante : utilisation de la sortie PWM ventilateur détournée via un circuit à transistor MOSFET pour piloter la puissance du laser.
+          </p>
+
+          <div class="bg-gray-800 rounded-lg p-6">
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                  <div class="space-y-4">
+                      
+                      <div class="flex items-center gap-4">
+                          <img src="/cv/images/projects/imprimante/transistor.jpg" class="w-24 h-24 rounded object-cover border border-purple-500">
+                          <div>
+                              <h5 class="font-bold text-white">Électronique</h5>
+                              <p class="text-sm text-gray-400">Soudure fine sur la carte mère pour récupérer le signal PWM.</p>
+                          </div>
+                      </div>
+                      
+                      <div class="flex items-center gap-4">
+                           <img src="/cv/images/projects/imprimante/support.jpg" class="w-24 h-24 rounded object-cover border border-purple-500">
+                           <div>
+                              <h5 class="font-bold text-white">Mécanique</h5>
+                              <p class="text-sm text-gray-400">Support CAO dessiné sur mesure et imprimé en 3D (PETG).</p>
+                           </div>
+                      </div>
+
+                  </div>
+                  <div>
+                      <h4 class="font-bold text-white mb-2 text-center">Laser en action</h4>
+                      <video controls poster="/cv/images/projects/imprimante/laser.jpg" class="w-full rounded shadow-lg border border-gray-700">
+                          <source src="/cv/videos/projects/imprimante/laser.mp4" type="video/mp4">
+                      </video>
+                  </div>
+              </div>
+          </div>
+       </section>
+
+       <!-- Réalisations -->
+       <section>
+            <h2 class="text-2xl font-semibold text-white mb-6 border-l-4 border-purple-500 pl-4">Réalisations</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="/cv/images/projects/imprimante/bougeoir.jpg" class="w-full h-48 object-cover transition transform group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-center text-sm">Bougeoir (Découpe Balsa 3mm)</div>
+                </div>
+                 <div class="group relative overflow-hidden rounded-lg">
+                    <img src="/cv/images/projects/imprimante/panier.jpg" class="w-full h-48 object-cover transition transform group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-center text-sm">Panier (Découpe CTP 3mm)</div>
+                </div>
+                 <div class="group relative overflow-hidden rounded-lg">
+                    <img src="/cv/images/projects/imprimante/chouette.jpg" class="w-full h-48 object-cover transition transform group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black/70 p-2 text-center text-sm">Gravure sur coque</div>
+                </div>
+            </div>
+       </section>
+
+    </div>
+  </div>
+</Layout>

@@ -5,35 +5,48 @@ const passions = [
     icon: "🏠",
     description: "Conception d'une installation connectée complète et autonome.",
     tags: ["Raspberry Pi", "Docker", "Home Assistant", "ZigBee", "InfluxDB"],
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-cyan-500",
+    link: "/cv/passions/domotique"
   },
   {
     title: "Aéromodélisme",
     icon: "✈️",
     description: "Construction d'avions thermiques en bois et programmation de radiocommandes.",
     tags: ["Modélisme", "Électronique", "Firmware", "Pilotage"],
-    color: "from-orange-500 to-red-500"
+    color: "from-orange-500 to-red-500",
+    link: "/cv/passions/aeromodelisme"
   },
   {
     title: "Mécanique Automobile",
     icon: "🔧",
     description: "Maintenance avancée et réparation (Turbo, injection, transmission sur BMW).",
     tags: ["Mécanique", "Diagnostic", "Précision"],
-    color: "from-gray-500 to-gray-700"
+    color: "from-gray-500 to-gray-700",
+    link: "/cv/passions/mecanique"
   },
   {
     title: "Impression 3D & Laser",
     icon: "🖨️",
     description: "Construction et modification d'imprimantes 3D et transformation en découpeuse laser.",
     tags: ["Marlin", "Hardware", "Conception 3D"],
-    color: "from-purple-500 to-pink-500"
+    color: "from-purple-500 to-pink-500",
+    link: "/cv/passions/imprimante"
   },
   {
     title: "Terrariophilie High-Tech",
     icon: "🌿",
     description: "Création de terrariums automatisés pour plantes carnivores et escargots géants.",
     tags: ["IoT", "ESP32", "Automatisation", "Biologie"],
-    color: "from-green-500 to-emerald-500"
+    color: "from-green-500 to-emerald-500",
+    link: "/cv/passions/terrariophilie"
+  },
+  {
+    title: "Formation & Hacking",
+    icon: "🎓",
+    description: "Cursus technique à TU Graz : Sécurité, Réseau, Réalité Augmentée.",
+    tags: ["CTF", "Sécurité", "Réseau", "Unity", "OpenCV"],
+    color: "from-red-500 to-pink-600",
+    link: "/cv/passions/formation"
   }
 ];
 ---
@@ -41,7 +54,7 @@ const passions = [
 <section id="passions" class="py-20 bg-gray-900">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-white mb-4">Projets Personnels & Passions</h2>
+      <h2 class="text-3xl font-bold text-white mb-4">Projets Personnels & Passions</h2>
       <p class="text-gray-400 max-w-2xl mx-auto">
         Au-delà de mon métier, je suis un passionné de technique ("Maker") qui aime concevoir, réparer et automatiser.
         Ces projets démontrent ma curiosité et ma capacité à apprendre par la pratique.
@@ -50,33 +63,33 @@ const passions = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {passions.map((item) => (
-        <div class="group relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-700">
+        <a href={item.link} class="group relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-700 flex flex-col">
           <!-- Gradient Line Top -->
           <div class={`h-2 w-full bg-gradient-to-r ${item.color}`}></div>
           
-          <div class="p-8">
-            <div class="flex items-center justify-between mb-6">
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
               <span class="text-4xl">{item.icon}</span>
-              <div class={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} opacity-10 group-hover:opacity-20 transition-opacity`}></div>
+              <div class={`w-10 h-10 rounded-full bg-gradient-to-br ${item.color} opacity-10 group-hover:opacity-20 transition-opacity`}></div>
             </div>
             
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
               {item.title}
             </h3>
             
-            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+            <p class="text-gray-400 mb-4 text-sm leading-relaxed flex-1">
               {item.description}
             </p>
             
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-1.5 mt-auto">
               {item.tags.map((tag) => (
-                <span class="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded-full border border-gray-700">
+                <span class="px-2 py-0.5 bg-gray-900 text-gray-300 text-[10px] rounded-full border border-gray-700">
                   #{tag}
                 </span>
               ))}
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>

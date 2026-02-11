@@ -2,7 +2,7 @@
 const experiences = [
   {
     role: "Mission @ CAGIP - Mainframe & AppOps",
-    company: "Prestataire Solutec",
+    company: "Prestataire Aubay Solutec",
     date: "Sept 2023 - Présent",
     description: "Une mission hybride au cœur de la modernisation bancaire. Pont entre le monde Legacy et le DevOps moderne.",
     tags: ["Mainframe", "Python", "AppOps", "Zowe", "VSCode"],
@@ -23,7 +23,7 @@ const experiences = [
   },
   {
     role: "Consultant IT",
-    company: "Solutec",
+    company: "Aubay Solutec",
     date: "Mai 2023 - Présent",
     description: "Intégration au sein de l'ESN Solutec pour des missions à haute valeur ajoutée.",
     tags: ["Consulting", "Java/Spring", "Agile"],
@@ -97,13 +97,13 @@ const experiences = [
 ];
 ---
 
-<section id="experience" class="py-12 bg-gray-900 text-white">
+<section id="experience" class="py-8 bg-gray-900 text-white">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+    <h2 class="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
       Mon Parcours
     </h2>
 
-    <div class="space-y-12">
+    <div class="space-y-8">
       {experiences.map((exp, index) => (
         <div class="relative pl-8 md:pl-0">
           <!-- Timeline Line -->
@@ -112,32 +112,32 @@ const experiences = [
           <div class={`md:flex items-center justify-between gap-8 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
             
             <!-- Date Bubble (Center) -->
-            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-32 py-1 rounded-full bg-gray-800 border-2 border-gray-700 z-10 text-sm font-mono text-blue-400">
+            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-36 py-1 rounded-full bg-gray-800 border-2 border-gray-700 z-10 text-xs font-mono text-blue-400 whitespace-nowrap">
                 {exp.date}
             </div>
 
             <!-- Content Card -->
             <div class="w-full md:w-5/12">
-              <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all border border-gray-700 group hover:border-blue-500/50 relative">
+              <div class="bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-700 group hover:border-blue-500/50 relative">
                  <!-- Mobile Date -->
-                 <span class="md:hidden text-blue-400 text-sm font-mono mb-2 block">{exp.date}</span>
+                 <span class="md:hidden text-blue-400 text-xs font-mono mb-2 block">{exp.date}</span>
                  
-                <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-300 transition-colors">{exp.role}</h3>
-                <p class="text-gray-400 mb-4 font-medium">{exp.company}</p>
-                <p class="text-gray-300 mb-6 italic text-sm">{exp.description}</p>
+                <h3 class="text-xl font-bold mb-1 group-hover:text-blue-300 transition-colors">{exp.role}</h3>
+                <p class="text-gray-400 mb-3 font-medium text-sm">{exp.company}</p>
+                <p class="text-gray-300 mb-4 italic text-xs leading-relaxed">{exp.description}</p>
                 
-                <div class="space-y-4">
+                <div class="space-y-3">
                   {exp.details.map((detail) => (
-                    <div class="bg-gray-700/50 p-3 rounded-lg border-l-2 border-blue-500">
-                      <h4 class="font-bold text-white text-sm mb-1">{detail.title}</h4>
-                      <p class="text-xs text-gray-300 leading-relaxed">{detail.content}</p>
+                    <div class="bg-gray-700/50 p-2.5 rounded-lg border-l-2 border-blue-500">
+                      <h4 class="font-bold text-white text-xs mb-0.5">{detail.title}</h4>
+                      <p class="text-[11px] text-gray-300 leading-relaxed">{detail.content}</p>
                     </div>
                   ))}
                 </div>
 
-                <div class="flex flex-wrap gap-2 mt-6">
+                <div class="flex flex-wrap gap-1.5 mt-4">
                   {exp.tags.map((tag) => (
-                    <span class="px-2 py-1 bg-gray-900 text-gray-300 text-xs rounded-md border border-gray-700">
+                    <span class="px-2 py-0.5 bg-gray-900 text-gray-300 text-[10px] rounded-md border border-gray-700">
                       #{tag}
                     </span>
                   ))}
