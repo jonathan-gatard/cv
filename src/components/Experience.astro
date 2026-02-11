@@ -1,15 +1,28 @@
 ---
 import { experiences, education } from '../data/experience';
 
-const sections = [
-  { id: 'experience', label: 'Expérience' },
-  { id: 'formation', label: 'Formation' },
-  { id: 'stack', label: 'Tech Stack' },
+// Build sidebar items with sub-entries
+const sidebarSections = [
+  {
+    id: 'experience',
+    label: 'Expérience',
+    children: experiences.map((exp, i) => ({ id: `exp-${i}`, label: exp.company.split('(')[0].trim() }))
+  },
+  {
+    id: 'formation',
+    label: 'Formation',
+    children: education.map((edu, i) => ({ id: `edu-${i}`, label: edu.company.split('(')[0].trim() }))
+  },
+  {
+    id: 'stack',
+    label: 'Tech Stack',
+    children: []
+  },
 ];
 
 const cardItems = [
-  { id: 'experience', title: 'Expérience Professionnelle', items: experiences },
-  { id: 'formation', title: 'Formation', items: education },
+  { id: 'experience', title: 'Expérience Professionnelle', items: experiences, prefix: 'exp' },
+  { id: 'formation', title: 'Formation', items: education, prefix: 'edu' },
 ];
 ---
 
@@ -19,11 +32,23 @@ const cardItems = [
     <!-- Sticky Sidebar (Desktop only) -->
     <aside class="hidden lg:block w-56 shrink-0">
       <nav class="sticky top-28 space-y-1" id="sidebar-nav">
-        {sections.map(s => (
-          <a href={`#${s.id}`} data-section={s.id}
-             class="sidebar-link block px-4 py-2.5 text-sm font-medium text-gray-500 rounded-lg border-l-2 border-transparent hover:text-white hover:bg-gray-800/50 transition-all">
-            {s.label}
-          </a>
+        {sidebarSections.map(s => (
+          <div>
+            <a href={`#${s.id}`} data-section={s.id}
+               class="sidebar-link block px-4 py-2.5 text-sm font-medium text-gray-500 rounded-lg border-l-2 border-transparent hover:text-white hover:bg-gray-800/50 transition-all">
+              {s.label}
+            </a>
+            {s.children.length > 0 && (
+              <div class="ml-4 mt-0.5 space-y-0.5">
+                {s.children.map(child => (
+                  <a href={`#${child.id}`} data-section={child.id}
+                     class="sidebar-link block px-3 py-1.5 text-[11px] text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         ))}
       </nav>
     </aside>
@@ -38,8 +63,8 @@ const cardItems = [
           </h2>
 
           <div class="space-y-6">
-            {section.items.map((item) => (
-              <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all group">
+            {section.items.map((item, i) => (
+              <div id={`${section.prefix}-${i}`} class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all group">
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
                     <h3 class="text-lg font-bold group-hover:text-blue-300 transition-colors">{item.role}</h3>
@@ -121,22 +146,24 @@ const cardItems = [
 
 <script>
   const links = document.querySelectorAll('.sidebar-link');
-  const sections = document.querySelectorAll('section[id]');
+  const targets = document.querySelectorAll('[id]');
   
   function updateActive() {
     let current = '';
-    sections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      if (top <= 150) current = section.id;
+    targets.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top <= 150) current = el.id;
     });
     
     links.forEach(link => {
       const isActive = link.getAttribute('data-section') === current;
       link.classList.toggle('text-white', isActive);
-      link.classList.toggle('text-gray-500', !isActive);
+      link.classList.toggle('text-gray-500', !isActive && link.classList.contains('text-sm'));
+      link.classList.toggle('text-gray-600', !isActive && !link.classList.contains('text-sm'));
+      link.classList.toggle('text-gray-300', isActive && !link.classList.contains('text-sm'));
       link.classList.toggle('border-blue-500', isActive);
       link.classList.toggle('border-transparent', !isActive);
-      link.classList.toggle('bg-gray-800/50', isActive);
+      link.classList.toggle('bg-gray-800/50', isActive && link.classList.contains('text-sm'));
     });
   }
   
