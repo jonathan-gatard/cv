@@ -70,24 +70,31 @@ import Layout from '../../layouts/Layout.astro';
            </div>
        </section>
 
-        <!-- Tourbiere -->
-       <section class="border-t border-gray-800 pt-8">
-            <h2 class="text-2xl font-semibold text-white mb-6">Tourbière Extérieure</h2>
-            <div class="flex flex-col md:flex-row gap-6 items-start">
-                <img src="/images/projects/projects_list/tourbiere.jpg" class="w-full md:w-1/3 rounded-lg shadow-md border border-gray-700">
-                <div>
-                    <h3 class="font-bold text-lg text-white mb-2">Ingénierie du sol</h3>
-                    <p class="text-gray-400 mb-4">
-                        Création d'un écosystème autonome enterré capable de supporter le gel et la canicule sans entretien.
-                        Basé sur une réserve d'eau (principe des nappes phréatiques) avec une céramique enterrée.
-                    </p>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                        <li class="bg-gray-800 p-2 rounded">Sarracenia</li>
-                        <li class="bg-gray-800 p-2 rounded">Drosera</li>
-                        <li class="bg-gray-800 p-2 rounded">Dionaea (Attrape-mouche)</li>
-                    </ul>
-                </div>
-            </div>
+       <!-- Tourbiere -->
+       <section class="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+           <div class="grid md:grid-cols-2">
+               <div class="h-64 md:h-auto overflow-hidden relative group">
+                   <img src="/images/projects/projects_list/tourbiere.jpg" class="w-full h-full object-cover transition transform group-hover:scale-105">
+               </div>
+               <div class="p-8 flex flex-col justify-center">
+                   <h2 class="text-2xl font-bold text-cyan-400 mb-4">Tourbière Extérieure (Sarracenia)</h2>
+                   <p class="mb-4 text-sm">
+                       Création d'un écosystème autonome enterré capable de supporter le gel et la canicule sans entretien.
+                       Basé sur une réserve d'eau (principe des nappes phréatiques) avec une céramique enterrée.
+                   </p>
+                   
+                   <h3 class="font-bold text-white text-sm uppercase tracking-wider mb-2">Plantes :</h3>
+                   <ul class="list-disc list-inside space-y-1 text-sm text-gray-400 mb-6">
+                       <li><span class="text-white">Sarracenia :</span> Plante trompette très résistante.</li>
+                       <li><span class="text-white">Drosera :</span> "Rossolis" à glu, indigène en France.</li>
+                       <li><span class="text-white">Dionaea :</span> La célèbre "Attrape-mouche".</li>
+                   </ul>
+
+                   <div class="bg-black/30 p-4 rounded text-xs font-mono text-cyan-200">
+                       Ingénierie: Substrat spécifique (Tourbe/Perlite) et gestion hydraulique passive.
+                   </div>
+               </div>
+           </div>
        </section>
 
     </div>
