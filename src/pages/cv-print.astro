@@ -7,7 +7,7 @@ const personalInfo = {
   phone: "06 13 54 83 19",
   website: "jonathan-gatard.fr",
   linkedin: "linkedin.com/in/jonathan-gatard",
-  // github: "github.com/jonathan-gtd" // Optional to save space
+  misc: "Permis B"
 };
 
 const skills = {
@@ -19,8 +19,8 @@ const skills = {
 const languages = [
   { name: "Français", level: "Natif" },
   { name: "Anglais", level: "Courant" },
-  { name: "Slovaque", level: "Notions" },
   { name: "Espagnol", level: "Scolaire" },
+  { name: "Slovaque", level: "Notions" },
 ];
 
 const experiences = [
@@ -36,36 +36,72 @@ const experiences = [
       "AppOps : Pont technique entre les équipes études et la production."
     ]
   },
-  // Removed "Consultant IT" as requested to save space
   {
-    role: "Ingénieur DevOps",
+    role: "Manager Projets & Ingénieur DevOps",
     company: "Stellantis (Slovaquie)",
-    date: "2022 - 2023",
-    description: "Transformation numérique en contexte industriel.",
+    date: "2021 - 2023",
+    description: "Double casquette : Pilotage de l'innovation industrielle et développement technique.",
     details: [
-      "Développement Fullstack (React/Node) pour la gestion des compétences RH.",
-      "Automatisation des déploiements via Jenkins, Docker et Ansible.",
-      "Administration système Linux et gestion de bases de données."
+      "Management : Gestion d'une équipe de 4 personnes et pilotage de projets digitaux industriels.",
+      "Technique : 6 mois de développement web fullstack (React, Node) et scripts d'automatisation.",
+      "Outils : Mise en place de monitoring (Grafana, Node-Red) et Business Intelligence (PowerBI)."
     ]
   },
-  {
-    role: "Manager Projets Informatiques",
-    company: "Stellantis (Slovaquie)",
-    date: "2021 - 2022",
-    description: "Pilotage de l'innovation industrielle.",
+   {
+    role: "Ingénieur Projets Logistique & Amélioration Continue",
+    company: "LISI Aerospace",
+    date: "2016 - 2020",
+    description: "Optimisation des flux et gestion de projets industriels.",
     details: [
-      "Management d'une équipe de 4 personnes.",
-      "Mise en place de dashboards de monitoring énergétique (Grafana/InfluxDB)."
+      "Gestion de projets logistiques pour la construction de deux nouvelles usines.",
+      "Amélioration de la satisfaction client et mise en place d'outils Lean (5S, VSM, PDCA)."
     ]
   }
 ];
 
 const education = [
   {
-    degree: "Diplôme d'Ingénieur Généraliste",
-    school: "CESI École d'Ingénieurs",
+    degree: "Ingénieur Informatique & Réseaux",
+    school: "CNAM / ISAE-Supaero",
+    date: "2022 (5 mois)",
+    desc: "Formation intensive : Réseaux, Sécurité, Architecture."
+  },
+  {
+    degree: "Sécurité & Réseaux (Autodidacte)",
+    school: "TU Graz (Autriche)",
+    date: "2022",
+    desc: "Suivi des cours en autonomie : Network Security, Real Time OS."
+  },
+  {
+    degree: "Ingénieur Industriel (Apprentissage)",
+    school: "École d'Ingénieurs",
     date: "2016 - 2019",
-    desc: "Spécialité Performance Industrielle & Amélioration Continue."
+    desc: "Génie Industriel, Performance et Amélioration Continue."
+  },
+  {
+    degree: "DUT Science et Génie des Matériaux",
+    school: "IUT",
+    date: "2014 - 2016",
+    desc: "Approfondissement matériaux composites."
+  }
+];
+
+const interests = [
+  {
+    title: "Domotique (Projet >100h)",
+    content: "Création d'un écosystème complet : Home Assistant, ZigBee, MQTT, Sniffeur réseau, Raspberry Pi & Docker."
+  },
+  {
+    title: "Aéromodélisme",
+    content: "Construction et pilotage d'avions thermiques. Membre d'association de sauvegarde du patrimoine."
+  },
+  {
+    title: "Maker / Hardware",
+    content: "Conception et amélioration d'imprimantes 3D. Transformation en découpeuse laser."
+  },
+   {
+    title: "Terrariophilie",
+    content: "Création de biotopes automatisés (Tourbière artificielle, plantes carnivores)."
   }
 ];
 ---
@@ -104,29 +140,29 @@ const education = [
     <!-- A4 Page Container -->
     <div class="w-[210mm] h-[297mm] bg-white shadow-2xl print:shadow-none flex overflow-hidden relative">
         
-        <!-- Left Column (Dark) - Increased density -->
-        <div class="w-1/3 bg-gray-900 text-white p-5 flex flex-col gap-5">
+        <!-- Left Column (Dark) - Sidebar -->
+        <div class="w-[30%] bg-gray-900 text-white p-5 flex flex-col gap-6">
             
             <!-- Photo Placeholder -->
-            <div class="flex justify-center">
-                 <div class="w-28 h-28 rounded-full bg-gray-800 border-4 border-blue-500 overflow-hidden flex items-center justify-center">
-                    <span class="text-gray-500 text-[10px] text-center px-1">Photo ici<br/>(à fournir)</span>
-                    <!-- <img src="/photo.jpg" class="w-full h-full object-cover"> -->
+            <div class="flex justify-center mt-2">
+                 <div class="w-24 h-24 rounded-full bg-gray-800 border-4 border-blue-500 overflow-hidden flex items-center justify-center relative group">
+                    <span class="text-gray-500 text-[10px] text-center px-1 group-hover:hidden">Photo ici</span>
+                    <div class="absolute inset-0 bg-gray-700 hidden group-hover:flex items-center justify-center text-[10px] text-center">Taille<br>Passeport</div>
                 </div>
             </div>
 
             <!-- Header -->
-            <div class="text-center mb-1">
+            <div class="text-center">
                 <h1 class="text-lg font-bold uppercase tracking-wider mb-1 leading-tight">{personalInfo.name}</h1>
-                <p class="text-blue-400 font-medium text-[11px]">{personalInfo.title}</p>
+                <p class="text-blue-400 font-medium text-[10px] leading-tight">{personalInfo.title}</p>
             </div>
 
             <!-- Contact -->
             <div>
                 <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Contact</h2>
-                <ul class="space-y-1 text-[10px] text-gray-300">
+                <ul class="space-y-1.5 text-[10px] text-gray-300">
                     <li class="flex items-center gap-2">
-                        <span>📧</span> {personalInfo.email}
+                        <span>📧</span> <span class="truncate">{personalInfo.email}</span>
                     </li>
                     <li class="flex items-center gap-2">
                         <span>📱</span> {personalInfo.phone}
@@ -135,41 +171,44 @@ const education = [
                         <span>🌐</span> {personalInfo.website}
                     </li>
                     <li class="flex items-center gap-2">
-                        <span>💼</span> {personalInfo.linkedin}
+                        <span>💼</span> <span class="truncate">linkedin.com/in/jonathan-gatard</span>
+                    </li>
+                     <li class="flex items-center gap-2 text-blue-300">
+                        <span>🚗</span> {personalInfo.misc}
                     </li>
                 </ul>
             </div>
 
             <!-- Skills -->
-            <div class="flex-1 flex flex-col gap-3">
+            <div class="flex-1 flex flex-col gap-4">
                 <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-1">Compétences</h2>
                 
                 <div>
                     <h3 class="text-white font-bold text-[10px] mb-1">Mainframe</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.mainframe.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300">{s}</span>)}
+                        {skills.mainframe.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300 border border-gray-700">{s}</span>)}
                     </div>
                 </div>
 
                 <div>
                     <h3 class="text-white font-bold text-[10px] mb-1">Open & DevOps</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.open.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300">{s}</span>)}
+                        {skills.open.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300 border border-gray-700">{s}</span>)}
                     </div>
                 </div>
 
                 <div>
                     <h3 class="text-white font-bold text-[10px] mb-1">Méthodologie</h3>
                     <div class="flex flex-wrap gap-1">
-                        {skills.methodology.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300">{s}</span>)}
+                        {skills.methodology.map(s => <span class="px-1.5 py-0.5 bg-gray-800 rounded text-[9px] text-gray-300 border border-gray-700">{s}</span>)}
                     </div>
                 </div>
             </div>
 
             <!-- Languages -->
-            <div>
+            <div class="mt-auto mb-4">
                 <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Langues</h2>
-                <ul class="space-y-0.5 text-[10px] text-gray-300">
+                <ul class="space-y-1 text-[10px] text-gray-300">
                     {languages.map(l => (
                         <li class="flex justify-between">
                             <span>{l.name}</span>
@@ -178,60 +217,71 @@ const education = [
                     ))}
                 </ul>
             </div>
-            
-             <!-- Passions (Short) -->
-             <div class="mt-auto">
-                <h2 class="text-[10px] font-bold uppercase text-gray-500 tracking-widest border-b border-gray-700 pb-1 mb-2">Intérêts</h2>
-                <div class="text-[10px] text-gray-400 leading-snug">
-                    Domotique (HA), Aéromodélisme, Mécanique Auto, Terrariophilie, Impression 3D.
-                </div>
-            </div>
 
         </div>
 
-        <!-- Right Column (White) - Increased density -->
-        <div class="w-2/3 p-6 bg-white text-gray-800 flex flex-col gap-4">
+        <!-- Right Column (White) - Main Content -->
+        <div class="w-[70%] p-6 bg-white text-gray-800 flex flex-col gap-4">
             
             <!-- Profile Summary -->
-            <div class="bg-blue-50 p-3 rounded-l border-l-4 border-blue-500 text-xs italic text-gray-600 leading-relaxed">
+            <div class="bg-blue-50 p-3 rounded-l border-l-4 border-blue-500 text-xs italic text-gray-600 leading-relaxed shadow-sm">
                 "Double compétence unique alliant la rigueur du Mainframe à l'agilité DevOps. 
-                 J'assure l'interconnexion sécurisée entre les environnements Mainframe et les architectures Open."
+                 Je conçois des ponts sécurisés entre les systèmes historiques (Système Z) et le monde ouvert."
             </div>
 
             <!-- Experience -->
-            <div class="flex-1">
-                <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3">Expériences Professionnelles</h2>
+            <div>
+                <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3 flex items-center gap-2">
+                    <span>Expériences Professionnelles</span>
+                </h2>
                 
                 <div class="space-y-4">
                     {experiences.map(exp => (
                         <div>
                             <div class="flex justify-between items-baseline mb-0.5">
                                 <h3 class="font-bold text-sm text-gray-900">{exp.role}</h3>
-                                <span class="text-[10px] font-mono text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">{exp.date}</span>
+                                <span class="text-[10px] font-mono text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded border border-gray-200">{exp.date}</span>
                             </div>
                             <div class="text-blue-600 font-semibold mb-0.5 text-xs">{exp.company}</div>
-                            <p class="text-[11px] text-gray-500 italic mb-1">{exp.description}</p>
-                            <ul class="list-disc list-inside space-y-0.5 text-[11px] text-gray-700 leading-snug">
-                                {exp.details.map(d => <li>{d}</li>)}
+                            <p class="text-[11px] text-gray-600 italic mb-1">{exp.description}</p>
+                            <ul class="list-disc list-inside space-y-0.5 text-[11px] text-gray-700 leading-snug marker:text-blue-500">
+                                {exp.details.map(d => <li class="pl-1"><span class="-ml-1">{d}</span></li>)}
                             </ul>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <!-- Education -->
-            <div class="mt-auto">
-                <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3">Formation</h2>
-                {education.map(edu => (
-                    <div class="mb-1">
-                        <div class="flex justify-between items-baseline">
-                             <h3 class="font-bold text-gray-900 text-sm">{edu.degree}</h3>
-                             <span class="text-gray-500 text-[10px]">{edu.date}</span>
-                        </div>
-                        <div class="text-blue-600 text-xs mb-0.5">{edu.school}</div>
-                        <p class="text-[11px] text-gray-500">{edu.desc}</p>
+            <div class="flex gap-6 mt-1">
+                <!-- Education -->
+                <div class="flex-1">
+                    <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3">Formation</h2>
+                    <div class="space-y-2">
+                        {education.map(edu => (
+                            <div>
+                                <div class="flex justify-between items-baseline">
+                                    <h3 class="font-bold text-gray-900 text-[11px]">{edu.degree}</h3>
+                                    <span class="text-gray-500 text-[9px] whitespace-nowrap">{edu.date}</span>
+                                </div>
+                                <div class="text-blue-600 text-[10px] mb-0.5 font-medium">{edu.school}</div>
+                                {/* <p class="text-[9px] text-gray-500 leading-tight">{edu.desc}</p> */} 
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
+                
+                 <!-- Interests (Moved here for more space) -->
+                <div class="flex-1">
+                    <h2 class="text-sm font-bold uppercase text-gray-800 tracking-widest border-b-2 border-gray-200 pb-1 mb-3">Projets & Passions</h2>
+                    <div class="space-y-2">
+                        {interests.map(int => (
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-[11px] mb-0.5">{int.title}</h3>
+                                <p class="text-[10px] text-gray-600 leading-tight">{int.content}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
 
         </div>
