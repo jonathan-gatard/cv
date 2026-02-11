@@ -3,92 +3,179 @@ const { lang = 'fr' } = Astro.props;
 import { experiences } from '../data/experience';
 
 const currentExperiences = experiences[lang] || experiences.fr;
+
+const sections = [
+  { id: 'experience', label: lang === 'fr' ? 'Expérience' : 'Experience' },
+  { id: 'formation', label: lang === 'fr' ? 'Formation' : 'Education' },
+  { id: 'stack', label: 'Tech Stack' },
+];
 ---
 
-<section id="experience" class="py-8 bg-gray-900 text-white">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-      {lang === 'fr' ? 'Mon Parcours' : 'My Journey'}
-    </h2>
+<div class="bg-gray-900 text-white pt-24 pb-16">
+  <div class="max-w-7xl mx-auto px-4 flex gap-0 md:gap-8">
 
-    <div class="space-y-8">
-      {currentExperiences.map((exp, index) => (
-        <div class="relative pl-8 md:pl-0">
-          <!-- Timeline Line -->
-          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-800 transform -translate-x-1/2"></div>
-          
-          <div class={`md:flex items-center justify-between gap-8 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-            
-            <!-- Date Bubble (Center) -->
-            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-36 py-1 rounded-full bg-gray-800 border-2 border-gray-700 z-10 text-xs font-mono text-blue-400 whitespace-nowrap">
-                {exp.date}
-            </div>
+    <!-- Sticky Sidebar (Desktop only) -->
+    <aside class="hidden lg:block w-56 shrink-0">
+      <nav class="sticky top-28 space-y-1" id="sidebar-nav">
+        {sections.map(s => (
+          <a href={`#${s.id}`} data-section={s.id}
+             class="sidebar-link block px-4 py-2.5 text-sm font-medium text-gray-500 rounded-lg border-l-2 border-transparent hover:text-white hover:bg-gray-800/50 transition-all">
+            {s.label}
+          </a>
+        ))}
+      </nav>
+    </aside>
 
-            <!-- Content Card -->
-            <div class="w-full md:w-5/12">
-              <div class="bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-700 group hover:border-blue-500/50 relative">
-                 <!-- Mobile Date -->
-                 <span class="md:hidden text-blue-400 text-xs font-mono mb-2 block">{exp.date}</span>
-                 
-                <h3 class="text-xl font-bold mb-1 group-hover:text-blue-300 transition-colors">{exp.role}</h3>
-                <p class="text-gray-400 mb-3 font-medium text-sm">{exp.company}</p>
-                <p class="text-gray-300 mb-4 italic text-xs leading-relaxed">{exp.description}</p>
-                
-                <div class="space-y-3">
-                  {exp.details.map((detail) => (
-                    <div class="bg-gray-700/50 p-2.5 rounded-lg border-l-2 border-blue-500">
-                      <h4 class="font-bold text-white text-xs mb-0.5">{detail.title}</h4>
-                      <p class="text-[11px] text-gray-300 leading-relaxed">{detail.content}</p>
-                    </div>
-                  ))}
+    <!-- Main Content -->
+    <main class="flex-1 min-w-0">
+
+      <!-- Experience Section -->
+      <section id="experience" class="mb-20">
+        <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          {lang === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience'}
+        </h2>
+
+        <div class="space-y-6">
+          {currentExperiences.map((exp) => (
+            <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all group">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-lg font-bold group-hover:text-blue-300 transition-colors">{exp.role}</h3>
+                  <p class="text-gray-400 text-sm font-medium">{exp.company}</p>
                 </div>
+                <span class="text-blue-400 text-xs font-mono bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700 whitespace-nowrap self-start">
+                  {exp.date}
+                </span>
+              </div>
 
-                <div class="flex flex-wrap gap-1.5 mt-4">
-                  {exp.tags.map((tag) => (
-                    <span class="px-2 py-0.5 bg-gray-900 text-gray-300 text-[10px] rounded-md border border-gray-700">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
+              <p class="text-gray-300 text-sm italic mb-4">{exp.description}</p>
+              
+              <div class="grid gap-2">
+                {exp.details.map((detail) => (
+                  <div class="bg-gray-700/30 p-3 rounded-lg border-l-2 border-blue-500">
+                    <h4 class="font-bold text-white text-xs mb-1">{detail.title}</h4>
+                    <p class="text-[12px] text-gray-300 leading-relaxed">{detail.content}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                {exp.tags.map((tag) => (
+                  <span class="px-2 py-0.5 bg-gray-900 text-gray-400 text-[10px] rounded-md border border-gray-700">
+                    #{tag}
+                  </span>
+                ))}
               </div>
             </div>
-
-            <!-- Empty Space for Timeline balance -->
-            <div class="w-full md:w-5/12"></div>
-            
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </section>
 
-    <div class="mt-20">
-        <h2 class="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          Formation
+      <!-- Education Section -->
+      <section id="formation" class="mb-20">
+        <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          {lang === 'fr' ? 'Formation' : 'Education'}
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all flex flex-col h-full">
-                <div class="text-blue-400 font-mono text-sm mb-2">2022</div>
-                <h3 class="text-lg font-bold text-white mb-1">TU Graz</h3>
-                <p class="text-gray-400 text-sm italic mb-2">{lang === 'fr' ? 'Autodidacte' : 'Self-taught'}</p>
-                <p class="text-gray-500 text-xs mt-auto">Network Security & Real Time OS</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
+                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2022</div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">TU Graz</h3>
+                  <p class="text-gray-400 text-sm italic">{lang === 'fr' ? 'Autodidacte' : 'Self-taught'}</p>
+                  <p class="text-gray-500 text-xs mt-1">Network Security & Real Time OS</p>
+                </div>
             </div>
-             <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all flex flex-col h-full">
-                <div class="text-blue-400 font-mono text-sm mb-2">2019</div>
-                <h3 class="text-lg font-bold text-white mb-1">ISAE-ENSMA</h3>
-                <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Approfondissement Matériaux' : 'Materials Science Deep Dive'}</p>
+             <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
+                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2019</div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">ISAE-ENSMA</h3>
+                  <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Approfondissement Matériaux' : 'Materials Science Deep Dive'}</p>
+                </div>
             </div>
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all flex flex-col h-full">
-                <div class="text-blue-400 font-mono text-sm mb-2">2018</div>
-                <h3 class="text-lg font-bold text-white mb-1">ISAE-Supaero</h3>
-                <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Formation Spécialisée' : 'Specialized Training'}</p>
+            <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
+                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2018</div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">ISAE-Supaero</h3>
+                  <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Formation Spécialisée' : 'Specialized Training'}</p>
+                </div>
             </div>
-             <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all flex flex-col h-full">
-                <div class="text-blue-400 font-mono text-sm mb-2">2017</div>
-                <h3 class="text-lg font-bold text-white mb-1">CNAM Poitiers</h3>
-                <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Parcours Ingénieur' : 'Engineering Degree'}</p>
+             <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all flex gap-4 items-start">
+                <div class="text-blue-400 font-mono text-sm font-bold shrink-0 bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700">2017</div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">CNAM Poitiers</h3>
+                  <p class="text-gray-400 text-sm">{lang === 'fr' ? 'Parcours Ingénieur' : 'Engineering Degree'}</p>
+                </div>
             </div>
         </div>
-    </div>
+      </section>
 
+      <!-- Tech Stack Section -->
+      <section id="stack">
+        <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          Tech Stack
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {[
+            { name: "IBM z/OS", cat: "mainframe" },
+            { name: "JCL", cat: "mainframe" },
+            { name: "COBOL", cat: "mainframe" },
+            { name: "DB2", cat: "mainframe" },
+            { name: "CICS", cat: "mainframe" },
+            { name: "Zowe", cat: "mainframe" },
+            { name: "Python", cat: "dev" },
+            { name: "React", cat: "dev" },
+            { name: "Node.js", cat: "dev" },
+            { name: "Docker", cat: "devops" },
+            { name: "Ansible", cat: "devops" },
+            { name: "Git", cat: "devops" },
+            { name: "Linux", cat: "devops" },
+            { name: "Jenkins", cat: "devops" },
+            { name: "VSCode", cat: "tools" },
+            { name: "REST API", cat: "dev" },
+          ].map(tech => (
+            <div class={`px-4 py-3 rounded-lg border text-sm font-medium text-center transition-all hover:scale-105 ${
+              tech.cat === 'mainframe' ? 'bg-blue-950/40 border-blue-800/50 text-blue-300' :
+              tech.cat === 'dev' ? 'bg-purple-950/40 border-purple-800/50 text-purple-300' :
+              tech.cat === 'devops' ? 'bg-green-950/40 border-green-800/50 text-green-300' :
+              'bg-gray-800/50 border-gray-700/50 text-gray-300'
+            }`}>
+              {tech.name}
+            </div>
+          ))}
+        </div>
+        <div class="flex gap-6 mt-4 text-xs text-gray-500 justify-center">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Mainframe</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> Dev</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-green-500"></span> DevOps</span>
+        </div>
+      </section>
+
+    </main>
   </div>
-</section>
+</div>
+
+<script>
+  // Sidebar scroll-spy
+  const links = document.querySelectorAll('.sidebar-link');
+  const sections = document.querySelectorAll('section[id]');
+  
+  function updateActive() {
+    let current = '';
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top <= 150) current = section.id;
+    });
+    
+    links.forEach(link => {
+      const isActive = link.getAttribute('data-section') === current;
+      link.classList.toggle('text-white', isActive);
+      link.classList.toggle('text-gray-500', !isActive);
+      link.classList.toggle('border-blue-500', isActive);
+      link.classList.toggle('border-transparent', !isActive);
+      link.classList.toggle('bg-gray-800/50', isActive);
+    });
+  }
+  
+  window.addEventListener('scroll', updateActive);
+  updateActive();
+</script>
