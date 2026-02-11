@@ -1,29 +1,20 @@
 ---
-const { lang = 'fr' } = Astro.props;
 import { passions } from '../data/passions';
-
-const currentPassions = passions[lang] || passions.fr;
-const basePath = lang === 'fr' ? '/passions' : '/en/passions';
 ---
 
 <section id="passions" class="py-20 bg-gray-900">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-white mb-4">
-        {lang === 'fr' ? 'Projets Personnels & Passions' : 'Personal Projects & Passions'}
-      </h2>
+      <h2 class="text-3xl font-bold text-white mb-4">Projets Personnels & Passions</h2>
       <p class="text-gray-400 max-w-2xl mx-auto">
-        {lang === 'fr'
-          ? "Au-delà de mon métier, je suis un passionné de technique (\"Maker\") qui aime concevoir, réparer et automatiser. Ces projets démontrent ma curiosité et ma capacité à apprendre par la pratique."
-          : "Beyond my work, I'm a tech enthusiast (\"Maker\") who loves to design, repair and automate. These projects demonstrate my curiosity and ability to learn by doing."
-        }
+        Au-delà de mon métier, je suis un passionné de technique ("Maker") qui aime concevoir, réparer et automatiser.
+        Ces projets démontrent ma curiosité et ma capacité à apprendre par la pratique.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {currentPassions.map((item) => (
-        <a href={`${basePath}/${item.slug}`} class="group relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-700 flex flex-col">
-          <!-- Gradient Line Top -->
+      {passions.map((item) => (
+        <a href={`/passions/${item.slug}`} class="group relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-700 flex flex-col">
           <div class={`h-2 w-full bg-gradient-to-r ${item.color}`}></div>
           
           <div class="p-6 flex-1 flex flex-col">

@@ -1,20 +1,15 @@
 ---
-const { lang = 'fr' } = Astro.props;
 import { experiences, education } from '../data/experience';
 
-const currentExperiences = experiences[lang] || experiences.fr;
-const currentEducation = education[lang] || education.fr;
-
 const sections = [
-  { id: 'experience', label: lang === 'fr' ? 'Expérience' : 'Experience' },
-  { id: 'formation', label: lang === 'fr' ? 'Formation' : 'Education' },
+  { id: 'experience', label: 'Expérience' },
+  { id: 'formation', label: 'Formation' },
   { id: 'stack', label: 'Tech Stack' },
 ];
 
-// Shared card renderer helper — same structure for both exp and edu
 const cardItems = [
-  { id: 'experience', title: lang === 'fr' ? 'Expérience Professionnelle' : 'Professional Experience', items: currentExperiences },
-  { id: 'formation', title: lang === 'fr' ? 'Formation' : 'Education', items: currentEducation },
+  { id: 'experience', title: 'Expérience Professionnelle', items: experiences },
+  { id: 'formation', title: 'Formation', items: education },
 ];
 ---
 
@@ -79,7 +74,7 @@ const cardItems = [
         </section>
       ))}
 
-      <!-- Tech Stack Section -->
+      <!-- Tech Stack -->
       <section id="stack">
         <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
           Tech Stack

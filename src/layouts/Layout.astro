@@ -1,9 +1,9 @@
 ---
-const { title, description, lang = 'fr', hideFooter = false } = Astro.props;
+const { title, description, hideFooter = false } = Astro.props;
 import Navbar from '../components/Navbar.astro';
 ---
 
-<html lang={lang} class="scroll-smooth">
+<html lang="fr" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -47,7 +47,7 @@ import Navbar from '../components/Navbar.astro';
         </script>
 	</head>
 	<body class="bg-gray-900 text-white font-sans antialiased min-h-screen flex flex-col relative">
-        <Navbar lang={lang} />
+        <Navbar />
 		<main class="flex-grow">
             <slot />
 		</main>
