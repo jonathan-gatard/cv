@@ -1,32 +1,7 @@
 ---
-import { siteConfig } from '../data/config';
-import { jobs } from '../data/jobs';
-import { education } from '../data/education';
+import { cvData } from '../data/cv';
 
-const personalInfo = siteConfig.personalInfo;
-
-// Keep print-specific skills here for layout control, or move to config if requested.
-const skills = {
-  mainframe: ["z/OS", "USS", "JCL", "CICS", "DB2", "Zowe"],
-  open: ["Python", "Docker", "Ansible", "Linux", "Git", "REST API"],
-  methodology: ["Agile/Scrum", "DevOps", "ITIL 4", "Lean/6σ"]
-};
-
-const languages = [
-  { name: "Français", level: "Natif", pct: 100 },
-  { name: "Anglais", level: "Courant (C1)", pct: 85 },
-  { name: "Espagnol", level: "Scolaire", pct: 35 },
-  { name: "Slovaque", level: "Notions", pct: 15 },
-];
-
-const interests = [
-  { icon: "🏠", text: "Domotique complète (Home Assistant, Docker, ZigBee, 25+ conteneurs)" },
-  { icon: "🌐", text: "Infrastructure Réseau (OpenWrt, VPN, Reverse Proxy, Frigate)" },
-  { icon: "✈️", text: "Aéromodélisme (construction, pilotage, firmware OpenTX)" },
-  { icon: "🔧", text: "Mécanique auto (turbo, swap moteur, diagnostic ISTA)" },
-  { icon: "🖨️", text: "Impression 3D & Laser (Prusa DIY, Voron CoreXY, Klipper)" },
-  { icon: "🌿", text: "Terrariophilie high-tech & Potager intelligent" },
-];
+const { personalInfo, skills, languages, experiences, education, interests } = cvData;
 ---
 
 <html lang="fr">
@@ -412,15 +387,15 @@ const interests = [
                 <div class="main-section-title"><span class="accent"></span> Expériences Professionnelles</div>
             </div>
             
-            {jobs.map(exp => (
+            {experiences.map(exp => (
                 <div class="exp-card">
                     <div class="exp-header">
                         <span class="exp-role">{exp.role}</span>
-                        <span class="exp-date">{exp.datePrint || exp.date}</span>
+                        <span class="exp-date">{exp.date}</span>
                     </div>
-                    <div class="exp-company">{exp.companyPrint || exp.company}</div>
+                    <div class="exp-company">{exp.company}</div>
                     <ul class="exp-details">
-                        {(exp.printDetails || []).map(d => <li>{d}</li>)}
+                        {(exp.details || []).map(d => <li>{d}</li>)}
                     </ul>
                 </div>
             ))}
@@ -430,13 +405,13 @@ const interests = [
                 <div class="bottom-col">
                     <div class="main-section-title" style="font-size:8pt;"><span class="accent"></span> Formation</div>
                     <div style="margin-top:2mm;">
-                        {education.filter(e => e.schoolPrint).map(edu => (
+                        {education.map(edu => (
                             <div class="edu-card">
                                 <div class="edu-header">
-                                    <span class="edu-degree">{edu.degreePrint || edu.role}</span>
+                                    <span class="edu-degree">{edu.degree}</span>
                                     <span class="edu-date">{edu.date}</span>
                                 </div>
-                                <div class="edu-school">{edu.schoolPrint || edu.company}</div>
+                                <div class="edu-school">{edu.school}</div>
                             </div>
                         ))}
                     </div>
@@ -458,3 +433,4 @@ const interests = [
     </div>
 </body>
 </html>
+
