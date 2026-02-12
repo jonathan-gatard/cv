@@ -3,16 +3,16 @@ export const jobs = [
         role: "Ingénieur Mainframe & Interopérabilité",
         company: "CAGIP Rodez (Prestataire Aubay Solutec)",
         date: "Sept 2023 - Aujourd'hui",
-        description: "Une mission hybride au cœur de la modernisation bancaire. Pont entre le monde Legacy et le DevOps moderne.",
+        description: "Garantir le MCO critique, assurer le rôle d'AppOps et piloter les projets de modernisation.",
         tags: ["Mainframe", "Python", "AppOps", "Zowe", "VSCode"],
         details: [
             {
-                title: "Run & Stabilité",
+                title: "RUN",
                 content: "Installation et maintenance de matière mainframe pour CATS. Garantie de la disponibilité et de la performance des environnements critiques."
             },
             {
                 title: "Build & Modernisation",
-                content: "Développement d'outils en Python pour automatiser les tâches récurrentes. Mise en place de Zowe et VSCode pour moderniser l'expérience développeur et formation des équipes à ces nouveaux standards."
+                content: "• Développement d'outils en Python pour automatiser les tâches récurrentes.\n• Mise en place de Zowe et VSCode pour moderniser l'expérience développeur.\n• Formation des équipes à ces nouveaux standards."
             },
             {
                 title: "AppOps",
@@ -40,7 +40,7 @@ export const jobs = [
     {
         role: "Ingénieur Projets Logistique & Amélioration Continue",
         company: "LISI Aerospace (Parthenay)",
-        date: "2016 - 2020",
+        date: "2016 - 2021",
         description: "Optimisation de flux et conduite de projets industriels majeurs. Poste en alternance puis CDI.",
         tags: ["Logistique", "Lean", "Gestion de Projet", "VB.NET", "5S"],
         details: [
