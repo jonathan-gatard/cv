@@ -8,6 +8,15 @@ const colorMap: Record<string, string> = {
   cyan: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
 };
 
+const categories = [
+  { id: 'blue', label: 'Mainframe & Systèmes' },
+  { id: 'purple', label: 'Dév & Logiciel' },
+  { id: 'green', label: 'Infra & DevOps' },
+  { id: 'yellow', label: 'Pilotage & Soft' },
+  { id: 'pink', label: 'Industrie' },
+  { id: 'cyan', label: 'IoT & Maker' },
+];
+
 const experiences = [
     {
         role: `Ingénieur Mainframe & Interopérabilité`,
@@ -215,6 +224,16 @@ Procédés de mise en forme et caractérisation mécanique.`
     }
 ];
 
+// Combine all tags for modal search
+const allTagsByCategory = categories.reduce((acc, cat) => {
+  const tags = [...experiences, ...education]
+    .flatMap(item => item.tags)
+    .filter(tag => tag.color === cat.id)
+    .map(tag => tag.name);
+  acc[cat.id] = [...new Set(tags)].sort();
+  return acc;
+}, {} as Record<string, string[]>);
+
 // Build sidebar items with sub-entries
 const sidebarSections = [
   {
@@ -237,56 +256,64 @@ const cardItems = [
 
 ---
 
-<div class="bg-gray-900 text-white pt-24 pb-16">
+<div class="bg-gray-900 text-white pt-24 pb-16 relative">
   <div class="max-w-7xl mx-auto px-4 flex gap-0 md:gap-8">
 
     <!-- Sticky Sidebar (Desktop only) -->
     <aside class="hidden lg:block w-56 shrink-0">
-      <nav class="sticky top-28 space-y-1" id="sidebar-nav">
-        {sidebarSections.map(s => (
-          <div>
-            <a href={`#${s.id}`} data-section={s.id}
-               class="sidebar-link block px-4 py-2.5 text-sm font-medium text-gray-500 rounded-lg border-l-2 border-transparent hover:text-white hover:bg-gray-800/50 transition-all">
-              {s.label}
-            </a>
-            {s.children.length > 0 && (
-              <div class="ml-4 mt-0.5 space-y-0.5">
-                {s.children.map(child => (
-                   <a href={`#${child.id}`} data-section={child.id}
-                      class="sidebar-link block px-3 py-1.5 text-xs text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
-                    {child.label}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+      <nav class="sticky top-28 space-y-6" id="sidebar-nav">
+        <!-- Main Navigation -->
+        <div class="space-y-1">
+          {sidebarSections.map(s => (
+            <div>
+              <a href={`#${s.id}`} data-section={s.id}
+                 class="sidebar-link block px-4 py-2 text-sm font-medium text-gray-500 rounded-lg border-l-2 border-transparent hover:text-white hover:bg-gray-800/50 transition-all">
+                {s.label}
+              </a>
+              {s.children.length > 0 && (
+                <div class="ml-4 mt-0.5 space-y-0.5">
+                  {s.children.map(child => (
+                     <a href={`#${child.id}`} data-section={child.id}
+                        class="sidebar-link block px-3 py-1 text-xs text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <!-- Discreet Legend in Sidebar -->
+        <div class="pt-6 border-t border-gray-800">
+           <h3 class="px-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-3">Légende</h3>
+           <div class="space-y-1">
+             {categories.map(cat => (
+               <button 
+                 class={`w-full text-left px-4 py-1.5 rounded-md text-[11px] font-semibold transition-all hover:bg-gray-800/50 flex items-center gap-2 group category-btn`}
+                 data-category={cat.id}
+                 data-label={cat.label}
+                 data-tags={JSON.stringify(allTagsByCategory[cat.id])}
+               >
+                 <span class={`w-2 h-2 rounded-full border ${colorMap[cat.id].replace('text-', 'bg-').split(' ')[2]}`}></span>
+                 <span class="text-gray-400 group-hover:text-gray-200 transition-colors">{cat.label}</span>
+               </button>
+             ))}
+           </div>
+        </div>
       </nav>
     </aside>
 
     <!-- Main Content -->
     <main class="flex-1 min-w-0">
 
-      <!-- Legend & Introduction -->
-      <section class="mb-12 space-y-8">
+      <!-- Professional Introduction -->
+      <section class="mb-12">
         <div class="bg-blue-600/10 border border-blue-500/20 p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
           <h1 class="text-4xl font-extrabold text-white mb-4 tracking-tight">Ingénieur Mainframe & Interopérabilité</h1>
           <p class="text-xl text-gray-300 leading-relaxed italic">
             "Ma double compétence en <strong>Mainframe</strong> et <strong>Open</strong> me permet de moderniser les infrastructures historiques en y intégrant les meilleures pratiques d'automatisation et d'agilité."
           </p>
-        </div>
-
-        <!-- Tag Legend -->
-        <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded-2xl backdrop-blur-sm">
-            <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Légende des compétences</h3>
-            <div class="flex flex-wrap gap-4 text-xs font-bold">
-                <span class={`px-3 py-1.5 rounded-full border ${colorMap.blue}`}>Mainframe & Systèmes</span>
-                <span class={`px-3 py-1.5 rounded-full border ${colorMap.purple}`}>Dév & Logiciel</span>
-                <span class={`px-3 py-1.5 rounded-full border ${colorMap.green}`}>Infra, Cloud & DevOps</span>
-                <span class={`px-3 py-1.5 rounded-full border ${colorMap.yellow}`}>Pilotage & Soft Skills</span>
-                <span class={`px-3 py-1.5 rounded-full border ${colorMap.pink}`}>Industrie & Ingénierie</span>
-                <span class={`px-3 py-1.5 rounded-full border ${colorMap.cyan}`}>IoT & Maker</span>
-            </div>
         </div>
       </section>
 
@@ -339,15 +366,85 @@ const cardItems = [
           </div>
         </section>
       ))}
-
-
     </main>
+  </div>
+
+  <!-- Tag Detail Modal -->
+  <div id="tag-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-gray-950/80 backdrop-blur-sm">
+    <div class="bg-gray-900 border border-gray-800 w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+      <div class="p-6 border-b border-gray-800 flex items-center justify-between">
+        <div>
+           <h2 id="modal-title" class="text-xl font-bold text-white mb-1">Détail des compétences</h2>
+           <p id="modal-subtitle" class="text-sm text-gray-400"></p>
+        </div>
+        <button id="close-modal" class="text-gray-500 hover:text-white transition-colors p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="p-6 max-h-[60vh] overflow-y-auto">
+        <div id="modal-tags" class="flex flex-wrap gap-3 text-sm font-medium">
+          <!-- Dynamically filled -->
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
+  // Legend & Modal Logic
+  const modal = document.getElementById('tag-modal');
+  const closeBtn = document.getElementById('close-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  const modalTagsContainer = document.getElementById('modal-tags');
+  const categoryBtns = document.querySelectorAll('.category-btn');
+
+  const colorClasses: Record<string, string> = {
+    blue: "text-blue-400 border-blue-500/30 bg-blue-500/10",
+    purple: "text-purple-400 border-purple-500/30 bg-purple-500/10",
+    green: "text-green-400 border-green-500/30 bg-green-500/10",
+    yellow: "text-yellow-400 border-yellow-500/30 bg-yellow-500/10",
+    pink: "text-pink-400 border-pink-500/30 bg-pink-500/10",
+    cyan: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
+  };
+
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const catId = btn.getAttribute('data-category');
+      const label = btn.getAttribute('data-label');
+      const tags = JSON.parse(btn.getAttribute('data-tags') || '[]');
+      
+      modalTitle.innerText = label;
+      modalSubtitle.innerText = `${tags.length} compétence(s) répertoriée(s)`;
+      modalTagsContainer.innerHTML = '';
+      
+      tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = `px-3 py-1.5 rounded-lg border ${colorClasses[catId || 'blue']}`;
+        span.innerText = tag;
+        modalTagsContainer.appendChild(span);
+      });
+      
+      modal?.classList.remove('hidden');
+      modal?.classList.add('flex');
+    });
+  });
+
+  const closeModal = () => {
+    modal?.classList.add('hidden');
+    modal?.classList.remove('flex');
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Sidebar Scroll Logic
   const links = document.querySelectorAll('.sidebar-link');
-  const targets = document.querySelectorAll('[id]');
+  const targets = document.querySelectorAll('main > section[id]');
   
   function updateActive() {
     let current = '';
