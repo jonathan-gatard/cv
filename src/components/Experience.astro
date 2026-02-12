@@ -1,11 +1,35 @@
 ---
+const colorMap: Record<string, string> = {
+  blue: "text-blue-400 border-blue-500/30 bg-blue-500/10",
+  purple: "text-purple-400 border-purple-500/30 bg-purple-500/10",
+  green: "text-green-400 border-green-500/30 bg-green-500/10",
+  yellow: "text-yellow-400 border-yellow-500/30 bg-yellow-500/10",
+  pink: "text-pink-400 border-pink-500/30 bg-pink-500/10",
+  cyan: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
+};
+
 const experiences = [
     {
         role: `Ingénieur Mainframe & Interopérabilité`,
         company: `Solutec & CAGIP (Rodez)`,
         date: `Sept 2023 - Aujourd'hui`,
         description: `Garantir le maintien en condition opérationnelle, assurer le rôle d'AppOps et piloter les projets de modernisation du mainframe.`,
-        tags: [`Mainframe`, `z/OS`, `USS`, `MCO`, `Python`, `Ansible`, `AppOps`, `Zowe`, `VSCode`, `API`, `Cobol`, `JCL`, `Rexx`, `Astreintes`],
+        tags: [
+            { name: `Mainframe`, color: `blue` },
+            { name: `z/OS`, color: `blue` },
+            { name: `USS`, color: `blue` },
+            { name: `MCO`, color: `blue` },
+            { name: `Python`, color: `purple` },
+            { name: `Ansible`, color: `green` },
+            { name: `AppOps`, color: `green` },
+            { name: `Zowe`, color: `blue` },
+            { name: `VSCode`, color: `purple` },
+            { name: `API`, color: `purple` },
+            { name: `Cobol`, color: `blue` },
+            { name: `JCL`, color: `blue` },
+            { name: `Rexx`, color: `blue` },
+            { name: `Astreintes`, color: `blue` }
+        ],
         details: [
             {
                 title: `MCO & Expertise z/OS`,
@@ -34,7 +58,20 @@ Création de Playbooks Ansible pour applications de développement cobol.`
         company: `Stellantis (Slovaquie)`,
         date: `2021 - 2023`,
         description: `Pilotage de projets IT industriels et transformation numérique.`,
-        tags: [`Management`, `DevOps`, `React`, `NodeJS`, `Docker`, `CI/CD`, `Grafana`, `PowerBI`, `Node-Red`, `Fullstack`, `Agile`, `Scrum`],
+        tags: [
+            { name: `Management`, color: `yellow` },
+            { name: `DevOps`, color: `green` },
+            { name: `React`, color: `purple` },
+            { name: `NodeJS`, color: `purple` },
+            { name: `Docker`, color: `green` },
+            { name: `CI/CD`, color: `green` },
+            { name: `Grafana`, color: `green` },
+            { name: `PowerBI`, color: `yellow` },
+            { name: `Node-Red`, color: `green` },
+            { name: `Fullstack`, color: `purple` },
+            { name: `Agile`, color: `yellow` },
+            { name: `Scrum`, color: `yellow` }
+        ],
         details: [
             {
                 title: `Management & Pilotage`,
@@ -53,7 +90,18 @@ Mise en place de pipelines CI/CD et monitoring (Grafana, Node-Red).`
         company: `LISI Aerospace (Parthenay)`,
         date: `2016 - 2021`,
         description: `Optimisation de flux et conduite de projets industriels majeurs.`,
-        tags: [`Logistique`, `Lean`, `Amélioration Continue`, `Gestion de Projet`, `VB.NET`, `VSM`, `5S`, `PDCA`, `Industrie`, `Flux`],
+        tags: [
+            { name: `Logistique`, color: `yellow` },
+            { name: `Lean`, color: `yellow` },
+            { name: `Amélioration Continue`, color: `yellow` },
+            { name: `Gestion de Projet`, color: `yellow` },
+            { name: `VB.NET`, color: `purple` },
+            { name: `VSM`, color: `yellow` },
+            { name: `5S`, color: `yellow` },
+            { name: `PDCA`, color: `yellow` },
+            { name: `Industrie`, color: `pink` },
+            { name: `Flux`, color: `yellow` }
+        ],
         details: [
             {
                 title: `Projets Industriels`,
@@ -75,7 +123,14 @@ const education = [
         company: `TU Graz (Autriche)`,
         date: `2022`,
         description: `Suivi de cours en autonomie, sur les thématiques de sécurité réseau et systèmes.`,
-        tags: [`Network Security`, `CTF`, `Intelligence Artificielle`, `AR/VR`, `Unity`, `OpenCV`],
+        tags: [
+            { name: `Network Security`, color: `green` },
+            { name: `CTF`, color: `cyan` },
+            { name: `Intelligence Artificielle`, color: `purple` },
+            { name: `AR/VR`, color: `cyan` },
+            { name: `Unity`, color: `purple` },
+            { name: `OpenCV`, color: `purple` }
+        ],
         details: [
             {
                 title: `Cursus`,
@@ -91,7 +146,15 @@ Réalité Augmentée (OpenCV / Unity)`
         company: `CNAM / ISAE-Supaero / ISAE-ENSMA`,
         date: `2016 - 2019`,
         description: `Diplôme d'ingénieur obtenu en alternance. Cursus réparti sur 3 écoles.`,
-        tags: [`Ingénierie`, `Aéronautique`, `Spatial`, `Matériaux Composites`, `Mécanique des fluides`, `Alternance`, `CAO`],
+        tags: [
+            { name: `Ingénierie`, color: `pink` },
+            { name: `Aéronautique`, color: `pink` },
+            { name: `Spatial`, color: `pink` },
+            { name: `Matériaux Composites`, color: `pink` },
+            { name: `Mécanique des fluides`, color: `pink` },
+            { name: `Alternance`, color: `yellow` },
+            { name: `CAO`, color: `pink` }
+        ],
         details: [
             {
                 title: `CNAM, Poitiers`,
@@ -114,7 +177,12 @@ Mécanique des fluides et résistance des matériaux.`
         company: `Malaisie`,
         date: `2018 (3 mois)`,
         description: `Stage de découverte dans une école de cuisine en Malaisie. Immersion linguistique et culturelle.`,
-        tags: [`Anglais`, `International`, `Ouverture culturelle`, `Immersion`],
+        tags: [
+            { name: `Anglais`, color: `yellow` },
+            { name: `International`, color: `yellow` },
+            { name: `Ouverture culturelle`, color: `yellow` },
+            { name: `Immersion`, color: `yellow` }
+        ],
         details: [
             {
                 title: `Objectifs`,
@@ -128,7 +196,15 @@ Découverte d'un environnement professionnel international.`
         company: `IUT Nantes`,
         date: `2014 - 2016`,
         description: `Formation technique en science des matériaux et procédés industriels.`,
-        tags: [`Matériaux`, `Composites`, `Procédés industriels`, `Métaux`, `Polymères`, `Physique`, `Chimie`],
+        tags: [
+            { name: `Matériaux`, color: `pink` },
+            { name: `Composites`, color: `pink` },
+            { name: `Procédés industriels`, color: `pink` },
+            { name: `Métaux`, color: `pink` },
+            { name: `Polymères`, color: `pink` },
+            { name: `Physique`, color: `pink` },
+            { name: `Chimie`, color: `pink` }
+        ],
         details: [
             {
                 title: `Formation`,
@@ -138,22 +214,6 @@ Procédés de mise en forme et caractérisation mécanique.`
         ]
     }
 ];
-const getTagColor = (tag: string) => {
-    const t = tag.toLowerCase();
-    if (t.includes(`mainframe`) || t.includes(`z/os`) || t.includes(`jcl`) || t.includes(`cics`) || t.includes(`db2`) || t.includes(`cobol`) || t.includes(`zowe`) || t.includes(`mco`) || t.includes(`uss`) || t.includes(`rexx`) || t.includes(`tso`) || t.includes(`astreintes`))
-        return `text-blue-400 border-blue-500/30 bg-blue-500/10`;
-    if (t.includes(`python`) || t.includes(`react`) || t.includes(`node`) || t.includes(`dev`) || t.includes(`web`) || t.includes(`js`) || t.includes(`fullstack`) || t.includes(`api`) || t.includes(`vb.net`) || t.includes(`firmware`) || t.includes(`unity`) || t.includes(`opencv`) || t.includes(`html`) || t.includes(`css`) || t.includes(`code`) || t.includes(`programmation`) || t.includes(`ia`) || t.includes(`intelligence artificielle`))
-        return `text-purple-400 border-purple-500/30 bg-purple-500/10`;
-    if (t.includes(`devops`) || t.includes(`docker`) || t.includes(`ansible`) || t.includes(`ci/cd`) || t.includes(`git`) || t.includes(`linux`) || t.includes(`openwrt`) || t.includes(`vpn`) || t.includes(`nginx`) || t.includes(`klipper`) || t.includes(`reseau`) || t.includes(`network`) || t.includes(`security`) || t.includes(`grafana`) || t.includes(`monitoring`) || t.includes(`virtua`))
-        return `text-green-400 border-green-500/30 bg-green-500/10`;
-    if (t.includes(`management`) || t.includes(`pilotage`) || t.includes(`agile`) || t.includes(`scrum`) || t.includes(`logistique`) || t.includes(`lean`) || t.includes(`itil`) || t.includes(`vsm`) || t.includes(`5s`) || t.includes(`pdca`) || t.includes(`anglais`) || t.includes(`international`) || t.includes(`gestion de projet`) || t.includes(`ouverture`) || t.includes(`immersion`) || t.includes(`powerbi`) || t.includes(`reporting`) || t.includes(`flux`))
-        return `text-yellow-400 border-yellow-500/30 bg-yellow-500/10`;
-    if (t.includes(`matériaux`) || t.includes(`composites`) || t.includes(`métaux`) || t.includes(`polymères`) || t.includes(`aéronautique`) || t.includes(`spatial`) || t.includes(`mécanique des fluides`) || t.includes(`ingénierie`) || t.includes(`procédés`) || t.includes(`industrie`) || t.includes(`physique`) || t.includes(`chimie`) || t.includes(`maths`) || t.includes(`cao`))
-        return `text-pink-400 border-pink-500/30 bg-pink-500/10`;
-    if (t.includes(`iot`) || t.includes(`zigbee`) || t.includes(`3d`) || t.includes(`laser`) || t.includes(`moteur`) || t.includes(`diag`) || t.includes(`home assistant`) || t.includes(`electronics`) || t.includes(`arduino`) || t.includes(`raspberry`) || t.includes(`rtos`) || t.includes(`ctf`) || t.includes(`ar/vr`))
-        return `text-cyan-400 border-cyan-500/30 bg-cyan-500/10`;
-    return `text-gray-400 border-gray-700 bg-gray-900`;
-};
 
 // Build sidebar items with sub-entries
 const sidebarSections = [
@@ -192,8 +252,8 @@ const cardItems = [
             {s.children.length > 0 && (
               <div class="ml-4 mt-0.5 space-y-0.5">
                 {s.children.map(child => (
-                  <a href={`#${child.id}`} data-section={child.id}
-                     class="sidebar-link block px-3 py-1.5 text-xs text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
+                   <a href={`#${child.id}`} data-section={child.id}
+                      class="sidebar-link block px-3 py-1.5 text-xs text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
                     {child.label}
                   </a>
                 ))}
@@ -220,12 +280,12 @@ const cardItems = [
         <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded-2xl backdrop-blur-sm">
             <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Légende des compétences</h3>
             <div class="flex flex-wrap gap-4 text-xs font-bold">
-                <span class="px-3 py-1.5 rounded-full border border-blue-500/30 text-blue-400 bg-blue-500/10">Mainframe & Systèmes</span>
-                <span class="px-3 py-1.5 rounded-full border border-purple-500/30 text-purple-400 bg-purple-500/10">Dév & Logiciel</span>
-                <span class="px-3 py-1.5 rounded-full border border-green-500/30 text-green-400 bg-green-500/10">Infra, Cloud & DevOps</span>
-                <span class="px-3 py-1.5 rounded-full border border-yellow-500/30 text-yellow-400 bg-yellow-500/10">Pilotage & Soft Skills</span>
-                <span class="px-3 py-1.5 rounded-full border border-pink-500/30 text-pink-400 bg-pink-500/10">Industrie & Ingénierie</span>
-                <span class="px-3 py-1.5 rounded-full border border-cyan-500/30 text-cyan-400 bg-cyan-500/10">IoT & Maker</span>
+                <span class={`px-3 py-1.5 rounded-full border ${colorMap.blue}`}>Mainframe & Systèmes</span>
+                <span class={`px-3 py-1.5 rounded-full border ${colorMap.purple}`}>Dév & Logiciel</span>
+                <span class={`px-3 py-1.5 rounded-full border ${colorMap.green}`}>Infra, Cloud & DevOps</span>
+                <span class={`px-3 py-1.5 rounded-full border ${colorMap.yellow}`}>Pilotage & Soft Skills</span>
+                <span class={`px-3 py-1.5 rounded-full border ${colorMap.pink}`}>Industrie & Ingénierie</span>
+                <span class={`px-3 py-1.5 rounded-full border ${colorMap.cyan}`}>IoT & Maker</span>
             </div>
         </div>
       </section>
@@ -269,8 +329,8 @@ const cardItems = [
 
                 <div class="flex flex-wrap gap-1.5 mt-4">
                   {item.tags.map((tag) => (
-                    <span class={`px-2 py-0.5 text-xs rounded-md border ${getTagColor(tag)}`}>
-                      {tag}
+                    <span class={`px-2 py-0.5 text-xs rounded-md border ${colorMap[tag.color] || colorMap.blue}`}>
+                      {tag.name}
                     </span>
                   ))}
                 </div>

@@ -1,10 +1,25 @@
 ---
+const colorMap: Record<string, string> = {
+  blue: "text-blue-400 border-blue-500/30 bg-blue-500/10",
+  purple: "text-purple-400 border-purple-500/30 bg-purple-500/10",
+  green: "text-green-400 border-green-500/30 bg-green-500/10",
+  yellow: "text-yellow-400 border-yellow-500/30 bg-yellow-500/10",
+  pink: "text-pink-400 border-pink-500/30 bg-pink-500/10",
+  cyan: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
+};
+
 const passions = [
     {
         title: "Domotique & Smart Home",
         icon: "🏠",
         description: "Conception d'une installation connectée complète et autonome, du Raspberry Pi au NUC.",
-        tags: ["Home Assistant", "Docker", "ZigBee", "Grafana", "NUC"],
+        tags: [
+            { name: "Home Assistant", color: "cyan" },
+            { name: "Docker", color: "green" },
+            { name: "ZigBee", color: "cyan" },
+            { name: "Grafana", color: "green" },
+            { name: "NUC", color: "cyan" }
+        ],
         color: "from-blue-500 to-cyan-500",
         slug: "domotique"
     },
@@ -12,7 +27,13 @@ const passions = [
         title: "Infrastructure Réseau",
         icon: "🌐",
         description: "Architecture réseau avancée : routeur OpenWrt, VPN, reverse proxy, vidéosurveillance.",
-        tags: ["OpenWrt", "VPN", "Nginx", "Frigate", "AdGuard"],
+        tags: [
+            { name: "OpenWrt", color: "green" },
+            { name: "VPN", color: "green" },
+            { name: "Nginx", color: "green" },
+            { name: "Frigate", color: "green" },
+            { name: "AdGuard", color: "green" }
+        ],
         color: "from-teal-500 to-blue-600",
         slug: "reseau"
     },
@@ -20,7 +41,12 @@ const passions = [
         title: "Aéromodélisme",
         icon: "✈️",
         description: "Construction d'avions thermiques en bois et programmation de radiocommandes.",
-        tags: ["Modélisme", "Électronique", "Firmware", "Pilotage"],
+        tags: [
+            { name: "Modélisme", color: "pink" },
+            { name: "Électronique", color: "cyan" },
+            { name: "Firmware", color: "purple" },
+            { name: "Pilotage", color: "cyan" }
+        ],
         color: "from-orange-500 to-red-500",
         slug: "aeromodelisme"
     },
@@ -28,7 +54,12 @@ const passions = [
         title: "Mécanique Automobile",
         icon: "🔧",
         description: "Maintenance avancée : turbo, injection, transmission BMW — boîte de vitesses Mini, swap moteur.",
-        tags: ["Mécanique", "Diagnostic", "BMW", "Mini"],
+        tags: [
+            { name: "Mécanique", color: "pink" },
+            { name: "Diagnostic", color: "cyan" },
+            { name: "BMW", color: "pink" },
+            { name: "Mini", color: "pink" }
+        ],
         color: "from-gray-500 to-gray-700",
         slug: "mecanique"
     },
@@ -36,7 +67,11 @@ const passions = [
         title: "Impression 3D & Laser",
         icon: "🖨️",
         description: "De la Prusa DIY à la machine hybride laser. Évolution continue depuis 2015.",
-        tags: ["Marlin", "Hardware", "Conception 3D"],
+        tags: [
+            { name: "Marlin", color: "cyan" },
+            { name: "Hardware", color: "cyan" },
+            { name: "Conception 3D", color: "cyan" }
+        ],
         color: "from-purple-500 to-pink-500",
         slug: "imprimante"
     },
@@ -44,7 +79,12 @@ const passions = [
         title: "Voron 3D",
         icon: "⚙️",
         description: "Construction d'une imprimante Voron haute performance (CoreXY, Klipper).",
-        tags: ["Voron", "Klipper", "CoreXY", "Moonraker"],
+        tags: [
+            { name: "Voron", color: "cyan" },
+            { name: "Klipper", color: "green" },
+            { name: "CoreXY", color: "cyan" },
+            { name: "Moonraker", color: "green" }
+        ],
         color: "from-red-600 to-orange-500",
         slug: "voron",
         wip: true
@@ -53,7 +93,12 @@ const passions = [
         title: "Terrariophilie High-Tech",
         icon: "🌿",
         description: "Terrariums automatisés pour plantes carnivores et escargots géants.",
-        tags: ["IoT", "ESP32", "Automatisation", "Biologie"],
+        tags: [
+            { name: "IoT", color: "cyan" },
+            { name: "ESP32", color: "cyan" },
+            { name: "Automatisation", color: "green" },
+            { name: "Biologie", color: "pink" }
+        ],
         color: "from-green-500 to-emerald-500",
         slug: "terrariophilie"
     },
@@ -61,7 +106,11 @@ const passions = [
         title: "Potager Intelligent",
         icon: "🥕",
         description: "Potager raisonné : engrais naturel, réflexion sur les nutriments et rotations.",
-        tags: ["Permaculture", "Nutriments", "Autonomie"],
+        tags: [
+            { name: "Permaculture", color: "pink" },
+            { name: "Nutriments", color: "pink" },
+            { name: "Autonomie", color: "yellow" }
+        ],
         color: "from-lime-500 to-green-600",
         slug: "potager",
         wip: true
@@ -70,7 +119,12 @@ const passions = [
         title: "Rénovation Maison",
         icon: "🏗️",
         description: "Rénovation complète d'une maison ancienne, pièce par pièce. Projet au long cours.",
-        tags: ["Bricolage", "Électricité", "Placo", "Design"],
+        tags: [
+            { name: "Bricolage", color: "pink" },
+            { name: "Électricité", color: "pink" },
+            { name: "Placo", color: "pink" },
+            { name: "Design", color: "purple" }
+        ],
         color: "from-amber-500 to-yellow-600",
         slug: "renovation",
         wip: true
@@ -79,7 +133,11 @@ const passions = [
         title: "Animaux",
         icon: "🐐",
         description: "Chèvres naines et poules : la vie à la campagne et l'amour des animaux.",
-        tags: ["Chèvres", "Poules", "Campagne"],
+        tags: [
+            { name: "Chèvres", color: "pink" },
+            { name: "Poules", color: "pink" },
+            { name: "Campagne", color: "pink" }
+        ],
         color: "from-emerald-400 to-teal-500",
         slug: "animaux",
         wip: true
@@ -88,27 +146,17 @@ const passions = [
         title: "Formation & Hacking",
         icon: "🎓",
         description: "Cursus technique à TU Graz : Sécurité, Réseau, Réalité Augmentée.",
-        tags: ["CTF", "Sécurité", "Réseau", "Unity", "OpenCV"],
+        tags: [
+            { name: "CTF", color: "cyan" },
+            { name: "Sécurité", color: "green" },
+            { name: "Réseau", color: "green" },
+            { name: "Unity", color: "purple" },
+            { name: "OpenCV", color: "purple" }
+        ],
         color: "from-red-500 to-pink-600",
         slug: "formation"
     }
 ];
-const getTagColor = (tag: string) => {
-    const t = tag.toLowerCase();
-    if (t.includes(`mainframe`) || t.includes(`z/os`) || t.includes(`jcl`) || t.includes(`cics`) || t.includes(`db2`) || t.includes(`cobol`) || t.includes(`zowe`) || t.includes(`mco`) || t.includes(`uss`) || t.includes(`rexx`) || t.includes(`tso`) || t.includes(`astreintes`))
-        return `text-blue-400 border-blue-500/30 bg-blue-500/10`;
-    if (t.includes(`python`) || t.includes(`react`) || t.includes(`node`) || t.includes(`dev`) || t.includes(`web`) || t.includes(`js`) || t.includes(`fullstack`) || t.includes(`api`) || t.includes(`vb.net`) || t.includes(`firmware`) || t.includes(`unity`) || t.includes(`opencv`) || t.includes(`html`) || t.includes(`css`) || t.includes(`code`) || t.includes(`programmation`) || t.includes(`ia`) || t.includes(`intelligence artificielle`))
-        return `text-purple-400 border-purple-500/30 bg-purple-500/10`;
-    if (t.includes(`ops`) || t.includes(`docker`) || t.includes(`ansible`) || t.includes(`ci/cd`) || t.includes(`git`) || t.includes(`linux`) || t.includes(`openwrt`) || t.includes(`vpn`) || t.includes(`nginx`) || t.includes(`klipper`) || t.includes(`reseau`) || t.includes(`network`) || t.includes(`security`) || t.includes(`grafana`) || t.includes(`monitoring`) || t.includes(`virtua`))
-        return `text-green-400 border-green-500/30 bg-green-500/10`;
-    if (t.includes(`management`) || t.includes(`pilotage`) || t.includes(`agile`) || t.includes(`scrum`) || t.includes(`logistique`) || t.includes(`lean`) || t.includes(`itil`) || t.includes(`vsm`) || t.includes(`5s`) || t.includes(`pdca`) || t.includes(`anglais`) || t.includes(`international`) || t.includes(`gestion de projet`) || t.includes(`ouverture`) || t.includes(`immersion`) || t.includes(`powerbi`) || t.includes(`reporting`) || t.includes(`flux`) || t.includes(`amélioration`))
-        return `text-yellow-400 border-yellow-500/30 bg-yellow-500/10`;
-    if (t.includes(`matériaux`) || t.includes(`composites`) || t.includes(`métaux`) || t.includes(`polymères`) || t.includes(`aéronautique`) || t.includes(`spatial`) || t.includes(`mécanique des fluides`) || t.includes(`ingénierie`) || t.includes(`procédés`) || t.includes(`industrie`) || t.includes(`physique`) || t.includes(`chimie`) || t.includes(`maths`) || t.includes(`cao`))
-        return `text-pink-400 border-pink-500/30 bg-pink-500/10`;
-    if (t.includes(`iot`) || t.includes(`zigbee`) || t.includes(`3d`) || t.includes(`laser`) || t.includes(`moteur`) || t.includes(`diag`) || t.includes(`home assistant`) || t.includes(`electronics`) || t.includes(`arduino`) || t.includes(`raspberry`) || t.includes(`rtos`) || t.includes(`ctf`) || t.includes(`ar/vr`))
-        return `text-cyan-400 border-cyan-500/30 bg-cyan-500/10`;
-    return `text-gray-400 border-gray-700 bg-gray-900`;
-};
 ---
 
 <section id="passions" class="py-20 bg-gray-900">
@@ -149,8 +197,8 @@ const getTagColor = (tag: string) => {
             
             <div class="flex flex-wrap gap-1.5 mt-auto">
               {item.tags.map((tag) => (
-                <span class={`px-2 py-0.5 text-xs rounded-full border ${getTagColor(tag)}`}>
-                  {tag}
+                <span class={`px-2 py-0.5 text-xs rounded-full border ${colorMap[tag.color] || colorMap.blue}`}>
+                  {tag.name}
                 </span>
               ))}
             </div>
