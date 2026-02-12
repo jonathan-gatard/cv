@@ -285,18 +285,18 @@ const cardItems = [
         </div>
 
         <!-- Discreet Legend in Sidebar -->
-        <div class="pt-6 border-t border-gray-800">
-           <h3 class="px-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-3">Légende</h3>
-           <div class="space-y-1">
+        <div class="pt-16 border-t border-gray-800 hidden lg:block">
+           <h3 class="px-4 text-[9px] font-bold text-gray-600 uppercase tracking-widest mb-4">Compétences</h3>
+           <div class="space-y-0.5">
              {categories.map(cat => (
                <button 
-                 class={`w-full text-left px-4 py-1.5 rounded-md text-[11px] font-semibold transition-all hover:bg-gray-800/50 flex items-center gap-2 group category-btn`}
+                 class={`w-full text-left px-4 py-1 rounded-md text-[10px] font-medium transition-all hover:bg-gray-800/30 flex items-center gap-2.5 group category-btn`}
                  data-category={cat.id}
                  data-label={cat.label}
                  data-tags={JSON.stringify(allTagsByCategory[cat.id])}
                >
-                 <span class={`w-2 h-2 rounded-full border ${colorMap[cat.id].replace('text-', 'bg-').split(' ')[2]}`}></span>
-                 <span class="text-gray-400 group-hover:text-gray-200 transition-colors">{cat.label}</span>
+                 <span class={`w-1.5 h-1.5 rounded-full border ${colorMap[cat.id].replace('text-', 'bg-').split(' ')[2]} opacity-60 group-hover:opacity-100 transition-opacity`}></span>
+                 <span class="text-gray-500 group-hover:text-gray-300 transition-colors uppercase tracking-tight">{cat.label}</span>
                </button>
              ))}
            </div>
