@@ -7,7 +7,7 @@ const navbar = [
 
 const cvButton = {
     label: `Télécharger mon CV`,
-    href: `/cv-print`,
+    href: `/CV - Jonathan GATARD.pdf`,
 };
 ---
 
@@ -42,7 +42,7 @@ const cvButton = {
         <!-- CV Button -->
         <a 
           href={cvButton.href}
-          target="_blank"
+          download="CV - Jonathan GATARD.pdf"
           class="px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-base font-bold shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5 flex items-center gap-2"
         >
           <span>{cvButton.label}</span>
@@ -74,7 +74,7 @@ const cvButton = {
       ))}
       <a 
         href={cvButton.href}
-        target="_blank"
+        download="CV - Jonathan GATARD.pdf"
         class="block px-4 py-3 rounded-xl text-base font-bold text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 transition-colors flex items-center gap-2"
       >
         <span>{cvButton.label}</span>
