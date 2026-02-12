@@ -6,6 +6,15 @@ export const siteConfig = {
         cta1: "Découvrir mon parcours",
         cta2: "Voir mes projets",
     },
+    personalInfo: {
+        name: "Jonathan Gatard",
+        title: "Ingénieur Mainframe & Interopérabilité",
+        email: "jonathan.gatard@gmail.com",
+        phone: "06 13 54 83 19",
+        website: "jonathan-gatard.fr",
+        linkedin: "linkedin.com/in/jonathan-gatard",
+        misc: "Permis B — Véhiculé",
+    },
     skills: [
         // Professional / Technical
         { name: "Mainframe z/OS", color: "text-blue-400" },
@@ -32,7 +41,7 @@ export const siteConfig = {
         { name: "Gestion de Projet", color: "text-gray-300" },
         { name: "ITIL 4", color: "text-gray-300" },
         { name: "Lean Management", color: "text-gray-300" },
-        { name: "Anglais B2+", color: "text-indigo-300" },
+        { name: "Anglais C1", color: "text-indigo-300" },
     ],
     navbar: [
         { label: 'Accueil', href: '/' },
