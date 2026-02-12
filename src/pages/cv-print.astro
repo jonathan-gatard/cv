@@ -8,7 +8,7 @@ const cvData = {
         website: `jonathan-gatard.fr`,
         linkedin: `linkedin.com/in/jonathan-gatard`,
         misc: `Permis B — Véhiculé`,
-        photo: `/photo2.png`
+        photo: `/images/profil.png`
     },
     skills: {
         mainframe: [`z/OS`, `USS`, `JCL`, `CICS`, `DB2`, `Zowe`, `Rexx`, `TSO`],
@@ -137,10 +137,10 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
             width: 72mm;
             background: #111827;
             color: white;
-            padding: 7mm 5mm 5mm;
+            padding: 5mm 5mm 3mm;
             display: flex;
             flex-direction: column;
-            gap: 4mm;
+            gap: 2.5mm;
             flex-shrink: 0;
         }
         
@@ -246,21 +246,21 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
         /* ── Right main content ── */
         .main {
             flex: 1;
-            padding: 8mm 8mm 6mm 8mm;
+            padding: 5mm 8mm 4mm 8mm;
             display: flex;
             flex-direction: column;
-            gap: 4mm;
+            gap: 2.5mm;
             overflow: hidden;
         }
 
         .summary-box {
             background: #eff6ff;
             border-left: 3px solid #3b82f6;
-            padding: 4mm 5mm;
-            font-size: 9pt;
+            padding: 3mm 4mm;
+            font-size: 8.5pt;
             font-style: italic;
             color: #374151;
-            line-height: 1.5;
+            line-height: 1.4;
             border-radius: 0 2mm 2mm 0;
         }
 
@@ -285,7 +285,7 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
         }
 
         /* Experience cards */
-        .exp-card { margin-bottom: 3mm; }
+        .exp-card { margin-bottom: 2mm; }
         .exp-header {
             display: flex;
             justify-content: space-between;
@@ -315,9 +315,9 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
         }
         .exp-details {
             list-style: none;
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #374151;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         .exp-details li {
             padding-left: 4mm;
@@ -348,7 +348,7 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
             align-items: baseline;
         }
         .edu-degree {
-            font-size: 10pt;
+            font-size: 9.5pt;
             font-weight: 700;
             color: #111827;
         }
@@ -366,11 +366,11 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
         .interest-row {
             display: flex;
             align-items: flex-start;
-            gap: 2mm;
-            margin-bottom: 2mm;
-            font-size: 8pt;
+            gap: 1.5mm;
+            margin-bottom: 1.5mm;
+            font-size: 7.5pt;
             color: #374151;
-            line-height: 1.4;
+            line-height: 1.3;
         }
         .interest-icon {
             font-size: 9.5pt;
@@ -459,9 +459,9 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
         <div class="main">
             
             <!-- Summary -->
-            <p class="summary">
+            <div class="summary-box">
                 Ma double compétence en <strong>Mainframe</strong> et <strong>Open</strong> me permet de moderniser les infrastructures historiques en y intégrant les meilleures pratiques d'automatisation et d'agilité.
-            </p>
+            </div>
 
             <!-- Expériences -->
             <div>
@@ -485,7 +485,7 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
             <div>
                 <div class="main-section-title"><span class="accent"></span> Formations</div>
             </div>
-            <div style="margin-top:2mm;">
+            <div style="margin-top:1mm;">
                 {education.map(edu => (
                     <div class="edu-card">
                         <div class="edu-header">
@@ -494,7 +494,7 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
                         </div>
                         <div class="edu-school">{edu.school}</div>
                         {edu.details && (
-                            <ul class="exp-details" style="font-size: 7pt; margin-top: 1mm;">
+                            <ul class="exp-details" style="font-size: 7pt; margin-top: 0.5mm;">
                                 {edu.details.map(d => <li>{d}</li>)}
                             </ul>
                         )}
@@ -506,13 +506,11 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
             <div>
                 <div class="main-section-title"><span class="accent"></span> Projets & Passions</div>
             </div>
-            <div class="bottom-row" style="margin-top:2mm; flex-wrap: wrap;">
+            <div class="bottom-row" style="margin-top:1mm; display: grid; grid-template-columns: 1fr 1fr; gap: 0 4mm;">
                 {interests.map(i => (
-                    <div class="bottom-col" style="min-width: 45%;">
-                        <div class="interest-row">
-                            <span class="interest-icon">{i.icon}</span>
-                            <span>{i.text}</span>
-                        </div>
+                    <div class="interest-row">
+                        <span class="interest-icon">{i.icon}</span>
+                        <span>{i.text}</span>
                     </div>
                 ))}
             </div>
@@ -521,4 +519,3 @@ const { personalInfo, skills, languages, experiences, education, interests } = c
     </div>
 </body>
 </html>
-
