@@ -87,5 +87,23 @@ import Lightbox from '../components/Lightbox.astro';
         </script>
 
         <Lightbox />
+
+        <style is:global>
+          @keyframes target-highlight {
+            0% {
+              box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+              background-color: rgba(59, 130, 246, 0.1);
+            }
+            100% {
+              box-shadow: 0 0 0 0px rgba(59, 130, 246, 0);
+              background-color: transparent;
+            }
+          }
+
+          :target {
+            animation: target-highlight 2s ease-out;
+            border-radius: 1rem;
+          }
+        </style>
 	</body>
 </html>
