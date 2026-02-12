@@ -1,25 +1,10 @@
 ---
-const colorMap: Record<string, string> = {
-  blue: "text-blue-400 border-blue-500/30 bg-blue-500/10",
-  purple: "text-purple-400 border-purple-500/30 bg-purple-500/10",
-  green: "text-green-400 border-green-500/30 bg-green-500/10",
-  yellow: "text-yellow-400 border-yellow-500/30 bg-yellow-500/10",
-  pink: "text-pink-400 border-pink-500/30 bg-pink-500/10",
-  cyan: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
-};
-
 const passions = [
     {
         title: "Domotique & Smart Home",
         icon: "🏠",
         description: "Conception d'une installation connectée complète et autonome, du Raspberry Pi au NUC.",
-        tags: [
-            { name: "Home Assistant", color: "cyan" },
-            { name: "Docker", color: "green" },
-            { name: "ZigBee", color: "cyan" },
-            { name: "Grafana", color: "green" },
-            { name: "NUC", color: "cyan" }
-        ],
+        tags: ["Home Assistant", "Docker", "ZigBee", "Grafana", "NUC"],
         color: "from-blue-500 to-cyan-500",
         slug: "domotique"
     },
@@ -27,13 +12,7 @@ const passions = [
         title: "Infrastructure Réseau",
         icon: "🌐",
         description: "Architecture réseau avancée : routeur OpenWrt, VPN, reverse proxy, vidéosurveillance.",
-        tags: [
-            { name: "OpenWrt", color: "green" },
-            { name: "VPN", color: "green" },
-            { name: "Nginx", color: "green" },
-            { name: "Frigate", color: "green" },
-            { name: "AdGuard", color: "green" }
-        ],
+        tags: ["OpenWrt", "VPN", "Nginx", "Frigate", "AdGuard"],
         color: "from-teal-500 to-blue-600",
         slug: "reseau"
     },
@@ -41,12 +20,7 @@ const passions = [
         title: "Aéromodélisme",
         icon: "✈️",
         description: "Construction d'avions thermiques en bois et programmation de radiocommandes.",
-        tags: [
-            { name: "Modélisme", color: "pink" },
-            { name: "Électronique", color: "cyan" },
-            { name: "Firmware", color: "purple" },
-            { name: "Pilotage", color: "cyan" }
-        ],
+        tags: ["Modélisme", "Électronique", "Firmware", "Pilotage"],
         color: "from-orange-500 to-red-500",
         slug: "aeromodelisme"
     },
@@ -54,12 +28,7 @@ const passions = [
         title: "Mécanique Automobile",
         icon: "🔧",
         description: "Maintenance avancée : turbo, injection, transmission BMW — boîte de vitesses Mini, swap moteur.",
-        tags: [
-            { name: "Mécanique", color: "pink" },
-            { name: "Diagnostic", color: "cyan" },
-            { name: "BMW", color: "pink" },
-            { name: "Mini", color: "pink" }
-        ],
+        tags: ["Mécanique", "Diagnostic", "BMW", "Mini"],
         color: "from-gray-500 to-gray-700",
         slug: "mecanique"
     },
@@ -67,11 +36,7 @@ const passions = [
         title: "Impression 3D & Laser",
         icon: "🖨️",
         description: "De la Prusa DIY à la machine hybride laser. Évolution continue depuis 2015.",
-        tags: [
-            { name: "Marlin", color: "cyan" },
-            { name: "Hardware", color: "cyan" },
-            { name: "Conception 3D", color: "cyan" }
-        ],
+        tags: ["Marlin", "Hardware", "Conception 3D"],
         color: "from-purple-500 to-pink-500",
         slug: "imprimante"
     },
@@ -79,12 +44,7 @@ const passions = [
         title: "Voron 3D",
         icon: "⚙️",
         description: "Construction d'une imprimante Voron haute performance (CoreXY, Klipper).",
-        tags: [
-            { name: "Voron", color: "cyan" },
-            { name: "Klipper", color: "green" },
-            { name: "CoreXY", color: "cyan" },
-            { name: "Moonraker", color: "green" }
-        ],
+        tags: ["Voron", "Klipper", "CoreXY", "Moonraker"],
         color: "from-red-600 to-orange-500",
         slug: "voron",
         wip: true
@@ -93,12 +53,7 @@ const passions = [
         title: "Terrariophilie High-Tech",
         icon: "🌿",
         description: "Terrariums automatisés pour plantes carnivores et escargots géants.",
-        tags: [
-            { name: "IoT", color: "cyan" },
-            { name: "ESP32", color: "cyan" },
-            { name: "Automatisation", color: "green" },
-            { name: "Biologie", color: "pink" }
-        ],
+        tags: ["IoT", "ESP32", "Automatisation", "Biologie"],
         color: "from-green-500 to-emerald-500",
         slug: "terrariophilie"
     },
@@ -106,11 +61,7 @@ const passions = [
         title: "Potager Intelligent",
         icon: "🥕",
         description: "Potager raisonné : engrais naturel, réflexion sur les nutriments et rotations.",
-        tags: [
-            { name: "Permaculture", color: "pink" },
-            { name: "Nutriments", color: "pink" },
-            { name: "Autonomie", color: "yellow" }
-        ],
+        tags: ["Permaculture", "Nutriments", "Autonomie"],
         color: "from-lime-500 to-green-600",
         slug: "potager",
         wip: true
@@ -119,12 +70,7 @@ const passions = [
         title: "Rénovation Maison",
         icon: "🏗️",
         description: "Rénovation complète d'une maison ancienne, pièce par pièce. Projet au long cours.",
-        tags: [
-            { name: "Bricolage", color: "pink" },
-            { name: "Électricité", color: "pink" },
-            { name: "Placo", color: "pink" },
-            { name: "Design", color: "purple" }
-        ],
+        tags: ["Bricolage", "Électricité", "Placo", "Design"],
         color: "from-amber-500 to-yellow-600",
         slug: "renovation",
         wip: true
@@ -133,11 +79,7 @@ const passions = [
         title: "Animaux",
         icon: "🐐",
         description: "Chèvres naines et poules : la vie à la campagne et l'amour des animaux.",
-        tags: [
-            { name: "Chèvres", color: "pink" },
-            { name: "Poules", color: "pink" },
-            { name: "Campagne", color: "pink" }
-        ],
+        tags: ["Chèvres", "Poules", "Campagne"],
         color: "from-emerald-400 to-teal-500",
         slug: "animaux",
         wip: true
@@ -146,13 +88,7 @@ const passions = [
         title: "Formation & Hacking",
         icon: "🎓",
         description: "Cursus technique à TU Graz : Sécurité, Réseau, Réalité Augmentée.",
-        tags: [
-            { name: "CTF", color: "cyan" },
-            { name: "Sécurité", color: "green" },
-            { name: "Réseau", color: "green" },
-            { name: "Unity", color: "purple" },
-            { name: "OpenCV", color: "purple" }
-        ],
+        tags: ["CTF", "Sécurité", "Réseau", "Unity", "OpenCV"],
         color: "from-red-500 to-pink-600",
         slug: "formation"
     }
@@ -197,8 +133,8 @@ const passions = [
             
             <div class="flex flex-wrap gap-1.5 mt-auto">
               {item.tags.map((tag) => (
-                <span class={`px-2 py-0.5 text-xs rounded-full border ${colorMap[tag.color] || colorMap.blue}`}>
-                  {tag.name}
+                <span class="px-2 py-0.5 text-xs rounded-full border border-gray-700 text-gray-400 bg-gray-800/50">
+                  {tag}
                 </span>
               ))}
             </div>
