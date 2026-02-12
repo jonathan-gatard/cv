@@ -1,6 +1,144 @@
 ---
-import { jobs as experiences } from '../data/jobs';
-import { education } from '../data/education';
+const experiences = [
+    {
+        role: `Ingénieur Mainframe & Interopérabilité`,
+        company: `Solutec & CAGIP (Rodez)`,
+        date: `Sept 2023 - Aujourd'hui`,
+        description: `Garantir le maintien en condition opérationnelle, assurer le rôle d'AppOps et piloter les projets de modernisation du mainframe.`,
+        tags: [`Mainframe`, `z/OS`, `USS`, `MCO`, `Python`, `Ansible`, `AppOps`, `Zowe`, `VSCode`, `API`, `Cobol`, `JCL`, `Rexx`, `Astreintes`],
+        details: [
+            {
+                title: `MCO & Expertise z/OS`,
+                content: `Installation et maintenance de matière mainframe pour CA-TS.
+Maîtrise de l'environnement USS (Z Linux)
+Garantie de la disponibilité et de la performance des environnements critiques.
+Astreintes : Résolution de jobs plantés, analyse de problèmes de stockage, modification de fichiers applicatifs en urgence.`
+            },
+            {
+                title: `Build & Modernisation`,
+                content: `Pilotage d'un projet majeur d'appels API depuis le Mainframe vers des servitudes techniques sur VMs.
+Pilote sur le déploiement de Zowe et VSCode pour moderniser l'expérience développeur.
+Automatisation de l'installation de matière logicielle CATS on Mainframe.
+Développement d'outils en Python pour automatiser les tâches d'exploitation récurrentes.`,
+            },
+            {
+                title: `AppOps & Projets Squads`,
+                content: `Expert technique CA-TS : pont entre besoins applicatifs et exigences opérationnelles mainframe.
+Développement d'outils de gestion des logs pour des squads techniques.
+Création de Playbooks Ansible pour applications de développement cobol.`
+            }
+        ]
+    },
+    {
+        role: `Manager Projets & Ingénieur DevOps`,
+        company: `Stellantis (Slovaquie)`,
+        date: `2021 - 2023`,
+        description: `Pilotage de projets IT industriels et transformation numérique.`,
+        tags: [`Management`, `DevOps`, `React`, `NodeJS`, `Docker`, `CI/CD`, `Grafana`, `PowerBI`, `Node-Red`, `Fullstack`, `Agile`, `Scrum`],
+        details: [
+            {
+                title: `Management & Pilotage`,
+                content: `Encadrement d'une équipe de 4 personnes.
+Gestion de projets de collecte de données industrielles et reporting PowerBI.`
+            },
+            {
+                title: `Développement & Automatisation`,
+                content: `Développement web fullstack (React/NodeJS) pour la gestion RH et industrielle.
+Mise en place de pipelines CI/CD et monitoring (Grafana, Node-Red).`
+            }
+        ]
+    },
+    {
+        role: `Ingénieur Projets Logistique & Amélioration Continue`,
+        company: `LISI Aerospace (Parthenay)`,
+        date: `2016 - 2021`,
+        description: `Optimisation de flux et conduite de projets industriels majeurs.`,
+        tags: [`Logistique`, `Lean`, `Amélioration Continue`, `Gestion de Projet`, `VB.NET`, `VSM`, `5S`, `PDCA`, `Industrie`, `Flux`],
+        details: [
+            {
+                title: `Projets Industriels`,
+                content: `Implantation de nouvelles zones logistiques pour la construction de deux usines neuves.
+Développement d'outils de gestion en VB.NET.`
+            },
+            {
+                title: `Amélioration Continue`,
+                content: `Mise en place d'outils Lean (5S, VSM, PDCA).
+Amélioration de la satisfaction client et optimisation des flux logistiques.`
+            }
+        ]
+    }
+];
+
+const education = [
+    {
+        role: `Sécurité & Réseaux (Autodidacte)`,
+        company: `TU Graz (Autriche)`,
+        date: `2022`,
+        description: `Suivi de cours en autonomie, sur les thématiques de sécurité réseau et systèmes.`,
+        tags: [`Network Security`, `CTF`, `Intelligence Artificielle`, `AR/VR`, `Unity`, `OpenCV`],
+        details: [
+            {
+                title: `Cursus`,
+                content: `Sécurité réseau
+Capture The Flag (CTF)
+Intelligence artificielle
+Réalité Augmentée (OpenCV / Unity)`
+            }
+        ]
+    },
+    {
+        role: `Ingénieur Aéronautique & Spatial (Alternance)`,
+        company: `CNAM / ISAE-Supaero / ISAE-ENSMA`,
+        date: `2016 - 2019`,
+        description: `Diplôme d'ingénieur obtenu en alternance. Cursus réparti sur 3 écoles.`,
+        tags: [`Ingénierie`, `Aéronautique`, `Spatial`, `Matériaux Composites`, `Mécanique des fluides`, `Alternance`, `CAO`],
+        details: [
+            {
+                title: `CNAM, Poitiers`,
+                content: `Fondamentaux de l'ingénierie.
+Sciences industrielles et gestion de projet.`
+            },
+            {
+                title: `ISAE-Supaero, Toulouse`,
+                content: `Formation intensive en ingénierie aéronautique et spatiale.
+Mécanique des fluides et résistance des matériaux.`
+            },
+            {
+                title: `ISAE-ENSMA, Poitiers`,
+                content: `Spécialisation en thermodynamique.`
+            }
+        ]
+    },
+    {
+        role: `Stage International`,
+        company: `Malaisie`,
+        date: `2018 (3 mois)`,
+        description: `Stage de découverte dans une école de cuisine en Malaisie. Immersion linguistique et culturelle.`,
+        tags: [`Anglais`, `International`, `Ouverture culturelle`, `Immersion`],
+        details: [
+            {
+                title: `Objectifs`,
+                content: `Perfectionnement de l'anglais en immersion totale.
+Découverte d'un environnement professionnel international.`
+            }
+        ]
+    },
+    {
+        role: `DUT Science et Génie des Matériaux`,
+        company: `IUT Nantes`,
+        date: `2014 - 2016`,
+        description: `Formation technique en science des matériaux et procédés industriels.`,
+        tags: [`Matériaux`, `Composites`, `Procédés industriels`, `Métaux`, `Polymères`, `Physique`, `Chimie`],
+        details: [
+            {
+                title: `Formation`,
+                content: `Étude approfondie des matériaux (métaux, polymères, composites).
+Procédés de mise en forme et caractérisation mécanique.`
+            }
+        ]
+    }
+];
+import { getTagColor } from '../utils/tagColors';
 
 // Build sidebar items with sub-entries
 const sidebarSections = [
@@ -14,17 +152,14 @@ const sidebarSections = [
     label: 'Formation',
     children: education.map((edu, i) => ({ id: `edu-${i}`, label: edu.company.split('(')[0].trim() }))
   },
-  {
-    id: 'stack',
-    label: 'Tech Stack',
-    children: []
-  },
 ];
 
 const cardItems = [
-  { id: 'experience', title: 'Expérience Professionnelle', items: experiences, prefix: 'exp' },
-  { id: 'formation', title: 'Formation', items: education, prefix: 'edu' },
+  { id: 'experience', title: 'Expériences professionnelles', items: experiences, prefix: 'exp' },
+  { id: 'formation', title: 'Formations', items: education, prefix: 'edu' },
 ];
+
+
 ---
 
 <div class="bg-gray-900 text-white pt-24 pb-16">
@@ -43,7 +178,7 @@ const cardItems = [
               <div class="ml-4 mt-0.5 space-y-0.5">
                 {s.children.map(child => (
                   <a href={`#${child.id}`} data-section={child.id}
-                     class="sidebar-link block px-3 py-1.5 text-[11px] text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
+                     class="sidebar-link block px-3 py-1.5 text-xs text-gray-600 rounded-md border-l-2 border-transparent hover:text-gray-300 hover:bg-gray-800/30 transition-all truncate">
                     {child.label}
                   </a>
                 ))}
@@ -57,6 +192,14 @@ const cardItems = [
     <!-- Main Content -->
     <main class="flex-1 min-w-0">
 
+      <!-- Professional Introduction -->
+      <section class="mb-16 bg-blue-600/10 border border-blue-500/20 p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
+        <h1 class="text-4xl font-extrabold text-white mb-4 tracking-tight">Ingénieur Mainframe & Interopérabilité</h1>
+        <p class="text-xl text-gray-300 leading-relaxed italic">
+          "Ma double compétence en **Mainframe z/OS** et **DevOps** me permet de moderniser les infrastructures historiques en y intégrant les meilleures pratiques d'automatisation et d'agilité."
+        </p>
+      </section>
+
       {cardItems.map(section => (
         <section id={section.id} class="mb-20">
           <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
@@ -68,29 +211,36 @@ const cardItems = [
               <div id={`${section.prefix}-${i}`} class="bg-gray-800/50 p-5 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-all group">
                 <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
-                    <h3 class="text-lg font-bold group-hover:text-blue-300 transition-colors">{item.role}</h3>
-                    <p class="text-gray-400 text-sm font-medium">{item.company}</p>
+                    <h3 class="text-xl font-bold group-hover:text-blue-300 transition-colors uppercase tracking-tight">{item.role}</h3>
+                    <p class="text-gray-400 text-base font-medium">{item.company}</p>
                   </div>
-                  <span class="text-blue-400 text-xs font-mono bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700 whitespace-nowrap self-start">
+                  <span class="text-blue-400 text-sm font-mono bg-gray-900/80 px-3 py-1 rounded-full border border-gray-700 whitespace-nowrap self-start">
                     {item.date}
                   </span>
                 </div>
 
-                <p class="text-gray-300 text-sm italic mb-4">{item.description}</p>
+                <p class="text-gray-300 text-base italic mb-4">{item.description}</p>
                 
                 <div class="grid gap-2">
                   {item.details.map((detail) => (
                     <div class="bg-gray-700/30 p-3 rounded-lg border-l-2 border-blue-500">
-                      <h4 class="font-bold text-white text-xs mb-1">{detail.title}</h4>
-                      <p class="text-[12px] text-gray-300 leading-relaxed whitespace-pre-line">{detail.content}</p>
+                      <h4 class="font-bold text-white text-sm mb-1">{detail.title}</h4>
+                      <ul class="space-y-1">
+                        {detail.content.split('\n').filter(line => line.trim() !== '').map(line => (
+                          <li class="text-sm text-gray-300 leading-relaxed flex items-start gap-2">
+                            <span class="text-blue-400 font-bold shrink-0 mt-0.5">›</span>
+                            <span>{line.trim()}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
 
                 <div class="flex flex-wrap gap-1.5 mt-4">
                   {item.tags.map((tag) => (
-                    <span class="px-2 py-0.5 bg-gray-900 text-gray-400 text-[10px] rounded-md border border-gray-700">
-                      #{tag}
+                    <span class={`px-2 py-0.5 text-xs rounded-md border ${getTagColor(tag)}`}>
+                      {tag}
                     </span>
                   ))}
                 </div>
@@ -100,46 +250,6 @@ const cardItems = [
         </section>
       ))}
 
-      <!-- Tech Stack -->
-      <section id="stack">
-        <h2 class="text-3xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          Tech Stack
-        </h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          {[
-            { name: "IBM z/OS", cat: "mainframe" },
-            { name: "JCL", cat: "mainframe" },
-            { name: "COBOL", cat: "mainframe" },
-            { name: "DB2", cat: "mainframe" },
-            { name: "CICS", cat: "mainframe" },
-            { name: "Zowe", cat: "mainframe" },
-            { name: "Python", cat: "dev" },
-            { name: "React", cat: "dev" },
-            { name: "Node.js", cat: "dev" },
-            { name: "Docker", cat: "devops" },
-            { name: "Ansible", cat: "devops" },
-            { name: "Git", cat: "devops" },
-            { name: "Linux", cat: "devops" },
-            { name: "Jenkins", cat: "devops" },
-            { name: "VSCode", cat: "tools" },
-            { name: "REST API", cat: "dev" },
-          ].map(tech => (
-            <div class={`px-4 py-3 rounded-lg border text-sm font-medium text-center transition-all hover:scale-105 ${
-              tech.cat === 'mainframe' ? 'bg-blue-950/40 border-blue-800/50 text-blue-300' :
-              tech.cat === 'dev' ? 'bg-purple-950/40 border-purple-800/50 text-purple-300' :
-              tech.cat === 'devops' ? 'bg-green-950/40 border-green-800/50 text-green-300' :
-              'bg-gray-800/50 border-gray-700/50 text-gray-300'
-            }`}>
-              {tech.name}
-            </div>
-          ))}
-        </div>
-        <div class="flex gap-6 mt-4 text-xs text-gray-500 justify-center">
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Mainframe</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> Dev</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-green-500"></span> DevOps</span>
-        </div>
-      </section>
 
     </main>
   </div>

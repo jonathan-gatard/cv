@@ -7,4 +7,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://jonathan-gatard.fr',
   integrations: [tailwind()],
+  server: {
+    host: true,
+    port: 4321
+  }
 });

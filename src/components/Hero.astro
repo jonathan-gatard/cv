@@ -1,5 +1,37 @@
 ---
-import { siteConfig } from '../data/config';
+const hero = {
+    title: `Jonathan GATARD`,
+    subtitle: `Maker, Ingénieur & Bidouilleur Passionné`,
+    description: `Ma philosophie : "Rien n'est magique, tout s'explique". Je décortique, répare et améliore chaque engrenage de mon environnement, du plus petit capteur au moteur BMW.`,
+    cta1: `Découvrir mon parcours`,
+    cta2: `Voir mes projets`,
+};
+
+const skills = [
+    { name: `Mainframe z/OS`, color: `text-blue-400` },
+    { name: `JCL`, color: `text-gray-300` },
+    { name: `CICS`, color: `text-gray-300` },
+    { name: `DB2`, color: `text-gray-300` },
+    { name: `COBOL`, color: `text-gray-300` },
+    { name: `Python`, color: `text-yellow-300` },
+    { name: `Ansible`, color: `text-red-400` },
+    { name: `Docker`, color: `text-blue-300` },
+    { name: `Zowe`, color: `text-purple-400` },
+    { name: `DevOps`, color: `text-green-400` },
+    { name: `CI/CD`, color: `text-gray-300` },
+    { name: `Git`, color: `text-orange-400` },
+    { name: `VLAN`, color: `text-teal-300` },
+    { name: `Firewall`, color: `text-teal-300` },
+    { name: `VPN`, color: `text-teal-300` },
+    { name: `Reverse Proxy`, color: `text-teal-300` },
+    { name: `Linux`, color: `text-yellow-100` },
+    { name: `Bash`, color: `text-gray-400` },
+    { name: `Agile/Scrum`, color: `text-yellow-400` },
+    { name: `Gestion de Projet`, color: `text-gray-300` },
+    { name: `ITIL 4`, color: `text-gray-300` },
+    { name: `Lean Management`, color: `text-gray-300` },
+    { name: `Anglais C1`, color: `text-indigo-300` },
+];
 ---
 
 <section class="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-gray-900 text-white pt-20 md:pt-0">
@@ -13,27 +45,27 @@ import { siteConfig } from '../data/config';
 
   <div class="relative z-10 text-center px-4 max-w-7xl mx-auto">
     
-    <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 text-white drop-shadow-lg">
-      {siteConfig.hero.title}
+    <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-6 md:mb-8 text-white drop-shadow-2xl">
+      {hero.title}
     </h1>
     
-    <h2 class="text-xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 mb-6 md:mb-10 pb-2">
-      {siteConfig.hero.subtitle}
+    <h2 class="text-2xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 mb-6 md:mb-10 pb-2">
+      {hero.subtitle}
     </h2>
     
-    <p class="text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-4xl mx-auto bg-gray-900/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-gray-800 shadow-2xl whitespace-nowrap overflow-x-auto scrollbar-hide">
-      {siteConfig.hero.description}
+    <p class="text-lg md:text-2xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-5xl mx-auto bg-gray-900/50 backdrop-blur-sm p-4 md:p-8 rounded-xl border border-gray-800 shadow-2xl">
+      {hero.description}
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center items-center relative z-20">
       <a href="/experience" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 group">
-        <span>{siteConfig.hero.cta1}</span>
+        <span>{hero.cta1}</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
       </a>
       <a href="/passions" class="px-8 py-4 bg-gray-800/80 hover:bg-gray-700/80 text-white border border-gray-600 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-sm flex items-center justify-center gap-2">
-        <span>{siteConfig.hero.cta2}</span>
+        <span>{hero.cta2}</span>
       </a>
     </div>
   </div>
@@ -45,9 +77,9 @@ import { siteConfig } from '../data/config';
         <!-- Duplicate content for seamless loop -->
         {[...Array(2)].map(() => (
           <>
-            {siteConfig.skills.map(skill => (
+            {skills.map(skill => (
               <>
-                <span class={`font-bold text-lg ${skill.color}`}>{skill.name}</span>
+                <span class={`font-bold text-xl ${skill.color}`}>{skill.name}</span>
                 <span class="text-gray-600 text-xs">●</span>
               </>
             ))}
