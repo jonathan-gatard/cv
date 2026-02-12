@@ -1,10 +1,5 @@
 ---
-const navItems = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Parcours', href: '/experience' },
-  { label: 'Passions', href: '/passions' },
-  { label: 'CV PDF', href: '/cv-print', external: true },
-];
+import { siteConfig } from '../data/config';
 ---
 
 <nav class="fixed w-full z-50 top-0 start-0 transition-all duration-300" id="navbar">
@@ -19,23 +14,33 @@ const navItems = [
           <span class="relative z-10">JG</span>
           <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
         </div>
-        <span class="font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">Jonathan Gatard</span>
+        <span class="font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">{siteConfig.hero.title}</span>
       </a>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center gap-1">
-        {navItems.map(item => (
-          <a 
-            href={item.href} 
-            target={item.external ? "_blank" : "_self"}
-            class="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 relative group overflow-hidden"
-          >
-            <span class="relative z-10">{item.label}</span>
-            {item.label === 'CV PDF' && (
-               <span class="ml-1 relative z-10 opacity-70">↗</span>
-            )}
-          </a>
-        ))}
+      <div class="hidden md:flex items-center gap-6">
+        <div class="flex items-center gap-1">
+          {siteConfig.navbar.map(item => (
+            <a 
+              href={item.href} 
+              class="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <!-- CV Button -->
+        <a 
+          href={siteConfig.cvButton.href}
+          target="_blank"
+          class="px-5 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5 flex items-center gap-2"
+        >
+          <span>{siteConfig.cvButton.label}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -50,16 +55,24 @@ const navItems = [
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-gray-900/95 backdrop-blur-xl border-b border-gray-800 shadow-2xl">
       <div class="px-4 py-4 space-y-2">
-      {navItems.map(item => (
+      {siteConfig.navbar.map(item => (
         <a 
           href={item.href}
-          target={item.external ? "_blank" : "_self"}
           class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
         >
           {item.label}
-          {item.external && <span class="ml-1 opacity-70">↗</span>}
         </a>
       ))}
+      <a 
+        href={siteConfig.cvButton.href}
+        target="_blank"
+        class="block px-4 py-3 rounded-xl text-base font-bold text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 transition-colors flex items-center gap-2"
+      >
+        <span>{siteConfig.cvButton.label}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+      </a>
       </div>
   </div>
 </nav>
