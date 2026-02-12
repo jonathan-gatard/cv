@@ -1,18 +1,20 @@
 export const jobs = [
     {
         role: "Ingénieur Mainframe & Interopérabilité",
-        company: "CAGIP Rodez (Prestataire Aubay Solutec)",
+        company: "CAGIP Rodez (Prestataire)",
         date: "Sept 2023 - Aujourd'hui",
-        description: "Garantir le MCO critique, assurer le rôle d'AppOps et piloter les projets de modernisation.",
+        description: "Garantir le maintien en condition opérationnelle, assurer le rôle d'AppOps et piloter les projets de modernisation du mainframe.",
         tags: ["Mainframe", "Python", "AppOps", "Zowe", "VSCode"],
         details: [
             {
-                title: "RUN",
-                content: "Installation et maintenance de matière mainframe pour CATS. Garantie de la disponibilité et de la performance des environnements critiques."
+                title: "MCO",
+                content: "Installation et maintenance de matière mainframe pour CA-TS. Garantie de la disponibilité et de la performance des environnements."
             },
             {
                 title: "Build & Modernisation",
-                content: "• Développement d'outils en Python pour automatiser les tâches récurrentes.\n• Mise en place de Zowe et VSCode pour moderniser l'expérience développeur.\n• Formation des équipes à ces nouveaux standards."
+                content: `• Développement d'outils en Python pour automatiser les tâches récurrentes.
+• Mise en place de Zowe et VSCode pour moderniser l'expérience développeur.
+• Formation des équipes à ces nouveaux standards.`,
             },
             {
                 title: "AppOps",
